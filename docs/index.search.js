@@ -53,7 +53,7 @@ var relearn_search_index = [
     "description": "",
     "tags": null,
     "title": "Hugo",
-    "uri": "/post/index.html"
+    "uri": "/hugo/index.html"
   },
   {
     "content": "",
@@ -410,7 +410,7 @@ var relearn_search_index = [
     "description": "",
     "tags": null,
     "title": "hugo note",
-    "uri": "/post/hugo-note/index.html"
+    "uri": "/hugo/hugo-note/index.html"
   },
   {
     "content": "",
