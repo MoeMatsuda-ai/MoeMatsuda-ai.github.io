@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>How to install Docker Compose :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/docker/instalation-docker-compose/index.html" rel="canonical" type="text/html" title="How to install Docker Compose :: Chiyo&#39;s blog">
+    <link href="/docker/instalation-docker-compose/index.xml" rel="alternate" type="application/rss+xml" title="How to install Docker Compose :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/docker/instalation-docker-compose/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/docker/index.html"><span itemprop="name">Docker</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">How to install Docker Compose</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="how-to-install-docker-compose">How to install Docker Compose</h1>
+
+<ol>
+<li>update</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update
+</span></span><span style="display:flex;"><span>$ sudo apt upgrade
+</span></span></code></pre></div><ol>
+<li>file のダウンロード</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo curl -L <span style="color:#e6db74">&#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-</span><span style="color:#66d9ef">$(</span>uname -s<span style="color:#66d9ef">)</span><span style="color:#e6db74">-</span><span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span> -o /usr/local/bin/docker-compose
+</span></span></code></pre></div><ol>
+<li>権限の付与</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo chmod +x /usr/local/bin/docker-compose
+</span></span></code></pre></div><ol>
+<li>動作確認</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker-compose --version
+</span></span></code></pre></div><h2 id="docker-compose-のアップグレード">docker compose のアップグレード</h2>
+<p>docker compose の v1 系をインストールしてしまっていたので v2 系にグレードアップ</p>
+<h3 id="1系のdocker-compose-の削除">1系のDocker compose の削除</h3>
+<p><code>/usr/local/bin/</code>にある<code>docker-compose</code>ディレクトリを削除</p>
+<pre tabindex="0"><code>$ sudo trash docker-compose 
+</code></pre><h3 id="新しいdocker-compose-のインストール">新しいDocker compose のインストール</h3>
+<ol>
+<li>
+<p>以下のコマンドを実行して Docker Compose の現時点での最新安定版をダウンロードします。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ DOCKER_CONFIG<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>DOCKER_CONFIG<span style="color:#66d9ef">:-</span>$HOME/.docker<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>$ mkdir -p $DOCKER_CONFIG/cli-plugins
+</span></span><span style="display:flex;"><span>$ curl -SL https://github.com/docker/compose/releases/download/v2.4.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+</span></span></code></pre></div><p>このコマンドによって、アクティブユーザーの$HOMEディレクトリ配下に Compose がインストールされます。 システム上の全ユーザー向けに Docker Compose をインストールする場合は、~/.docker/cli-pluginsの部分を/usr/local/lib/docker/cli-pluginsに置き換えます。</p>
+<p>別のバージョンをインストールする場合は<code>v2.4.1</code> の部分を書き換える</p>
+</li>
+<li>
+<p>実行バイナリに対して実行権限を与えます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+</span></span></code></pre></div></li>
+<li>
+<p>インストール結果をテストします。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker compose version
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="アンインストールする場合">アンインストールする場合</h3>
+<ul>
+<li>curlを使って Docker Compose をインストールしていた場合は、次のようにしてアンインストールします。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rm $DOCKER_CONFIG/cli-plugins/docker-compose
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://matsuand.github.io/docs.docker.jp.onthefly/compose/install/">docker docs</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Bulletins in latex :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/latex/item/index.html" rel="canonical" type="text/html" title="Bulletins in latex :: Chiyo&#39;s blog">
+    <link href="/latex/item/index.xml" rel="alternate" type="application/rss+xml" title="Bulletins in latex :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/latex/item/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/latex/index.html"><span itemprop="name">Latex</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Bulletins in latex</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="bulletins-in-latex">Bulletins in latex</h1>
+
+<h2 id="記号付き箇条書き">記号付き箇条書き</h2>
+<p>　見出し記号付きの箇条書きをするためには¥itemizeを使用する。</p>
+<p>【入力例】</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>¥begin{itemize}
+</span></span><span style="display:flex;"><span>　　¥item aaa
+</span></span><span style="display:flex;"><span>　　¥item bbb
+</span></span><span style="display:flex;"><span>　　¥begin{itemize}
+</span></span><span style="display:flex;"><span>　　　　¥item ccc
+</span></span><span style="display:flex;"><span>　　¥end{itemize}
+</span></span><span style="display:flex;"><span>　　¥item ddd
+</span></span><span style="display:flex;"><span>¥end{itemize}
+</span></span></code></pre></div><p>【出力例】</p>
+<pre tabindex="0"><code>・ aaa
+・ bbb
+    - ccc
+・ ddd
+</code></pre><!-- raw HTML omitted -->
+<h2 id="itemizeのマークの変更">itemizeのマークの変更</h2>
+<p>　itemizeを入れ子にすると、各項目の見出しとなる記号が変化する。
+これらの記号は、クラスファイルのなかで次の命令に定義されている。</p>
+<table>
+<thead>
+<tr>
+<th>レベル</th>
+<th>命令</th>
+<th>デフォルト</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>１</td>
+<td>¥labelitemi</td>
+<td>●</td>
+</tr>
+<tr>
+<td>２</td>
+<td>¥labelitemii</td>
+<td>−</td>
+</tr>
+<tr>
+<td>３</td>
+<td>¥labelitemiii</td>
+<td>＊</td>
+</tr>
+<tr>
+<td>４</td>
+<td>¥labelitemiv</td>
+<td>・</td>
+</tr>
+</tbody>
+</table>
+<p>【入力例１】itemizeの第１レベルの見出し記号を”○”に変更</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>¥renewcommand{¥labelitemi}{○}
+</span></span><span style="display:flex;"><span>　　¥begin{itemize}
+</span></span><span style="display:flex;"><span>　　　　¥item マークが変わった！
+</span></span><span style="display:flex;"><span>　　¥end{itemize}
+</span></span></code></pre></div><p>【出力例１】</p>
+<pre tabindex="0"><code>○ マークが変わった！
+</code></pre><p>【入力例２】見出し記号を１つだけ”○”に変更</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>¥begin{itemize}
+</span></span><span style="display:flex;"><span>　　¥item 普通のマーク
+</span></span><span style="display:flex;"><span>　　¥item[○]マークが変わります
+</span></span><span style="display:flex;"><span>¥end{itemize}
+</span></span></code></pre></div><p>【出力例２】</p>
+<pre tabindex="0"><code>・ 普通のマーク
+○ マークが変わります
+</code></pre><!-- raw HTML omitted -->
+<h2 id="番号付き箇条書き">番号付き箇条書き</h2>
+<p>　見出し番号付きの箇条書きをするためには¥enumerateを使用する。</p>
+<p>【入力例】</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>¥begin{enumerate}
+</span></span><span style="display:flex;"><span>　　¥item aaa
+</span></span><span style="display:flex;"><span>　　¥begin{enumerate}
+</span></span><span style="display:flex;"><span>　　　　　¥item bbb
+</span></span><span style="display:flex;"><span>　　　　　¥begin{enumerate}
+</span></span><span style="display:flex;"><span>　　　　　　　　¥item ccc
+</span></span><span style="display:flex;"><span>　　　　　¥end{enumerate}
+</span></span><span style="display:flex;"><span>　　¥end{enumerate}
+</span></span><span style="display:flex;"><span>　　¥item ddd
+</span></span><span style="display:flex;"><span>　　¥item eee
+</span></span><span style="display:flex;"><span>¥end{enumerate}
+</span></span></code></pre></div><p>【出力例】</p>
+<pre tabindex="0"><code>1. aaa
+    (a) bb
+        i. ccc
+2. ddd
+3. eee
+</code></pre><!-- raw HTML omitted -->
+<h2 id="enumerateの番号の変更">enumerateの番号の変更</h2>
+<p>　enumerateの番号の出力形式を変更するには、カウンタの値を出力する命令を定義し直す。</p>
+<table>
+<thead>
+<tr>
+<th>レベル</th>
+<th>カウンタ</th>
+<th>出力する命令</th>
+<th>デフォルトの出力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>１</td>
+<td>enumi</td>
+<td>¥theenumi</td>
+<td>アラビア数字（１，２，３，・・・）</td>
+</tr>
+<tr>
+<td>２</td>
+<td>enumii</td>
+<td>¥theenumii</td>
+<td>小文字のアルファベット（a，b，c，・・・）</td>
+</tr>
+<tr>
+<td>３</td>
+<td>enumiii</td>
+<td>¥theenumiii</td>
+<td>小文字のローマ数字（小文字のローマ数字（ⅰ，ⅱ，ⅲ，・・・）</td>
+</tr>
+<tr>
+<td>４</td>
+<td>enumiv</td>
+<td>¥theenumiv</td>
+<td>大文字のアルファベット（A，B，C，・・・）</td>
+</tr>
+</tbody>
+</table>
+<p>【例】¥enumiカウンタを大文字のローマ数字で出力する設定</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>¥renewcommand{¥theenumi}{¥Roman{enumi}}
+</span></span></code></pre></div><h4 id="番号の出力形式">番号の出力形式</h4>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>出力形式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>¥arabic</td>
+<td>アラビア数字（１、２、３、・・・）</td>
+</tr>
+<tr>
+<td>¥roman</td>
+<td>ローマ数字（ⅰ、ⅱ、ⅲ、・・・）</td>
+</tr>
+<tr>
+<td>¥Roman</td>
+<td>ローマ数字（Ⅰ、Ⅱ、Ⅲ、・・・）</td>
+</tr>
+<tr>
+<td>¥alph</td>
+<td>アルファベット（a、b、c、・・・）</td>
+</tr>
+<tr>
+<td>¥Alph</td>
+<td>アルファベット（A、B、C、・・・）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="見出し語付き箇条書き">見出し語付き箇条書き</h2>
+<p>　見出し語付きの箇条書きをするためには¥descriptionを使用する。</p>
+<p>【入力例】</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>¥begin{description}
+</span></span><span style="display:flex;"><span>　　¥item[日時] ○月○日
+</span></span><span style="display:flex;"><span>　　¥item[場所] どこか
+</span></span><span style="display:flex;"><span>　　¥item[時間] ○時○分
+</span></span><span style="display:flex;"><span>　 ¥end{description}
+</span></span></code></pre></div><p>【出力例】</p>
+<pre tabindex="0"><code>日時 ○月○日
+場所 どこか
+時間 ○時○分
+</code></pre><!-- raw HTML omitted -->
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="http://www3.otani.ac.jp/fkdsemi/pLaTeX_manual/kajyo.html">箇条書き</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

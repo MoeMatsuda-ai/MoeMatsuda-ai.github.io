@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Anaconda settings on WSL :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/windows_settings/conda_settings_onwsl/index.html" rel="canonical" type="text/html" title="Anaconda settings on WSL :: Chiyo&#39;s blog">
+    <link href="/windows_settings/conda_settings_onwsl/index.xml" rel="alternate" type="application/rss+xml" title="Anaconda settings on WSL :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/windows_settings/conda_settings_onwsl/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/windows_settings/index.html"><span itemprop="name">Windows settings</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Anaconda settings on WSL</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="anaconda-settings-on-wsl">Anaconda settings on WSL</h1>
+
+<h2 id="出力用displayの設定">出力用DISPLAYの設定</h2>
+<h3 id="x11のインストール">x11のインストール</h3>
+<ol>
+<li>wslにX11をインストール
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt install x11
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="vcxsrvのインストールと設定">VcXsrvのインストールと設定</h3>
+<ol>
+<li><a href="https://ja.wikipedia.org/wiki/SourceForge.net">SourceForge.net</a>からインストーラーをダウンロード</li>
+<li>インストーラーを実行し，VcXsrvをインストール（推奨の設定でOK！）</li>
+<li>VcXsrvを起動
+<ol>
+<li>Display settings: Multiple windowsを選択し，次へをクリック</li>
+<li>Client startup: Start no clientを選択肢，次へをクリック</li>
+<li>Extra settings: ClipboardとPrimary Selection, Native openglにチェックが入っていることを確認し，Disable access controlにチェックを入れてから次へをクリック</li>
+<li>Finish configuration: Save configurationをクリックしてデスクトップ等にconfigを保存してから完了をクリック</li>
+</ol>
+</li>
+<li><code>Windows+R</code>でダイアログボックスを開き，<code>shell:startup</code>と入力してエクスプローラーのスタートアップアプリを開く</li>
+<li>デスクトップ等に保存していたVcXsrvのconfigファイルをスタートアップアプリに移動させる</li>
+</ol>
+<h3 id="display環境変数のエクスポート">Display環境変数のエクスポート</h3>
+<p>以下の1文を<code>.bashrc</code>に追加</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export DISPLAY<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat /etc/resolv.conf | grep nameserver | awk <span style="color:#e6db74">&#39;{print $2}&#39;</span><span style="color:#66d9ef">)</span>:0.0
+</span></span></code></pre></div><h4 id="参照">参照</h4>
+<ul>
+<li><a href="https://atmarkit.itmedia.co.jp/ait/articles/1812/06/news040.html">WSL上にXサーバをインストールしてGUIを実現する（VcXsrv編）, メディアID</a></li>
+<li><a href="https://dev.classmethod.jp/articles/wsl-x-window/">Windows10のWSL上でX11アプリケーションを実行してみた，DevelopersIO</a></li>
+<li><a href="https://rin-ka.net/windows-x-server/">errorについて</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

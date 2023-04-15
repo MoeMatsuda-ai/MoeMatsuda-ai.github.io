@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Github :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/github/index.html" rel="canonical" type="text/html" title="Github :: Chiyo&#39;s blog">
+    <link href="/github/index.xml" rel="alternate" type="application/rss+xml" title="Github :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/github/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Github</span><meta itemprop="position" content="2"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable chapter narrow" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="chapter">
+<div class="article-subheading">Chapter 3</div>
+<h1 id="github">Github</h1>
+
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <section>
+            <h1 class="a11y-only">Subsections of Github</h1>
+          <article class="default">
+<h1 id="repository-operations">Repository Operations</h1>
+
+<h2 id="リポジトリのダウンロード">リポジトリのダウンロード</h2>
+<p>GitHubにあるリモートリポジトリをhttps接続でダウンロードする場合は以下のコマンドで。(ただし，GitHub上のリポジトリ設定で若干異なる場合もある)</p>
+<pre tabindex="0"><code>$ git clone https://github.com/someone/somerepo.git
+</code></pre><p>上記URLのsomeone, someprepoの部分はダウンロードしたいリポジトリによって変わる。</p>
+<h4 id="ssh接続">ssh接続</h4>
+<pre tabindex="0"><code>git clone git@github.com:bcl-exercises/21exercises-MoeMatsuda-ai.git
+</code></pre><p>cloneするときのURL以下は<strong>ブラウザ上のgithubでcloneしたいリポジトリに移動し、<code>code</code>をクリックすることで確認できる。</strong></p>
+<h4 id="publicの場合">publicの場合</h4>
+<pre tabindex="0"><code>$ git clone https://github.com/jnishii/jgr.git
+</code></pre><h4 id="privateの場合">privateの場合</h4>
+<pre tabindex="0"><code>$ git clone https://&lt;username&gt;@github.com/someone/somerepo.git
+</code></pre><p><strong>Wikiページをcloneする場合は<code>.git</code>の前に<code>.wiki</code>をつける。</strong></p>
+<ul>
+<li><strong>参照</strong>
+<a href="https://docs.github.com/ja/repositories/creating-and-managing-repositories/cloning-a-repository">リポジトリをクローンする</a></li>
+</ul>
+<h2 id="最新情報のダウンロード--更新ファイルのアップロード">最新情報のダウンロード / 更新ファイルのアップロード</h2>
+<p>ダウンロードしたファイルをいじるときには，まず，Gitサーバから最新バージョンをダウンロードしてから開始。</p>
+<pre tabindex="0"><code>$ git pull origin main
+</code></pre><p>これはサーバ(origin)から，masterブランチ(ブランチは後述)をダウンロードしてローカルリポジトリを更新し(fetch)，作業ディレクトリに反映(merge)するという意味。</p>
+<p>ファイルを更新したら，gitサーバ(origin)にアップロードする。</p>
+<pre tabindex="0"><code>$ git add &lt;更新したファイル名&gt;
+$ git commit -m “修正点を少し書く”    &lt;=ローカルリポジトリ(手元)に登録
+$ git push origin main           &lt;=リモートリポジトリに反映
+</code></pre><p>とりあえず，これで最低限のファイル共有/共同編集はできる。</p>
+<p>git addは，更新したファイルのうち，リモートリポジトリに反映したいファイルを指定(stagingとよぶ。これにより対象ファイルはstaging areaに移動)する。指定方法は以下のようにいろいろある。</p>
+<pre tabindex="0"><code>    $ git add . 新規作成ファイルと更新ファイルを全部指定
+    $ git add -u 前回から更新したファイルのみ指定(新規作成ファイルは含まない)
+    $ git add -A .新規作成ファイル，更新ファイル，削除ファイル全部指定
+</code></pre><p>ただし，リモートリポジトリは，知らないヒトが勝手に’git push’で書き換えたりできるとよくないので，アクセス制限をできるようになっている。アクセス制限がかかっているリモートリポジトリの内容の修正をリクエストするにはPullRequestをする(後述)。</p>
+<h2 id="gitサーバでリポジトリを削除する方法">gitサーバでリポジトリを削除する方法</h2>
+<ol>
+<li>削除したいリポジトリのページに移動</li>
+<li>上の一覧から<code>Settings</code>をクリック</li>
+<li>下の方にある<code>Delete this repository</code>をクリック</li>
+<li>警告を読んで、消したいリポジトリの名前を入力</li>
+<li><code>I understand the consequences, delete this repository</code>をクリック</li>
+</ol>
+<ul>
+<li><strong>参照</strong>
+<a href="https://qiita.com/PlanetMeron/items/4d164eff7bff2243cf06">Qiita「githubでリポジトリを削除する方法」</a></li>
+</ul>
+<h2 id="ローカルリポジトリの削除git-initの取り消し">ローカルリポジトリの削除(git initの取り消し)</h2>
+<p>.gitファイルを削除して、git initしたディレクトリに対して、それを取り消す</p>
+<pre tabindex="0"><code>$rm -rf .git
+</code></pre><ul>
+<li><strong>参照</strong>
+<a href="https://qiita.com/majihuwa_z/items/ec0d2e1ac21d68769693">Qiita 「git init取り消し」</a></li>
+</ul>
+<h2 id="コミット履歴の確認">コミット履歴の確認</h2>
+<pre tabindex="0"><code>     $ git log
+</code></pre><p><code>--graph</code>というオプションをつけるとコミットログをアスキーアートでカラフルに表示シてくれる。たくさんブランチがあるリポジトリなどでは見やすくなる</p>
+<pre tabindex="0"><code>     $ git log --graph
+</code></pre><h2 id="コミットのキャンセル">コミットのキャンセル</h2>
+<h4 id="ステージングのキャンセル">ステージングのキャンセル</h4>
+<p>ステージング(git add)から変更ファイルを取り消す場合は下記コマンドを実行します。</p>
+<pre tabindex="0"><code>$ git rm --cached &lt;ファイル名&gt;
+</code></pre><p>ステージング(git add)から削除するだけでなく、ファイル自体も削除する場合には下記コマンドを実行します。</p>
+<pre tabindex="0"><code>$ git rm -f &lt;ファイル名&gt;
+</code></pre><h4 id="コミットの取り消し">コミットの取り消し</h4>
+<p>直前に行ったコミットを取り消すには下記コマンドを実行します。</p>
+<p>作業ディレクトリの内容はコミット時のままで、「コミットした」ということだけが取り消されます。</p>
+<p>「&ndash;soft」オプションは省略できます。</p>
+<pre tabindex="0"><code>$ git reset [--soft] HEAD^
+</code></pre><p>作業ディレクトリに加えた変更点もコミット前に戻す場合は以下のコマンドです。</p>
+<pre tabindex="0"><code>$ git reset --hard HEAD^
+</code></pre><p>作業ディレクトリをローカルリポジトリの最新状態にするには下記コマンドを実行します。</p>
+<p>indexもクリーンされます。</p>
+<pre tabindex="0"><code>$ git reset --hard HEAD
+</code></pre><h4 id="コミット後の修正">コミット後の修正</h4>
+<p>前回のコミットを破棄して、現在のIndex内容で新しくコミットします。</p>
+<p>「reset」と「commit」を実行することと同様の処理となります。</p>
+<p>コミットメッセージの修正なども行えます。</p>
+<pre tabindex="0"><code>$ git commit --amend
+</code></pre><ul>
+<li><strong>参照</strong>
+<a href="http://capm-network.com/?tag=Git%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E6%93%8D%E4%BD%9C">Camp Netwoek「Gitローカルリポジトリ操作」</a></li>
+</ul>
+<h2 id="プッシュの取り消し">プッシュの取り消し</h2>
+<p>基本、プッシュした情報をローカルリポジトリに戻すことはできない。
+そこで、コミットを打ち消すコミットを生成する（git revertコマンド）。プッシュ済みのコミットを消す方法もあるが、よくなさそう。。git revertでは打ち消したコミットの記録が残る。</p>
+<h4 id="git-revert">git revert</h4>
+<ul>
+<li>
+<p>指定したコミットを、add前に戻してくれるコマンド。</p>
+</li>
+<li>
+<p>ターミナル(間違って、masterにpushしちゃった時など)</p>
+<pre tabindex="0"><code>% git log                    # コミットログの確認
+% git revert 間違えたコミットID   # 指定したコミットを、add前に戻す
+# ターミナルが編集できなくなるので、`:q`で脱出
+</code></pre><ul>
+<li>GitHub Desktopを確認すると、git revertで生成したコミットが生成されてるハズ。これをpushすれば、リモートリポジトリで打ち消されているハズ。この時、ローカルからも消えるので、注意。</li>
+</ul>
+</li>
+<li>
+<p>参)ターミナルで実施する場合</p>
+<pre tabindex="0"><code>% git pull                            # 念のため、ローカルのmasterを最新にする
+% git checkout pushすべきだったブランチ    # ブランチを切り替える
+% git merge master
+% git add .                           # 変更箇所をadd
+% git commit -m &#34;コミットメッセージ&#34;
+% git push origin pushしたかったブランチ
+</code></pre><p>※ 念のため、ローカルのmasterをpull(最新)にしてから、作業してたブランチも最新状態をmerge(反映)し、pushすべきだったブランチにpushするイメージ。</p>
+</li>
+</ul>
+<h2 id="その他のコマンド">その他のコマンド</h2>
+<h4 id="よく使用するコマンド">よく使用するコマンド</h4>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git init</td>
+<td>対象のディレクトリをバージョン管理できる入れ物に格納してくれるイメージ</td>
+</tr>
+<tr>
+<td>git add ●●</td>
+<td>●●をインデックスに追加。※ git add . とすると「全て」を対象にできる</td>
+</tr>
+<tr>
+<td>git commit -m &lsquo;メッセージ&rsquo;</td>
+<td>コミット</td>
+</tr>
+<tr>
+<td>git status</td>
+<td>現在のファイルの状態(staging等)一覧を表示する</td>
+</tr>
+<tr>
+<td>git reset &lt;ファイル名&gt;</td>
+<td>間違えてgit addしたファイルの取り消し(stagingの取り消し)</td>
+</tr>
+<tr>
+<td>git log</td>
+<td>コミットログの履歴確認（コミットID、コミットメッセージ、日時）</td>
+</tr>
+<tr>
+<td>git remote add origin リモートリポジトリのURL(https：//github.com/GitHubのユーザー名/リモートリポジトリ名.git)</td>
+<td>ローカルリポジトリにリモートリポジトリの情報を付与し、紐づける</td>
+</tr>
+<tr>
+<td>git push origin ブランチ名</td>
+<td>ローカルの変更点を、リモートに反映。ブランチ名 masterなら、マスターブランチにプッシュ。</td>
+</tr>
+<tr>
+<td>git pull origin master</td>
+<td>リモートリポジトリ（origin）のマスターブランチをローカルリポジトリに反映。</td>
+</tr>
+<tr>
+<td>git clone https：//github.com/ユーザー名/リモートリポジト名.git</td>
+<td>リモートリポジトからローカルリポジトリにダウンロード</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git remote -v</td>
+<td>ローカルにクローンしたリポジトリのリモートURL確認方法</td>
+</tr>
+</tbody>
+</table>
+<h4 id="コミットメッセージ例">コミットメッセージ例</h4>
+<table>
+<thead>
+<tr>
+<th>コミットメーセージ</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create ●● class</td>
+<td>クラス作成</td>
+</tr>
+<tr>
+<td>Add relation with ●●</td>
+<td>リレーションの追加</td>
+</tr>
+<tr>
+<td>Add presence validation of ●●</td>
+<td>バリデーションの追加</td>
+</tr>
+<tr>
+<td>Add #parse_body for parse body&rsquo;s markdown</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="参照">参照</h2>
+<h3 id="上記にも記入済み">上記にも記入済み</h3>
+<ul>
+<li><a href="https://qiita.com/PlanetMeron/items/4d164eff7bff2243cf06">Qiita「githubでリポジトリを削除する方法」</a></li>
+<li><a href="https://qiita.com/majihuwa_z/items/ec0d2e1ac21d68769693">Qiita 「git init取り消し」</a></li>
+<li><a href="http://capm-network.com/?tag=Git%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E6%93%8D%E4%BD%9C">Camp Netwoek「Gitローカルリポジトリ操作」</a></li>
+</ul>
+<h3 id="その他">その他</h3>
+<ul>
+<li><a href="https://qiita.com/manbolila/items/01c2f6a5cf2ffc473f92">Qiita「GitとGitHubの基礎」</a></li>
+<li><a href="https://qiita.com/zhao-xy/items/a35add58575ef7d9d4dc">Qiita「ローカルgitリポジトリでリモートのリポジトリURLを確認する方法」</a></li>
+<li><a href="https://qiita.com/aiandrox/items/d1c19ffabad7b8cc187a">Qiita「【GitHub】アカウント名を変更するときの注意点</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="about-resetting-commit-and-rm-the-file">About resetting commit and rm the file</h1>
+
+<h2 id="コミットの取り消し">コミットの取り消し</h2>
+<h4 id="直前のコミットの取り消し">直前のコミットの取り消し</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git reset &lt;打ち消したいコミットID&gt;
+</span></span></code></pre></div><p><strong>直前のコミットを打ち消す場合には</strong>以下のコマンドを使用</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git reset --soft HEAD^
+</span></span></code></pre></div><ul>
+<li><code>--soft</code>オプション：ワークディレクトリの内容はそのままでコミットだけを取り消したい場合に使用</li>
+<li><code>--hard</code>オプション：コミット取り消した上でワークディレクトリの内容も書き換えたい場合に使用</li>
+<li><code>HEAD^</code>: 直前のコミットを意味</li>
+<li><code>HEAD~{n}</code>n個前のコミットを意味</li>
+</ul>
+<h2 id="コミットの打ち消し">コミットの打ち消し</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git revert &lt;コミットのハッシュ値&gt;
+</span></span></code></pre></div><p>作業ツリーを指定したコミット時点の状態にまで戻し、コミットを行う。</p>
+<h2 id="コミットの上書き">コミットの上書き</h2>
+<p>直前のコミットに上書きする場合は以下のコマンドを使用</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git commit --amend
+</span></span></code></pre></div><h2 id="リモートリポジトリからのみ特定のファイルを削除">リモートリポジトリからのみ特定のファイルを削除</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git rm --cached &lt;target file&gt;
+</span></span></code></pre></div><p>ディレクトリを削除する場合は</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git rm --cached -r &lt;target directory&gt;
+</span></span></code></pre></div><h1 id="reference">reference</h1>
+<ul>
+<li><a href="%5BGit%5D%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88%E3%81%AE%E5%8F%96%E3%82%8A%E6%B6%88%E3%81%97%E3%80%81%E6%89%93%E3%81%A1%E6%B6%88%E3%81%97%E3%80%81%E4%B8%8A%E6%9B%B8%E3%81%8D">[Git]コミットの取り消し、打ち消し、上書き</a></li>
+<li><a href="https://tech-blog.rakus.co.jp/entry/20210528/git">【Git入門】git commitを取り消したい、元に戻す方法まとめ</a></li>
+<li><a href="https://aduce.jp/dev/remove-files-in-remote-git-repo">Gitのリモートリポジトリから特定のファイルを削除する方法
+</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="public-key-authentication-settings-in-github">Public key authentication settings in github</h1>
+
+<h4 id="公開鍵を-github-に登録することでpush-時などにパスワードを入力する手間が省略可能">公開鍵を GitHub に登録することで、push 時などにパスワードを入力する手間が省略可能</h4>
+<h2 id="公開鍵および秘密鍵の作成と登録">公開鍵および秘密鍵の作成と登録</h2>
+<ol>
+<li>
+<p>公開鍵および秘密鍵を作成</p>
+<pre tabindex="0"><code>ssh-keygen -t ed25519
+</code></pre></li>
+<li>
+<p>公開鍵 を GitHub に登録</p>
+<pre tabindex="0"><code>cat ~/.ssh/id_ed25519.pub
+# コマンドを実行して表示されたすべての文字列を GitHub に登録
+#
+# ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX user@host
+# ↑こんな感じの文字列をすべてコピペ
+</code></pre><p>GitHub の公開鍵登録の手順は、</p>
+<ol>
+<li>Settings</li>
+<li>SSH and GPG keys</li>
+<li>[New SSH key]</li>
+<li>タイトルをつけ公開鍵をコピペし [Add SSH key]</li>
+</ol>
+</li>
+<li>
+<p>SSH の設定 GitHub で使用する秘密鍵を設定するため、~/.ssh/config に<a href="https://github.com/MoeMatsuda-ai/info_study/wiki/Create-ssh_GitHub#%E5%85%AC%E9%96%8B%E9%8D%B5%E3%81%8A%E3%82%88%E3%81%B3%E7%A7%98%E5%AF%86%E9%8D%B5%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%A8%E7%99%BB%E9%8C%B2">設定</a>を記述</p>
+</li>
+</ol>
+<p>最終行 (ProxyCommand の部分) は学内のコンピューターの場合にのみ設定</p>
+<h2 id="接続の確認">接続の確認</h2>
+<pre tabindex="0"><code>$ ssh -T git@github.com
+</code></pre><p>ターミナルで実行して以下のように表示されればOK!</p>
+<pre tabindex="0"><code>Hi (User名)! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre><p>※途中で以下のプロンプトメッセージが表示されたら<code>yes</code>と入力
+<code>The authenticity of host '[ssh.github.com]:443 (&lt;no hostip for proxy command&gt;)' can't be established. RSA key fingerprint is [以下省略]. Are you sure you want to continue connecting (yes/no/[fingerprint])? The authenticity of host '[ssh.github.com]:443 (&lt;no hostip for proxy command&gt;)' can't be established. RSA key fingerprint is [以下略]. Are you sure you want to continue connecting (yes/no/[fingerprint])? </code></p>
+<h2 id="ssh接続がうまく行かないとき">ssh接続がうまく行かないとき</h2>
+<p>レポジトリのディレクトリに入り次のコマンドを入力</p>
+<pre tabindex="0"><code>git config remote.origin.url
+</code></pre><p><code>https://github.com/[ユーザID]/[リポジトリ]</code>となっていたらレポジトリのディレクトリ内の<code>/.git/config</code>を開いて<code>url</code>の覧を</p>
+<pre tabindex="0"><code>url = github.com:[ユーザID]/[リポジトリ].git
+</code></pre><p>と書き換える。</p>
+<p>または以下のコマンドを実行</p>
+<pre tabindex="0"><code>git remote set-url origin [Host名]:[ユーザID]/[リポジトリ].git
+</code></pre><p>※~/.ssh/configで設定していない場合は</p>
+<pre tabindex="0"><code>git remote set-url origin git@github.com:[ユーザID]/[リポジトリ].git
+</code></pre><p>でOK!</p>
+<h2 id="参照">参照</h2>
+<p><a href="https://qiita.com/shizuma/items/2b2f873a0034839e47ce">Qiita「Githubでssh接続する手順」</a>
+<a href="https://dev.classmethod.jp/articles/github-ssh-setting/">GitHubヘルプを参考にSSHキーの設定を行ってみた</a></p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="confirmation-of-difference">Confirmation of difference</h1>
+
+<h2 id="ファイルの変更差分の確認">ファイルの変更差分の確認</h2>
+<pre tabindex="0"><code>$ git diff [変更前のコミット識別子]..[変更後のコミット識別子]
+</code></pre><h2 id="ブランチ同士の差分の確認">ブランチ同士の差分の確認</h2>
+<pre tabindex="0"><code>$ git diff master..develop
+</code></pre><p>masterブランチにプルリクエストを送る前にdevelopブランチに追加した内容を確認できる</p>
+<h2 id="git-pull-する前にリモート追跡ブランチとの差分を確認する">git pull する前に、リモート追跡ブランチとの差分を確認する</h2>
+<ol>
+<li>リモートリポジトリからの変更内容の取得
+<pre tabindex="0"><code>$ git fetch origin
+</code></pre></li>
+<li>ローカルリポジトリのmasterブランチの最新コミット(HEAD)とリモート追跡ブランチ(origin/master)を比較
+<pre tabindex="0"><code>$ git diff HEAD..origin/master
+</code></pre></li>
+</ol>
+<h2 id="git-push-する前にリモート追跡ブランチとの差分を確認する">git push する前に、リモート追跡ブランチとの差分を確認する</h2>
+<ul>
+<li>
+<pre tabindex="0"><code>$ git diff origin/master..HEAD
+</code></pre></li>
+</ul>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="参考">参考</h1>
+<ul>
+<li><a href="https://www.r-staffing.co.jp/engineer/entry/20200228_1">第9話 git diff で差分を確認！【連載】マンガでわかるGit ～コマンド編～</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="branch">Branch</h1>
+
+<h2 id="ブランチとは">ブランチとは？</h2>
+<p>ブランチとは平行世界のようなものである。
+ブランチを活用することでmasterブランチをそのまま据え置いた状態で、別のブランチで新機能を試しながら作ることができる。</p>
+<h2 id="ブランチの正体は">ブランチの正体は？</h2>
+<p><a href="https://git-scm.com/book/ja/v2/Git-%E3%81%AE%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E6%A9%9F%E8%83%BD-%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%A8%E3%81%AF">github公式ドキュメント</a>によると、</p>
+<blockquote>
+<p>ブランチとは（中略）コミットを指す軽量なポインタに過ぎません
+と説明されている。</p>
+</blockquote>
+<p>リポジトリの正体は<code>.git</code>という隠しフォルダのことであり、この中にある<code>refs/heads/master</code>ファイルこそがブランチの正体である。
+このファイルの中身をcatしてみると</p>
+<pre tabindex="0"><code>dd95ddf066d452949bb54304bbf43ab3dadfee25
+</code></pre><p>のように英数字の羅列が保存してある。これは<!-- raw HTML omitted --><strong>コミットID</strong><!-- raw HTML omitted -->または<!-- raw HTML omitted --><strong>コミットハッシュ値</strong><!-- raw HTML omitted -->と呼ばれている。またコミットによって生成されたデータのことを<!-- raw HTML omitted -->コミットオブジェクト<!-- raw HTML omitted -->といい、一つのコミットオブジェクトに対して４０文字のIDを割り当てるのがコミットIDである。</p>
+<p>つまりブランチとは<!-- raw HTML omitted --><strong>ただ単に特定のコミットIDを指しているだけ</strong><!-- raw HTML omitted -->である。</p>
+<p>またコミットオブジェクトにはそれぞれ</p>
+<ul>
+<li>tree</li>
+<li>parent</li>
+<li>author</li>
+<li>committer</li>
+</ul>
+<p>の情報が保存されており、<code>parent</code>が一つ前のコミットIDを示している。</p>
+<h2 id="例">例</h2>
+<p>作成した<code>sample.txt</code>に何かしらの変更を加え、</p>
+<pre tabindex="0"><code>$ git add sample.text
+$ git commit -m &#34;2回目のコミット&#34;
+$ git log
+</code></pre><p>とすると、次のような結果が得られる。</p>
+<p>
+<a href="/github/branch/index.html/jpg/github/commit_log.jpg" data-featherlight="image">
+<img src="/github/branch/index.html/jpg/github/commit_log.jpg" alt="コミットしたときのログ" style="height: auto; width: auto;" loading="lazy">
+</a></p>
+<p>このとき以下のように実行すると、コミットオブジェクトを確認することができる</p>
+<pre tabindex="0"><code>$ git cat-file -p 0e9556
+</code></pre><blockquote>
+<p>tree e290b48b356d721ae54d1edb03993802cc98bad8</p>
+<p>parent 02f11b759bfeb461e117c5da18bb2dcbe06d862a</p>
+<p>author llminatolll<a href="mailto:XXX@mail.com">XXX@mail.com</a>l1562052826 +0900</p>
+<p>commit errllminatolll<a href="mailto:XXX@mail.com">XXX@mail.com</a>l1562052826 +0900</p>
+</blockquote>
+<p>この<code>parent</code>の部分が前のコミットのコミットIDを表しており、一番はじめのコミットでは<code>paernt</code>は保存されていない</p>
+<h4 id="ひとことメモ-コミットidは何を元に作られているの">ひとことメモ　** コミットIDは何を元に作られているの？**</h4>
+<blockquote>
+<p>コミットID（コミットハッシュ値）は、実はこのコミットオブジェクトのバイト数と中身を使い、計算されて作られています。よって、コミットした人の名前やコミットした時間、指し示すparent、treeが違えばコミットハッシュ値も違うものになります。</p>
+<p>その証拠に、同じ内容をコミットしていても、あなたの練習用リポジトリとわかばちゃんのコミットIDは違うはずです。コミットハッシュ値についてもっと深く知りたい方は、こちらの記事が詳しいのでおすすめです。</p>
+<ul>
+<li><a href="https://www.r-staffing.co.jp/engineer/entry/20190719_1">Gitのコミットハッシュ値は何を元にどうやって生成されているのか</a></li>
+</ul>
+</blockquote>
+<!-- raw HTML omitted -->
+<h2 id="ブランチの操作">ブランチの操作</h2>
+<ul>
+<li>
+<p>今存在するブランチの確認</p>
+<pre tabindex="0"><code>$ git branch
+</code></pre><p>※<strong>アスタリスクのついているブランチが現在のブランチ</strong></p>
+</li>
+<li>
+<p>ブランチの作成</p>
+<pre tabindex="0"><code>$ git branch &lt;branch name&gt;
+</code></pre></li>
+<li>
+<p>ローカルブランチの作成をリモートにプッシュ</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git push origin &lt;branch name&gt;
+</span></span></code></pre></div></li>
+<li>
+<p>ブランチの移動</p>
+<pre tabindex="0"><code>$ git checkout &lt;branch name&gt;
+</code></pre><p>※指定したブランチへ移動する</p>
+<ul>
+<li><code>-b</code>オプションを指定するとブランチの作成とチェックアウトを同時に行える</li>
+<li><code>-f</code>オプションを指定するとブランチを強制的に切り替えることができる（<!-- raw HTML omitted -->コミットしていない作業データは消えるため注意<!-- raw HTML omitted -->)</li>
+</ul>
+</li>
+<li>
+<p>リモートブランチの反映</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git fetch origin
+</span></span></code></pre></div></li>
+<li>
+<p>ブランチの削除</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git branch -d &lt;branch name&gt; <span style="color:#75715e"># ローカルブランチの削除(強制削除する場合は`-D`オプションに変更)</span>
+</span></span><span style="display:flex;"><span>$ git push origin --delete &lt;branch name&gt; <span style="color:#75715e"># リモートブランチの削除(`$ git push origin :&lt;branch name&gt;` でも可)</span>
+</span></span></code></pre></div></li>
+<li>
+<p>remote には存在するブランチが local には存在しない場合</p>
+<pre tabindex="0"><code>$ git brantch -a 
+</code></pre><p>でブランチを表示</p>
+<pre tabindex="0"><code>$ git checkout -b release origin/release
+</code></pre><p>で解決できる!
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+</li>
+</ul>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://www.r-staffing.co.jp/engineer/entry/20190719_1">第2話 ブランチとは？ポインタってどういう意味？作成・確認・切り替え方法【連載】マンガでわかるGit ～コマンド編～</a></li>
+<li><a href="https://www.atlassian.com/ja/git/tutorials/using-branches#:~:text=git%20branch%20%E3%81%AF%E3%80%81%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%AE,%E3%81%AB%E6%88%BB%E3%81%99%E6%A9%9F%E8%83%BD%E3%82%82%E3%81%82%E3%82%8A%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82">Git Branch コマンド</a></li>
+<li><a href="https://awesome-linus.com/2018/03/11/cannot-get-remote-branch/">リモートブランチの更新が見えない時</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="how-to-create-repository">How to Create Repository</h1>
+
+<h2 id="ローカルリポジトリの作成">ローカルリポジトリの作成</h2>
+<ol>
+<li>
+<p>リモートリポジトリに登録したいディレクトリにして次のコマンドでバージョン管理のための初期化を行う。</p>
+<pre tabindex="0"><code>$ git init
+</code></pre><p>これで，ローカルリポジトリ(.git/)が作られ，<code>git init</code>を実行したディレクトリが作業ディレクトリになる。</p>
+<p>以下のように<code>git init</code>でローカルリポジトリ用のディレクトリを新規作成することもできる。</p>
+<pre tabindex="0"><code>$ git init &lt;target directory&gt;
+$ cd &lt;target directory&gt;
+</code></pre></li>
+<li>
+<p>.gitignoreの作成
+gitコマンドでは無視したいファイルが有る時(LaTeXの一時ファイル等)は，.gitignoreという名前のファイルを作っておく。 以下は例。latex関連の一時ファイルを無視するように設定している。</p>
+<pre tabindex="0"><code>$ cat .gitignore
+*.aux
+*.idx
+*.log
+*.toc
+*.ist
+*.bbl
+*.blg
+*.dvi
+*.ilg
+*.ind
+*.lot
+*.out
+*.synctex.gz
+*~
+</code></pre></li>
+</ol>
+<h2 id="ローカルリポジトリに登録するファイルやディレクトリの指定">ローカルリポジトリに登録するファイルやディレクトリの指定</h2>
+<p>下記のいずれかのコマンドで登録するファイルやディレクトリを指定</p>
+<pre tabindex="0"><code>$ git add .            # 現在のディレクトリにある全てのファイル/ディレクトリを登録
+$ git add figures/     # ディレクトリ figures/ 以下のファイルを登録
+$ git add *.tex        # すべての .tex ファイルを登録
+$ git add &lt;ファイル名&gt; #特定のファイルのみを登録
+</code></pre><h2 id="ローカルリポジトリにファイル登録">ローカルリポジトリにファイル登録</h2>
+<p><code>git add</code>で指定したファイルやディレクトリを，ローカルリポジトリに登録する。</p>
+<pre tabindex="0"><code>$ git commit -m &#34;first commit&#34;
+</code></pre><p>-mは1行コメントをつけるオプション。 更新したファイルをローカルリポジトリに反映するときにも，同様にgit addとgit commitを実行する。ここまではローカルリポジトリの管理。</p>
+<h1 id="gitサーバ上で新規リモートリポジトリを登録">gitサーバ上で新規リモートリポジトリを登録</h1>
+<ol>
+<li>
+<p>GitHubにログイン</p>
+</li>
+<li>
+<p>左上の<code>Repositories</code>の隣りにある<code>New</code>のタブをクリック</p>
+</li>
+<li>
+<p>repository作成ページで以下のことを記入</p>
+<ul>
+<li>Repository name : リポジトリの名前</li>
+<li>Description : リポジトリの内容</li>
+<li><code>Public / Private</code>の選択</li>
+</ul>
+</li>
+<li>
+<p><code>Create repository</code>をクリック</p>
+</li>
+<li>
+<p>リポジトリ作成後のすべきこと（コマンドライン）が記載されたページが表示されるので、URLの覧をチェックしておく。以下はその一例。</p>
+<pre tabindex="0"><code>echo &#34;# re&#34; &gt;&gt; README.md
+git init
+git add README.md
+git commit -m &#34;first commit&#34;
+git branch -M main
+git remote add origin https://github.com/&lt;ユーザーネーム&gt;/&lt;repository名&gt;.git
+git push -u origin main
+</code></pre></li>
+<li>
+<p><strong>コマンドラインの上に<code>HTTPS</code>か<code>SSH</code>かを選択する覧もあるので、<code>SSH</code>にする場合はここで選択しておく</strong></p>
+</li>
+</ol>
+<ul>
+<li><strong>参照</strong>
+<ul>
+<li><a href="https://atmarkit.itmedia.co.jp/ait/articles/1701/24/news141.html">ITmedia 「Git/GitHubにおける<strong>リモートリポジトリの作成</strong>、確認、変更、更新時の5コマンド」</a></li>
+<li><a href="https://www.sejuku.net/blog/70775">SAMURAIENGINEER 「【Git初心者向け】リポジトリの作成からpushまで」</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="トークンの作成">トークンの作成</h1>
+<p>2021年8月13日以降、GitHubのリポジトリにアクセスするには、ユーザ名とパスワードではなくアクセストークンが必要になった。</p>
+<ol>
+<li>GitHubにログイン</li>
+<li>右上のアイコンをクリックし、一覧から<code>Settings</code>をクリック</li>
+<li>左下の<code>Developer settings</code>をクリック</li>
+<li>左の覧から<code>Personal avvess tokens</code>をクリック</li>
+<li>右上の<code>Generate new token</code>をクリックしてアクセストークンを作成</li>
+<li>以下のことを記入
+Note : トークン名
+Expiration : トークンが使用できる期限。この期限が切れると新しくトークンを作成する必要がある。（上限あり）
+Select scopes : <strong>少なくともrepoの覧はチェックを入れること。</strong>
+<code>トークンは一度ページを移動すると二度と見れなくなってしまうため、作成後はコピーして保存しておくこと！！！</code></li>
+</ol>
+<ul>
+<li><strong>参照</strong>
+<ul>
+<li><a href="https://note.kiriukun.com/entry/20210904-github-password-authentication-was-removed">アクセストークンの作成方法</a></li>
+<li><a href="https://qiita.com/shunsa10/items/e43564cf48f84b95455b">Qiita「アクセストークンとSSH接続について」</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="gitサーバへの登録">Gitサーバへの登録</h1>
+<h3 id="ローカルリポジトリとgitサーバ上のリモートリポジトリの紐付け">ローカルリポジトリとgitサーバ上のリモートリポジトリの紐付け</h3>
+<p>ローカルリポジトリ(要はgit管理したいプログラム群のあるディレクトリ)をgitサーバ上のリモートリポジトリと紐付ける。リモートリポジトリを作成した際に表示されたすべきこと（コマンドライン）を順次実行していく。
+以下はその一例。</p>
+<pre tabindex="0"><code>git branch -M main
+git remote add origin https://github.com/&lt;ユーザーネーム&gt;/&lt;repository名&gt;.git
+git push -u origin main
+</code></pre><p>ただしURLの覧には<code>https://</code>と<code>github.com/...</code>の間に<code>&lt;トークン&gt;@</code>を加えて実行する。</p>
+<pre tabindex="0"><code>$ git remote add origin https://&lt;トークン&gt;@github.com/&lt;ユーザーネーム&gt;/&lt;repository名&gt;.git
+</code></pre><p>ユーザーネームとパスワードを求められたらユーザーネームには自分の登録名、<strong>パスワードにはトークンを打ち込む</strong></p>
+<p><code>git remote</code>は，サーバ上のファイル置き場(リモートリポジトリ)を登録する命令。 この例では，URL(<a href="https://github.com/">https://github.com/</a>&lt;ユーザーネーム&gt;/&lt;repository名&gt;.git)を，originという名前(識別子)で登録している。 識別子 origin は他の名前にしても良いが，慣習的にこの名称が使われている。 someone/somerepoの部分は，GitHub上に作ったリポジトリの名前に従って設定する。</p>
+<p>ただし，非公開リポジトリ(private repository)に登録する場合は，以下のようにGitHubの認証情報を加える。</p>
+<pre tabindex="0"><code>$ git remote add origin https://&lt;username&gt;@github.com/s&lt;ユーザーネーム&gt;/&lt;repository名&gt;.git
+</code></pre><p>セキュリティを高めるためには，ssh keyをGitHubに登録しておいて，ssh通信にするほうが無難。この場合のgit rmoteは以下のなる。</p>
+<pre tabindex="0"><code>$ git remote add origin git@github.com:someone/somerepo.git
+</code></pre><h3 id="登録情報の確認">登録情報の確認</h3>
+<pre tabindex="0"><code>$ git remote -v
+</code></pre><p>登録情報を間違えていたら，以下のコマンドで一旦削除して再登録する</p>
+<pre tabindex="0"><code>$ git remote rm origin
+</code></pre>
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="settings">Settings</h1>
+
+<h1 id="アカウントの作成">アカウントの作成</h1>
+<p><a href="https://github.com/">GitHubのホームページ</a>でアカウントを作成する</p>
+<h4 id="pro版github-educationへの変更方法"><strong>pro版（GitHub Education)への変更方法</strong></h4>
+<ol>
+<li><a href="https://education.github.com/">GitHub Education</a>にアクセス</li>
+<li>右上の<a href="https://education.github.com/benefits">Benefits</a>をクリック</li>
+<li>IndividualsのGet student benefitsを選択
+<pre tabindex="0"><code>申し込むための資格が書いてあります。
+学生であること。
+学校からもらったメアドがあること。
+GitHubアカウントを持っていること。
+13歳以上であること。 Screenshot from 2020-09-23 15-02-45.png
+</code></pre></li>
+<li><code>Add an email address</code>から学校のアドレスを追加</li>
+<li><code>How do you plan to use GitHub?</code>にgithubの利用目的を記入</li>
+<li><code>Submit your information</code>を押して完了
+※利用目的は形式的なものなので（多分）適当に書いてOK!</li>
+</ol>
+<h2 id="参考ページ">参考ページ</h2>
+<p><a href="https://qiita.com/Kobayashi2019/items/5adb9bde57691a770419">Qiita , @Kobayashi2019「<strong>GitHub Educationのメリットと申請方法</strong>」</a></p>
+<h1 id="gitコマンドのインストール">gitコマンドのインストール</h1>
+<p>git コマンドをローカルマシンにインストールする。 Mac OSの場合は，Xcode コマンドラインツールをインストールしていたら，gitコマンドもインストールされている。</p>
+<p>apt-get対応のLinuxディストリビューションなら以下でたいていOK。</p>
+<pre tabindex="0"><code>$apt-get install git 
+</code></pre><h1 id="自分のアカウント情報のローカルマシンへの登録">自分のアカウント情報のローカルマシンへの登録</h1>
+<pre tabindex="0"><code>$git config --global user.name &lt;ユーザーネーム&gt;
+$git config --global user.email &lt;登録したメールアドレス&gt;
+$git config --global core.editer vi   #コメント編集につかいたいエディタを設定（デフォルトはvi）
+</code></pre><p><code>--global</code>は，ローカルリポジトリ作成時のデフォルト設定にするためのオプション。 特定のリポジトリでのみ別の設定にしたいときには，ダウンロードしたポジトリ内に移動してから<code>--local</code>を指定して実行する。</p>
+<h1 id="必要に応じてproxy設定">必要に応じてproxy設定</h1>
+<p>外部とのネットワーク接続にproxy設定が必要な環境の場合は，Proxy設定のページを見て設定をする。ターミナルとgitのproxy設定をする。</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="git-pull-するたびに警告が出る">git pull するたびに警告が出る…</h1>
+<ul>
+<li><a href="https://qiita.com/tearoom6/items/0237080aaf2ad46b1963">Git2.27での git pull 時の warning について</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          </section>        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

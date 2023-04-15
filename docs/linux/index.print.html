@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Linux :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/linux/index.html" rel="canonical" type="text/html" title="Linux :: Chiyo&#39;s blog">
+    <link href="/linux/index.xml" rel="alternate" type="application/rss+xml" title="Linux :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/linux/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Linux</span><meta itemprop="position" content="2"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable chapter narrow" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="chapter">
+<div class="article-subheading">Chapter 6</div>
+<h1 id="linux">Linux</h1>
+
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <section>
+            <h1 class="a11y-only">Subsections of Linux</h1>
+          <article class="default">
+<h1 id="shortcut">Shortcut</h1>
+
+<h2 id="エディタのショートカットキー">エディタのショートカットキー</h2>
+<h3 id="移動系">移動系</h3>
+<table>
+<thead>
+<tr>
+<th>ショートカットキー</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl+Home</td>
+<td>ファイルの先頭に移動</td>
+</tr>
+<tr>
+<td>Ctrl＋End</td>
+<td>ファイルの末尾に移動</td>
+</tr>
+<tr>
+<td>Home</td>
+<td>行頭に移動</td>
+</tr>
+<tr>
+<td>End</td>
+<td>行末に移動</td>
+</tr>
+<tr>
+<td>Ctrl＋←</td>
+<td>単語の先頭に移動</td>
+</tr>
+<tr>
+<td>Ctrl+→</td>
+<td>単語の末尾に移動</td>
+</tr>
+</tbody>
+</table>
+<h3 id="分割">分割</h3>
+<table>
+<thead>
+<tr>
+<th>ショートカットキー</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ショートカットキー</td>
+<td>概要</td>
+</tr>
+<tr>
+<td>Ctrl＋\ ※\は右上の｜のキーボード</td>
+<td>編集画面を分割表示</td>
+</tr>
+<tr>
+<td>Ctrl＋１or２or 3 &hellip;</td>
+<td>分割した画面間を移動</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ファイルやディレクトリの開き方">ファイルやディレクトリの開き方</h3>
+<table>
+<thead>
+<tr>
+<th>ショートカットキー</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl＋N</td>
+<td>新規ファイル</td>
+</tr>
+<tr>
+<td>Ctrl＋Shift＋N</td>
+<td>新規ウィンドウ</td>
+</tr>
+<tr>
+<td>Ctrl＋o</td>
+<td>ファイルを開く</td>
+</tr>
+</tbody>
+</table>
+<h3 id="文字列検索">文字列検索</h3>
+<table>
+<thead>
+<tr>
+<th>ショートカットキー</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl＋F</td>
+<td>エディタ内検索</td>
+</tr>
+<tr>
+<td>Ctrl＋H</td>
+<td>エディタ内置換</td>
+</tr>
+<tr>
+<td>F3</td>
+<td>次の検索結果にジャンプ</td>
+</tr>
+<tr>
+<td>Shift＋F3</td>
+<td>前の検索結果にジャンプ</td>
+</tr>
+</tbody>
+</table>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88">シェルスクリプト</h1>
+
+<h1 id="シェルスクリプト">シェルスクリプト</h1>
+<pre tabindex="0"><code>$mv arg.sh ~/bin/arg.sh
+</code></pre><p>※このあとパス設定が必要だけど、すでにbinにパスが設定されてた…
+パスの確認方法は</p>
+<pre tabindex="0"><code>$printenv PATH
+</code></pre><h2 id="シェルスクリプトの作成手順">シェルスクリプトの作成手順</h2>
+<ol>
+<li>
+<p>~/bin にbzdirファイルを作成</p>
+</li>
+<li>
+<p>ファイルに書き込めたら次のコマンドを実行</p>
+<pre tabindex="0"><code>$chmod +x bzdir.sh 
+</code></pre><ul>
+<li>ファイル内容は　~/bin/bzdir を参照</li>
+</ul>
+</li>
+<li>
+<p>~/.bashrcに下記の記述を書き込む</p>
+<pre tabindex="0"><code>&#34;alias bzdir=&#39;bzdir.sh&#39;
+</code></pre></li>
+<li>
+<p>$source ~/.bashrcを実行</p>
+</li>
+</ol>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="command">Command</h1>
+
+<h2 id="コンソールの起動">コンソールの起動</h2>
+<ol>
+<li>Ctel+F[2~3]
+以下のコマンドを実行することでコンソール画面からXwindowを起動することもできる
+<pre tabindex="0"><code>$ startx
+</code></pre></li>
+<li>ログインするアカウント名を入力</li>
+<li>passwordを入力</li>
+</ol>
+<h2 id="x-windowへの復帰">X windowへの復帰</h2>
+<ul>
+<li>Ctrl-Alt-F7</li>
+</ul>
+<h2 id="コマンド停止方法">コマンド停止方法</h2>
+<ul>
+<li>Ctrl + C</li>
+<li>コマンド kill
+<ol>
+<li><code>ps r</code> を入力</li>
+<li>PID（プロセスID）を確認</li>
+<li><code>kill [PID]</code> を入力</li>
+</ol>
+</li>
+<li>コマンド kill②
+<ol>
+<li><code>ps  auxw | grep yes</code> （axでもOK）で実行しているコマンドyesのPID（2列目）を検索</li>
+<li>kill [PID]  を入力</li>
+</ol>
+</li>
+<li>コマンド kill③
+<ol>
+<li>topでPIDを確認</li>
+<li>topコマンド実行中に<code>k</code>をタイプ</li>
+<li>killしたいPIDを入力＆Enter</li>
+<li><code>Send PID &lt;PID&gt; signal</code>でEnter</li>
+</ol>
+</li>
+<li><code>killall yes</code>と入力　→※同じコマンド名のものはすべてkillされる</li>
+</ul>
+<h3 id="topコマンド">topコマンド</h3>
+<p><a href="https://qiita.com/Kernel_OGSun/items/55afb7e93b445f1be019">topコマンドでよく使う or 便利そうな機能</a></p>
+<!-- raw HTML omitted -->
+<h2 id="コンソール上で入出力を受け付けない際の対処法">コンソール上で入出力を受け付けない際の対処法</h2>
+<ol>
+<li>Ctrl-sで入出力を受け付けなくなる</li>
+<li>Ctrl-q で復帰</li>
+</ol>
+<h2 id="aptコマンドubuntu-linux等">aptコマンド(Ubuntu Linux等)</h2>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>インストールされているパッケージの一覧を表示する</td>
+<td>$apt list &ndash;installed</td>
+</tr>
+<tr>
+<td>インストールされているパッケージを最新状態にする</td>
+<td>$apt-get update</td>
+</tr>
+<tr>
+<td>パッケージをインストールする</td>
+<td>$apt-get install package [package &hellip;]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ユーザーの追加方法">ユーザーの追加方法</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ useradd &lt;option&gt; &lt;user name&gt;
+</span></span></code></pre></div><h3 id="オプション">オプション</h3>
+<ul>
+<li>m: ホームディレクトリを追加</li>
+</ul>
+<h2 id="パーミッション">パーミッション</h2>
+<ul>
+<li>権限の変更
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ chmod u+w 
+</span></span></code></pre></div></li>
+<li>ユーザー所有権の変更
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ chown &lt;user name&gt;:&lt;group name&gt; &lt;file name&gt;
+</span></span></code></pre></div><ul>
+<li><code>&lt;user name&gt;:&lt;group name&gt;</code>はユーザー所有権とグループ所有権</li>
+<li>グループ所有権は省略可</li>
+</ul>
+</li>
+</ul>
+<h2 id="パスワードの変更">パスワードの変更</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ passwd &lt;user name&gt;
+</span></span></code></pre></div><h2 id="バックグラウンド処理">バックグラウンド処理</h2>
+<pre tabindex="0"><code>$ &lt;command&gt; &amp;
+</code></pre><h3 id="をつけ忘れた場合"><code>&amp;</code>をつけ忘れた場合</h3>
+<ol>
+<li>コマンド実行中に<strong>Ctrl-z</strong>でコマンドを中断</li>
+<li>
+<ul>
+<li>bgとタイプ　→　バックグラウンド処理に移行</li>
+<li>fgとタイプ　→　コンソール上で処理を再開</li>
+</ul>
+</li>
+</ol>
+<h2 id="エイリアス">エイリアス</h2>
+<h3 id="エイリアスの作成">エイリアスの作成</h3>
+<pre tabindex="0"><code>alias em=`emacs`
+</code></pre><p>※ここではemという名前でemacsのエイリアスを作成</p>
+<h3 id="エイリアスを無効にしてコマンドを実行">エイリアスを無効にしてコマンドを実行</h3>
+<pre tabindex="0"><code>\&lt;コマンド&gt;
+</code></pre><h3 id="エイリアスの確認">エイリアスの確認</h3>
+<pre tabindex="0"><code>alias &lt;エイリアス名&gt;
+</code></pre><h3 id="エイリアスの削除">エイリアスの削除</h3>
+<ol>
+<li>unalias em</li>
+<li>.bashrc のエイリアス設定も消去</li>
+</ol>
+<h2 id="シンボリックリンク">シンボリックリンク</h2>
+<p>ホームディレクトリにディレクトリ ~/c と ~/tmp を作成し、tmpから c へのシンボリックリンクを作成するには下記のようにする。</p>
+<pre tabindex="0"><code>$cd
+$mkdir c tmp
+$cd tmp
+$ln -s ../c
+</code></pre><h3 id="シンボリックリンクの削除">シンボリックリンクの削除</h3>
+<p><code>$unlink c</code> または <code>rm c</code>
+※ただし <code>rm c</code> で削除する場合は <code>rm c/</code> としてしまうと元のディレクトリの中身まで削除してしまうので注意！！</p>
+<h2 id="リダイレクト">リダイレクト</h2>
+<p><code>&gt;</code>をリダイレクトよぶ。リダイレクトの左で実行したコマンドの標準出力が、リダイレクトの右に書い
+たファイルに出力される。</p>
+<p>(例)ls -IR の出力をファイルls-IRに書き込む</p>
+<pre tabindex="0"><code>$ls -IR &gt; ls-IR
+</code></pre><h2 id="パイプ">パイプ</h2>
+<p><code>|</code>をパイプとよぶ。パイプの左側で実行したコマンドの標準出力が、パイプの右側のコマンドの標準入
+力になる。</p>
+<p>（例）</p>
+<ol>
+<li>
+<p>ファイルから文字列<code>PI</code>を含む行をすべて抜き出す</p>
+<pre tabindex="0"><code>$less math.h | grep IR
+</code></pre><p>【補足】math.hのファイルのパス(所在)を調べるには<code>locate</code>コマンドをインストールして使う</p>
+<pre tabindex="0"><code>$ sudo -E apt-get update
+$ sudo -E apt install mlocate
+$ locate math.h
+</code></pre></li>
+<li>
+<p>ファイルの先頭から50行のみを出力する。</p>
+<pre tabindex="0"><code>head -50 &lt;ファイル名&gt; | less
+</code></pre></li>
+<li>
+<p>ファイルの末尾50行のみを出力する。</p>
+<pre tabindex="0"><code>tail -50 &lt;ファイル名&gt; | less
+</code></pre></li>
+<li>
+<p>CSVファイルの2列目のみを抜き出して表示する。</p>
+<pre tabindex="0"><code>$cut -f 2 -d &#34;,&#34; retu.csv
+</code></pre><p>-f が表示する項数、-dが区切りの文字、-fと-dは基本一緒に使う</p>
+</li>
+<li>
+<p>2つのファイルの各行をくっつけて別のファイルに出力する。</p>
+<pre tabindex="0"><code>$paste -d &#34; &#34; data[1-2].txt &gt; data3.txt
+</code></pre><p>または</p>
+<pre tabindex="0"><code>$paste -d &#34; &#34; data1.txt data2.txt &gt; data3.txt
+</code></pre></li>
+</ol>
+<h2 id="文字列の置換">文字列の置換</h2>
+<p>ストリームエディタ sed を使うと、文字列の置
+換を簡単にできる。あるファイル中の文字列 1 を
+文字列 2 に置換した内容を出力したいときには以
+下を実行する。</p>
+<pre tabindex="0"><code>$ sed −e ”s/文字列1/文字列2/g” &lt;ファイル名&gt;
+</code></pre><p>※gはすべての文字列を置換するためのオプション。これがない場合は各行で一番はじめにあった文字列1のみが置換される。</p>
+<p>（例）</p>
+<ol>
+<li>
+<p>ファイルの空白をすべて削除</p>
+<pre tabindex="0"><code>$sed -i -e &#34;s/ //g&#34; ファイル名
+</code></pre><ul>
+<li>-i はファイルの中身そのものの変更</li>
+<li>gはすべてのマッチした文字列を置換（gの指定がなく1行に２つ以上文字がある場合は1つ目しか置換されない</li>
+</ul>
+</li>
+<li>
+<p>ファイルの連続した5つのスペースをタブに変換してその結果をファイルに保存</p>
+<pre tabindex="0"><code>$sed -i -e &#34;s/[(space)(tab)][(space)(tab)]*/[(tab)]/g&#34; ファイル名
+</code></pre><p>※(space)および(tab)はそれぞれスペースキー、タブキーをクリック</p>
+</li>
+<li>
+<p>ファイルの各行のはじめ(行頭)にある空白およびタブをすべて削除する方法</p>
+<pre tabindex="0"><code>$ sed -i -e &#34;s/^[ \t]*//&#34; test
+</code></pre><p>※<code>^</code>は行頭を表す</p>
+</li>
+</ol>
+<h2 id="その他の様々なコマンド">その他の様々なコマンド</h2>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>locate &lt;ファイル名&gt;</td>
+<td>そのファイルがシステム上のどこにあるか、一覧を表示するコマンド</td>
+</tr>
+<tr>
+<td>which &lt;コマンド&gt;</td>
+<td>実行されるコマンドがどこのパスにあるか表示</td>
+</tr>
+<tr>
+<td>diff <!-- raw HTML omitted --> <!-- raw HTML omitted --></td>
+<td>ファイル1と2の違いを表示</td>
+</tr>
+<tr>
+<td>cd -</td>
+<td>もとのディレクトリに移動</td>
+</tr>
+<tr>
+<td>df</td>
+<td>ディスク使用率を表示</td>
+</tr>
+<tr>
+<td>wc &lt;ファイル名&gt;</td>
+<td>ファイルに含まれる文字数や行数を表示</td>
+</tr>
+<tr>
+<td>nkf -g &lt;ファイル名&gt;</td>
+<td>日本語のテキストファイルの文字コードを判断</td>
+</tr>
+<tr>
+<td>nkf -w &lt;ファイル名&gt;</td>
+<td>テキストファイルの文字コードをUTF-8に変換</td>
+</tr>
+</tbody>
+</table>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          </section>        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

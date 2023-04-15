@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Filter with python :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/python/filter/index.html" rel="canonical" type="text/html" title="Filter with python :: Chiyo&#39;s blog">
+    <link href="/python/filter/index.xml" rel="alternate" type="application/rss+xml" title="Filter with python :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/python/filter/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/python/index.html"><span itemprop="name">Python</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Filter with python</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="filter-with-python">Filter with python</h1>
+
+<h2 id="filtfiltを用いたバンドパスフィルタバターワースフィルタの記述例">filtfiltを用いたバンドパスフィルタ(バターワースフィルタ)の記述例</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#バターワースフィルタ（バンドパス）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fp <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">50</span>])       <span style="color:#75715e">#通過域端周波数[Hz]</span>
+</span></span><span style="display:flex;"><span>fs <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">100</span>])       <span style="color:#75715e">#阻止域端周波数[Hz]</span>
+</span></span><span style="display:flex;"><span>gpass <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>       <span style="color:#75715e">#通過域端最大損失[dB]</span>
+</span></span><span style="display:flex;"><span>gstop <span style="color:#f92672">=</span> <span style="color:#ae81ff">40</span>      <span style="color:#75715e">#阻止域端最小損失[dB]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bandpass</span>(x, samplerate, fp, fs, gpass, gstop):<span style="color:#75715e">#samplerate がサンプリング周波数</span>
+</span></span><span style="display:flex;"><span>    fn <span style="color:#f92672">=</span> samplerate <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>                           <span style="color:#75715e">#ナイキスト周波数</span>
+</span></span><span style="display:flex;"><span>    wp <span style="color:#f92672">=</span> fp <span style="color:#f92672">/</span> fn                                  <span style="color:#75715e">#ナイキスト周波数で通過域端周波数を正規化</span>
+</span></span><span style="display:flex;"><span>    ws <span style="color:#f92672">=</span> fs <span style="color:#f92672">/</span> fn                                  <span style="color:#75715e">#ナイキスト周波数で阻止域端周波数を正規化</span>
+</span></span><span style="display:flex;"><span>    N, Wn <span style="color:#f92672">=</span> signal<span style="color:#f92672">.</span>buttord(wp, ws, gpass, gstop)  <span style="color:#75715e">#オーダーとバターワースの正規化周波数を計算</span>
+</span></span><span style="display:flex;"><span>    b, a <span style="color:#f92672">=</span> signal<span style="color:#f92672">.</span>butter(N, Wn, <span style="color:#e6db74">&#39;bandpass&#39;</span>)            <span style="color:#75715e">#フィルタ伝達関数の分子と分母を計算</span>
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">=</span> signal<span style="color:#f92672">.</span>filtfilt(b, a, x)                  <span style="color:#75715e">#信号に対してフィルタをかける</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> y                                      <span style="color:#75715e">#フィルタ後の信号を返す</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> bandpass(f_biceps, samplerate, fp, fs, gpass, gstop)
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="scipysignalfiltfilt">scipy.signal.filtfilt</h2>
+<p><strong>scipyのfiltfiltを使用する場合は以下のようにインポートする</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> signal
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span></code></pre></div><p>※pltはインポートしなくても大丈夫？</p>
+<!-- raw HTML omitted -->
+<h4 id="filtfiltの記述の仕方">filtfiltの記述の仕方</h4>
+<p>filtfiltでバターワースフィルターをかける場合には以下のように記述する</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>b, a <span style="color:#f92672">=</span> signal<span style="color:#f92672">.</span>butter(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">0.125</span>)
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> signal<span style="color:#f92672">.</span>filtfilt(b, a, x, padlen<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>)
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h4 id="filtfiltのパラメータと返り値">filtfiltのパラメータと返り値</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>scipy<span style="color:#f92672">.</span>signal<span style="color:#f92672">.</span>filtfilt(b, a, x, axis<span style="color:#f92672">=-</span> <span style="color:#ae81ff">1</span>, padtype<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;odd&#39;</span>, padlen<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pad&#39;</span>, irlen<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>)<span style="color:#960050;background-color:#1e0010">`</span>
+</span></span></code></pre></div><ol>
+<li>
+<p>parameters</p>
+<ul>
+<li>
+<p>b : (<em>N</em>,)arrau_like
+フィルターの分子係数</p>
+</li>
+<li>
+<p>a : (<em>N</em>,)array_like
+フィルターの分母係数</p>
+<p>a[0]が1でなければaもbもa[0]で正規化される。</p>
+</li>
+<li>
+<p>x : array_like
+フィルターをかける配列のデータ</p>
+</li>
+<li>
+<p>axis : int, optional
+フィルターを適用するx軸。デフォルトは-1</p>
+</li>
+<li>
+<p>padtype</p>
+</li>
+<li>
+<p>pandlen</p>
+</li>
+<li>
+<p>method</p>
+</li>
+<li>
+<p>irlen</p>
+</li>
+</ul>
+</li>
+<li>
+<p>return</p>
+<ul>
+<li>ndarray
+xと同じ形状の(?)フィルタリングされた出力</li>
+</ul>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<h2 id="バターワースデジタルフィルターバターワースアナログフィルターの設計">バターワースデジタルフィルター、バターワースアナログフィルターの設計</h2>
+<p>バターワースフィルターの設計では<code>scipy.signal.butter</code>モジュールを使用する。
+このモジュールでは N 次元のデジタル、またはアナログバターワースフィルターを設計し、係数を返す。</p>
+<!-- raw HTML omitted -->
+<h4 id="記述方法">記述方法</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> signal
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>b, a <span style="color:#f92672">=</span> signal<span style="color:#f92672">.</span>butter(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">100</span>, <span style="color:#e6db74">&#39;low&#39;</span>, analog<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h4 id="パラメータと返り値">パラメータと返り値</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>scipy<span style="color:#f92672">.</span>signal<span style="color:#f92672">.</span>butter(N, Wn, btype<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;low&#39;</span>, analog<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, output<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ba&#39;</span>, fs<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>)
+</span></span></code></pre></div><ol>
+<li>
+<p>parameters</p>
+<ul>
+<li>
+<p>N : int
+フィルターの次数　←　<code>buttor</code>モジュールで必要な最低次数を求められる(？)</p>
+</li>
+<li>
+<p>Wn : array_like
+臨界周波数。</p>
+<p>ローパス、ハイパスフィルターでは、Wn はスカラー。バンドパス、バンドストップフィルターでは長さ2の配列。</p>
+<p>バターワースフィルターでは、ゲインが通過帯域の1/√2 まで低下する点(「-3dB点」)を表す。</p>
+<p>アナログフィルターでは Wn は各周波数(例：rad/s)</p>
+</li>
+<li>
+<p>btype : {‘lowpass’, ‘highpass’, ‘bandpass’, ‘bandstop’}, optional
+filterのタイプ。デフォルトはlowpass</p>
+</li>
+<li>
+<p>analog</p>
+</li>
+<li>
+<p>output</p>
+</li>
+<li>
+<p>fs</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Returns</p>
+<ul>
+<li>
+<p>b, a : nadarray, ndarray
+IIR フィルターの分子 (b) および 分母 (a) 多項式。   output=&lsquo;ba&rsquo; のときだけ返される。</p>
+</li>
+<li>
+<p>z, p, k</p>
+</li>
+<li>
+<p>sos</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="バターワースフィルターの次数選択">バターワースフィルターの次数選択</h2>
+<p>バターワースフィルターの次数選択では <code>buttord</code> モジュールを用いる。</p>
+<p>このモジュールでは、通過帯域で gpass dB 以上の減衰がなく、停止帯域で gstop dB 以上の減衰がある最低次のデジタルまたはアナログバターワースフィルタの次数を返す。</p>
+<!-- raw HTML omitted -->
+<h4 id="記述方法-1">記述方法</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> signal
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> pltN<span style="color:#f92672">,</span> Wn <span style="color:#f92672">=</span> signal<span style="color:#f92672">.</span>buttord([<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">50</span>], [<span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">60</span>], <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">40</span>, <span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>b, a <span style="color:#f92672">=</span> signal<span style="color:#f92672">.</span>butter(N, Wn, <span style="color:#e6db74">&#39;band&#39;</span>, <span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>w, h <span style="color:#f92672">=</span> signal<span style="color:#f92672">.</span>freqs(b, a, np<span style="color:#f92672">.</span>logspace(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">500</span>))
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h4 id="パラメータと返り値-1">パラメータと返り値</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>scipy<span style="color:#f92672">.</span>signal<span style="color:#f92672">.</span>buttord(wp, ws, gpass, gstop, analog<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, fs<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>)
+</span></span></code></pre></div><ol>
+<li>
+<p>parameters</p>
+<ul>
+<li>
+<p>wp, ws : float
+通過帯域と阻止帯域のエッジ周波数。</p>
+<p>デジタルフィルタの場合、これらはfsと同じ単位である。デフォルトでは、fsは 2 half-cycles/sample なので、これらは0から1に正規化され、1がナイキスト周波数となる。(wpとwsはhalf-cycles/sample )例えば</p>
+<pre><code>      ローパス：wp=0.2, ws=0.3
+
+      ハイパス：wp = 0.3, ws = 0.2
+
+      バンドパス：wp = [0.2, 0.5]、ws = [0.1, 0.6].
+
+      バンドストップ：wp＝［0.1，0.6］，ws＝［0.2，0.5］。
+</code></pre>
+<p>アナログフィルタの場合、wpとwsは角周波数（例：rad/s）です。</p>
+</li>
+<li>
+<p>gpass : float
+通過帯域の最大損失(dB)。</p>
+</li>
+<li>
+<p>gstop : float
+停止帯域の最小減衰量（dB）。</p>
+</li>
+<li>
+<p>analog : bool, optional</p>
+</li>
+<li>
+<p>fs : float, optional
+デジタルシステムのサンプリング周波数</p>
+</li>
+</ul>
+</li>
+<li>
+<p>returns</p>
+<ul>
+<li>
+<p>ord : int
+使用を満たすバターワースフィルターの最低次数</p>
+</li>
+<li>
+<p>wn : ndarray or float
+バターワース固有振動数（すなわち &ldquo;3dB振動数&rdquo;）。フィルタリングの結果を得るために、butterと一緒に使用する必要がある。fs が指定された場合、これは同じ単位であり、fs も butter に渡さなければならない。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.filtfilt.html">scipy.signal.filtfilt</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.butter.html">scipy.signal.butter</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.buttord.html#scipy.signal.buttord">scipy.signal.buttor</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

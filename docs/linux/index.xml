@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Chiyo&#39;s blog</title>
+    <link>https://moematsuda-ai.github.io/linux/index.html</link>
+    <description>Recent content in Linux on Chiyo&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 29 Mar 2023 06:50:00 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shortcut</title>
+      <link>https://moematsuda-ai.github.io/linux/shortcut/index.html</link>
+      <pubDate>Wed, 29 Mar 2023 06:50:00 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/linux/shortcut/index.html</guid>
+      <description>エディタのショートカットキー 移動系 ショートカットキー 概要 Ctrl+Home ファイルの先頭に移動 Ctrl＋End ファイルの末尾に移動 Home 行頭に移動 End 行末に移動 Ctrl＋← 単語の先頭に移動 Ctrl+→ 単語の末尾に移動 分割 ショートカットキー 概要 ショートカットキー 概要 Ctrl＋\ ※\は右上の｜のキーボード 編集画面を分割表示 Ctrl＋１or２or 3 &amp;hellip; 分割した画面間を移動 ファイルやディレクトリの開き方 ショートカットキー 概要 Ctrl＋N 新規ファイル Ctrl＋Shift＋N 新規ウィンドウ Ctrl＋o ファイルを開く 文字列検索 ショートカットキー 概要 Ctrl＋F エディタ内検索 Ctrl＋H エディタ内置換 F3 次の検索結果にジャンプ Shift＋F3 前の検索結果にジャンプ </description>
+    </item>
+    <item>
+      <title>シェルスクリプト</title>
+      <link>https://moematsuda-ai.github.io/linux/shell_script/index.html</link>
+      <pubDate>Wed, 29 Mar 2023 06:36:40 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/linux/shell_script/index.html</guid>
+      <description>シェルスクリプト $mv arg.sh ~/bin/arg.sh ※このあとパス設定が必要だけど、すでにbinにパスが設定されてた… パスの確認方法は
+$printenv PATH シェルスクリプトの作成手順 ~/bin にbzdirファイルを作成
+ファイルに書き込めたら次のコマンドを実行
+$chmod +x bzdir.sh ファイル内容は　~/bin/bzdir を参照 ~/.bashrcに下記の記述を書き込む
+&amp;#34;alias bzdir=&amp;#39;bzdir.sh&amp;#39; $source ~/.bashrcを実行</description>
+    </item>
+    <item>
+      <title>Command</title>
+      <link>https://moematsuda-ai.github.io/linux/command/index.html</link>
+      <pubDate>Wed, 29 Mar 2023 06:20:56 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/linux/command/index.html</guid>
+      <description>コンソールの起動 Ctel+F[2~3] 以下のコマンドを実行することでコンソール画面からXwindowを起動することもできる $ startx ログインするアカウント名を入力 passwordを入力 X windowへの復帰 Ctrl-Alt-F7 コマンド停止方法 Ctrl + C コマンド kill ps r を入力 PID（プロセスID）を確認 kill [PID] を入力 コマンド kill② ps auxw | grep yes （axでもOK）で実行しているコマンドyesのPID（2列目）を検索 kill [PID] を入力 コマンド kill③ topでPIDを確認 topコマンド実行中にkをタイプ killしたいPIDを入力＆Enter Send PID &amp;lt;PID&amp;gt; signalでEnter killall yesと入力　→※同じコマンド名のものはすべてkillされる topコマンド topコマンドでよく使う or 便利そうな機能
+コンソール上で入出力を受け付けない際の対処法 Ctrl-sで入出力を受け付けなくなる Ctrl-q で復帰 aptコマンド(Ubuntu Linux等) コマンド 概要 インストールされているパッケージの一覧を表示する $apt list &amp;ndash;installed インストールされているパッケージを最新状態にする $apt-get update パッケージをインストールする $apt-get install package [package &amp;hellip;] ユーザーの追加方法 $ useradd &amp;lt;option&amp;gt; &amp;lt;user name&amp;gt; オプション m: ホームディレクトリを追加 パーミッション 権限の変更 $ chmod u+w ユーザー所有権の変更 $ chown &amp;lt;user name&amp;gt;:&amp;lt;group name&amp;gt; &amp;lt;file name&amp;gt; &amp;lt;user name&amp;gt;:&amp;lt;group name&amp;gt;はユーザー所有権とグループ所有権 グループ所有権は省略可 パスワードの変更 $ passwd &amp;lt;user name&amp;gt; バックグラウンド処理 $ &amp;lt;command&amp;gt; &amp;amp; &amp;amp;をつけ忘れた場合 コマンド実行中にCtrl-zでコマンドを中断 bgとタイプ　→　バックグラウンド処理に移行 fgとタイプ　→　コンソール上で処理を再開 エイリアス エイリアスの作成 alias em=`emacs` ※ここではemという名前でemacsのエイリアスを作成</description>
+    </item>
+  </channel>
+</rss>

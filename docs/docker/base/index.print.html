@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Basic docker usage :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/docker/base/index.html" rel="canonical" type="text/html" title="Basic docker usage :: Chiyo&#39;s blog">
+    <link href="/docker/base/index.xml" rel="alternate" type="application/rss+xml" title="Basic docker usage :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/docker/base/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/docker/index.html"><span itemprop="name">Docker</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Basic docker usage</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="basic-docker-usage">Basic docker usage</h1>
+
+<h2 id="systemctl-の使い方">systemctl の使い方</h2>
+<h3 id="docker-の起動と停止">Docker の起動と停止</h3>
+<pre tabindex="0"><code>$ systemctl start docker.service
+$ systemctl stop docker.service
+$ systemctl stop docker.socket
+</code></pre><h3 id="設定の反映と再起動">設定の反映と再起動</h3>
+<pre tabindex="0"><code>$ systemctl deamon-reload
+$ systemctl restart docker.service
+</code></pre><h2 id="docker-コマンド">docker コマンド</h2>
+<pre tabindex="0"><code>$ docker &lt;上位コマンド&gt; &lt;副コマンド&gt; &lt;オプション&gt; &lt;対象&gt; &lt;引数&gt;
+</code></pre><h3 id="option">option</h3>
+<table>
+<thead>
+<tr>
+<th>オプションの書式</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ndash;name &lt;コンテナ名&gt;</td>
+<td>コンテナ名の指定</td>
+</tr>
+<tr>
+<td>-p &lt;ホストのポート番号&gt;:&lt;コンテナのポート番号&gt;</td>
+<td>ポート番号の指定</td>
+</tr>
+<tr>
+<td>-v &lt;ホストのディスク&gt;:&lt;コンテナのディレクトリ&gt;</td>
+<td>ボリュームのマウント</td>
+</tr>
+<tr>
+<td>&ndash;net=&lt;ネットワーク&gt;</td>
+<td>コンテナをネットワークに接続</td>
+</tr>
+<tr>
+<td>-e &lt;環境変数名&gt;=&lt;値&gt;</td>
+<td>環境変数の指定</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>バックグラウンドで実行(detach: デタッチモードの略)</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>コンテナに操作端末（キーボード）をつなぐ</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>特殊キーを使用可能にする</td>
+</tr>
+<tr>
+<td>-help</td>
+<td>ヘルプの表示</td>
+</tr>
+<tr>
+<td>&ndash;rm</td>
+<td>コンテナ終了時に自動的にコンテナを削除する</td>
+</tr>
+<tr>
+<td>&ndash;workdir <!-- raw HTML omitted -->, -w <!-- raw HTML omitted --></td>
+<td>コンテナ内部の作業ディレクトリを変更する</td>
+</tr>
+</tbody>
+</table>
+<h3 id="docker-container-の作成">Docker container の作成</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker run &lt;option&gt; &lt;container image&gt; &lt;引数&gt;
+</span></span></code></pre></div><p><code>docker run</code>コマンドは、イメージをダウンロードする<code>docker pull</code>, コンテナを作成する<code>docker create</code>, コンテナを起動する<code>docker start</code>コマンドを一つにまとめたもの。</p>
+<p>コンテナを起動せずに作成したい(docker createしたい)場合などに, <code>docker create</code>と<code>docker start</code>を分けて使用する。</p>
+<h3 id="docker-起動と停止">Docker 起動と停止</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker start &lt;container name or container ID&gt; <span style="color:#75715e">#container の起動(container ID は他と重複しない先頭数文字だけでOK！)</span>
+</span></span><span style="display:flex;"><span>$ docker stop &lt;container name or container ID&gt; <span style="color:#75715e">#container のストップ</span>
+</span></span></code></pre></div><h3 id="便利なコマンド">便利なコマンド</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker logs &lt;container name&gt; <span style="color:#75715e">#logの確認</span>
+</span></span></code></pre></div><h3 id="container-の破棄">container の破棄</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker container ls <span style="color:#75715e">#起動中のコンテナの表示(`docker ps`のように省略可)</span>
+</span></span><span style="display:flex;"><span>$ docker container rm &lt;container name&gt; <span style="color:#75715e">#コンテナの削除(``docker rm`のように省略可)</span>
+</span></span></code></pre></div><p>起動していないコンテナをすべて削除する場合は</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker container prune
+</span></span></code></pre></div><h3 id="image-の破棄">image の破棄</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker image ls <span style="color:#75715e">#ダウンロードしたイメージ一覧</span>
+</span></span><span style="display:flex;"><span>$ docker image rm &lt;repository&gt;:&lt;tag&gt; <span style="color:#75715e">#imageの削除(※tag が latest という最新版を表す値の場合は省略可, `docker rmi` のように省略可)</span>
+</span></span></code></pre></div><h3 id="docker-の容量利用状況の確認">Docker の容量利用状況の確認</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker system df
+</span></span></code></pre></div><h3 id="build-cache-の削除">Build Cache の削除</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker builder prune
+</span></span></code></pre></div><p>※キャッシュが貯まると容量を大量に食うので注意！</p>
+<h3 id="detachとattach">detachとattach</h3>
+<ul>
+<li>
+<p>detach
+Ctrl+P, Ctrl+Q</p>
+</li>
+<li>
+<p>attach</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker attach &lt;container name or containerID&gt;
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="shellの実行">shellの実行</h3>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>コンテナの状態</th>
+<th>シェル終了時</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docker run</td>
+<td>停止時</td>
+<td>コンテナ終了</td>
+</tr>
+<tr>
+<td>docker exec</td>
+<td>稼働時</td>
+<td>稼働のまま</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>実行中のコンテナの場合</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker exec -it &lt;container name&gt; /bin/bash
+</span></span></code></pre></div><p>を実行することでシェルが起動する</p>
+<p>※ここで<code>exit</code>しても<code>docker exec</code> で実行したものが終了するだけのため、コンテナは終了しない</p>
+</li>
+<li>
+<p><strong>停止中のコンテナの場合</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker run --name &lt;container name&gt; -it &lt;conteinaer image&gt; /bin/bash
+</span></span></code></pre></div><p>を実行することでシェルが起動する</p>
+<p>※ここで<code>exit</code>するとコンテナも終了する</p>
+</li>
+<li>
+<p>補足</p>
+<ul>
+<li>ここではあくまで<code>/bin/bash</code>というコマンドを実行しているだけのため、<code>/bin/passwd</code>(パスワードの変更画面を表示)のような他のコマンドを実行することもできる。</li>
+<li>他のシェルを使用したい場合には <code>/bin/bash</code> でなく <code>/bin/sh/</code> のように実行することもできる</li>
+<li>現在使用しているシェルは<code>echo $SHELL</code>, 使用可能なシェルは<code>cat /etc/shells</code>で確認することができる。</li>
+</ul>
+</li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

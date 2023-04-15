@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Table :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/latex/table/index.html" rel="canonical" type="text/html" title="Table :: Chiyo&#39;s blog">
+    <link href="/latex/table/index.xml" rel="alternate" type="application/rss+xml" title="Table :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/latex/table/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/latex/index.html"><span itemprop="name">Latex</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Table</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="table">Table</h1>
+
+<h2 id="表の書き方">表の書き方</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{table}
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\label</span>{ラベル名}
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\centering</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\caption</span>{表題}
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\begin</span>{tabular}{|c|c|c|}<span style="color:#75715e">%3列で表示、列と列の間に縦罫線を引く
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">\hline</span>
+</span></span><span style="display:flex;"><span>      西暦 &amp; 測定者 &amp; 測定方法 &amp; 測定結果 <span style="color:#66d9ef">\\</span>
+</span></span><span style="display:flex;"><span>      &amp; &amp; &amp; <span style="color:#e6db74">$</span>\times <span style="color:#ae81ff">10</span>^<span style="color:#ae81ff">8</span><span style="color:#e6db74">$</span> [m/sec] <span style="color:#66d9ef">\\</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">\hline</span> <span style="color:#66d9ef">\hline</span>
+</span></span><span style="display:flex;"><span>      1638 &amp; Galileo &amp; 二人が離れてランプの光を見る &amp; (音速10倍以上) <span style="color:#66d9ef">\\</span>
+</span></span><span style="display:flex;"><span>      1675 &amp; Roemer &amp; 木星の衛星の観測から &amp; 2 <span style="color:#66d9ef">\\</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">\hline</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\end</span>{tabular}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{table}
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h2 id="コマンド">コマンド</h2>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\hline</td>
+<td>横罫線を引く ※2回かけば2つ横罫線が引かれる</td>
+</tr>
+<tr>
+<td>\multicolmn{横に結合するマスの数}{表示形式、<code>|c|</code>等}{文字}</td>
+<td>横に並んだ表の要素を結合する</td>
+</tr>
+<tr>
+<td>\cline{3-5}</td>
+<td>任意の列に横罫線を引く(ここでは3列目から5列目に横罫線を引く)</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="packageを用いた表作成">packageを用いた表作成</h2>
+<table>
+<thead>
+<tr>
+<th>概要</th>
+<th>コマンド</th>
+<th>備考</th>
+<th>package</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>セルの結合（縦）</td>
+<td>\multirow{結合要素数}{*}{文字}</td>
+<td>縦に並んだ表の要素を結合</td>
+<td>multirow</td>
+</tr>
+<tr>
+<td>幅を指定した横罫線</td>
+<td>\toprule[<!-- raw HTML omitted -->]</td>
+<td>表の最上部の横罫線を引きます．<!-- raw HTML omitted -->は線幅です．線幅を設定しないデフォルトを強く推奨します．</td>
+<td>booktabs</td>
+</tr>
+<tr>
+<td>横罫線(列見出しと本文、幅指定)</td>
+<td>\midrule[<!-- raw HTML omitted -->]</td>
+<td>列見出しと本文の間に横罫線を引きます．</td>
+<td>booktabs</td>
+</tr>
+<tr>
+<td>横罫線(表の最下部、幅指定)</td>
+<td>\bottomrule[<!-- raw HTML omitted -->]</td>
+<td>表の最下部の横罫線を引きます．</td>
+<td>booktabs</td>
+</tr>
+<tr>
+<td>任意の行への縦罫線</td>
+<td>\cmidrule<a href="/latex/table/index.html/trim"><!-- raw HTML omitted --></a>{a-b}</td>
+<td>a 行目から b 行目まで罫線を引きます．trim の設定(lr)を強く勧めます．</td>
+<td>booktabs</td>
+</tr>
+<tr>
+<td>行間スペース</td>
+<td>\addlinespace[<!-- raw HTML omitted -->]</td>
+<td>行間にスペースを挿入します．</td>
+<td>booktabs</td>
+</tr>
+<tr>
+<td>二重罫線(\cmidrule)</td>
+<td>\morecmidrules</td>
+<td>\cmidrule を二重罫線にするときに使います．他の罫線 (\toprule, \midrule, \bottomrule) では不要です．</td>
+<td>booktabs</td>
+</tr>
+<tr>
+<td>スペースありの罫線</td>
+<td>\specialrule{<!-- raw HTML omitted -->}{<!-- raw HTML omitted -->}{<!-- raw HTML omitted -->}</td>
+<td>上下にスペースを挿入した罫線を引きます．これを使う場合，三つの引数が必須です．</td>
+<td>booktabs</td>
+</tr>
+</tbody>
+</table>
+<p>※＜wd＞は幅指定（pt,em, cmなど)</p>
+<p>※「<!-- raw HTML omitted -->」は線のトリミングの指定です．「(lr)」とすると，列の幅より少し短い罫線になります．格好良い罫線が引きますので，このオプションをつけることを強く推奨します．「l{-2.3mm}r{3.4mm}」のようにすると，罫線を左側に 2.3 mm 伸び，右側に 3.4 mm 短くなります．</p>
+<p>※「<!-- raw HTML omitted -->」と「<!-- raw HTML omitted -->」は，罫線上下の空白の幅を指定します．幅指定は (1pt, 0.5em, 1.2mm) のようにします．</p>
+<!-- raw HTML omitted -->
+<h2 id="tabularの設定パラメータ">tabularの設定パラメータ</h2>
+<table>
+<thead>
+<tr>
+<th>パラメータ</th>
+<th>動作</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>l</td>
+<td>左詰(left)</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>r</td>
+<td>右詰</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>c</td>
+<td>センタリング</td>
+<td>引き続くブロックのセンタリング指定</td>
+</tr>
+<tr>
+<td>p{長さ}</td>
+<td>上/左詰めの幅指定カラム(paragraph)</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>m{長さ}</td>
+<td>中/左詰めの幅指定カラム(middle)</td>
+<td><code>arry.sty</code>が必要</td>
+</tr>
+<tr>
+<td>b{長さ}</td>
+<td>下/左詰めの幅指定カラム(bottom)</td>
+<td><code>arry.sty</code>が必要</td>
+</tr>
+<tr>
+<td>@{文字列}</td>
+<td>文字列がセパレーターになる</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>`</td>
+<td>`</td>
+<td>縦線(1本)</td>
+</tr>
+<tr>
+<td>`</td>
+<td></td>
+<td>`</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="http://www.yamamo10.jp/yamamoto/comp/latex/make_doc/table/table.php">LaTeX 表組</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

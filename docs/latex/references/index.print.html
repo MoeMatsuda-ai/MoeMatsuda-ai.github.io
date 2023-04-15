@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>References :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/latex/references/index.html" rel="canonical" type="text/html" title="References :: Chiyo&#39;s blog">
+    <link href="/latex/references/index.xml" rel="alternate" type="application/rss+xml" title="References :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/latex/references/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/latex/index.html"><span itemprop="name">Latex</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">References</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="references">References</h1>
+
+<h2 id="latexでの参考文献の書き方">LaTeXでの参考文献の書き方</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{thebibliography}{99}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\bibitem</span>{参照ラベル名1} 文献情報
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\bibitem</span>{参照ラベル2名} 文献情報
+</span></span><span style="display:flex;"><span>......
+</span></span><span style="display:flex;"><span>......
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{thebibliography}
+</span></span></code></pre></div><p>このように記述してタイプセットすると、文献番号が<code>\bibitem</code>の登録順に[1], [2], [3], &hellip; のように表される。</p>
+<p><strong>本文中で文献情報を参照するには次のように記述する</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>....といったことが指摘されている<span style="color:#66d9ef">\cite</span>{ラベル名a}<span style="color:#66d9ef">\cite</span>{ラベル名b}
+</span></span></code></pre></div><p>これをタイプセットすると<code>....といったことが指摘されている[6][9]</code>のように表示される。</p>
+<p>文中で文献番号だけでなくページ数などをオプション表示させるには次のように記述する。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>....といったことが指摘されている
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\cite</span>{ラベル名a}<span style="color:#66d9ef">\cite</span><span style="color:#a6e22e">[第3章127ページ]</span>{ラベル名b}。
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h2 id="引用を上付き右カッコで表示する">引用を上付き右カッコで表示する</h2>
+<p>LaTeXの引用表示を[xxx]ではなくxxx)にする方法。プリアンブルに次のように書く。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\makeatletter</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\@</span>cite#1{<span style="color:#66d9ef">\textsuperscript</span>{#1)}}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\makeatother</span>
+</span></span></code></pre></div><p>他にいろいろ変えたければ、\textsuperscript{#1)}の部分を編集する (#1が冒頭に出てきたxxxにあたる)。
+参考文献一覧の先頭も同様にに変えたい場合、プリアンブルの\makeatletter～\makeatother中に次のように書く。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\def\@</span>biblabel#1{#1)}
+</span></span></code></pre></div><h4 id="makeatleter-maketotherとは">〇<code>\makeatleter</code>, <code>\maketother</code>とは？</h4>
+<p>また，再定義するマクロの名前や再定義の内容に @ が現れる場合は，次のように再定義全体を <code>\makeatletter</code> と <code>\makeatother</code> で挟んでおく必要がある．</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{foo}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\makeatletter</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\renewcommand\bar</span>{... 20pt ...}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\makeatother</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="http://www.ic.daito.ac.jp/~mizutani/tex/drill/drillbook3.html">参考文献情報の書き方</a></li>
+<li><a href="http://nabew.blog113.fc2.com/blog-entry-19.html">創作メモ 【参考文献の表示の変更】</a></li>
+<li><a href="https://texwiki.texjp.org/?%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8">LaTeX Wiki パッケージ</a></li>
+</ul>
+<h2 id="bibtex-の使い方">bibtex の使い方</h2>
+<ol>
+<li>
+<p><code>.bib</code>拡張子のファイルを用意し、内容を記述</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% 論文の場合
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>@article{hoshino2019,
+</span></span><span style="display:flex;"><span>    author  = {Hikaru Hoshino and Yoshihiko Susuki and T. John Koo and Takashi Hikihara},
+</span></span><span style="display:flex;"><span>    journal = {Journal of Dynamic Systems, Measurement, and Control},
+</span></span><span style="display:flex;"><span>    title   = {Structural Analysis and Control of a Model of Two-Site Electricity and Heat Supply},
+</span></span><span style="display:flex;"><span>    year    = {2019},
+</span></span><span style="display:flex;"><span>    volume  = {141},
+</span></span><span style="display:flex;"><span>    number  = {10},
+</span></span><span style="display:flex;"><span>    pages   = {101004},
+</span></span><span style="display:flex;"><span>    doi     = {10.1115/1.4043703},
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% 本の場合
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>@book{biggar2014,
+</span></span><span style="display:flex;"><span>    author    = {Darryl R.Biggar and Mohammad Reza Hesamzadeh},
+</span></span><span style="display:flex;"><span>    title     = {The Economics of Electricity Market},
+</span></span><span style="display:flex;"><span>    publisher = {John Wiley &amp; Sons},
+</span></span><span style="display:flex;"><span>    isbn      = {9781118775752},
+</span></span><span style="display:flex;"><span>    year      = {2014},
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>本文中の参考文献を出力したい一に以下の記述を追加</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\bibliographystyle</span>{junsrt} <span style="color:#75715e">%参考文献出力スタイル
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\bibliography</span>{hoge} <span style="color:#75715e">%hoge.bibから拡張子を外した名前
+</span></span></span></code></pre></div><p>なお、参考文献出力スタイル(bibliographystyle)には主に以下のスタイルがあります。</p>
+<table>
+<thead>
+<tr>
+<th>欧文用</th>
+<th>和文用</th>
+<th>特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plain</td>
+<td>jplain</td>
+<td>参考文献をアルファベット順で出力する</td>
+</tr>
+<tr>
+<td>unsrt</td>
+<td>junsrt</td>
+<td>参考文献を引用された順で出力する</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h1 id="参考-1">参考</h1>
+<ul>
+<li><a href="http://ideas.paunix.org/latex/latex_6_bib.htm">thebibliography 環境</a></li>
+<li><a href="https://qiita.com/SUZUKI_Masaya/items/14f9727845e020f8e7e9">BiBTeXとは Qiita</a></li>
+<li><a href="https://www.eng.u-hyogo.ac.jp/faculty/hoshino/pc/latex/bibtex/">星野光　参考文献の書き方</a></li>
+<li><a href="http://www.yamamo10.jp/yamamoto/comp/latex/bibtex/bibtex.html">LaTeX 参考文献処理(BibTeX)</a></li>
+<li><a href="https://gist.github.com/momota10s/97887692ebe01f24d234">BiBTeXでのURLの書き方</a></li>
+<li><a href="https://qiita.com/SUZUKI_Masaya/items/a552ad66705f4f9a5710">学術論文の情報をそれらしい形で出力する方法 Quiita</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

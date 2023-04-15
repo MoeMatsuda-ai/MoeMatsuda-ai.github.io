@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Basic operation on Chiyo&#39;s blog</title>
+    <link>https://moematsuda-ai.github.io/markdown/base/index.html</link>
+    <description>Recent content in Basic operation on Chiyo&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 24 Nov 2022 01:38:14 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/markdown/base/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

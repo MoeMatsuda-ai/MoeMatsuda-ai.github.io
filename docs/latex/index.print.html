@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Latex :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/latex/index.html" rel="canonical" type="text/html" title="Latex :: Chiyo&#39;s blog">
+    <link href="/latex/index.xml" rel="alternate" type="application/rss+xml" title="Latex :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/latex/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Latex</span><meta itemprop="position" content="2"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable chapter narrow" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="chapter">
+<div class="article-subheading">Chapter 5</div>
+<h1 id="latex">Latex</h1>
+
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <section>
+            <h1 class="a11y-only">Subsections of Latex</h1>
+          <article class="default">
+<h1 id="%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86%E8%A8%AD%E5%AE%9A">よく使う設定</h1>
+
+<h2 id="プリアンブル">プリアンブル</h2>
+<h3 id="packages">Packages</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[dvipdfmx]</span>{jsarticle}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[dvipdfmx]</span>{graphicx}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[dvipdfmx]</span>{color}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{amsmath}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{mathtools}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{ascmac}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{comment}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{algorithmic}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{algorithm}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{here}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{listings,jvlisting}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{bm}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{multicol}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[square,sort,comma,numbers]</span>{natbib}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[subrefformat=simple]</span>{subcaption}<span style="color:#75715e">%サブキャプションを付けたいときに必要
+</span></span></span></code></pre></div><h4 id="gnuplotでlatex形式の数式を表示するための設定">gnuplotでlatex形式の数式を表示するための設定</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% \usepackage{gnuplot-lua-tikz}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% \usepackage{tikz}
+</span></span></span></code></pre></div><h3 id="algorithm-疑似コード-の表示の設定">algorithm (疑似コード) の表示の設定</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\renewcommand</span>{<span style="color:#66d9ef">\algorithmicrequire</span>}{<span style="color:#66d9ef">\textbf</span>{Input:}}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\renewcommand</span>{<span style="color:#66d9ef">\algorithmicensure</span>}{<span style="color:#66d9ef">\textbf</span>{Output:}}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>### 参考文献の文献番号の表示形式を変更
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\makeatletter</span><span style="color:#75715e">%再定義に＠が使用される場合に\makeatletterと\makeatotherで挟む
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\def\@</span>cite#1{<span style="color:#66d9ef">\textsuperscript</span>{#1)}}<span style="color:#75715e">%引用文献の文献番号の表示方法を変更
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\def\@</span>biblabel#1{#1)}<span style="color:#75715e">%参考文献の先頭も変更
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\makeatother</span>
+</span></span></code></pre></div><h3 id="文献番号等の色やリンクの設定">文献番号等の色やリンクの設定</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[dvipdfmx]</span>{hyperref}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\hypersetup</span>{<span style="color:#75715e">% hyperrefオプションリスト
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    setpagesize=false,
+</span></span><span style="display:flex;"><span>    bookmarksnumbered=true,<span style="color:#75715e">%ブックマークを作成
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    bookmarksopen=true,<span style="color:#75715e">%ブックマークを開く
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    colorlinks=true,<span style="color:#75715e">%カラーリンクを使用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    linkcolor=black, <span style="color:#75715e">%内部参照リンクカラー
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    citecolor=blue, <span style="color:#75715e">%文献カラー
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">% filecolor=, %ローカルファイル参照リンクカラー
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    urlcolor=blue,
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="programc言語の記述形式についての設定">program（c言語）の記述形式についての設定</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\renewcommand</span>{<span style="color:#66d9ef">\lstlistingname</span>}{program}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% %c言語の設定 気に入ってる方
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\lstset</span>{
+</span></span><span style="display:flex;"><span>    language=c,
+</span></span><span style="display:flex;"><span>    basicstyle={<span style="color:#66d9ef">\ttfamily\small</span>},
+</span></span><span style="display:flex;"><span>    tabsize=2,
+</span></span><span style="display:flex;"><span>    frame=trBL,
+</span></span><span style="display:flex;"><span>    numbers=left,
+</span></span><span style="display:flex;"><span>    numberstyle={<span style="color:#66d9ef">\ttfamily\small</span>},
+</span></span><span style="display:flex;"><span>    breaklines=true,
+</span></span><span style="display:flex;"><span>    captionpos=t
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">%キャプションを一番下にするならcaptions=b
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h3 id="jsreportでchapterの改行を削除する設定">jsreportでchapterの改行を削除する設定</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% chapterの改行を削除
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\makeatletter</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\@</span>makechapterhead#1{<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\vspace*</span>{2<span style="color:#66d9ef">\Cvs</span>}<span style="color:#75715e">% 欧文は50pt
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {<span style="color:#66d9ef">\parindent</span> <span style="color:#66d9ef">\z</span>@ <span style="color:#66d9ef">\raggedright</span> <span style="color:#66d9ef">\normalfont</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\ifnum</span> <span style="color:#66d9ef">\c</span>@secnumdepth &gt;<span style="color:#66d9ef">\m</span>@ne
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\huge\headfont</span> <span style="color:#66d9ef">\@</span>chapapp<span style="color:#66d9ef">\thechapter\@</span>chappos
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">%% \par\nobreak
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">%% \vskip \Cvs % 欧文は20pt
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\fi</span>
+</span></span><span style="display:flex;"><span>    　<span style="color:#66d9ef">\interlinepenalty\@</span>M<span style="color:#75715e">%先頭の空白で、章とチャプター名の間に空白が挿入される
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\huge</span> <span style="color:#66d9ef">\headfont</span> #1<span style="color:#66d9ef">\par\nobreak</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\vskip</span> 3<span style="color:#66d9ef">\Cvs</span>}
+</span></span><span style="display:flex;"><span>} <span style="color:#75715e">% 欧文は40pt
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\makeatother</span>
+</span></span></code></pre></div><h2 id="in-document">In document</h2>
+<h3 id="bibtexの表示">bibtexの表示</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\bibliographystyle</span>{junsrt}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\nocite</span>{*}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\bibliography</span>{reference}
+</span></span></code></pre></div>
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="problem">Problem</h1>
+
+<h2 id="グラフが記述した位置に正しく出力されない">グラフが記述した位置に正しく出力されない</h2>
+<h3 id="もとのやり方">もとのやり方</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{figure}[h]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{figure}
+</span></span></code></pre></div><p><strong>このやり方では画像を連続して出力する場合などにテキストの最後にまとめて出力されてしまう。</strong></p>
+<h3 id="解決法">解決法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>usepackage{here}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{figure}[H]<span style="color:#75715e">%[H]オプションで記述した位置に強制的に出力する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\end</span>{figure}
+</span></span></code></pre></div><h4 id="参考">参考</h4>
+<p><a href="http://ac206223.ppp.asahi-net.or.jp/adiary/memo/adiary.cgi/hirosugu/TeX%E3%81%A7%E5%9B%B3%E3%82%92%E3%82%B3%E3%83%BC%E3%83%89%E8%A8%98%E8%BF%B0%E4%BD%8D%E7%BD%AE%E3%81%AB%E5%BC%B7%E5%88%B6%E7%9A%84%E3%81%AB%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B">TeXで図をコード記述位置に強制的に出力する</a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="図表番号が正しく表示されない">図表番号が正しく表示されない。</h2>
+<!-- raw HTML omitted -->
+<h4 id="問題点">問題点</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{figure}[H]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\label</span>{graph3_4}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{center}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\scalebox</span>{0.9}{<span style="color:#66d9ef">\input</span>{kadai3_4_graph.tex}}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\caption</span>{<span style="color:#e6db74">$</span>\alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">4</span> <span style="color:#e6db74">$</span>における分散<span style="color:#e6db74">$</span>\langle x<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>\rangle<span style="color:#e6db74">$</span>と時間<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>の関係}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{center}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{figure}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{figure}[h]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\label</span>{graph3_2}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{center}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\scalebox</span>{0.9}{<span style="color:#66d9ef">\input</span>{kadai3_2_graph.tex}}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\caption</span>{<span style="color:#e6db74">$</span>\alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#e6db74">$</span>における分散<span style="color:#e6db74">$</span>\langle x<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>\rangle<span style="color:#e6db74">$</span>と時間<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>の関係}       
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{center}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{figure}
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{figure}[h]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\label</span>{graph3_1}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{center}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\scalebox</span>{0.9}{<span style="color:#66d9ef">\input</span>{kadai3_1_graph.tex}}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\caption</span>{<span style="color:#e6db74">$</span>\alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#e6db74">$</span>における分散<span style="color:#e6db74">$</span>\langle x<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>\rangle<span style="color:#e6db74">$</span>と時間<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>の関係}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{center}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{figure}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>図<span style="color:#66d9ef">\ref</span>{graph3_4}, <span style="color:#66d9ef">\ref</span>{graph3_2}, <span style="color:#66d9ef">\ref</span>{graph3_1}
+</span></span></code></pre></div><p>と書くと<code>図4, 4, 4</code>と出力されてしまう</p>
+<!-- raw HTML omitted -->
+<h4 id="解決法-1">解決法</h4>
+<p>captionの中にlabelをかく</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{figure}[H]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{center}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\scalebox</span>{0.9}{<span style="color:#66d9ef">\input</span>{kadai3_4_graph.tex}}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\caption</span>{<span style="color:#e6db74">$</span>\alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">4</span> <span style="color:#e6db74">$</span>における分散<span style="color:#e6db74">$</span>\langle x<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>\rangle<span style="color:#e6db74">$</span>と時間<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>の関係<span style="color:#66d9ef">\label</span>{graph3_4}}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{center}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{figure}
+</span></span></code></pre></div><h4 id="参考-1">参考</h4>
+<ul>
+<li><a href="https://seihiguchi.hatenadiary.org/entry/20080708/1215542448">LaTeXの図番号がおかしい問題 - \label{}を\caption{}内に挿入</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="references">References</h1>
+
+<h2 id="latexでの参考文献の書き方">LaTeXでの参考文献の書き方</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{thebibliography}{99}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\bibitem</span>{参照ラベル名1} 文献情報
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\bibitem</span>{参照ラベル2名} 文献情報
+</span></span><span style="display:flex;"><span>......
+</span></span><span style="display:flex;"><span>......
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{thebibliography}
+</span></span></code></pre></div><p>このように記述してタイプセットすると、文献番号が<code>\bibitem</code>の登録順に[1], [2], [3], &hellip; のように表される。</p>
+<p><strong>本文中で文献情報を参照するには次のように記述する</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>....といったことが指摘されている<span style="color:#66d9ef">\cite</span>{ラベル名a}<span style="color:#66d9ef">\cite</span>{ラベル名b}
+</span></span></code></pre></div><p>これをタイプセットすると<code>....といったことが指摘されている[6][9]</code>のように表示される。</p>
+<p>文中で文献番号だけでなくページ数などをオプション表示させるには次のように記述する。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>....といったことが指摘されている
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\cite</span>{ラベル名a}<span style="color:#66d9ef">\cite</span><span style="color:#a6e22e">[第3章127ページ]</span>{ラベル名b}。
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h2 id="引用を上付き右カッコで表示する">引用を上付き右カッコで表示する</h2>
+<p>LaTeXの引用表示を[xxx]ではなくxxx)にする方法。プリアンブルに次のように書く。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\makeatletter</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\@</span>cite#1{<span style="color:#66d9ef">\textsuperscript</span>{#1)}}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\makeatother</span>
+</span></span></code></pre></div><p>他にいろいろ変えたければ、\textsuperscript{#1)}の部分を編集する (#1が冒頭に出てきたxxxにあたる)。
+参考文献一覧の先頭も同様にに変えたい場合、プリアンブルの\makeatletter～\makeatother中に次のように書く。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\def\@</span>biblabel#1{#1)}
+</span></span></code></pre></div><h4 id="makeatleter-maketotherとは">〇<code>\makeatleter</code>, <code>\maketother</code>とは？</h4>
+<p>また，再定義するマクロの名前や再定義の内容に @ が現れる場合は，次のように再定義全体を <code>\makeatletter</code> と <code>\makeatother</code> で挟んでおく必要がある．</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{foo}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\makeatletter</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\renewcommand\bar</span>{... 20pt ...}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\makeatother</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="http://www.ic.daito.ac.jp/~mizutani/tex/drill/drillbook3.html">参考文献情報の書き方</a></li>
+<li><a href="http://nabew.blog113.fc2.com/blog-entry-19.html">創作メモ 【参考文献の表示の変更】</a></li>
+<li><a href="https://texwiki.texjp.org/?%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8">LaTeX Wiki パッケージ</a></li>
+</ul>
+<h2 id="bibtex-の使い方">bibtex の使い方</h2>
+<ol>
+<li>
+<p><code>.bib</code>拡張子のファイルを用意し、内容を記述</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% 論文の場合
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>@article{hoshino2019,
+</span></span><span style="display:flex;"><span>    author  = {Hikaru Hoshino and Yoshihiko Susuki and T. John Koo and Takashi Hikihara},
+</span></span><span style="display:flex;"><span>    journal = {Journal of Dynamic Systems, Measurement, and Control},
+</span></span><span style="display:flex;"><span>    title   = {Structural Analysis and Control of a Model of Two-Site Electricity and Heat Supply},
+</span></span><span style="display:flex;"><span>    year    = {2019},
+</span></span><span style="display:flex;"><span>    volume  = {141},
+</span></span><span style="display:flex;"><span>    number  = {10},
+</span></span><span style="display:flex;"><span>    pages   = {101004},
+</span></span><span style="display:flex;"><span>    doi     = {10.1115/1.4043703},
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% 本の場合
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>@book{biggar2014,
+</span></span><span style="display:flex;"><span>    author    = {Darryl R.Biggar and Mohammad Reza Hesamzadeh},
+</span></span><span style="display:flex;"><span>    title     = {The Economics of Electricity Market},
+</span></span><span style="display:flex;"><span>    publisher = {John Wiley &amp; Sons},
+</span></span><span style="display:flex;"><span>    isbn      = {9781118775752},
+</span></span><span style="display:flex;"><span>    year      = {2014},
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>本文中の参考文献を出力したい一に以下の記述を追加</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\bibliographystyle</span>{junsrt} <span style="color:#75715e">%参考文献出力スタイル
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\bibliography</span>{hoge} <span style="color:#75715e">%hoge.bibから拡張子を外した名前
+</span></span></span></code></pre></div><p>なお、参考文献出力スタイル(bibliographystyle)には主に以下のスタイルがあります。</p>
+<table>
+<thead>
+<tr>
+<th>欧文用</th>
+<th>和文用</th>
+<th>特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plain</td>
+<td>jplain</td>
+<td>参考文献をアルファベット順で出力する</td>
+</tr>
+<tr>
+<td>unsrt</td>
+<td>junsrt</td>
+<td>参考文献を引用された順で出力する</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h1 id="参考-1">参考</h1>
+<ul>
+<li><a href="http://ideas.paunix.org/latex/latex_6_bib.htm">thebibliography 環境</a></li>
+<li><a href="https://qiita.com/SUZUKI_Masaya/items/14f9727845e020f8e7e9">BiBTeXとは Qiita</a></li>
+<li><a href="https://www.eng.u-hyogo.ac.jp/faculty/hoshino/pc/latex/bibtex/">星野光　参考文献の書き方</a></li>
+<li><a href="http://www.yamamo10.jp/yamamoto/comp/latex/bibtex/bibtex.html">LaTeX 参考文献処理(BibTeX)</a></li>
+<li><a href="https://gist.github.com/momota10s/97887692ebe01f24d234">BiBTeXでのURLの書き方</a></li>
+<li><a href="https://qiita.com/SUZUKI_Masaya/items/a552ad66705f4f9a5710">学術論文の情報をそれらしい形で出力する方法 Quiita</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="bulletins-in-latex">Bulletins in latex</h1>
+
+<h2 id="記号付き箇条書き">記号付き箇条書き</h2>
+<p>　見出し記号付きの箇条書きをするためには¥itemizeを使用する。</p>
+<p>【入力例】</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>¥begin{itemize}
+</span></span><span style="display:flex;"><span>　　¥item aaa
+</span></span><span style="display:flex;"><span>　　¥item bbb
+</span></span><span style="display:flex;"><span>　　¥begin{itemize}
+</span></span><span style="display:flex;"><span>　　　　¥item ccc
+</span></span><span style="display:flex;"><span>　　¥end{itemize}
+</span></span><span style="display:flex;"><span>　　¥item ddd
+</span></span><span style="display:flex;"><span>¥end{itemize}
+</span></span></code></pre></div><p>【出力例】</p>
+<pre tabindex="0"><code>・ aaa
+・ bbb
+    - ccc
+・ ddd
+</code></pre><!-- raw HTML omitted -->
+<h2 id="itemizeのマークの変更">itemizeのマークの変更</h2>
+<p>　itemizeを入れ子にすると、各項目の見出しとなる記号が変化する。
+これらの記号は、クラスファイルのなかで次の命令に定義されている。</p>
+<table>
+<thead>
+<tr>
+<th>レベル</th>
+<th>命令</th>
+<th>デフォルト</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>１</td>
+<td>¥labelitemi</td>
+<td>●</td>
+</tr>
+<tr>
+<td>２</td>
+<td>¥labelitemii</td>
+<td>−</td>
+</tr>
+<tr>
+<td>３</td>
+<td>¥labelitemiii</td>
+<td>＊</td>
+</tr>
+<tr>
+<td>４</td>
+<td>¥labelitemiv</td>
+<td>・</td>
+</tr>
+</tbody>
+</table>
+<p>【入力例１】itemizeの第１レベルの見出し記号を”○”に変更</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>¥renewcommand{¥labelitemi}{○}
+</span></span><span style="display:flex;"><span>　　¥begin{itemize}
+</span></span><span style="display:flex;"><span>　　　　¥item マークが変わった！
+</span></span><span style="display:flex;"><span>　　¥end{itemize}
+</span></span></code></pre></div><p>【出力例１】</p>
+<pre tabindex="0"><code>○ マークが変わった！
+</code></pre><p>【入力例２】見出し記号を１つだけ”○”に変更</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>¥begin{itemize}
+</span></span><span style="display:flex;"><span>　　¥item 普通のマーク
+</span></span><span style="display:flex;"><span>　　¥item[○]マークが変わります
+</span></span><span style="display:flex;"><span>¥end{itemize}
+</span></span></code></pre></div><p>【出力例２】</p>
+<pre tabindex="0"><code>・ 普通のマーク
+○ マークが変わります
+</code></pre><!-- raw HTML omitted -->
+<h2 id="番号付き箇条書き">番号付き箇条書き</h2>
+<p>　見出し番号付きの箇条書きをするためには¥enumerateを使用する。</p>
+<p>【入力例】</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>¥begin{enumerate}
+</span></span><span style="display:flex;"><span>　　¥item aaa
+</span></span><span style="display:flex;"><span>　　¥begin{enumerate}
+</span></span><span style="display:flex;"><span>　　　　　¥item bbb
+</span></span><span style="display:flex;"><span>　　　　　¥begin{enumerate}
+</span></span><span style="display:flex;"><span>　　　　　　　　¥item ccc
+</span></span><span style="display:flex;"><span>　　　　　¥end{enumerate}
+</span></span><span style="display:flex;"><span>　　¥end{enumerate}
+</span></span><span style="display:flex;"><span>　　¥item ddd
+</span></span><span style="display:flex;"><span>　　¥item eee
+</span></span><span style="display:flex;"><span>¥end{enumerate}
+</span></span></code></pre></div><p>【出力例】</p>
+<pre tabindex="0"><code>1. aaa
+    (a) bb
+        i. ccc
+2. ddd
+3. eee
+</code></pre><!-- raw HTML omitted -->
+<h2 id="enumerateの番号の変更">enumerateの番号の変更</h2>
+<p>　enumerateの番号の出力形式を変更するには、カウンタの値を出力する命令を定義し直す。</p>
+<table>
+<thead>
+<tr>
+<th>レベル</th>
+<th>カウンタ</th>
+<th>出力する命令</th>
+<th>デフォルトの出力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>１</td>
+<td>enumi</td>
+<td>¥theenumi</td>
+<td>アラビア数字（１，２，３，・・・）</td>
+</tr>
+<tr>
+<td>２</td>
+<td>enumii</td>
+<td>¥theenumii</td>
+<td>小文字のアルファベット（a，b，c，・・・）</td>
+</tr>
+<tr>
+<td>３</td>
+<td>enumiii</td>
+<td>¥theenumiii</td>
+<td>小文字のローマ数字（小文字のローマ数字（ⅰ，ⅱ，ⅲ，・・・）</td>
+</tr>
+<tr>
+<td>４</td>
+<td>enumiv</td>
+<td>¥theenumiv</td>
+<td>大文字のアルファベット（A，B，C，・・・）</td>
+</tr>
+</tbody>
+</table>
+<p>【例】¥enumiカウンタを大文字のローマ数字で出力する設定</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>¥renewcommand{¥theenumi}{¥Roman{enumi}}
+</span></span></code></pre></div><h4 id="番号の出力形式">番号の出力形式</h4>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>出力形式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>¥arabic</td>
+<td>アラビア数字（１、２、３、・・・）</td>
+</tr>
+<tr>
+<td>¥roman</td>
+<td>ローマ数字（ⅰ、ⅱ、ⅲ、・・・）</td>
+</tr>
+<tr>
+<td>¥Roman</td>
+<td>ローマ数字（Ⅰ、Ⅱ、Ⅲ、・・・）</td>
+</tr>
+<tr>
+<td>¥alph</td>
+<td>アルファベット（a、b、c、・・・）</td>
+</tr>
+<tr>
+<td>¥Alph</td>
+<td>アルファベット（A、B、C、・・・）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="見出し語付き箇条書き">見出し語付き箇条書き</h2>
+<p>　見出し語付きの箇条書きをするためには¥descriptionを使用する。</p>
+<p>【入力例】</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>¥begin{description}
+</span></span><span style="display:flex;"><span>　　¥item[日時] ○月○日
+</span></span><span style="display:flex;"><span>　　¥item[場所] どこか
+</span></span><span style="display:flex;"><span>　　¥item[時間] ○時○分
+</span></span><span style="display:flex;"><span>　 ¥end{description}
+</span></span></code></pre></div><p>【出力例】</p>
+<pre tabindex="0"><code>日時 ○月○日
+場所 どこか
+時間 ○時○分
+</code></pre><!-- raw HTML omitted -->
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="http://www3.otani.ac.jp/fkdsemi/pLaTeX_manual/kajyo.html">箇条書き</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="figure">Figure</h1>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{figure}[位置指定]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\centering</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\includegraphics</span><span style="color:#a6e22e">[オプション]</span>{ファイル名}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\caption</span>{図のタイトル<span style="color:#66d9ef">\label</span>{ラベル}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{figure}
+</span></span></code></pre></div><p><strong><code>.tex</code>拡張子の図を挿入するときは次のように記述する</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{figure}[H]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\centering</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\scalebox</span>{0.6}{<span style="color:#66d9ef">\input</span>{ファイル名}}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\caption</span>{図のタイトル<span style="color:#66d9ef">\label</span>{ラベル}}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{figure}
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h2 id="位置指定">位置指定</h2>
+<table>
+<thead>
+<tr>
+<th>位置指定</th>
+<th>出力場所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>h</td>
+<td>記述した部分</td>
+</tr>
+<tr>
+<td>t</td>
+<td>ページの上部</td>
+</tr>
+<tr>
+<td>b</td>
+<td>ページの下部</td>
+</tr>
+<tr>
+<td>p</td>
+<td>独立したページ</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="オプション">オプション</h2>
+<table>
+<thead>
+<tr>
+<th>オプション指定</th>
+<th>指定方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keepaspectratio</td>
+<td>縦横の比を維持</td>
+</tr>
+<tr>
+<td>scale</td>
+<td>図のサイズの変更(例:scale=0.7)</td>
+</tr>
+<tr>
+<td>width</td>
+<td>横幅の指定(例:width=130mm)</td>
+</tr>
+<tr>
+<td>height</td>
+<td>高さの指定(例:height=60mm)</td>
+</tr>
+<tr>
+<td>angle</td>
+<td>回転角の指定(例:angle=90)</td>
+</tr>
+<tr>
+<td>origin</td>
+<td>回転角の時の原点，c:中心，tl:左上，tr:右上，bl:左下，br：右下(例:origin=c)</td>
+</tr>
+<tr>
+<td>draft</td>
+<td>図が入る枠だけ表示</td>
+</tr>
+<tr>
+<td>clip</td>
+<td>BoundingBoxからはみ出た分を切り取る</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="複数枚のグラフを横に並べて表示">複数枚のグラフを横に並べて表示</h2>
+<p>figure の中で minipage を使って，画像一つ分の領域を確保してから includegraphics を使う．
+\linewidth, \textwidth などを使って領域の幅を調整する．
+subcaption を使う時は，大抵プリアンブルに次のように書くとよい．</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[subrefformat=parens]</span>{subcaption}
+</span></span></code></pre></div><p>subcaption パッケージが使用しているスタイルと競合する場合は諦めて， (a)や(b)などの文字を直接打ち込んで挿入する．
+以下は1行2列で2つの画像を挿入する例．</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% --- Figure ------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\begin</span>{figure}[H]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{tabular}{cc}
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">% -- (a) --
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">\begin</span>{minipage}{0.45<span style="color:#66d9ef">\linewidth</span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\centering</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\includegraphics</span><span style="color:#a6e22e">[keepaspectratio, scale=0.6]</span>{fig/a.pdf} 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\subcaption</span>{1つめ}
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">\end</span>{minipage}
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">% ---------
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">% \vspace と \hspace を駆使して間隔を調節
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">% -- (b) --
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">\begin</span>{minipage}{0.45<span style="color:#66d9ef">\linewidth</span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\centering</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\includegraphics</span><span style="color:#a6e22e">[keepaspectratio, scale=0.6]</span>{fig/b.pdf}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\subcaption</span>{2つめ}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">\end</span>{minipage}
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">% ---------
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">%% main caption
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">\caption</span>{Hogehoge}
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">\label</span>{fig:1}  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{tabular}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{figure*}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% -----------------------------------------
+</span></span></span></code></pre></div><p>\minipage を応用すれば任意の配置で図を置くことができる．
+\subcaption{} は minipage の中に必ず入れないといけない点に注意．
+入れなかった場合，普通の caption が図Xでなくて (c) 等になってしまう．</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://www.okomeda.net/wp/484/">LaTeX 図</a></li>
+<li><a href="http://www.yamamo10.jp/yamamoto/comp/latex/make_doc/insert_fig/index.php">LaTeX 図の挿入</a></li>
+<li><a href="https://qiita.com/poemn/items/9142339749c87ebdb536">TeXで好きな位置に図を配置する</a></li>
+<li><a href="https://atatat.hatenablog.com/entry/cloud_latex18_subcaption">TeXによる文書作成</a></li>
+<li><a href="https://hydrocoast.jp/index.php?LaTeX/%E5%9B%B3">図の挿入</a></li>
+<li><a href="https://medemanabu.net/latex/scalebox-resizebox/">文字の拡大・縮小 - scalebox, resizebox</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="table">Table</h1>
+
+<h2 id="表の書き方">表の書き方</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{table}
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\label</span>{ラベル名}
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\centering</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\caption</span>{表題}
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\begin</span>{tabular}{|c|c|c|}<span style="color:#75715e">%3列で表示、列と列の間に縦罫線を引く
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">\hline</span>
+</span></span><span style="display:flex;"><span>      西暦 &amp; 測定者 &amp; 測定方法 &amp; 測定結果 <span style="color:#66d9ef">\\</span>
+</span></span><span style="display:flex;"><span>      &amp; &amp; &amp; <span style="color:#e6db74">$</span>\times <span style="color:#ae81ff">10</span>^<span style="color:#ae81ff">8</span><span style="color:#e6db74">$</span> [m/sec] <span style="color:#66d9ef">\\</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">\hline</span> <span style="color:#66d9ef">\hline</span>
+</span></span><span style="display:flex;"><span>      1638 &amp; Galileo &amp; 二人が離れてランプの光を見る &amp; (音速10倍以上) <span style="color:#66d9ef">\\</span>
+</span></span><span style="display:flex;"><span>      1675 &amp; Roemer &amp; 木星の衛星の観測から &amp; 2 <span style="color:#66d9ef">\\</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">\hline</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\end</span>{tabular}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{table}
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h2 id="コマンド">コマンド</h2>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\hline</td>
+<td>横罫線を引く ※2回かけば2つ横罫線が引かれる</td>
+</tr>
+<tr>
+<td>\multicolmn{横に結合するマスの数}{表示形式、<code>|c|</code>等}{文字}</td>
+<td>横に並んだ表の要素を結合する</td>
+</tr>
+<tr>
+<td>\cline{3-5}</td>
+<td>任意の列に横罫線を引く(ここでは3列目から5列目に横罫線を引く)</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="packageを用いた表作成">packageを用いた表作成</h2>
+<table>
+<thead>
+<tr>
+<th>概要</th>
+<th>コマンド</th>
+<th>備考</th>
+<th>package</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>セルの結合（縦）</td>
+<td>\multirow{結合要素数}{*}{文字}</td>
+<td>縦に並んだ表の要素を結合</td>
+<td>multirow</td>
+</tr>
+<tr>
+<td>幅を指定した横罫線</td>
+<td>\toprule[<!-- raw HTML omitted -->]</td>
+<td>表の最上部の横罫線を引きます．<!-- raw HTML omitted -->は線幅です．線幅を設定しないデフォルトを強く推奨します．</td>
+<td>booktabs</td>
+</tr>
+<tr>
+<td>横罫線(列見出しと本文、幅指定)</td>
+<td>\midrule[<!-- raw HTML omitted -->]</td>
+<td>列見出しと本文の間に横罫線を引きます．</td>
+<td>booktabs</td>
+</tr>
+<tr>
+<td>横罫線(表の最下部、幅指定)</td>
+<td>\bottomrule[<!-- raw HTML omitted -->]</td>
+<td>表の最下部の横罫線を引きます．</td>
+<td>booktabs</td>
+</tr>
+<tr>
+<td>任意の行への縦罫線</td>
+<td>\cmidrule<a href="/latex/table/index.html/trim"><!-- raw HTML omitted --></a>{a-b}</td>
+<td>a 行目から b 行目まで罫線を引きます．trim の設定(lr)を強く勧めます．</td>
+<td>booktabs</td>
+</tr>
+<tr>
+<td>行間スペース</td>
+<td>\addlinespace[<!-- raw HTML omitted -->]</td>
+<td>行間にスペースを挿入します．</td>
+<td>booktabs</td>
+</tr>
+<tr>
+<td>二重罫線(\cmidrule)</td>
+<td>\morecmidrules</td>
+<td>\cmidrule を二重罫線にするときに使います．他の罫線 (\toprule, \midrule, \bottomrule) では不要です．</td>
+<td>booktabs</td>
+</tr>
+<tr>
+<td>スペースありの罫線</td>
+<td>\specialrule{<!-- raw HTML omitted -->}{<!-- raw HTML omitted -->}{<!-- raw HTML omitted -->}</td>
+<td>上下にスペースを挿入した罫線を引きます．これを使う場合，三つの引数が必須です．</td>
+<td>booktabs</td>
+</tr>
+</tbody>
+</table>
+<p>※＜wd＞は幅指定（pt,em, cmなど)</p>
+<p>※「<!-- raw HTML omitted -->」は線のトリミングの指定です．「(lr)」とすると，列の幅より少し短い罫線になります．格好良い罫線が引きますので，このオプションをつけることを強く推奨します．「l{-2.3mm}r{3.4mm}」のようにすると，罫線を左側に 2.3 mm 伸び，右側に 3.4 mm 短くなります．</p>
+<p>※「<!-- raw HTML omitted -->」と「<!-- raw HTML omitted -->」は，罫線上下の空白の幅を指定します．幅指定は (1pt, 0.5em, 1.2mm) のようにします．</p>
+<!-- raw HTML omitted -->
+<h2 id="tabularの設定パラメータ">tabularの設定パラメータ</h2>
+<table>
+<thead>
+<tr>
+<th>パラメータ</th>
+<th>動作</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>l</td>
+<td>左詰(left)</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>r</td>
+<td>右詰</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>c</td>
+<td>センタリング</td>
+<td>引き続くブロックのセンタリング指定</td>
+</tr>
+<tr>
+<td>p{長さ}</td>
+<td>上/左詰めの幅指定カラム(paragraph)</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>m{長さ}</td>
+<td>中/左詰めの幅指定カラム(middle)</td>
+<td><code>arry.sty</code>が必要</td>
+</tr>
+<tr>
+<td>b{長さ}</td>
+<td>下/左詰めの幅指定カラム(bottom)</td>
+<td><code>arry.sty</code>が必要</td>
+</tr>
+<tr>
+<td>@{文字列}</td>
+<td>文字列がセパレーターになる</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>`</td>
+<td>`</td>
+<td>縦線(1本)</td>
+</tr>
+<tr>
+<td>`</td>
+<td></td>
+<td>`</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="http://www.yamamo10.jp/yamamoto/comp/latex/make_doc/table/table.php">LaTeX 表組</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="basic">Basic</h1>
+
+<h2 id="latexコマンド集">LaTexコマンド集</h2>
+<table>
+<thead>
+<tr>
+<th>概要</th>
+<th>コマンド</th>
+<th>詳細</th>
+<th>パッケージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文字サイズの変更</td>
+<td>\scalebox{倍率}{文字}</td>
+<td>特定の文字やtexファイルを＜倍率＞倍にして出力する。<!-- raw HTML omitted -->{倍率}の部分を{幅}[高さ]のようにかき分けてもOK!</td>
+<td>graphics</td>
+</tr>
+<tr>
+<td>行間の調整</td>
+<td>\begin{spacing}{倍率} <!-- raw HTML omitted --> 文章 <!-- raw HTML omitted --> \end{spacing}</td>
+<td>指定した倍率に行間を変更する</td>
+<td>setspace</td>
+</tr>
+<tr>
+<td>部分的に2段組みにする</td>
+<td>\begin{multicols}{2} <!-- raw HTML omitted --> 2段組にしたい文章 <!-- raw HTML omitted --> \end{multicols}</td>
+<td><code>2</code>のところをかえれば多段組にできるかも(?)</td>
+<td>multicol</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="特殊文字">特殊文字</h2>
+<table>
+<thead>
+<tr>
+<th>表示</th>
+<th>コマンド</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Å</td>
+<td>{\AA}</td>
+<td>数式環境以外で単位<code>Å</code>を表示する。ただし数式中では<code>\mathrm{\mathring{A}}</code>とするか<code>\mathrm{\AA}</code>とする。</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="文字サイズ">文字サイズ</h2>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>標準を10ptとしたときの大きさ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\tiny</td>
+<td>5pt</td>
+</tr>
+<tr>
+<td>\scriptsize</td>
+<td>7pt</td>
+</tr>
+<tr>
+<td>\footnotesize</td>
+<td>8pt</td>
+</tr>
+<tr>
+<td>\small</td>
+<td>9pt</td>
+</tr>
+<tr>
+<td>\normalsize</td>
+<td>10pt</td>
+</tr>
+<tr>
+<td>\large</td>
+<td>12pt</td>
+</tr>
+<tr>
+<td>\Large</td>
+<td>14.4pt</td>
+</tr>
+<tr>
+<td>\LARGE</td>
+<td>17.28pt</td>
+</tr>
+<tr>
+<td>\huge</td>
+<td>20.74pt</td>
+</tr>
+<tr>
+<td>\Huge</td>
+<td>24.88pt</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="数式環境">数式環境</h2>
+<table>
+<thead>
+<tr>
+<th>環境名</th>
+<th>環境</th>
+<th>パッケージ</th>
+<th>特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>equation</td>
+<td>\begin{equation}<!-- raw HTML omitted -->\end{equation}</td>
+<td>&mdash;</td>
+<td>1行の数式を記入でき、数式番号がつく</td>
+</tr>
+<tr>
+<td>equation</td>
+<td>\begin{equation*}・・・</td>
+<td>amsmath</td>
+<td>equation環境とほとんど同じだが、数式番号がつかない</td>
+</tr>
+<tr>
+<td>eqnarray</td>
+<td>\begin{eqnarray}<!-- raw HTML omitted -->  数式 $=$ 数式\<!-- raw HTML omitted -->数式 $=$ 数式<!-- raw HTML omitted -->\end{eqnarray}</td>
+<td>&mdash;</td>
+<td>複数行の数式を、$で挟んでいる<code>＝</code>をそろえて表示する。<!-- raw HTML omitted -->※数式番号は各行に表示されるが、<code>\nonumber</code>を使用してはならない。</td>
+</tr>
+<tr>
+<td>eqnarray</td>
+<td>\begin{eqnarray*}・・・</td>
+<td>&mdash;</td>
+<td>数式番号がつかない</td>
+</tr>
+<tr>
+<td>split</td>
+<td>\begin{split}<!-- raw HTML omitted -->  数式 $= 数式<!-- raw HTML omitted -->  数式 $= 数式<!-- raw HTML omitted -->\end{split}</td>
+<td>amsmath</td>
+<td>eqnarray環境の代替。equation環境の中で使用し、<code>&amp;=</code>をそろえて表示し、数式番号は複数行の中間に一つだけ表示する</td>
+</tr>
+<tr>
+<td>align</td>
+<td>\begin{align}<!-- raw HTML omitted -->  数式 $= 数式\・・・</td>
+<td>amsmath</td>
+<td>{<code>&amp;=</code> で数式の<code>=</code>をそろえて表示し、数式番号を各行ごとに表示する。</td>
+</tr>
+<tr>
+<td>align</td>
+<td>\begin{align*}・・・</td>
+<td>amsmath</td>
+<td>数式番号がつかない</td>
+</tr>
+<tr>
+<td>aligned</td>
+<td>\begin{aligned}・・・</td>
+<td>amsmath</td>
+<td><code>equation</code>環境内で使用でき、一部分のみ<code>align</code>環境にすることができる</td>
+</tr>
+<tr>
+<td>gather</td>
+<td>\begin{gather}・・・</td>
+<td>amsmath</td>
+<td>複数の数式を中央揃えで表示し、各行ごとに数式番号をつける</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="数式表示">数式表示</h2>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>パッケージ</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\bm{a}</td>
+<td>bm</td>
+<td>括弧内の文字をベクトル（太字）で表示する</td>
+</tr>
+<tr>
+<td><code>\label{数式のラベル}</code></td>
+<td>&mdash;</td>
+<td>数式にラベル付けできる。数式の数式番号やページ数を呼び出すときに使用する。<!-- raw HTML omitted --><code>数式環境下で使用する</code></td>
+</tr>
+<tr>
+<td><code>\ref{ラベル名}</code></td>
+<td>&mdash;</td>
+<td>数式につけた式番号をラベル名を指定することで表示できる</td>
+</tr>
+<tr>
+<td><code>\frac{分子}{分母}</code></td>
+<td>&mdash;</td>
+<td>分数表示</td>
+</tr>
+<tr>
+<td><code>\int_{上限}^{下限}</code></td>
+<td>&mdash;</td>
+<td>積分表示</td>
+</tr>
+<tr>
+<td><code>\left&lt;括弧なら何でも&gt;・・・\right&lt;括弧&gt;</code></td>
+<td>&mdash;</td>
+<td>括弧のサイズを括弧内の数式に自動で合わせる</td>
+</tr>
+<tr>
+<td><code>\hspace{50pt}</code></td>
+<td>&mdash;</td>
+<td><code>{ }</code>内に指定した幅の文だけスペースを生成。使用できる単位は「pt」「pc」「mm」「cm」</td>
+</tr>
+<tr>
+<td><code>\;</code> または <code>\:</code> または <code>\,</code></td>
+<td>空白を生成。左に行くにつれて大きくなる</td>
+<td></td>
+</tr>
+<tr>
+<td><code>\begin{pmatrix}</code> <!-- raw HTML omitted --> <code>a11 &amp; a12 &amp; a13\\\\</code> <!-- raw HTML omitted --> <code>a21 &amp; a22 &amp; a23 \\\\</code> <!-- raw HTML omitted --> <code>\end{pmatrix}</code></td>
+<td>amsmath</td>
+<td>行列</td>
+</tr>
+<tr>
+<td><code>\begin{vmatrix}</code> <!-- raw HTML omitted --> <code>a11 &amp; a12 &amp; a13\\\\</code> <!-- raw HTML omitted --> <code>a21 &amp; a22 &amp; a23 \\\\</code> <!-- raw HTML omitted --> <code>\end{vmatrix}</code></td>
+<td>amsmath</td>
+<td>行列式</td>
+</tr>
+<tr>
+<td><code>\cdot</code></td>
+<td>&mdash;</td>
+<td>どっと(中央)</td>
+</tr>
+<tr>
+<td><code>\cdots</code></td>
+<td>&mdash;</td>
+<td>3点ドット(中央)</td>
+</tr>
+<tr>
+<td><code>\vdots</code></td>
+<td>&mdash;</td>
+<td>縦の3点ドット</td>
+</tr>
+<tr>
+<td><code>\ddots</code></td>
+<td>&mdash;</td>
+<td>斜めの3点ドット</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="ギリシャ文字">ギリシャ文字</h2>
+<p>**ギリシャ文字を使用する場合にも数式環境下で記述する必要がある。</p>
+<table>
+<thead>
+<tr>
+<th>出力</th>
+<th>入力</th>
+<th>出力</th>
+<th>入力</th>
+<th>出力</th>
+<th>入力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>α</td>
+<td>\alpha</td>
+<td>β</td>
+<td>\beta</td>
+<td>γ</td>
+<td>\gamma</td>
+</tr>
+<tr>
+<td>δ</td>
+<td>\delta</td>
+<td>ϵ</td>
+<td>\epsilon</td>
+<td>ε</td>
+<td>\varepsilon</td>
+</tr>
+<tr>
+<td>ζ</td>
+<td>\zeta</td>
+<td>η</td>
+<td>\eta</td>
+<td>θ</td>
+<td>\theta</td>
+</tr>
+<tr>
+<td>ϑ</td>
+<td>\vartheta</td>
+<td>ι</td>
+<td>\iota</td>
+<td>κ</td>
+<td>\kappa</td>
+</tr>
+<tr>
+<td>λ</td>
+<td>\lambda</td>
+<td>μ</td>
+<td>\mu</td>
+<td>ν</td>
+<td>\nu</td>
+</tr>
+<tr>
+<td>ξ</td>
+<td>\xi</td>
+<td>o</td>
+<td>o</td>
+<td>π</td>
+<td>\pi</td>
+</tr>
+<tr>
+<td>ϖ</td>
+<td>\varpi</td>
+<td>ρ</td>
+<td>\rho</td>
+<td>ϱ</td>
+<td>\varrho</td>
+</tr>
+<tr>
+<td>σ</td>
+<td>\sigma</td>
+<td>ς</td>
+<td>\varsigma</td>
+<td>τ</td>
+<td>\tau</td>
+</tr>
+<tr>
+<td>υ</td>
+<td>\upsilon</td>
+<td>ϕ</td>
+<td>\phi</td>
+<td>φ</td>
+<td>\varphi</td>
+</tr>
+<tr>
+<td>χ</td>
+<td>\chi</td>
+<td>ψ</td>
+<td>\psi</td>
+<td>ω</td>
+<td>\omega</td>
+</tr>
+<tr>
+<td>Γ</td>
+<td>\Gamma</td>
+<td>Λ</td>
+<td>\Lambda</td>
+<td>Σ</td>
+<td>\Sigma</td>
+</tr>
+<tr>
+<td>Ψ</td>
+<td>\Psi</td>
+<td>Δ</td>
+<td>\Delta</td>
+<td>Ξ</td>
+<td>\Xi</td>
+</tr>
+<tr>
+<td>Υ</td>
+<td>\Upsilon</td>
+<td>Ω</td>
+<td>\Omega</td>
+<td>Θ</td>
+<td>\Theta</td>
+</tr>
+<tr>
+<td>Π</td>
+<td>\Pi</td>
+<td>Φ</td>
+<td>\Phi</td>
+<td>∑</td>
+<td>\sum</td>
+</tr>
+<tr>
+<td>∏</td>
+<td>\prod</td>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&mdash;</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="数学記号">数学記号</h2>
+<table>
+<thead>
+<tr>
+<th>出力</th>
+<th>コマンド</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Å</td>
+<td>\mathrm{\mathring{A}}</td>
+</tr>
+<tr>
+<td>₁P₂</td>
+<td><code>{}_1P_2</code></td>
+</tr>
+<tr>
+<td>≤</td>
+<td><code>\leq</code></td>
+</tr>
+<tr>
+<td>≥</td>
+<td><code>\geq</code></td>
+</tr>
+<tr>
+<td>∈</td>
+<td><code>\in</code></td>
+</tr>
+<tr>
+<td>±</td>
+<td><code>\pm</code></td>
+</tr>
+<tr>
+<td>≃</td>
+<td><code>\simeq</code></td>
+</tr>
+<tr>
+<td>・</td>
+<td><code>\cdot</code></td>
+</tr>
+<tr>
+<td>∂</td>
+<td><code>\partial</code></td>
+</tr>
+<tr>
+<td>分数</td>
+<td>frac{分子}{分母}</td>
+</tr>
+<tr>
+<td>∇</td>
+<td><code>\nabla</code></td>
+</tr>
+<tr>
+<td>Δ（デルタ，ラプラシアン）</td>
+<td><code>\Delta</code></td>
+</tr>
+<tr>
+<td>≡</td>
+<td><code>\equiv</code></td>
+</tr>
+<tr>
+<td>期待値の記号&lt;&gt;</td>
+<td>\langle, \rangle</td>
+</tr>
+<tr>
+<td>Ⅱ</td>
+<td>$\rm{I\hspace{-.01em}I}$</td>
+</tr>
+<tr>
+<td>A(数式中で斜体表示を解除)</td>
+<td>\rm{A}</td>
+</tr>
+<tr>
+<td>A(行列を表すA，太字かつ斜体無し)</td>
+<td>\mathbf{A}</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="vebatim環境内での数式表示">Vebatim環境内での数式表示</h2>
+<p>Verbatim環境内で数式を使う場合は**プリアンブルに<code>\usepackage{fancyvrb}</code>**と記述し、以下のようにドキュメント内に書く。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{spacing}{0.8}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{Verbatim}[commandchars=<span style="color:#66d9ef">\\\{\}</span>, codes={<span style="color:#66d9ef">\catcode</span>`<span style="color:#e6db74">$</span><span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>\catcode`_<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>\catcode`^<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>}<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span> <span style="color:#e6db74">$</span><span style="color:#66d9ef">\sum</span>_[i=1]^[n]M_i<span style="color:#e6db74">$</span>
+</span></span><span style="display:flex;"><span>\end{Verbatim}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{Verbatim}[<span style="color:#75715e">%frame=single, numbers=left, commandchars=\\\{\},codes={\catcode`$=3\catcode`_=8\catcode`^=7}]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#e6db74">$</span>f<span style="color:#f92672">(</span>x<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> \frac{<span style="color:#ae81ff">1</span>}{x}
+</span></span><span style="display:flex;"><span>\end{Verbatim}
+</span></span></code></pre></div><p>※どちらがいいのかわからない…</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="アルゴリズムの擬似コード">アルゴリズムの擬似コード</h1>
+<ul>
+<li><a href="https://li-feel.hatenablog.com/entry/2017/12/19/160618">https://li-feel.hatenablog.com/entry/2017/12/19/160618</a></li>
+<li><a href="https://qiita.com/jirojiro/items/0ae13aac9112a804f8d5">https://qiita.com/jirojiro/items/0ae13aac9112a804f8d5</a></li>
+<li><a href="https://qiita.com/harmegiddo/items/04ae672402bb8c1d01a6">https://qiita.com/harmegiddo/items/04ae672402bb8c1d01a6</a></li>
+<li></li>
+</ul>
+<h1 id="ソースコード">ソースコード</h1>
+<ul>
+<li><a href="https://qiita.com/ta_b0_/items/2619d5927492edbb5b03">LaTeXにソースコードを美しく貼る方法</a></li>
+</ul>
+<h1 id="図の挿入input">図の挿入(input)</h1>
+<ul>
+<li><a href="https://hydrocoast.jp/index.php?LaTeX/%E5%9B%B3">https://hydrocoast.jp/index.php?LaTeX/%E5%9B%B3</a></li>
+<li><a href="https://www.okomeda.net/wp/484/">https://www.okomeda.net/wp/484/</a></li>
+<li><a href="http://www.yamamo10.jp/yamamoto/comp/latex/make_doc/insert_fig/index.php">http://www.yamamo10.jp/yamamoto/comp/latex/make_doc/insert_fig/index.php</a></li>
+<li><a href="https://atatat.hatenablog.com/entry/cloud_latex18_subcaption">https://atatat.hatenablog.com/entry/cloud_latex18_subcaption</a></li>
+<li><a href="https://medemanabu.net/latex/scalebox-resizebox/">https://medemanabu.net/latex/scalebox-resizebox/</a></li>
+<li><a href="https://qiita.com/poemn/items/9142339749c87ebdb536">https://qiita.com/poemn/items/9142339749c87ebdb536</a></li>
+<li></li>
+</ul>
+<h1 id="表紙テンプレ">表紙テンプレ</h1>
+<ul>
+<li><a href="https://yosshi71jp.hatenadiary.org/entry/20101210/1292005429">卒論をTeXフォーマットなしから書くためのtips</a></li>
+<li><a href="https://qiita.com/ganyariya/items/6fe38f371dc8fa3a49a4">Quiita「LaTeXの卒論の表紙テンプレート &gt;&lt;」</a></li>
+</ul>
+<h1 id="参考文献">参考文献</h1>
+<ul>
+<li><a href="http://www1.kiy.jp/~yoka/LaTeX/latex.html">LaTeX - コマンド一覧</a></li>
+<li><a href="https://uec.medit.link/latex/eqnalign.html">複数行の数式</a></li>
+<li><a href="https://mathlandscape.com/latex-bracket/">【LaTeX】括弧類のかき方一覧と大きさの変更方法まとめ</a></li>
+<li><a href="https://qiita.com/poemn/items/9142339749c87ebdb536">TeXで好きな位置に図を配置する</a></li>
+<li><a href="http://www.ic.daito.ac.jp/~mizutani/tex/special_characters.html">LaTeXの特殊文字・特別記号</a></li>
+<li><a href="https://medemanabu.net/latex/horizontal-space/">空白-水平方向のスペース - quad, hspace</a></li>
+<li><a href="https://saphir-jaune.hatenablog.com/entry/2016/07/27/232010">TeX 行間の調整</a></li>
+<li><a href="https://konoyonohana.blog.fc2.com/blog-entry-165.html">【LaTex】 fancyvrb &mdash; 洗練されたverbatim拡張機能の提供</a></li>
+<li><a href="https://oversleptabit.com/archives/750">TeXの記憶(89) — Verbatim環境の中で数式を表示する</a></li>
+<li></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          </section>        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

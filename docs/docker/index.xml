@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Chiyo&#39;s blog</title>
+    <link>https://moematsuda-ai.github.io/docker/index.html</link>
+    <description>Recent content in Docker on Chiyo&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 22 Nov 2022 08:44:42 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post Installation Steps for linux</title>
+      <link>https://moematsuda-ai.github.io/docker/post-installation-step/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:44:42 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/post-installation-step/index.html</guid>
+      <description>Docker のインストール後の設定 docker group に追加 Docker サービスをデフォルトで起動時に開始するように設定 $ sudo systemctl enable docker.service $ sudo systemctl enable containerd.service 無効化は以下の通り
+$ sudo systemctl disable docker.service $ sudo systemctl disable containerd.service インストール後の設定はこちら</description>
+    </item>
+    <item>
+      <title>Copy and Mount from Docker container or to Docker container</title>
+      <link>https://moematsuda-ai.github.io/docker/copy-mount/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:44:19 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/copy-mount/index.html</guid>
+      <description>docker での copy と mount コピー ホストとコンテナ間でファイルをコピーするときは次のようにする
+$ docker cp &amp;lt;option&amp;gt; &amp;lt;コピー元path&amp;gt; &amp;lt;コピー先path&amp;gt; コンテナのパスは&amp;lt;container name&amp;gt;:&amp;lt;path&amp;gt;のように書く
+マウント ※マウントはコンテナをrunするときにオプションとして指定する
+バインドマウント 既存（ホスト側）のファイルやフォルダをマウントする方法のこと。
+普通のファイル同様に編集やバックアップが可能となるため、頻繁にアクセスするファイルなどはこちらに置く。
+$ docker run (省略) -v &amp;lt;マウント元のパス&amp;gt;:&amp;lt;マウントポイント&amp;gt; (省略) ボリュームマウント ボリュームを作成し、マウントする方法のこと。
+Dockerホストから変更を加えたくないようなファイルなどはこちらに置く。
+ボリュームの作成
+$ docker volume create &amp;lt;volume name&amp;gt; ボリュームの削除
+$ docker volume rm &amp;lt;volume name&amp;gt; マウント方法
+$ docker run (省略) -v &amp;lt;ボリューム名&amp;gt;:&amp;lt;マウントポイント&amp;gt; (省略) ※ただしボリュームが存在しないときには新規作成される。
+docker volume コマンドにおけるサブコマンド
+サブコマンド 意味 create ボリュームの作成 inspect ボリュームの詳細情報を確認 ls ボリューム一覧を確認 prune コンテナからマウントされていないボリュームをすべて削除 rm ボリュームの削除 ボリュームマウントとバインドマウントを明示的に指定した設定方法 $ --mount type=&amp;lt;bind or volume&amp;gt;,src=&amp;lt;マウント元&amp;gt;,dst=&amp;lt;マウント先&amp;gt; ※この方法ではバインドマウントとボリュームマウントが明示的に指定されているためわかりやすく、 ボリュームが存在しない場合には新規作成されずエラーが出力される。そのため-vオプションより --mountオプションを使用することが推奨されている。</description>
+    </item>
+    <item>
+      <title>How to install Docker</title>
+      <link>https://moematsuda-ai.github.io/docker/installation-docker/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:43:54 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/installation-docker/index.html</guid>
+      <description>1. Dockerのインストールの仕方 古いバージョンをアンインストール
+$ sudo apt-get remove docker docker-engine docker.io containerd runc It’s OK if apt-get reports that none of these packages are installed.
+1.1 Install methods Dockerのリポジトリをセットアップしてそこからインストール方法が推奨されている。
+異なる方法もあるが、ここではリポジトリからインストールを行う。
+リポジトリの設定
+$ sudo -E apt-get update $ sudo apt-get install \ ca-certificates \ curl \ gnupg \ lsb-release Dockerの公式GPGキーを追加
+$ sudo mkdir -p /etc/apt/keyrings $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg 次のコマンドを使用して、リポジトリを設定
+$ echo \ &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.</description>
+    </item>
+    <item>
+      <title>Docker Container for Cuda</title>
+      <link>https://moematsuda-ai.github.io/docker/container-cuda/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:43:12 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/container-cuda/index.html</guid>
+      <description>docker の cuda コンテナの追加設定 1. .bashrc の変更 /home/ と /root/ 以下に保存 /home/ はボリュームマウントしているので、新しくコンテナを作成する場合は設定ファイルを /home/ の保存し、作成したコンテナで /home/ 以下の設定ファイルをコピーすること！ 2. python のライブラリの追加 ライブラリを追加するディレクトリにパスを通す
+$ export PYTHONPATH=&amp;#34;/root/.local/lib/python3.8/site-pachages/:$PYTHONPATH&amp;#34; moysnn ライブラリのシンボリックリンクを&amp;quot;/root/.local/lib/python3.8/site-pachages/&amp;ldquo;以下に作成 3. コマンドのインストール tree trash </description>
+    </item>
+    <item>
+      <title>Connect to Docker Container via ssh</title>
+      <link>https://moematsuda-ai.github.io/docker/container-ssh/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:43:00 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/container-ssh/index.html</guid>
+      <description>dockerでsshを行う場合にはopensshd-serverをインストールし、設定を行う必要がある。
+settings.sh
+export DEBIAN_FRONTEND=noninteractive apt-get install -y openssh-server export mkdir /var/run/sshd export ENV=NOTVISIBLE &amp;#34;in users profile&amp;#34; echo &amp;#34;export VISIBLE=now&amp;#34; &amp;gt;&amp;gt; /etc/profile echo &amp;#34;service ssh start&amp;#34; &amp;gt;&amp;gt; /etc/profile Dockerfile
+RUN bash /tmp/setting.sh EXPOSE &amp;lt;port&amp;gt; CMD [&amp;#34;/usr/sbin/sshd&amp;#34;, &amp;#34;-D&amp;#34;] ただしssh-serverが起動していなければ接続できない。そのため、コンテナ内で以下のコマンドを使用し、サーバーが止まっていないかを確認すること。
+$ service ssh status start or stop ssh $ service ssh start $ service ssh stop trouble 何度もuser名などを変えているとssh接続できない… known_hostsファイルの情報と異なるためsshできなくなる
+$ ssh-keygen -f &amp;#34;&amp;lt;path of known-hosts file&amp;gt;&amp;#34; -R &amp;#34;[&amp;lt;host&amp;gt;]:&amp;lt;port&amp;gt;&amp;#34; と実行すればOK! (log標準出力でも表示されるのでそちらを参照！）
+詳しくはこちら 参照 docker 「コンテナを ssh 接続できるようにするDockerfile」チュートリアル解説 Docker Ubuntu18.</description>
+    </item>
+    <item>
+      <title>How to install Docker Compose</title>
+      <link>https://moematsuda-ai.github.io/docker/instalation-docker-compose/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:42:15 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/instalation-docker-compose/index.html</guid>
+      <description>update $ sudo apt update $ sudo apt upgrade file のダウンロード $ sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose 権限の付与 $ sudo chmod +x /usr/local/bin/docker-compose 動作確認 $ docker-compose --version docker compose のアップグレード docker compose の v1 系をインストールしてしまっていたので v2 系にグレードアップ
+1系のDocker compose の削除 /usr/local/bin/にあるdocker-composeディレクトリを削除
+$ sudo trash docker-compose 新しいDocker compose のインストール 以下のコマンドを実行して Docker Compose の現時点での最新安定版をダウンロードします。
+$ DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker} $ mkdir -p $DOCKER_CONFIG/cli-plugins $ curl -SL https://github.com/docker/compose/releases/download/v2.4.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose このコマンドによって、アクティブユーザーの$HOMEディレクトリ配下に Compose がインストールされます。 システム上の全ユーザー向けに Docker Compose をインストールする場合は、~/.</description>
+    </item>
+    <item>
+      <title>Docker Compose</title>
+      <link>https://moematsuda-ai.github.io/docker/docker-compose-cuda/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:41:46 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/docker-compose-cuda/index.html</guid>
+      <description>dockerでcudaコンテナの作成 cuda の　GPG key 登録 古いキーの削除
+$ sudo apt-key del 7fa2af80 ヘルパーパッケージを利用したキーの登録 nvidia が提供している、nvidia リポジトリ用の新しい署名キーのインストールを自動化する新しいヘルパーパッケージを利用して鍵を登録
+$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb $ sudo dpkg -i cuda-keyring_1.0-1_all.deb ※ubuntu2204とx86_64は該当のものに書き換える
+remove の仕方 ※インストール時にターミナルに表示された文
+A deprecated public CUDA GPG key appear to be installed. To remove the key, run this command: sudo apt-key del 7fa2af80 結局必要だったのかわからなかったけどとりあえずやったこと Setting up NVIDIA Container Toolkit パッケージリポジトリと GPG key のセットアップ
+$ distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \ &amp;amp;&amp;amp; curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.</description>
+    </item>
+    <item>
+      <title>Basic docker usage</title>
+      <link>https://moematsuda-ai.github.io/docker/base/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:41:22 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/base/index.html</guid>
+      <description>systemctl の使い方 Docker の起動と停止 $ systemctl start docker.service $ systemctl stop docker.service $ systemctl stop docker.socket 設定の反映と再起動 $ systemctl deamon-reload $ systemctl restart docker.service docker コマンド $ docker &amp;lt;上位コマンド&amp;gt; &amp;lt;副コマンド&amp;gt; &amp;lt;オプション&amp;gt; &amp;lt;対象&amp;gt; &amp;lt;引数&amp;gt; option オプションの書式 内容 &amp;ndash;name &amp;lt;コンテナ名&amp;gt; コンテナ名の指定 -p &amp;lt;ホストのポート番号&amp;gt;:&amp;lt;コンテナのポート番号&amp;gt; ポート番号の指定 -v &amp;lt;ホストのディスク&amp;gt;:&amp;lt;コンテナのディレクトリ&amp;gt; ボリュームのマウント &amp;ndash;net=&amp;lt;ネットワーク&amp;gt; コンテナをネットワークに接続 -e &amp;lt;環境変数名&amp;gt;=&amp;lt;値&amp;gt; 環境変数の指定 -d バックグラウンドで実行(detach: デタッチモードの略) -i コンテナに操作端末（キーボード）をつなぐ -t 特殊キーを使用可能にする -help ヘルプの表示 &amp;ndash;rm コンテナ終了時に自動的にコンテナを削除する &amp;ndash;workdir , -w コンテナ内部の作業ディレクトリを変更する Docker container の作成 $ docker run &amp;lt;option&amp;gt; &amp;lt;container image&amp;gt; &amp;lt;引数&amp;gt; docker runコマンドは、イメージをダウンロードするdocker pull, コンテナを作成するdocker create, コンテナを起動するdocker startコマンドを一つにまとめたもの。</description>
+    </item>
+    <item>
+      <title>Appendix</title>
+      <link>https://moematsuda-ai.github.io/docker/appendix/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:41:11 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/appendix/index.html</guid>
+      <description>補足 1回限り動かすコンテナの使い方 （例）go言語でコンパイルするためのコンテナを作成する場合
+$ docker run --rm -v &amp;#34;$PWD&amp;#34;:/usr/src/myapp -w /usr/src/myapp golang:1.13 go built -v ここではgo built -v を実行してコンテナを終了・削除している。</description>
+    </item>
+  </channel>
+</rss>

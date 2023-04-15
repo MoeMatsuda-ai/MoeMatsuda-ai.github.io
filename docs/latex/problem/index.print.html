@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Problem :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/latex/problem/index.html" rel="canonical" type="text/html" title="Problem :: Chiyo&#39;s blog">
+    <link href="/latex/problem/index.xml" rel="alternate" type="application/rss+xml" title="Problem :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/latex/problem/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/latex/index.html"><span itemprop="name">Latex</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Problem</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="problem">Problem</h1>
+
+<h2 id="グラフが記述した位置に正しく出力されない">グラフが記述した位置に正しく出力されない</h2>
+<h3 id="もとのやり方">もとのやり方</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{figure}[h]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{figure}
+</span></span></code></pre></div><p><strong>このやり方では画像を連続して出力する場合などにテキストの最後にまとめて出力されてしまう。</strong></p>
+<h3 id="解決法">解決法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>usepackage{here}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{figure}[H]<span style="color:#75715e">%[H]オプションで記述した位置に強制的に出力する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\end</span>{figure}
+</span></span></code></pre></div><h4 id="参考">参考</h4>
+<p><a href="http://ac206223.ppp.asahi-net.or.jp/adiary/memo/adiary.cgi/hirosugu/TeX%E3%81%A7%E5%9B%B3%E3%82%92%E3%82%B3%E3%83%BC%E3%83%89%E8%A8%98%E8%BF%B0%E4%BD%8D%E7%BD%AE%E3%81%AB%E5%BC%B7%E5%88%B6%E7%9A%84%E3%81%AB%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B">TeXで図をコード記述位置に強制的に出力する</a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="図表番号が正しく表示されない">図表番号が正しく表示されない。</h2>
+<!-- raw HTML omitted -->
+<h4 id="問題点">問題点</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{figure}[H]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\label</span>{graph3_4}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{center}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\scalebox</span>{0.9}{<span style="color:#66d9ef">\input</span>{kadai3_4_graph.tex}}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\caption</span>{<span style="color:#e6db74">$</span>\alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">4</span> <span style="color:#e6db74">$</span>における分散<span style="color:#e6db74">$</span>\langle x<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>\rangle<span style="color:#e6db74">$</span>と時間<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>の関係}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{center}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{figure}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{figure}[h]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\label</span>{graph3_2}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{center}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\scalebox</span>{0.9}{<span style="color:#66d9ef">\input</span>{kadai3_2_graph.tex}}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\caption</span>{<span style="color:#e6db74">$</span>\alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#e6db74">$</span>における分散<span style="color:#e6db74">$</span>\langle x<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>\rangle<span style="color:#e6db74">$</span>と時間<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>の関係}       
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{center}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{figure}
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{figure}[h]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\label</span>{graph3_1}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{center}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\scalebox</span>{0.9}{<span style="color:#66d9ef">\input</span>{kadai3_1_graph.tex}}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\caption</span>{<span style="color:#e6db74">$</span>\alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#e6db74">$</span>における分散<span style="color:#e6db74">$</span>\langle x<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>\rangle<span style="color:#e6db74">$</span>と時間<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>の関係}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{center}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{figure}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>図<span style="color:#66d9ef">\ref</span>{graph3_4}, <span style="color:#66d9ef">\ref</span>{graph3_2}, <span style="color:#66d9ef">\ref</span>{graph3_1}
+</span></span></code></pre></div><p>と書くと<code>図4, 4, 4</code>と出力されてしまう</p>
+<!-- raw HTML omitted -->
+<h4 id="解決法-1">解決法</h4>
+<p>captionの中にlabelをかく</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{figure}[H]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{center}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\scalebox</span>{0.9}{<span style="color:#66d9ef">\input</span>{kadai3_4_graph.tex}}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\caption</span>{<span style="color:#e6db74">$</span>\alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">4</span> <span style="color:#e6db74">$</span>における分散<span style="color:#e6db74">$</span>\langle x<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>\rangle<span style="color:#e6db74">$</span>と時間<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>の関係<span style="color:#66d9ef">\label</span>{graph3_4}}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{center}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{figure}
+</span></span></code></pre></div><h4 id="参考-1">参考</h4>
+<ul>
+<li><a href="https://seihiguchi.hatenadiary.org/entry/20080708/1215542448">LaTeXの図番号がおかしい問題 - \label{}を\caption{}内に挿入</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

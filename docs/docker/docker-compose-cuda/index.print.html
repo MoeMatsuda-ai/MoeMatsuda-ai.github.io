@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Docker Compose :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/docker/docker-compose-cuda/index.html" rel="canonical" type="text/html" title="Docker Compose :: Chiyo&#39;s blog">
+    <link href="/docker/docker-compose-cuda/index.xml" rel="alternate" type="application/rss+xml" title="Docker Compose :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/docker/docker-compose-cuda/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/docker/index.html"><span itemprop="name">Docker</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Docker Compose</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="docker-compose">Docker Compose</h1>
+
+<h2 id="dockerでcudaコンテナの作成">dockerでcudaコンテナの作成</h2>
+<h3 id="cuda-のgpg-key-登録">cuda の　GPG key 登録</h3>
+<ol>
+<li>
+<p>古いキーの削除</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt-key del 7fa2af80
+</span></span></code></pre></div></li>
+<li>
+<p>ヘルパーパッケージを利用したキーの登録
+nvidia が提供している、nvidia リポジトリ用の新しい署名キーのインストールを自動化する新しいヘルパーパッケージを利用して鍵を登録</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
+</span></span><span style="display:flex;"><span>$ sudo dpkg -i cuda-keyring_1.0-1_all.deb
+</span></span></code></pre></div><p>※<code>ubuntu2204</code>と<code>x86_64</code>は該当のものに書き換える</p>
+</li>
+<li>
+<p>remove の仕方
+※インストール時にターミナルに表示された文</p>
+<pre tabindex="0"><code>A deprecated public CUDA GPG key appear to be installed.
+To remove the key, run this command:
+sudo apt-key del 7fa2af80
+</code></pre></li>
+</ol>
+<h3 id="結局必要だったのかわからなかったけどとりあえずやったこと">結局必要だったのかわからなかったけどとりあえずやったこと</h3>
+<h4 id="setting-up-nvidia-container-toolkit">Setting up NVIDIA Container Toolkit</h4>
+<ol>
+<li>
+<p>パッケージリポジトリと GPG key のセットアップ</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ distribution<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>. /etc/os-release;echo $ID$VERSION_ID<span style="color:#66d9ef">)</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> curl -s -L https://nvidia.github.io/libnvidia-container/$distribution/libnvidia-container.list | <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>            sed <span style="color:#e6db74">&#39;s#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g&#39;</span> | <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>            sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+</span></span></code></pre></div></li>
+<li>
+<p><code>nvidia-docker2</code> パッケージのインストール</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt-get update
+</span></span><span style="display:flex;"><span>$ sudo apt-get install -y nvidia-docker2
+</span></span></code></pre></div></li>
+<li>
+<p>Docker demon のリスタート</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo systemctl restart docker
+</span></span></code></pre></div></li>
+<li>
+<p>ベースとなるCUDAコンテナを実行することによって、動作するセットアップをテスト</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo docker run --rm --gpus all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
+</span></span></code></pre></div><p>以下のような出力ならOK！</p>
+<pre tabindex="0"><code>+-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.51.06    Driver Version: 450.51.06    CUDA Version: 11.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla T4            On   | 00000000:00:1E.0 Off |                    0 |
+| N/A   34C    P8     9W /  70W |      0MiB / 15109MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+</code></pre></li>
+</ol>
+<h4 id="containerd">containerd</h4>
+<ol>
+<li>
+<p>コンテナエンジンとしてcontainerdをシステムにインストールするために、いくつかの前提モジュールをインストール</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo modprobe overlay <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> sudo modprobe br_netfilter
+</span></span></code></pre></div></li>
+<li>
+<p>これらを確実に持続させることができる</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat <span style="color:#e6db74">&lt;&lt;EOF | sudo tee /etc/modules-load.d/containerd.conf
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">overlay
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">br_netfilter
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span></code></pre></div></li>
+<li>
+<p>apt が HTTPS 上でリポジトリを使用できるようにするためのパッケージをインストール</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update
+</span></span><span style="display:flex;"><span>$ sudo apt-get install <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    ca-certificates <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    curl <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    gnupg <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    lsb-release
+</span></span></code></pre></div></li>
+<li>
+<p>リポジトリとGPG key の追加</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/  docker-archive-keyring.gpg
+</span></span><span style="display:flex;"><span>$ echo <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#e6db74">&#34;deb [arch=</span><span style="color:#66d9ef">$(</span>dpkg --print-architecture<span style="color:#66d9ef">)</span><span style="color:#e6db74"> signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    </span><span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span><span style="color:#e6db74"> stable&#34;</span> | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</span></span></code></pre></div><p>※1回やってたらいらないかも…</p>
+</li>
+</ol>
+<h2 id="dockerfile-and-docker-composeyml-の作成">Dockerfile and docker-compose.yml の作成</h2>
+<h3 id="docker-compose-と-dockerfileを使う場合">docker compose と Dockerfileを使う場合</h3>
+<ul>
+<li><a href="https://github.com/MoeMatsuda-ai/docker-set">こちらを参照</a></li>
+</ul>
+<h4 id="コンテナ作成後の設定">コンテナ作成後の設定</h4>
+<ol>
+<li>鍵の作成</li>
+<li>ssh server の起動
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ bash ./sterter.sh
+</span></span></code></pre></div></li>
+<li>vscodeのsettings.jsonとkeyboard.jsonの設定</li>
+<li>rootのパスワード設定</li>
+</ol>
+<h3 id="dockerfile-のみの場合">Dockerfile のみの場合</h3>
+<ul>
+<li><a href="/docker/docker-compose-cuda/index.html/docker-compose-cuda-Dockerfile">こちらを参照</a></li>
+</ul>
+<h2 id="trouble">trouble</h2>
+<h4 id="apt-が使えない">apt が使えない…</h4>
+<p>コンテナにはproxyを通してたけどaptに通すのを忘れてた…</p>
+<p>Dockerfile の <code>apt update</code> の前に以下の文を追加</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>RUN echo <span style="color:#e6db74">&#39;Acquire::http::proxy &#34;http://proxy.cc.yamaguchi-u.ac.jp:8080&#34;; \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Acquire::https::proxy &#34;https://proxy.cc.yamaguchi-u.ac.jp:8080&#34;;&#39;</span> &gt; /etc/apt/apt.conf
+</span></span></code></pre></div><h4 id="nvidia-gpg-key-の更新">nvidia gpg key の更新</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt-key del 7fa2af80
+</span></span><span style="display:flex;"><span>$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-keyring_1.0-1_all.deb
+</span></span><span style="display:flex;"><span>$ sudo dpkg -i cuda-keyring_1.0-1_all.deb 
+</span></span><span style="display:flex;"><span>$ sudo apt update
+</span></span></code></pre></div><h4 id="cuda-version-を下げるとapt-update-が通らなくなる">cuda version を下げると<code>apt update</code> が通らなくなる</h4>
+<pre tabindex="0"><code>RUN apt-get update &amp;&amp; apt-get install -y \
+  bzr \
+  cvs \
+  git \
+  mercurial \
+  subversion
+</code></pre><p>みたいな感じで <code>update</code> と <code>install</code> をつなげてみたけどだめだった…</p>
+<h4 id="nvidiaのドライバが使えなくなった">nvidiaのドライバが使えなくなった…</h4>
+<ol>
+<li>nvidia driverのバージョンを落としてインストールし直す</li>
+<li>nvidia container toolkitをインストール</li>
+<li>proxy設定</li>
+</ol>
+<h1 id="参照">参照</h1>
+<ul>
+<li><a href="https://hub.docker.com/r/nvidia/cuda">Dockerhub nvidia/cuda</a></li>
+<li><a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#setting-up-nvidia-container-toolkit">NVIDA Installation Guide</a></li>
+<li><a href="https://qiita.com/kaijism/items/ada49192df0a6d285c3a">【Docker】GPU が使える Jupyter Notebook 環境を最速で用意する</a></li>
+<li><a href="https://qiita.com/ksasaki/items/b20a785e1a0f610efa08">NVIDIA Docker って今どうなってるの？ (19.11版)</a></li>
+<li><a href="http://bcl.sci.yamaguchi-u.ac.jp/~jun/notebook/docker/">西井先生のページ</a></li>
+<li><a href="https://qiita.com/tkusumi/items/f275f0737fb5b261a868">NVIDIA Container Toolkit (NVIDIA Docker) は何をしてくれるか</a></li>
+<li><a href="https://qiita.com/tifa2chan/items/1aa93bde3aa26dcf2060">Dockerfileのプロキシ設定</a></li>
+<li><a href="https://docs.docker.jp/v1.11/engine/userguide/containers/dockerizing.html">コンテナで Hello world</a></li>
+<li><a href="https://ricrowl.hatenablog.com/entry/2020/05/21/222821">docker上でjupyter-notebookを使用する方法</a></li>
+<li><a href="https://tech-blog.optim.co.jp/entry/2022/05/18/100000">NVIDIA DockerイメージのGPGキー更新に関する備忘録</a></li>
+<li><a href="https://www.nemotos.net/?p=5178">NVIDIAのリポジトリのキーが更新されました。（2022年4月28日）</a></li>
+<li><a href="https://docs.docker.jp/engine/articles/dockerfile_best-practice.html">Dockerfile のベストプラクティス</a></li>
+<li><a href="https://qiita.com/satodoc/items/188a387f7439e4ec394f">docker-composeで作成されるものの名前を明示的に指定する方法</a></li>
+</ul>
+<h2 id="cudaをdockerで使用する際のdockerfileの作成">CudaをDockerで使用する際のDockerfileの作成</h2>
+<ol>
+<li>
+<p>次のようなDockerfileを作成する</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> nvidia/cuda:11.4.0-cudnn8-devel-ubuntu20.04</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">USER</span><span style="color:#e6db74"> root</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> ./requirements.txt /tmp<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /code</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># ENV DEBIAN_FRONTEND noninteractive</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENV</span> https_proxy <span style="color:#e6db74">&#34;http://&lt;proxy server&gt;&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENV</span> https_proxy <span style="color:#e6db74">&#34;http://&lt;proxy server&gt;&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> echo <span style="color:#e6db74">&#39;Acquire::http::proxy &#34;http://&lt;proxy server&gt;&#34;; \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Acquire::https::proxy &#34;https://&lt;proxy server&gt;&#34;;&#39;</span> &gt; /etc/apt/apt.conf<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> apt-get update <span style="color:#f92672">&amp;&amp;</span> apt-get install -y <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>curl <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>python3 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>python3-distutils<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py <span style="color:#f92672">&amp;&amp;</span> python3 get-pip.py<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip install -r /tmp/requirements.txt<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><ul>
+<li>proxy 設定は以下のようにする
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">ENV</span> https_proxy <span style="color:#e6db74">&#34;http://~~~&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENV</span> http_proxy <span style="color:#e6db74">&#34;http://~~~&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div></li>
+<li>**cuda の　version を下げると <code>apt update</code> が通らなくなったので、<code>RUN apt-get update</code> 以下はコメントアウトして、
+pythonなどはコンテナ作成後にアタッチしてインストールした&hellip;</li>
+</ul>
+</li>
+<li>
+<p>同じ階層に <code>requirememts.txt</code> を作成し、 Dockerfile で呼び出せるようにする。
+このファイルには必要なパッケージを記入しておく</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>jupyter
+</span></span><span style="display:flex;"><span>jupyterlab
+</span></span><span style="display:flex;"><span>numpy
+</span></span><span style="display:flex;"><span>pandas
+</span></span><span style="display:flex;"><span>matplotlib
+</span></span><span style="display:flex;"><span>scikit-learn
+</span></span><span style="display:flex;"><span>scikit-image
+</span></span><span style="display:flex;"><span>scipy
+</span></span><span style="display:flex;"><span>torch
+</span></span><span style="display:flex;"><span>torchvision
+</span></span><span style="display:flex;"><span>tqdm
+</span></span><span style="display:flex;"><span>albumentations
+</span></span><span style="display:flex;"><span>tensorflow-gpu
+</span></span><span style="display:flex;"><span>Pillow
+</span></span><span style="display:flex;"><span>opencv-python
+</span></span></code></pre></div></li>
+<li>
+<p>作成したディレクトリ構造は次のようになる</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ tree my-nvidia-cuda/
+</span></span><span style="display:flex;"><span>my-nvidia-cuda/
+</span></span><span style="display:flex;"><span>├── Dockerfile
+</span></span><span style="display:flex;"><span>├── requirements.txt
+</span></span><span style="display:flex;"><span>└── src
+</span></span><span style="display:flex;"><span>    └── test.ipynb
+</span></span></code></pre></div></li>
+<li>
+<p>Docker イメージをビルド</p>
+<pre tabindex="0"><code>$ cd my-nvidia-cuda
+$ docker build . -t &lt;image name&gt;
+</code></pre></li>
+<li>
+<p>Docker コンテナを起動</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo docker run -it --gpus<span style="color:#f92672">=</span>all -v <span style="color:#e6db74">&#34;</span>$PWD<span style="color:#e6db74">&#34;</span>:/code -p 8888:8888 --name &lt;container name&gt; &lt;image name&gt; /bin/bash
+</span></span></code></pre></div><ul>
+<li><code>--gpus</code>はgpuのを列挙</li>
+</ul>
+</li>
+</ol>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

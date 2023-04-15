@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Public key authentication settings in github :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/github/ssh/index.html" rel="canonical" type="text/html" title="Public key authentication settings in github :: Chiyo&#39;s blog">
+    <link href="/github/ssh/index.xml" rel="alternate" type="application/rss+xml" title="Public key authentication settings in github :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/github/ssh/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/github/index.html"><span itemprop="name">Github</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Public key authentication settings in github</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="public-key-authentication-settings-in-github">Public key authentication settings in github</h1>
+
+<h4 id="公開鍵を-github-に登録することでpush-時などにパスワードを入力する手間が省略可能">公開鍵を GitHub に登録することで、push 時などにパスワードを入力する手間が省略可能</h4>
+<h2 id="公開鍵および秘密鍵の作成と登録">公開鍵および秘密鍵の作成と登録</h2>
+<ol>
+<li>
+<p>公開鍵および秘密鍵を作成</p>
+<pre tabindex="0"><code>ssh-keygen -t ed25519
+</code></pre></li>
+<li>
+<p>公開鍵 を GitHub に登録</p>
+<pre tabindex="0"><code>cat ~/.ssh/id_ed25519.pub
+# コマンドを実行して表示されたすべての文字列を GitHub に登録
+#
+# ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX user@host
+# ↑こんな感じの文字列をすべてコピペ
+</code></pre><p>GitHub の公開鍵登録の手順は、</p>
+<ol>
+<li>Settings</li>
+<li>SSH and GPG keys</li>
+<li>[New SSH key]</li>
+<li>タイトルをつけ公開鍵をコピペし [Add SSH key]</li>
+</ol>
+</li>
+<li>
+<p>SSH の設定 GitHub で使用する秘密鍵を設定するため、~/.ssh/config に<a href="https://github.com/MoeMatsuda-ai/info_study/wiki/Create-ssh_GitHub#%E5%85%AC%E9%96%8B%E9%8D%B5%E3%81%8A%E3%82%88%E3%81%B3%E7%A7%98%E5%AF%86%E9%8D%B5%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%A8%E7%99%BB%E9%8C%B2">設定</a>を記述</p>
+</li>
+</ol>
+<p>最終行 (ProxyCommand の部分) は学内のコンピューターの場合にのみ設定</p>
+<h2 id="接続の確認">接続の確認</h2>
+<pre tabindex="0"><code>$ ssh -T git@github.com
+</code></pre><p>ターミナルで実行して以下のように表示されればOK!</p>
+<pre tabindex="0"><code>Hi (User名)! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre><p>※途中で以下のプロンプトメッセージが表示されたら<code>yes</code>と入力
+<code>The authenticity of host '[ssh.github.com]:443 (&lt;no hostip for proxy command&gt;)' can't be established. RSA key fingerprint is [以下省略]. Are you sure you want to continue connecting (yes/no/[fingerprint])? The authenticity of host '[ssh.github.com]:443 (&lt;no hostip for proxy command&gt;)' can't be established. RSA key fingerprint is [以下略]. Are you sure you want to continue connecting (yes/no/[fingerprint])? </code></p>
+<h2 id="ssh接続がうまく行かないとき">ssh接続がうまく行かないとき</h2>
+<p>レポジトリのディレクトリに入り次のコマンドを入力</p>
+<pre tabindex="0"><code>git config remote.origin.url
+</code></pre><p><code>https://github.com/[ユーザID]/[リポジトリ]</code>となっていたらレポジトリのディレクトリ内の<code>/.git/config</code>を開いて<code>url</code>の覧を</p>
+<pre tabindex="0"><code>url = github.com:[ユーザID]/[リポジトリ].git
+</code></pre><p>と書き換える。</p>
+<p>または以下のコマンドを実行</p>
+<pre tabindex="0"><code>git remote set-url origin [Host名]:[ユーザID]/[リポジトリ].git
+</code></pre><p>※~/.ssh/configで設定していない場合は</p>
+<pre tabindex="0"><code>git remote set-url origin git@github.com:[ユーザID]/[リポジトリ].git
+</code></pre><p>でOK!</p>
+<h2 id="参照">参照</h2>
+<p><a href="https://qiita.com/shizuma/items/2b2f873a0034839e47ce">Qiita「Githubでssh接続する手順」</a>
+<a href="https://dev.classmethod.jp/articles/github-ssh-setting/">GitHubヘルプを参考にSSHキーの設定を行ってみた</a></p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

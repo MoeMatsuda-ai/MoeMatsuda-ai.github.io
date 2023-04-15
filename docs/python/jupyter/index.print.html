@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Jupyter notebook :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/python/jupyter/index.html" rel="canonical" type="text/html" title="Jupyter notebook :: Chiyo&#39;s blog">
+    <link href="/python/jupyter/index.xml" rel="alternate" type="application/rss+xml" title="Jupyter notebook :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/python/jupyter/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/python/index.html"><span itemprop="name">Python</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Jupyter notebook</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="jupyter-notebook">Jupyter notebook</h1>
+
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="セル">セル</h2>
+<ul>
+<li>編集モードへの変更：ダブルクリックまたは&quot;Enter&quot;</li>
+<li>コマンドモードへの変更：ESC</li>
+<li>セルの内容の実行
+<ul>
+<li>Windows：Ctrl+Enter</li>
+<li>MacOS：command+Return</li>
+<li>OS共通：Shift+Enter
+<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h2 id="markdownセルとcodeセル">Markdownセルとcodeセル</h2>
+<ul>
+<li>Markdownセル：テキストを入力するためのセル</li>
+<li>Codeセル：Pythonの実行を行うセル
+<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+<h2 id="arkdownセルの編集方法">arkdownセルの編集方法</h2>
+<ul>
+<li>&ldquo;#&ldquo;でタイトル</li>
+<li>&ldquo;##&ldquo;でサブタイトル</li>
+<li>&ldquo;-&ldquo;で箇条書き</li>
+<li>&ldquo;<strong>太文字</strong>&ldquo;で太文字
+<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+<h2 id="便利なショートカットキーwindow">便利なショートカットキー（Window）</h2>
+<h4 id="コマンドモード">コマンドモード</h4>
+<table>
+<thead>
+<tr>
+<th>ショートカットキー</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F</td>
+<td>検索・置換</td>
+</tr>
+<tr>
+<td>Ctrl</td>
+<td>-Shift</td>
+</tr>
+<tr>
+<td>Ctrl</td>
+<td>-Shift</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>編集モードにする</td>
+</tr>
+<tr>
+<td>P</td>
+<td>コマンドパレットを開く</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>-Enter</td>
+</tr>
+<tr>
+<td>Ctrl</td>
+<td>-Enter</td>
+</tr>
+<tr>
+<td>Alt</td>
+<td>-Enter</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>コードセルにする</td>
+</tr>
+<tr>
+<td>M</td>
+<td>マークダウンセルにする</td>
+</tr>
+<tr>
+<td>R</td>
+<td>rawセルにする</td>
+</tr>
+<tr>
+<td>1</td>
+<td>見出し１にする</td>
+</tr>
+<tr>
+<td>2</td>
+<td>見出し２にする</td>
+</tr>
+<tr>
+<td>3</td>
+<td>見出し３にする</td>
+</tr>
+<tr>
+<td>4</td>
+<td>見出し４にする</td>
+</tr>
+<tr>
+<td>5</td>
+<td>見出し５にする</td>
+</tr>
+<tr>
+<td>6</td>
+<td>見出し６にする</td>
+</tr>
+<tr>
+<td>K</td>
+<td>上のセルを選択する</td>
+</tr>
+<tr>
+<td>Up</td>
+<td>上のセルを選択する</td>
+</tr>
+<tr>
+<td>Down</td>
+<td>下のセルを選択する</td>
+</tr>
+<tr>
+<td>J</td>
+<td>下のセルを選択する</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>-K</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>-Up</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>-Down</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>-J</td>
+</tr>
+<tr>
+<td>A</td>
+<td>上にセルを追加する</td>
+</tr>
+<tr>
+<td>B</td>
+<td>下にセルを追加する</td>
+</tr>
+<tr>
+<td>X</td>
+<td>選択しているセルをカット</td>
+</tr>
+<tr>
+<td>C</td>
+<td>選択しているセルをコピー</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>-V</td>
+</tr>
+<tr>
+<td>V</td>
+<td>下に貼り付け</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>セルの削除をやり直す</td>
+</tr>
+<tr>
+<td>DD</td>
+<td>選択しているセルを削除する</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>-M</td>
+</tr>
+<tr>
+<td>Ctrl</td>
+<td>-S</td>
+</tr>
+<tr>
+<td>S</td>
+<td>保存する</td>
+</tr>
+<tr>
+<td>L</td>
+<td>行番号の表示・非表示</td>
+</tr>
+<tr>
+<td>O</td>
+<td>セルの出力結果の表示・非表示</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>-O</td>
+</tr>
+<tr>
+<td>H</td>
+<td>キーボードショートカット表示</td>
+</tr>
+<tr>
+<td>I×2</td>
+<td>カーネルをインタラプト</td>
+</tr>
+<tr>
+<td>0</td>
+<td>カーネルを再起動</td>
+</tr>
+<tr>
+<td>Esc</td>
+<td>ページャーを閉じる</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>ページャーを閉じる</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>-L</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>-Space</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>下にスクロール</td>
+</tr>
+</tbody>
+</table>
+<h4 id="編集モード">編集モード</h4>
+<table>
+<thead>
+<tr>
+<th>ショートカットキー</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tab</td>
+<td>コード補完・タブ</td>
+</tr>
+<tr>
+<td>Shift-Tab</td>
+<td>ツールチップ</td>
+</tr>
+<tr>
+<td>Ctrl-]</td>
+<td>インデント</td>
+</tr>
+<tr>
+<td>Ctrl-[</td>
+<td>ディデント</td>
+</tr>
+<tr>
+<td>Ctrl-A</td>
+<td>全選択</td>
+</tr>
+<tr>
+<td>Ctrl-Z</td>
+<td>やり直し</td>
+</tr>
+<tr>
+<td>Ctrl-Shift</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Ctrl-Y</td>
+<td>やり直し</td>
+</tr>
+<tr>
+<td>Ctrl-Home</td>
+<td>セルの最初に移動</td>
+</tr>
+<tr>
+<td>Ctrl-Up</td>
+<td>セルの最初に移動</td>
+</tr>
+<tr>
+<td>Ctrl-End</td>
+<td>セルの最後に移動</td>
+</tr>
+<tr>
+<td>Ctrl-Down</td>
+<td>セルの最後に移動</td>
+</tr>
+<tr>
+<td>Ctrl-Left</td>
+<td>一単語前に移動</td>
+</tr>
+<tr>
+<td>Ctrl-Right</td>
+<td>一単語後に移動</td>
+</tr>
+<tr>
+<td>Ctrl-Backspace</td>
+<td>前の単語を削除</td>
+</tr>
+<tr>
+<td>Ctrl-Delete</td>
+<td>後の単語を削除</td>
+</tr>
+<tr>
+<td>Ctrl-M</td>
+<td>コマンドモードにする</td>
+</tr>
+<tr>
+<td>Ctrl-Shift-F</td>
+<td>コマンドパレットを開く</td>
+</tr>
+<tr>
+<td>Ctrl-Shift-P</td>
+<td>コマンドパレットを開く</td>
+</tr>
+<tr>
+<td>Esc</td>
+<td>コマンドモードにする</td>
+</tr>
+<tr>
+<td>Shift-Enter</td>
+<td>セルを実行し、下のセルを選択する</td>
+</tr>
+<tr>
+<td>Ctrl-Enter</td>
+<td>セルを実行する</td>
+</tr>
+<tr>
+<td>Alt-Enter</td>
+<td>セルを実行し、下にセルを追加する</td>
+</tr>
+<tr>
+<td>Ctrl-Shift-Minus</td>
+<td>セルを分割する</td>
+</tr>
+<tr>
+<td>Ctrl-S</td>
+<td>保存する</td>
+</tr>
+<tr>
+<td>Down</td>
+<td>カーソルを下に移動</td>
+</tr>
+<tr>
+<td>Up</td>
+<td>カーソルを上に移動</td>
+</tr>
+<tr>
+<td>Ctrl-/</td>
+<td>選択部分をコメントアウト</td>
+</tr>
+</tbody>
+</table>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="kernel">Kernel</h2>
+<ul>
+<li>セルの左の &ldquo;In[]&rdquo; の括弧内の数字は実行を行った順番を示す。</li>
+<li>順番によっては正常に作動しない場合もあるため最後は左上の欄から&quot;Kernel &gt; Restart &amp; Run All&quot;をクリック</li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

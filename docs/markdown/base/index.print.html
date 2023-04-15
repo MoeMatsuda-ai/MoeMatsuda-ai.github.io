@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Basic operation :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/markdown/base/index.html" rel="canonical" type="text/html" title="Basic operation :: Chiyo&#39;s blog">
+    <link href="/markdown/base/index.xml" rel="alternate" type="application/rss+xml" title="Basic operation :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/markdown/base/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/markdown/index.html"><span itemprop="name">Markdown</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Basic operation</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="basic-operation">Basic operation</h1>
+
+<h2 id="markdown-記法">markdown 記法</h2>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>概要</th>
+<th>表示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#[space]</td>
+<td>セクション</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>##[space]</td>
+<td>サブセクション</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>###[space]</td>
+<td>サブサブセクション</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>-[space]</td>
+<td>箇条書きリスト</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>1.[space] <!-- raw HTML omitted -->   1.[space]</td>
+<td>番号付きリスト <!-- raw HTML omitted -->(数字はすべて1と記入することで順番に番号が割り振られる)</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>- [ ] 文字</td>
+<td>チェック付き箇条書きリスト</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>&gt;[spave]</td>
+<td>引用</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>&raquo;[space]</td>
+<td>二重引用</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td><code>*[文字]*</code></td>
+<td>イタリック体</td>
+<td><em>イタリック</em></td>
+</tr>
+<tr>
+<td><code>**[文字]**</code></td>
+<td>bold（太字）</td>
+<td><strong>bold</strong></td>
+</tr>
+<tr>
+<td><code>***[文字]***</code></td>
+<td>強調(イタリック&amp;ボールド)</td>
+<td><em><strong>強調</strong></em></td>
+</tr>
+<tr>
+<td><code>~~取り消し線~~</code></td>
+<td>取り消し線</td>
+<td><del>取り消し線</del></td>
+</tr>
+<tr>
+<td><code>***</code></td>
+<td>水平線(アスタリスクの変わりに<code>---</code>や<code>___</code>でも良い)</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td><code>[リンク名](URL)</code></td>
+<td>リンクの記述</td>
+<td><a href="https://qiita.com/tbpgr/items/989c6badefff69377da7">Markdown記法</a></td>
+</tr>
+<tr>
+<td><code>`[文字]`</code></td>
+<td>文字の強調</td>
+<td><code>str</code></td>
+</tr>
+<tr>
+<td><code>```python</code><!-- raw HTML omitted -->print(&ldquo;Hello World) <!-- raw HTML omitted --><code>```</code></td>
+<td>ソースコードの記入(その他にもc言語やgnuplotなどでも使用できる)</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td><code>&lt;br&gt;</code></td>
+<td>改行</td>
+<td>改行します<!-- raw HTML omitted -->※改行後に文字を記入</td>
+</tr>
+<tr>
+<td><code>&amp;nbsp</code></td>
+<td>半角スペース</td>
+<td></td>
+</tr>
+<tr>
+<td><code>&amp;ensp</code></td>
+<td>半角より少し広めの空白</td>
+<td></td>
+</tr>
+<tr>
+<td><code>&amp;emsp</code></td>
+<td>全角スペース</td>
+<td></td>
+</tr>
+<tr>
+<td><code>&amp;thinsp</code>, <code>&amp;nbsp</code></td>
+<td>より狭い空白</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>※表示例が空欄のところは下記を参照</p>
+<h2 id="セクション-様々な記法の表示例">セクション 〜様々な記法の表示例〜</h2>
+<h2 id="サブセクション">サブセクション</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## サブセクション
+</span></span></span></code></pre></div><h3 id="サブサブセクション">サブサブセクション</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">### サブサブセクション
+</span></span></span></code></pre></div><h4 id="サブサブサブセクション">サブサブサブセクション・・・</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">#### サブサブサブセクション・・・
+</span></span></span></code></pre></div><h4 id="箇条書き番号付きリスト">箇条書き&amp;番号付きリスト</h4>
+<ul>
+<li>A</li>
+<li>B
+<ul>
+<li>C</li>
+<li>D
+<ul>
+<li>E</li>
+<li>F</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>a</li>
+<li>b</li>
+</ol>
+<ul>
+<li><input disabled="" type="checkbox"> 箇条書き1</li>
+<li><input checked="" disabled="" type="checkbox"> 箇条書き2</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> A
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> B
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> C
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> D
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-</span> E
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-</span> F
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> a
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> b
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> 箇条書き1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [X]</span> 箇条書き2
+</span></span></code></pre></div><h4 id="引用">引用</h4>
+<blockquote>
+<p>引用1</p>
+<blockquote>
+<p>二重引用</p>
+</blockquote>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>&gt;引用1
+</span></span><span style="display:flex;"><span>  &gt;&gt;二重引用
+</span></span></code></pre></div><h4 id="ソースコードpython-c">ソースコード（Python, c)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>    print(i)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>  <span style="color:#75715e">#include</span><span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>      print(i);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#e6db74">```python
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span>  <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>    print(i)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```c
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span>  <span style="color:#75715e">#include</span><span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>      print(i);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
+</span></span></code></pre></div><h4 id="下線">下線</h4>
+<p><!-- raw HTML omitted -->アンダーラインの例<!-- raw HTML omitted --></p>
+<pre tabindex="0"><code>&lt;u&gt; 下線のcode &lt;/u&gt;
+</code></pre><h4 id="数式">数式</h4>
+<p>数式は<code>$</code>や<code>$$</code>で囲むことでlatexと同様に表示することができる</p>
+<ul>
+<li>
+<p><code>$</code>は $\Deltax` のように組み込み</p>
+</li>
+<li>
+<p><code>$$</code> は下記のように段落形式になる
+$$ x = \frac{-b\pm\sqrt{b^2}-4ac}{2a} $$</p>
+<p>※ものによっては数式表示できないものもあるが、下記のようにヘッダーに記述しhtml形式に変換すれば数式表示が可能</p>
+<pre tabindex="0"><code>&lt;script type=&#34;text/javascript&#34; async src=&#34;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML&#34;&gt;
+&lt;/script&gt;
+&lt;script type=&#34;text/x-mathjax-config&#34;&gt;
+MathJax.Hub.Config({
+tex2jax: {
+inlineMath: [[&#39;$&#39;, &#39;$&#39;] ],
+displayMath: [ [&#39;$$&#39;,&#39;$$&#39;], [&#34;\\[&#34;,&#34;\\]&#34;] ]
+}
+});
+&lt;/script&gt;
+</code></pre></li>
+<li>
+<pre tabindex="0"><code>```math 
+x = \frac{-b\pm\sqrt{b^2}-4ac}{2a}
+``` 
+</code></pre><p>でもOKかも？</p>
+</li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

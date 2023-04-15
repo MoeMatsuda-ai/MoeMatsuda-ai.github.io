@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gnuplot on Chiyo&#39;s blog</title>
+    <link>https://moematsuda-ai.github.io/gnuplot/index.html</link>
+    <description>Recent content in Gnuplot on Chiyo&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 24 Nov 2022 01:07:41 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/gnuplot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to insert formulas like latex</title>
+      <link>https://moematsuda-ai.github.io/gnuplot/output_equation_on_latex/index.html</link>
+      <pubDate>Thu, 24 Nov 2022 01:07:41 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/gnuplot/output_equation_on_latex/index.html</guid>
+      <description>gnuplotでlatex形式の数式を挿入 準備 gnuplot では直接pdfをつくらずLaTeX（TikZ）を経由することで美しいグラフのpdfをつくることができる。
+このグラフ作成にはtikz環境を使用し、これにより作成されたtexファイルを読み込みタイプセットすることが可能である。
+ただしこの環境と関連するファイルはTeXLiveには含まれておらず、Linux等の環境ではGnuplotのインストール時にpackageマネージャーがスタイルファイル gnuplot-lua-tikzとそれに関連するファイルをLaTeXが探索するファイルにインストールしてくれるが、Windowsでは自分で環境を整える必要がある。
+ターミナル（コマンドプロンプト）でc/texlive/texmx-local/tex/latexに移動し、gnuplotファイルを作成する。 gnuplotを起動してtexlive/texmx-local/tex/latex/gnuplotに移動し、以下のコマンドを実行する。 set terminal tikz createstyle コマンドプロンプト上でgnuplotファイルに移動し、mktexlsrを実行してls-IRを更新する。 TeXソースコードの生成 次のように入力し、出力をtilzにしてプロットする。
+set terminal tikz set output &amp;#34;filename.tex&amp;#34; plot sin(x) TeXで画像を出力 次のようにTeXファイルに記入することでfilename.texの画像を出力することができる。
+\documentclass[dvipdfmx]{jarticle} \usepackage{tikz} \usepackage{gnuplot-lua-tikz} \begin{document} \input{filename.tex} \end{document} 【参考文献】 gnuplotからTikZを介してpdfを生成 Gnuplot で LaTex 用の綺麗なグラフを作成する gnuplotでTeXフォントを用いる </description>
+    </item>
+    <item>
+      <title>Command file</title>
+      <link>https://moematsuda-ai.github.io/gnuplot/command_file/index.html</link>
+      <pubDate>Thu, 24 Nov 2022 01:07:10 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/gnuplot/command_file/index.html</guid>
+      <description>gnuplotのコマンドをファイルで保存する方法 拡張子は.plt コメントは#を使う コマンドを順に入力していけばOK!（コマンドの頭に特殊な文字を入れる必要はない） コマンドファイルの拡張子を.plt以外にした場合 下記のコマンドを打ち込む
+&amp;gt; load &amp;#34;コマンドファイル名.拡張子&amp;#34; 参考文献 コマンド・ファイルを実行する </description>
+    </item>
+    <item>
+      <title>basic operation</title>
+      <link>https://moematsuda-ai.github.io/gnuplot/base/index.html</link>
+      <pubDate>Thu, 24 Nov 2022 01:07:00 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/gnuplot/base/index.html</guid>
+      <description>基本コマンド 関数の表示 &amp;gt;plot x*x+2 カレントディレクトリの移動 &amp;gt;cd &amp;#39;C:\Users&amp;#39; ※ディレクトリやファイル名は&amp;rsquo;&amp;rsquo; &amp;rsquo; &amp;rsquo; &amp;lsquo;&amp;lsquo;で囲む
+データファイルの表示 &amp;gt;plot &amp;#39;test.dat&amp;#39; ※ファイル名は絶対パスまたは相対パスでOK ※ファイルデータのここの列はスペースで区切る
+データファイルのフィッティング f(x)=ax**2+bx+c fit f(x) &amp;#34;data.d&amp;#34; u 1:2 via a,b,c 【出力結果】
+... Final set of parameters Asymptotic Standard Error ======================= ========================== a = 0.995618 +/- 0.005679 (0.5704%) b = 15.3268 +/- 0.051 (0.3327%) c = 0.970465 +/- 0.04439 (4.574%) ... &amp;gt; ※Final set of parameterが最終的なフィッティングの結果を表す。Asymptotic Standard Errorは何だろ？
+便利なオプション &amp;gt;plot &amp;#34;ファイル名&amp;#34; [オプション] オプション 意味 with lines 点と点を線で結ぶ using 1:2 データの1列目をx軸、2列めをy軸にとってプロットする with points pointtype 2 (pointtypeをptと略してもOK！) 点の種類を2に変える ※【参考】「gnuplotのグラフを調整するには」 with lines linetype 3 (linetypeをltと略してもOK！) 線の種類を3に変える with lp lt 3 lw 2 pt 5 ps 2 線の種類(lt)を3番目のもの，線の太さ(lw)を2に，点の種類(pt)を5番目のもの，点の大きさ(ps)を2にする。 (lp=linespoints,lt=linetype，lw=linewidth，pt=pointtype，ps=pointsize) title &amp;ldquo;データのラベル&amp;rdquo; プロットするデータの名前（凡例）を指定する※【参考】「凡例、ラベル等」 unset key (またはnotitle) データの名前（凡例）を消す グラフの調整 &amp;gt;set [オプション] オプション 意味 xtics 1 x軸の目盛間隔を設定 title &amp;ldquo;タイトル&amp;rdquo; グラフのタイトルを設定 xlabel &amp;ldquo;ラベル&amp;rdquo; x軸の軸ラベルを設定 mxtics [数] x軸の副目盛の数を設定　※[数]は省略可。標準では1個の主目盛を10等分するように設定されている。 label at first 1.</description>
+    </item>
+    <item>
+      <title>How to install gnuplot</title>
+      <link>https://moematsuda-ai.github.io/gnuplot/install/index.html</link>
+      <pubDate>Thu, 24 Nov 2022 00:26:02 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/gnuplot/install/index.html</guid>
+      <description>gnuplotのインストール方法 $ sudo apt update $ sudo apt install gnuplot $ sudo apt install gnuplot-x11 gnuplot-x11をインストールすると、出力端末が&amp;quot;X11&amp;quot;になる。
+出力端末は以下の3つのパッケージが使用可能。ただしこれらは 排他的なパッケージのため、どれか1つのみしかインストールできない。 （他のをインストールしようとすると、すでにインストールされていた パッケージはアンインストールされる。）
+gnuplot-qt gnuplot-x11 gnuplot-nox 参考 Ubuntuのリポジトリからインストールできるgnuplotのパッケージについて LinuxにGnuplotをインストール </description>
+    </item>
+  </channel>
+</rss>

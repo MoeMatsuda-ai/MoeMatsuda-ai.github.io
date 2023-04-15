@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>C language :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/c_lang/index.html" rel="canonical" type="text/html" title="C language :: Chiyo&#39;s blog">
+    <link href="/c_lang/index.xml" rel="alternate" type="application/rss+xml" title="C language :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/c_lang/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">C language</span><meta itemprop="position" content="2"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable chapter narrow" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="chapter">
+<div class="article-subheading">Chapter 1</div>
+<h1 id="c-language">C language</h1>
+
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <section>
+            <h1 class="a11y-only">Subsections of C language</h1>
+          <article class="default">
+<h1 id="using-gniplot-on-c">Using gniplot on C</h1>
+
+<h2 id="操作方法">操作方法</h2>
+<p>gnuplotをC言語のプログラムから制御するには，パイプを使うのが最も簡単である．ここでは，C言語のプログラムによりパイプの生成しgnuplotを起動を行い，パイプを通してコマンドを送る．C言語のプログラム内にコマンドを記述することにより，プログラマーの意図したとおりにgnuplotを操作することができる．</p>
+<ol>
+<li>
+<p>パイプを開く</p>
+<ol>
+<li>パイプを開くためには，ファイルポインターをつかう．そのためファイルポインターを格 納する変数を用意しなくてはならない．パイプの先もファイルとして扱われるのである．
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>FILE <span style="color:#f92672">*</span>hoge;
+</span></span></code></pre></div></li>
+<li>次にgnuplotを立ち上げて，そこにパイプを接続する必要がある．次のようにする．
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>hoge <span style="color:#f92672">=</span> popen(<span style="color:#e6db74">&#34;gnuplot -persist&#34;</span>,<span style="color:#e6db74">&#34;w&#34;</span>);
+</span></span></code></pre></div></li>
+<li>popen()関数がパイプを開く命令である．これで，gnuplot が立ち上がり，パイプを 通して，コマンドを送ることができる．オプションのpersistで，gnuplotが終了し てもグラフが残るようにしている．そうしないと，コンピューターの動作は高速なので， gnuplotは一瞬にして終了し，グラフが消えてしまい，ほとんど動作内容が分からなく なる．popen()関数の戻り値はパイプの情報を示すファイルポインターである．この ファイルポインターを指定して，コマンドを送ることになる．</li>
+</ol>
+</li>
+<li>
+<p>パイプを通してコマンドを送る
+パイプを通して，gnuplotにコマンドを送るのはfprintf()関数を使う．
+<code>c fprintf(hoge, &quot;plot sin(x)\n&quot;); </code>
+このfprintfを使って，gnuplotにいくらでもコマンドを送ることができる．あたかも，C言語の向こう側でgnuplotが立ち上がって，それから命令を送っているかのように動作する．このようなことができるのが，コマンドを打ち込むCharacter-based User Interface(CUI)の良いところである．</p>
+</li>
+<li>
+<p>パイプを閉じる
+すべての動作が終了したならば，パイプを閉じなくてはならない．これも，ファイルの操作と全く同じである．
+<code>c pclose(hoge);  </code></p>
+</li>
+</ol>
+<p><em><strong>（例）三角関数のグラフ作成プログラム</strong></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ae81ff">1</span> <span style="color:#960050;background-color:#1e0010">#</span>include <span style="color:#f92672">&lt;</span>stdio.h<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span> <span style="color:#66d9ef">int</span> main(<span style="color:#66d9ef">void</span>){
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span>   FILE <span style="color:#f92672">*</span>gp;
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span>   gp <span style="color:#f92672">=</span> popen(<span style="color:#e6db74">&#34;gnuplot -persist&#34;</span>,<span style="color:#e6db74">&#34;w&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">7</span>   <span style="color:#a6e22e">fprintf</span>(gp, <span style="color:#e6db74">&#34;plot sin(x)</span><span style="color:#960050;background-color:#1e0010">\</span>n<span style="color:#e6db74">&#34;)</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">9</span>   <span style="color:#a6e22e">pclose</span>(gp);
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">11</span>   <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">12</span> }
+</span></span></code></pre></div><h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="http://www.yamamo10.jp/yamamoto/lecture/2007/5E_comp_app/gnuplot/html/node4.html">c言語からgnuplotを操作する(平成19年7月11日、山本昌志)</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="method-of-file-division">Method of file division</h1>
+
+<h2 id="ファイル分割">ファイル分割</h2>
+<p>c言語のファイル分割では関数等を書き込むファイル<code>.c``.h</code>ファイルと<code>main</code>関数を書き込むファイルの3つのファイルを用意する</p>
+<ol>
+<li>
+<p>関数を書き込む<code>calc.c</code>ファイル</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#ifndef _CALC_H_
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define _CALC_H_
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//  関数avgのプロトタイプ宣言
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">double</span> <span style="color:#a6e22e">avg</span>(<span style="color:#66d9ef">double</span>,<span style="color:#66d9ef">double</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif </span><span style="color:#75715e">// _CALC_H_
+</span></span></span></code></pre></div></li>
+<li>
+<p><code>calc.h</code>ファイル</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;calc.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//  平均値を求める関数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">double</span> <span style="color:#a6e22e">avg</span>(<span style="color:#66d9ef">double</span> l,<span style="color:#66d9ef">double</span> m){
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//  引数l,mの平均値を求め、rに代入する。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">double</span> r <span style="color:#f92672">=</span> (l <span style="color:#f92672">+</span> m) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2.0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> r;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>このファイルでは次のようにファイルに書き込み、プロトタイプ宣言を行う</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#ifnfdef _(大文字で記述したファイル名)_H_
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define _(大文字で記述したファイル名)_H_
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">プロトタイプ宣言</span>;
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">プロトタイプ宣言</span>;
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">：</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif </span><span style="color:#75715e">// _（大文字で記述したファイル名)_H_
+</span></span></span></code></pre></div><p>ここで登場した<code>#ifndef``#define``#endif</code>はマクロといい、二重インクルードを防いでいる</p>
+</li>
+<li>
+<p>main関数を書き込む<code>main.c</code>ファイル</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;calc.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">double</span> d1,d2,d3;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">double</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.2</span>,b <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.4</span>,c <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.7</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//   同じ計算が3回(関数を呼び出して計算）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>d1 <span style="color:#f92672">=</span> avg(a,b);
+</span></span><span style="display:flex;"><span>d2 <span style="color:#f92672">=</span> avg(<span style="color:#ae81ff">4.1</span>,<span style="color:#ae81ff">5.7</span>);
+</span></span><span style="display:flex;"><span>d3 <span style="color:#f92672">=</span> avg(c,<span style="color:#ae81ff">2.8</span>);
+</span></span><span style="display:flex;"><span>printf(<span style="color:#e6db74">&#34;d1 = %f,d2 = %f,d3 = %f¥n&#34;</span>,d1,d2,d3);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="コンパイルの仕方">コンパイルの仕方</h2>
+<p>gcc はコマンドラインで与えられたソースファイルしか読み込まないため、すべての<code>.c</code>ソースファイルをまとめ上げて実行する必要がある</p>
+<p>下記2パターンの方法で実行が可能</p>
+<ol>
+<li>
+<p>(即席回答)１コマンドで</p>
+<pre tabindex="0"><code>$ gcc main.c calc.c
+</code></pre><p>※-o オプションで実行ファイル名を指定することも可能</p>
+<p>この方法ではオブジェクトファイル<code>*.o</code>は最後に掃除・削除されるため残らない</p>
+</li>
+<li>
+<p>3コマンドで</p>
+<pre tabindex="0"><code>$ gcc -c main.c
+$ gcc -c calc.c
+$ gcc main.o calc.o
+</code></pre><p>-c オプションではオブジェクトファイル<code>*.o</code>を作るところまでしてくれる</p>
+<p>この方法では途中までの<code>.o</code>ファイルも残るため、途中でコンパイルエラーが起きてもそれまでのオブジェクトファイルは残るという利点がある。したがってたくさんの<code>*.c</code>ファイルで構成される実務プログラムではこの方法で１本ずつコンパイルシていくのが一般的担っている。</p>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<h4 id="c言語コンパイルのちょこっと解説">c言語コンパイルのちょこっと解説</h4>
+<p>gcc は、3つの下請けを順次起動する、親玉に過ぎません。</p>
+<ol>
+<li>プリプロセッサ - #include や #define を処理、本来(?)のC言語ソースにする</li>
+<li>コンパイラ - *.c をコンパイルし、オブジェクトファイル *.o を作る</li>
+<li>リンカ - 1個以上の *.o をまとめあげ、1個の実行形式ファイル(Windowsなら *.exe)を作る</li>
+</ol>
+<!-- raw HTML omitted -->
+<p>gcc の -c オプションは、「上記2.まででいいよ」指示です。</p>
+<!-- raw HTML omitted -->
+<p>即席回答 1. のやりかたは、これを全部まとめて1回にしてるだけ。</p>
+<p>*.o は、実は途中でできてますが、こういう要求のしかたをされたgcc は、最後にキレイに掃除・削除してしまいます。</p>
+<h1 id="参考">参考</h1>
+<ul>
+<li><a href="https://c-lang.sevendays-study.com/day7.html">一週間で身につくc言語の基本 -ファイル分割-</a></li>
+<li><a href="https://c-lang.sevendays-study.com/ex-day7.html">一週間で身につくc言語の基本 -複雑なファイル分割-</a></li>
+<li><a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10128407290">Yahoo!知恵袋 -ソースファイルを複数使ったプログラムのコンパイル-</a></li>
+<li><a href="https://dev.grapecity.co.jp/support/powernews/column/clang/015/page02.htm">もう一度基礎からc言語 -プロトタイプ宣言の省略-</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          </section>        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

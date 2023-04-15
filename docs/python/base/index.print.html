@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Pythonの基本 :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/python/base/index.html" rel="canonical" type="text/html" title="Pythonの基本 :: Chiyo&#39;s blog">
+    <link href="/python/base/index.xml" rel="alternate" type="application/rss+xml" title="Pythonの基本 :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/python/base/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/python/index.html"><span itemprop="name">Python</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Pythonの基本</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="python%E3%81%AE%E5%9F%BA%E6%9C%AC">Pythonの基本</h1>
+
+<h2 id="pythonのプログラムの作成と実行">Pythonのプログラムの作成と実行</h2>
+<ul>
+<li>
+<p><strong>方法1</strong>: C言語のように，テキスト形式でプログラムを書いて実行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi program.py <span style="color:#75715e"># プログラム作成</span>
+</span></span><span style="display:flex;"><span>$ python program.py <span style="color:#75715e"># プログラム実行</span>
+</span></span></code></pre></div><p>注) Pythonは<strong>インタプリタ型言語</strong>なのでコンパイルは不要。</p>
+</li>
+<li>
+<p><strong>方法2</strong>: jupyter notebookやIpython等を用いて<strong>インタラクティブに実行</strong></p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="コメント">コメント</h2>
+<ul>
+<li>#：1行コメント</li>
+<li>複数行コメント：&ldquo;&ldquo;&ldquo;コメント&rdquo;&rdquo;&rdquo;　※ダブルクォートの代わりにシングルを使っても良い →ドックストリング</li>
+</ul>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="モジュールパッケージライブラリ">モジュール・パッケージ・ライブラリ</h2>
+<ul>
+<li><strong>モジュール</strong>: クラスや関数を記述したファイル(.py)</li>
+<li><strong>パッケージ</strong>: いくつかのモジュールを一つのディレクトリ(フォルダ)にまとめたもの</li>
+<li><strong>ライブラリ</strong>: いくつかのパッケージをまとめたもの。モジュールやパッケージをライブラリと呼ぶこともある</li>
+</ul>
+<ol>
+<li>標準ライブラリ</li>
+</ol>
+<ul>
+<li><a href="https://docs.python.org/3/library/math.html">math</a>: 数学関数モジュール</li>
+<li><a href="https://docs.python.org/3/library/random.html">random</a>: 乱数発生モジュール</li>
+</ul>
+<ol start="2">
+<li>外部ライブラリ：追加インストール必要</li>
+</ol>
+<ul>
+<li><a href="https://numpy.org/">NumPy</a>: 数値計算用の多次元配列ライブラリ。C言語で作られているので高速</li>
+<li><a href="https://www.scipy.org/scipylib/index.html">SciPy</a>: 科学計算ライブラリ</li>
+<li><a href="https://pandas.pydata.org/">pandas</a>: データフレーム(エクセルのような表形式)のデータ解析ライブラリ</li>
+<li><a href="https://scikit-learn.org/stable/">scikit-learn</a>: 機械学習ライブラリ</li>
+</ul>
+<p>モジュールやパッケージ，ライブラリに含まれるオブジェクト(クラスや関数等)を使うには，以下の例のように<code>import</code>を用いて読み込みを行う。</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="pythonのデータ型について">Pythonのデータ型について</h2>
+<p>すべてのPythonオブジェクトはC言語の構造体で定義されており、C言語等の静的型付言語などと比べてオーバーヘッドが生じる</p>
+<p><strong>【例】 integer(long)型</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> _longobject{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">long</span> ob_refcnt;
+</span></span><span style="display:flex;"><span>    PyTypeObject ob_type;
+</span></span><span style="display:flex;"><span>    size_t ob_size;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">long</span> ob_digit[<span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><ul>
+<li>ob_refcnt : Pythonが目盛りの割当と解除を自動的に行うための参照カウンタ</li>
+<li>ob_type : 変数の方を表すコード</li>
+<li>ob_size : この後に続くデータの大きさ</li>
+<li>ob_digit : このPython変数が持つ実際の整数値</li>
+</ul>
+<!-- raw HTML omitted -->
+<h3 id="pythonリストとnumpy配列">PythonリストとNumpy配列</h3>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pytonリスト</td>
+<td>ポインタ列へのポインタを格納した<strong>動的配列</strong>。各ポインタは完全なPythonオブジェクトを示すため、柔軟性に利点を持つ一方ですべての変数が同じ方であるケースでは情報が冗長になる。</td>
+</tr>
+<tr>
+<td>Numpy配列</td>
+<td>すべてのデータの型が同じ<strong>固定型</strong>の配列のため柔軟性に欠ける一方でデータの保存と操作がはるかに効率的</td>
+</tr>
+</tbody>
+</table>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="immutable-と-mutable">immutable と mutable</h2>
+<p>関数の引数(仮引数)の値を関数内で変更した場合，引数が**immutable(変更不可)**な型ならば呼び出した側の引数(実引数)は変化しない。**mutable(変更可能)**ならば，実引数も変化。</p>
+<ul>
+<li><strong>immutable</strong>: <code>int</code>, <code>float</code>, <code>str</code>, <code>tuple</code> 等</li>
+<li><strong>mutable</strong>: <code>list</code>, <code>dict</code>, <code>set</code> 等(これらについては後述)</li>
+</ul>
+<p>immutableな引数については， 返り値を使って更新するようにする。</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>

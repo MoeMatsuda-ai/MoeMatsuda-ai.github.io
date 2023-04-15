@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C language on Chiyo&#39;s blog</title>
+    <link>https://moematsuda-ai.github.io/c_lang/index.html</link>
+    <description>Recent content in C language on Chiyo&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 26 Nov 2022 12:34:46 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/c_lang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using gniplot on C</title>
+      <link>https://moematsuda-ai.github.io/c_lang/using_gniplot/index.html</link>
+      <pubDate>Sat, 26 Nov 2022 12:34:46 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/c_lang/using_gniplot/index.html</guid>
+      <description>操作方法 gnuplotをC言語のプログラムから制御するには，パイプを使うのが最も簡単である．ここでは，C言語のプログラムによりパイプの生成しgnuplotを起動を行い，パイプを通してコマンドを送る．C言語のプログラム内にコマンドを記述することにより，プログラマーの意図したとおりにgnuplotを操作することができる．
+パイプを開く
+パイプを開くためには，ファイルポインターをつかう．そのためファイルポインターを格 納する変数を用意しなくてはならない．パイプの先もファイルとして扱われるのである． FILE *hoge; 次にgnuplotを立ち上げて，そこにパイプを接続する必要がある．次のようにする． hoge = popen(&amp;#34;gnuplot -persist&amp;#34;,&amp;#34;w&amp;#34;); popen()関数がパイプを開く命令である．これで，gnuplot が立ち上がり，パイプを 通して，コマンドを送ることができる．オプションのpersistで，gnuplotが終了し てもグラフが残るようにしている．そうしないと，コンピューターの動作は高速なので， gnuplotは一瞬にして終了し，グラフが消えてしまい，ほとんど動作内容が分からなく なる．popen()関数の戻り値はパイプの情報を示すファイルポインターである．この ファイルポインターを指定して，コマンドを送ることになる． パイプを通してコマンドを送る パイプを通して，gnuplotにコマンドを送るのはfprintf()関数を使う． c fprintf(hoge, &amp;quot;plot sin(x)\n&amp;quot;); このfprintfを使って，gnuplotにいくらでもコマンドを送ることができる．あたかも，C言語の向こう側でgnuplotが立ち上がって，それから命令を送っているかのように動作する．このようなことができるのが，コマンドを打ち込むCharacter-based User Interface(CUI)の良いところである．
+パイプを閉じる すべての動作が終了したならば，パイプを閉じなくてはならない．これも，ファイルの操作と全く同じである． c pclose(hoge); （例）三角関数のグラフ作成プログラム
+1 #include &amp;lt;stdio.h&amp;gt; 2 3 int main(void){ 4 FILE *gp; 5 6 gp = popen(&amp;#34;gnuplot -persist&amp;#34;,&amp;#34;w&amp;#34;); 7 fprintf(gp, &amp;#34;plot sin(x)\n&amp;#34;); 8 9 pclose(gp); 10 11 return 0; 12 } 参考文献 c言語からgnuplotを操作する(平成19年7月11日、山本昌志) </description>
+    </item>
+    <item>
+      <title>Method of file division</title>
+      <link>https://moematsuda-ai.github.io/c_lang/file_sep/index.html</link>
+      <pubDate>Sat, 26 Nov 2022 12:34:28 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/c_lang/file_sep/index.html</guid>
+      <description>ファイル分割 c言語のファイル分割では関数等を書き込むファイル.c``.hファイルとmain関数を書き込むファイルの3つのファイルを用意する
+関数を書き込むcalc.cファイル
+#ifndef _CALC_H_ #define _CALC_H_ // 関数avgのプロトタイプ宣言 double avg(double,double); #endif // _CALC_H_ calc.hファイル
+#include &amp;#34;calc.h&amp;#34; // 平均値を求める関数 double avg(double l,double m){ // 引数l,mの平均値を求め、rに代入する。 double r = (l + m) / 2.0; return r; } このファイルでは次のようにファイルに書き込み、プロトタイプ宣言を行う
+#ifnfdef _(大文字で記述したファイル名)_H_ #define _(大文字で記述したファイル名)_H_ プロトタイプ宣言; プロトタイプ宣言; ： #endif // _（大文字で記述したファイル名)_H_ ここで登場した#ifndef``#define``#endifはマクロといい、二重インクルードを防いでいる
+main関数を書き込むmain.cファイル
+#include &amp;lt;stdio.h&amp;gt; #include &amp;#34;calc.h&amp;#34; void main(){ double d1,d2,d3; double a = 1.2,b = 3.4,c = 2.7; // 同じ計算が3回(関数を呼び出して計算） d1 = avg(a,b); d2 = avg(4.</description>
+    </item>
+  </channel>
+</rss>

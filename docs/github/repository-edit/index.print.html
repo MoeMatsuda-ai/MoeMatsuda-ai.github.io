@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Repository Operations :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/github/repository-edit/index.html" rel="canonical" type="text/html" title="Repository Operations :: Chiyo&#39;s blog">
+    <link href="/github/repository-edit/index.xml" rel="alternate" type="application/rss+xml" title="Repository Operations :: Chiyo&#39;s blog">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681585239" rel="stylesheet">
+    <link href="/css/nucleus.css?1681585239" rel="stylesheet">
+    <link href="/css/fonts.css?1681585239" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681585239" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681585239" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681585239" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681585239" rel="stylesheet">
+    <link href="/css/variant.css?1681585239" rel="stylesheet">
+    <link href="/css/print.css?1681585239" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681585239" rel="stylesheet">
+    <script src="/js/url.js?1681585239"></script>
+    <script src="/js/variant.js?1681585239"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1681585239" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/github/repository-edit/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/github/index.html"><span itemprop="name">Github</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Repository Operations</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="repository-operations">Repository Operations</h1>
+
+<h2 id="リポジトリのダウンロード">リポジトリのダウンロード</h2>
+<p>GitHubにあるリモートリポジトリをhttps接続でダウンロードする場合は以下のコマンドで。(ただし，GitHub上のリポジトリ設定で若干異なる場合もある)</p>
+<pre tabindex="0"><code>$ git clone https://github.com/someone/somerepo.git
+</code></pre><p>上記URLのsomeone, someprepoの部分はダウンロードしたいリポジトリによって変わる。</p>
+<h4 id="ssh接続">ssh接続</h4>
+<pre tabindex="0"><code>git clone git@github.com:bcl-exercises/21exercises-MoeMatsuda-ai.git
+</code></pre><p>cloneするときのURL以下は<strong>ブラウザ上のgithubでcloneしたいリポジトリに移動し、<code>code</code>をクリックすることで確認できる。</strong></p>
+<h4 id="publicの場合">publicの場合</h4>
+<pre tabindex="0"><code>$ git clone https://github.com/jnishii/jgr.git
+</code></pre><h4 id="privateの場合">privateの場合</h4>
+<pre tabindex="0"><code>$ git clone https://&lt;username&gt;@github.com/someone/somerepo.git
+</code></pre><p><strong>Wikiページをcloneする場合は<code>.git</code>の前に<code>.wiki</code>をつける。</strong></p>
+<ul>
+<li><strong>参照</strong>
+<a href="https://docs.github.com/ja/repositories/creating-and-managing-repositories/cloning-a-repository">リポジトリをクローンする</a></li>
+</ul>
+<h2 id="最新情報のダウンロード--更新ファイルのアップロード">最新情報のダウンロード / 更新ファイルのアップロード</h2>
+<p>ダウンロードしたファイルをいじるときには，まず，Gitサーバから最新バージョンをダウンロードしてから開始。</p>
+<pre tabindex="0"><code>$ git pull origin main
+</code></pre><p>これはサーバ(origin)から，masterブランチ(ブランチは後述)をダウンロードしてローカルリポジトリを更新し(fetch)，作業ディレクトリに反映(merge)するという意味。</p>
+<p>ファイルを更新したら，gitサーバ(origin)にアップロードする。</p>
+<pre tabindex="0"><code>$ git add &lt;更新したファイル名&gt;
+$ git commit -m “修正点を少し書く”    &lt;=ローカルリポジトリ(手元)に登録
+$ git push origin main           &lt;=リモートリポジトリに反映
+</code></pre><p>とりあえず，これで最低限のファイル共有/共同編集はできる。</p>
+<p>git addは，更新したファイルのうち，リモートリポジトリに反映したいファイルを指定(stagingとよぶ。これにより対象ファイルはstaging areaに移動)する。指定方法は以下のようにいろいろある。</p>
+<pre tabindex="0"><code>    $ git add . 新規作成ファイルと更新ファイルを全部指定
+    $ git add -u 前回から更新したファイルのみ指定(新規作成ファイルは含まない)
+    $ git add -A .新規作成ファイル，更新ファイル，削除ファイル全部指定
+</code></pre><p>ただし，リモートリポジトリは，知らないヒトが勝手に’git push’で書き換えたりできるとよくないので，アクセス制限をできるようになっている。アクセス制限がかかっているリモートリポジトリの内容の修正をリクエストするにはPullRequestをする(後述)。</p>
+<h2 id="gitサーバでリポジトリを削除する方法">gitサーバでリポジトリを削除する方法</h2>
+<ol>
+<li>削除したいリポジトリのページに移動</li>
+<li>上の一覧から<code>Settings</code>をクリック</li>
+<li>下の方にある<code>Delete this repository</code>をクリック</li>
+<li>警告を読んで、消したいリポジトリの名前を入力</li>
+<li><code>I understand the consequences, delete this repository</code>をクリック</li>
+</ol>
+<ul>
+<li><strong>参照</strong>
+<a href="https://qiita.com/PlanetMeron/items/4d164eff7bff2243cf06">Qiita「githubでリポジトリを削除する方法」</a></li>
+</ul>
+<h2 id="ローカルリポジトリの削除git-initの取り消し">ローカルリポジトリの削除(git initの取り消し)</h2>
+<p>.gitファイルを削除して、git initしたディレクトリに対して、それを取り消す</p>
+<pre tabindex="0"><code>$rm -rf .git
+</code></pre><ul>
+<li><strong>参照</strong>
+<a href="https://qiita.com/majihuwa_z/items/ec0d2e1ac21d68769693">Qiita 「git init取り消し」</a></li>
+</ul>
+<h2 id="コミット履歴の確認">コミット履歴の確認</h2>
+<pre tabindex="0"><code>     $ git log
+</code></pre><p><code>--graph</code>というオプションをつけるとコミットログをアスキーアートでカラフルに表示シてくれる。たくさんブランチがあるリポジトリなどでは見やすくなる</p>
+<pre tabindex="0"><code>     $ git log --graph
+</code></pre><h2 id="コミットのキャンセル">コミットのキャンセル</h2>
+<h4 id="ステージングのキャンセル">ステージングのキャンセル</h4>
+<p>ステージング(git add)から変更ファイルを取り消す場合は下記コマンドを実行します。</p>
+<pre tabindex="0"><code>$ git rm --cached &lt;ファイル名&gt;
+</code></pre><p>ステージング(git add)から削除するだけでなく、ファイル自体も削除する場合には下記コマンドを実行します。</p>
+<pre tabindex="0"><code>$ git rm -f &lt;ファイル名&gt;
+</code></pre><h4 id="コミットの取り消し">コミットの取り消し</h4>
+<p>直前に行ったコミットを取り消すには下記コマンドを実行します。</p>
+<p>作業ディレクトリの内容はコミット時のままで、「コミットした」ということだけが取り消されます。</p>
+<p>「&ndash;soft」オプションは省略できます。</p>
+<pre tabindex="0"><code>$ git reset [--soft] HEAD^
+</code></pre><p>作業ディレクトリに加えた変更点もコミット前に戻す場合は以下のコマンドです。</p>
+<pre tabindex="0"><code>$ git reset --hard HEAD^
+</code></pre><p>作業ディレクトリをローカルリポジトリの最新状態にするには下記コマンドを実行します。</p>
+<p>indexもクリーンされます。</p>
+<pre tabindex="0"><code>$ git reset --hard HEAD
+</code></pre><h4 id="コミット後の修正">コミット後の修正</h4>
+<p>前回のコミットを破棄して、現在のIndex内容で新しくコミットします。</p>
+<p>「reset」と「commit」を実行することと同様の処理となります。</p>
+<p>コミットメッセージの修正なども行えます。</p>
+<pre tabindex="0"><code>$ git commit --amend
+</code></pre><ul>
+<li><strong>参照</strong>
+<a href="http://capm-network.com/?tag=Git%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E6%93%8D%E4%BD%9C">Camp Netwoek「Gitローカルリポジトリ操作」</a></li>
+</ul>
+<h2 id="プッシュの取り消し">プッシュの取り消し</h2>
+<p>基本、プッシュした情報をローカルリポジトリに戻すことはできない。
+そこで、コミットを打ち消すコミットを生成する（git revertコマンド）。プッシュ済みのコミットを消す方法もあるが、よくなさそう。。git revertでは打ち消したコミットの記録が残る。</p>
+<h4 id="git-revert">git revert</h4>
+<ul>
+<li>
+<p>指定したコミットを、add前に戻してくれるコマンド。</p>
+</li>
+<li>
+<p>ターミナル(間違って、masterにpushしちゃった時など)</p>
+<pre tabindex="0"><code>% git log                    # コミットログの確認
+% git revert 間違えたコミットID   # 指定したコミットを、add前に戻す
+# ターミナルが編集できなくなるので、`:q`で脱出
+</code></pre><ul>
+<li>GitHub Desktopを確認すると、git revertで生成したコミットが生成されてるハズ。これをpushすれば、リモートリポジトリで打ち消されているハズ。この時、ローカルからも消えるので、注意。</li>
+</ul>
+</li>
+<li>
+<p>参)ターミナルで実施する場合</p>
+<pre tabindex="0"><code>% git pull                            # 念のため、ローカルのmasterを最新にする
+% git checkout pushすべきだったブランチ    # ブランチを切り替える
+% git merge master
+% git add .                           # 変更箇所をadd
+% git commit -m &#34;コミットメッセージ&#34;
+% git push origin pushしたかったブランチ
+</code></pre><p>※ 念のため、ローカルのmasterをpull(最新)にしてから、作業してたブランチも最新状態をmerge(反映)し、pushすべきだったブランチにpushするイメージ。</p>
+</li>
+</ul>
+<h2 id="その他のコマンド">その他のコマンド</h2>
+<h4 id="よく使用するコマンド">よく使用するコマンド</h4>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git init</td>
+<td>対象のディレクトリをバージョン管理できる入れ物に格納してくれるイメージ</td>
+</tr>
+<tr>
+<td>git add ●●</td>
+<td>●●をインデックスに追加。※ git add . とすると「全て」を対象にできる</td>
+</tr>
+<tr>
+<td>git commit -m &lsquo;メッセージ&rsquo;</td>
+<td>コミット</td>
+</tr>
+<tr>
+<td>git status</td>
+<td>現在のファイルの状態(staging等)一覧を表示する</td>
+</tr>
+<tr>
+<td>git reset &lt;ファイル名&gt;</td>
+<td>間違えてgit addしたファイルの取り消し(stagingの取り消し)</td>
+</tr>
+<tr>
+<td>git log</td>
+<td>コミットログの履歴確認（コミットID、コミットメッセージ、日時）</td>
+</tr>
+<tr>
+<td>git remote add origin リモートリポジトリのURL(https：//github.com/GitHubのユーザー名/リモートリポジトリ名.git)</td>
+<td>ローカルリポジトリにリモートリポジトリの情報を付与し、紐づける</td>
+</tr>
+<tr>
+<td>git push origin ブランチ名</td>
+<td>ローカルの変更点を、リモートに反映。ブランチ名 masterなら、マスターブランチにプッシュ。</td>
+</tr>
+<tr>
+<td>git pull origin master</td>
+<td>リモートリポジトリ（origin）のマスターブランチをローカルリポジトリに反映。</td>
+</tr>
+<tr>
+<td>git clone https：//github.com/ユーザー名/リモートリポジト名.git</td>
+<td>リモートリポジトからローカルリポジトリにダウンロード</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git remote -v</td>
+<td>ローカルにクローンしたリポジトリのリモートURL確認方法</td>
+</tr>
+</tbody>
+</table>
+<h4 id="コミットメッセージ例">コミットメッセージ例</h4>
+<table>
+<thead>
+<tr>
+<th>コミットメーセージ</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create ●● class</td>
+<td>クラス作成</td>
+</tr>
+<tr>
+<td>Add relation with ●●</td>
+<td>リレーションの追加</td>
+</tr>
+<tr>
+<td>Add presence validation of ●●</td>
+<td>バリデーションの追加</td>
+</tr>
+<tr>
+<td>Add #parse_body for parse body&rsquo;s markdown</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="参照">参照</h2>
+<h3 id="上記にも記入済み">上記にも記入済み</h3>
+<ul>
+<li><a href="https://qiita.com/PlanetMeron/items/4d164eff7bff2243cf06">Qiita「githubでリポジトリを削除する方法」</a></li>
+<li><a href="https://qiita.com/majihuwa_z/items/ec0d2e1ac21d68769693">Qiita 「git init取り消し」</a></li>
+<li><a href="http://capm-network.com/?tag=Git%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E6%93%8D%E4%BD%9C">Camp Netwoek「Gitローカルリポジトリ操作」</a></li>
+</ul>
+<h3 id="その他">その他</h3>
+<ul>
+<li><a href="https://qiita.com/manbolila/items/01c2f6a5cf2ffc473f92">Qiita「GitとGitHubの基礎」</a></li>
+<li><a href="https://qiita.com/zhao-xy/items/a35add58575ef7d9d4dc">Qiita「ローカルgitリポジトリでリモートのリポジトリURLを確認する方法」</a></li>
+<li><a href="https://qiita.com/aiandrox/items/d1c19ffabad7b8cc187a">Qiita「【GitHub】アカウント名を変更するときの注意点</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1681585239" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681585239" defer></script>
+    <script src="/js/featherlight.min.js?1681585239" defer></script>
+    <script src="/js/theme.js?1681585239" defer></script>
+  </body>
+</html>
