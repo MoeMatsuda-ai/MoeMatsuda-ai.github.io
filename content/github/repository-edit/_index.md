@@ -18,14 +18,14 @@ $ git clone https://github.com/someone/somerepo.git
 
 #### ssh接続
 ```
-git clone git@github.com:bcl-exercises/21exercises-MoeMatsuda-ai.git
+git clone git@github.com:<repo>.git
 ```
 cloneするときのURL以下は**ブラウザ上のgithubでcloneしたいリポジトリに移動し、`code`をクリックすることで確認できる。**
 
 
 #### publicの場合
 ```
-$ git clone https://github.com/jnishii/jgr.git
+$ git clone https://github.com/<repo>
 ```
 
 #### privateの場合

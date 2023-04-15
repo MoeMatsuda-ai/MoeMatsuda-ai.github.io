@@ -10,19 +10,19 @@
     <link href="/github/repository-edit/index.xml" rel="alternate" type="application/rss+xml" title="Repository Operations :: Chiyo&#39;s blog">
     <link href="/github/repository-edit/index.print.html" rel="alternate" type="text/html" title="Repository Operations :: Chiyo&#39;s blog">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1681586032" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681586032" rel="stylesheet"></noscript>
-    <link href="/css/featherlight.min.css?1681586032" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681586032" rel="stylesheet"></noscript>
-    <link href="/css/auto-complete.css?1681586032" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681586032" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1681586032" rel="stylesheet">
-    <link href="/css/nucleus.css?1681586032" rel="stylesheet">
-    <link href="/css/fonts.css?1681586032" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681586032" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1681586032" rel="stylesheet">
-    <link href="/css/theme-relearn-dark.css?1681586032" rel="stylesheet" id="variant-style">
-    <link href="/css/ie.css?1681586032" rel="stylesheet">
-    <link href="/css/variant.css?1681586032" rel="stylesheet">
-    <link href="/css/print.css?1681586032" rel="stylesheet" media="print">
-    <script src="/js/url.js?1681586032"></script>
-    <script src="/js/variant.js?1681586032"></script>
+    <link href="/css/fontawesome-all.min.css?1681586977" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681586977" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681586977" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681586977" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681586977" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681586977" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681586977" rel="stylesheet">
+    <link href="/css/nucleus.css?1681586977" rel="stylesheet">
+    <link href="/css/fonts.css?1681586977" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681586977" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681586977" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681586977" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681586977" rel="stylesheet">
+    <link href="/css/variant.css?1681586977" rel="stylesheet">
+    <link href="/css/print.css?1681586977" rel="stylesheet" media="print">
+    <script src="/js/url.js?1681586977"></script>
+    <script src="/js/variant.js?1681586977"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -40,7 +40,7 @@
       var baseUriFull='https:\/\/moematsuda-ai.github.io/';
       window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
     </script>
-    <script src="/js/jquery.min.js?1681586032" defer></script>
+    <script src="/js/jquery.min.js?1681586977" defer></script>
   </head>
   <body class="mobile-support html" data-url="/github/repository-edit/index.html">
     <div id="body" class="default-animation">
@@ -122,10 +122,10 @@
 <pre tabindex="0"><code>$ git clone https://github.com/someone/somerepo.git
 </code></pre><p>上記URLのsomeone, someprepoの部分はダウンロードしたいリポジトリによって変わる。</p>
 <h4 id="ssh接続">ssh接続</h4>
-<pre tabindex="0"><code>git clone git@github.com:bcl-exercises/21exercises-MoeMatsuda-ai.git
+<pre tabindex="0"><code>git clone git@github.com:&lt;repo&gt;.git
 </code></pre><p>cloneするときのURL以下は<strong>ブラウザ上のgithubでcloneしたいリポジトリに移動し、<code>code</code>をクリックすることで確認できる。</strong></p>
 <h4 id="publicの場合">publicの場合</h4>
-<pre tabindex="0"><code>$ git clone https://github.com/jnishii/jgr.git
+<pre tabindex="0"><code>$ git clone https://github.com/&lt;repo&gt;
 </code></pre><h4 id="privateの場合">privateの場合</h4>
 <pre tabindex="0"><code>$ git clone https://&lt;username&gt;@github.com/someone/somerepo.git
 </code></pre><p><strong>Wikiページをcloneする場合は<code>.git</code>の前に<code>.wiki</code>をつける。</strong></p>
@@ -402,12 +402,12 @@ $ git push origin main           &lt;=リモートリポジトリに反映
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/js/auto-complete.js?1681586032" defer></script>
-        <script src="/js/lunr.min.js?1681586032" defer></script>
-        <script src="/js/lunr.stemmer.support.min.js?1681586032" defer></script>
-        <script src="/js/lunr.multi.min.js?1681586032" defer></script>
-        <script src="/js/lunr.en.min.js?1681586032" defer></script>
-        <script src="/js/search.js?1681586032" defer></script>
+        <script src="/js/auto-complete.js?1681586977" defer></script>
+        <script src="/js/lunr.min.js?1681586977" defer></script>
+        <script src="/js/lunr.stemmer.support.min.js?1681586977" defer></script>
+        <script src="/js/lunr.multi.min.js?1681586977" defer></script>
+        <script src="/js/lunr.en.min.js?1681586977" defer></script>
+        <script src="/js/search.js?1681586977" defer></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -437,6 +437,7 @@ $ git push origin main           &lt;=リモートリポジトリに反映
           <li data-nav-id="/github/ssh/index.html" class="dd-item"><a href="/github/ssh/index.html">Public key authentication settings in github</a></li>
           <li data-nav-id="/github/diff/index.html" class="dd-item"><a href="/github/diff/index.html">Confirmation of difference</a></li>
           <li data-nav-id="/github/branch/index.html" class="dd-item"><a href="/github/branch/index.html">Branch</a></li>
+          <li data-nav-id="/github/repository-access/index.html" class="dd-item"><a href="/github/repository-access/index.html">Repository Access Restrictions</a></li>
           <li data-nav-id="/github/create-repository/index.html" class="dd-item"><a href="/github/create-repository/index.html">How to Create Repository</a></li>
           <li data-nav-id="/github/settings/index.html" class="dd-item"><a href="/github/settings/index.html">Settings</a></li></ul></li>
           <li data-nav-id="/gnuplot/index.html" class="dd-item"><a href="/gnuplot/index.html">Gnuplot</a><ul id="subsections-96e1c1d59e724966aa5bbafac0938a58">
@@ -526,9 +527,9 @@ $ git push origin main           &lt;=リモートリポジトリに反映
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1681586032" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1681586032" defer></script>
-    <script src="/js/featherlight.min.js?1681586032" defer></script>
-    <script src="/js/theme.js?1681586032" defer></script>
+    <script src="/js/clipboard.min.js?1681586977" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681586977" defer></script>
+    <script src="/js/featherlight.min.js?1681586977" defer></script>
+    <script src="/js/theme.js?1681586977" defer></script>
   </body>
 </html>

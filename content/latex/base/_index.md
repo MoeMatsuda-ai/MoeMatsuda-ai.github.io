@@ -152,16 +152,16 @@ $f(x) = \frac{1}{x}
 
 
 
-# アルゴリズムの擬似コード
+## アルゴリズムの擬似コード
 - https://li-feel.hatenablog.com/entry/2017/12/19/160618
 - https://qiita.com/jirojiro/items/0ae13aac9112a804f8d5
 - https://qiita.com/harmegiddo/items/04ae672402bb8c1d01a6
 - 
-# ソースコード
+## ソースコード
 - [LaTeXにソースコードを美しく貼る方法](https://qiita.com/ta_b0_/items/2619d5927492edbb5b03)
 
 
-# 図の挿入(input)
+## 図の挿入(input)
 - https://hydrocoast.jp/index.php?LaTeX/%E5%9B%B3
 - https://www.okomeda.net/wp/484/
 - http://www.yamamo10.jp/yamamoto/comp/latex/make_doc/insert_fig/index.php
@@ -170,12 +170,12 @@ $f(x) = \frac{1}{x}
 - https://qiita.com/poemn/items/9142339749c87ebdb536
 - 
 
-# 表紙テンプレ
+## 表紙テンプレ
 - [卒論をTeXフォーマットなしから書くためのtips](https://yosshi71jp.hatenadiary.org/entry/20101210/1292005429)
 - [Quiita「LaTeXの卒論の表紙テンプレート ><」](https://qiita.com/ganyariya/items/6fe38f371dc8fa3a49a4)
 
 
-# 参考文献
+## 参考文献
 - [LaTeX - コマンド一覧](http://www1.kiy.jp/~yoka/LaTeX/latex.html)
 - [複数行の数式](https://uec.medit.link/latex/eqnalign.html)
 - [【LaTeX】括弧類のかき方一覧と大きさの変更方法まとめ](https://mathlandscape.com/latex-bracket/)

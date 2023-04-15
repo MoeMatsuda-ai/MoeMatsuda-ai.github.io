@@ -10,20 +10,20 @@
     <link href="https://moematsuda-ai.github.io/github/create-repository/index.html" rel="canonical" type="text/html" title="How to Create Repository :: Chiyo&#39;s blog">
     <link href="/github/create-repository/index.xml" rel="alternate" type="application/rss+xml" title="How to Create Repository :: Chiyo&#39;s blog">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1681586032" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681586032" rel="stylesheet"></noscript>
-    <link href="/css/featherlight.min.css?1681586032" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681586032" rel="stylesheet"></noscript>
-    <link href="/css/auto-complete.css?1681586032" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681586032" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1681586032" rel="stylesheet">
-    <link href="/css/nucleus.css?1681586032" rel="stylesheet">
-    <link href="/css/fonts.css?1681586032" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681586032" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1681586032" rel="stylesheet">
-    <link href="/css/theme-relearn-dark.css?1681586032" rel="stylesheet" id="variant-style">
-    <link href="/css/ie.css?1681586032" rel="stylesheet">
-    <link href="/css/variant.css?1681586032" rel="stylesheet">
-    <link href="/css/print.css?1681586032" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1681586032" rel="stylesheet">
-    <script src="/js/url.js?1681586032"></script>
-    <script src="/js/variant.js?1681586032"></script>
+    <link href="/css/fontawesome-all.min.css?1681586977" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681586977" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681586977" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681586977" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681586977" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681586977" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681586977" rel="stylesheet">
+    <link href="/css/nucleus.css?1681586977" rel="stylesheet">
+    <link href="/css/fonts.css?1681586977" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681586977" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681586977" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681586977" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681586977" rel="stylesheet">
+    <link href="/css/variant.css?1681586977" rel="stylesheet">
+    <link href="/css/print.css?1681586977" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681586977" rel="stylesheet">
+    <script src="/js/url.js?1681586977"></script>
+    <script src="/js/variant.js?1681586977"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -41,7 +41,7 @@
       var baseUriFull='https:\/\/moematsuda-ai.github.io/';
       window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
     </script>
-    <script src="/js/jquery.min.js?1681586032" defer></script>
+    <script src="/js/jquery.min.js?1681586977" defer></script>
   </head>
   <body class="mobile-support print" data-url="/github/create-repository/index.html">
     <div id="body" class="default-animation">
@@ -108,7 +108,7 @@ $ git add &lt;ファイル名&gt; #特定のファイルのみを登録
 <p><code>git add</code>で指定したファイルやディレクトリを，ローカルリポジトリに登録する。</p>
 <pre tabindex="0"><code>$ git commit -m &#34;first commit&#34;
 </code></pre><p>-mは1行コメントをつけるオプション。 更新したファイルをローカルリポジトリに反映するときにも，同様にgit addとgit commitを実行する。ここまではローカルリポジトリの管理。</p>
-<h1 id="gitサーバ上で新規リモートリポジトリを登録">gitサーバ上で新規リモートリポジトリを登録</h1>
+<h2 id="gitサーバ上で新規リモートリポジトリを登録">gitサーバ上で新規リモートリポジトリを登録</h2>
 <ol>
 <li>
 <p>GitHubにログイン</p>
@@ -149,7 +149,7 @@ git push -u origin main
 </ul>
 </li>
 </ul>
-<h1 id="トークンの作成">トークンの作成</h1>
+<h2 id="トークンの作成">トークンの作成</h2>
 <p>2021年8月13日以降、GitHubのリポジトリにアクセスするには、ユーザ名とパスワードではなくアクセストークンが必要になった。</p>
 <ol>
 <li>GitHubにログイン</li>
@@ -171,7 +171,7 @@ Select scopes : <strong>少なくともrepoの覧はチェックを入れるこ�
 </ul>
 </li>
 </ul>
-<h1 id="gitサーバへの登録">Gitサーバへの登録</h1>
+<h2 id="gitサーバへの登録">Gitサーバへの登録</h2>
 <h3 id="ローカルリポジトリとgitサーバ上のリモートリポジトリの紐付け">ローカルリポジトリとgitサーバ上のリモートリポジトリの紐付け</h3>
 <p>ローカルリポジトリ(要はgit管理したいプログラム群のあるディレクトリ)をgitサーバ上のリモートリポジトリと紐付ける。リモートリポジトリを作成した際に表示されたすべきこと（コマンドライン）を順次実行していく。
 以下はその一例。</p>
@@ -197,9 +197,9 @@ git push -u origin main
         </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1681586032" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1681586032" defer></script>
-    <script src="/js/featherlight.min.js?1681586032" defer></script>
-    <script src="/js/theme.js?1681586032" defer></script>
+    <script src="/js/clipboard.min.js?1681586977" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681586977" defer></script>
+    <script src="/js/featherlight.min.js?1681586977" defer></script>
+    <script src="/js/theme.js?1681586977" defer></script>
   </body>
 </html>

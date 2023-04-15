@@ -6,9 +6,9 @@
     <meta name="generator" content="Hugo 0.104.3">
     <meta name="generator" content="Relearn 5.6.5+tip">
     <meta name="description" content="">
-    <title>Public key authentication settings in github :: Chiyo&#39;s blog</title>
-    <link href="https://moematsuda-ai.github.io/github/ssh/index.html" rel="canonical" type="text/html" title="Public key authentication settings in github :: Chiyo&#39;s blog">
-    <link href="/github/ssh/index.xml" rel="alternate" type="application/rss+xml" title="Public key authentication settings in github :: Chiyo&#39;s blog">
+    <title>Repository Access Restrictions :: Chiyo&#39;s blog</title>
+    <link href="https://moematsuda-ai.github.io/github/repository-access/index.html" rel="canonical" type="text/html" title="Repository Access Restrictions :: Chiyo&#39;s blog">
+    <link href="/github/repository-access/index.xml" rel="alternate" type="application/rss+xml" title="Repository Access Restrictions :: Chiyo&#39;s blog">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1681586977" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681586977" rel="stylesheet"></noscript>
     <link href="/css/featherlight.min.css?1681586977" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681586977" rel="stylesheet"></noscript>
@@ -43,7 +43,7 @@
     </script>
     <script src="/js/jquery.min.js?1681586977" defer></script>
   </head>
-  <body class="mobile-support print" data-url="/github/ssh/index.html">
+  <body class="mobile-support print" data-url="/github/repository-access/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
@@ -56,7 +56,7 @@
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/github/index.html"><span itemprop="name">Github</span></a><meta itemprop="position" content="2"> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Public key authentication settings in github</span><meta itemprop="position" content="3"></li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Repository Access Restrictions</span><meta itemprop="position" content="3"></li>
             </ol>
           </div>
         </div>
@@ -66,55 +66,14 @@
           <div id="head-tags">
           </div>
           <article class="default">
-<h1 id="public-key-authentication-settings-in-github">Public key authentication settings in github</h1>
+<h1 id="repository-access-restrictions">Repository Access Restrictions</h1>
 
-<h4 id="公開鍵を-github-に登録することでpush-時などにパスワードを入力する手間が省略可能">公開鍵を GitHub に登録することで、push 時などにパスワードを入力する手間が省略可能</h4>
-<h2 id="公開鍵および秘密鍵の作成と登録">公開鍵および秘密鍵の作成と登録</h2>
+<p>group内で作成したrepositoryのアクセス権限を設定する方法</p>
 <ol>
-<li>
-<p>公開鍵および秘密鍵を作成</p>
-<pre tabindex="0"><code>ssh-keygen -t ed25519
-</code></pre></li>
-<li>
-<p>公開鍵 を GitHub に登録</p>
-<pre tabindex="0"><code>cat ~/.ssh/id_ed25519.pub
-# コマンドを実行して表示されたすべての文字列を GitHub に登録
-#
-# ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX user@host
-# ↑こんな感じの文字列をすべてコピペ
-</code></pre><p>GitHub の公開鍵登録の手順は、</p>
-<ol>
-<li>Settings</li>
-<li>SSH and GPG keys</li>
-<li>[New SSH key]</li>
-<li>タイトルをつけ公開鍵をコピペし [Add SSH key]</li>
+<li>操作したいrepositoryの<code>settings</code>をクリック</li>
+<li>左の<code>Access</code>の<code>Collaborators and teams</code>をクリックし、パスワードを入力</li>
+<li><code>Add people</code>または<code>Add teams</code>をクリックし、アクセスを許可するpeopleまたはgroupを追加する</li>
 </ol>
-</li>
-<li>
-<p>SSH の設定 GitHub で使用する秘密鍵を設定するため、~/.ssh/config に<a href="https://github.com/MoeMatsuda-ai/info_study/wiki/Create-ssh_GitHub#%E5%85%AC%E9%96%8B%E9%8D%B5%E3%81%8A%E3%82%88%E3%81%B3%E7%A7%98%E5%AF%86%E9%8D%B5%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%A8%E7%99%BB%E9%8C%B2">設定</a>を記述</p>
-</li>
-</ol>
-<p>最終行 (ProxyCommand の部分) は学内のコンピューターの場合にのみ設定</p>
-<h2 id="接続の確認">接続の確認</h2>
-<pre tabindex="0"><code>$ ssh -T git@github.com
-</code></pre><p>ターミナルで実行して以下のように表示されればOK!</p>
-<pre tabindex="0"><code>Hi (User名)! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
-</code></pre><p>※途中で以下のプロンプトメッセージが表示されたら<code>yes</code>と入力
-<code>The authenticity of host '[ssh.github.com]:443 (&lt;no hostip for proxy command&gt;)' can't be established. RSA key fingerprint is [以下省略]. Are you sure you want to continue connecting (yes/no/[fingerprint])? The authenticity of host '[ssh.github.com]:443 (&lt;no hostip for proxy command&gt;)' can't be established. RSA key fingerprint is [以下略]. Are you sure you want to continue connecting (yes/no/[fingerprint])? </code></p>
-<h2 id="ssh接続がうまく行かないとき">ssh接続がうまく行かないとき</h2>
-<p>レポジトリのディレクトリに入り次のコマンドを入力</p>
-<pre tabindex="0"><code>git config remote.origin.url
-</code></pre><p><code>https://github.com/[ユーザID]/[リポジトリ]</code>となっていたらレポジトリのディレクトリ内の<code>/.git/config</code>を開いて<code>url</code>の覧を</p>
-<pre tabindex="0"><code>url = github.com:[ユーザID]/[リポジトリ].git
-</code></pre><p>と書き換える。</p>
-<p>または以下のコマンドを実行</p>
-<pre tabindex="0"><code>git remote set-url origin [Host名]:[ユーザID]/[リポジトリ].git
-</code></pre><p>※~/.ssh/configで設定していない場合は</p>
-<pre tabindex="0"><code>git remote set-url origin git@github.com:[ユーザID]/[リポジトリ].git
-</code></pre><p>でOK!</p>
-<h2 id="参照">参照</h2>
-<p><a href="https://qiita.com/shizuma/items/2b2f873a0034839e47ce">Qiita「Githubでssh接続する手順」</a>
-<a href="https://dev.classmethod.jp/articles/github-ssh-setting/">GitHubヘルプを参考にSSHキーの設定を行ってみた</a></p>
 
             <footer class="footline">
             </footer>

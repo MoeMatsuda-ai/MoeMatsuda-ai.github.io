@@ -10,20 +10,20 @@
     <link href="https://moematsuda-ai.github.io/github/index.html" rel="canonical" type="text/html" title="Github :: Chiyo&#39;s blog">
     <link href="/github/index.xml" rel="alternate" type="application/rss+xml" title="Github :: Chiyo&#39;s blog">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1681586032" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681586032" rel="stylesheet"></noscript>
-    <link href="/css/featherlight.min.css?1681586032" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681586032" rel="stylesheet"></noscript>
-    <link href="/css/auto-complete.css?1681586032" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681586032" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1681586032" rel="stylesheet">
-    <link href="/css/nucleus.css?1681586032" rel="stylesheet">
-    <link href="/css/fonts.css?1681586032" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681586032" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1681586032" rel="stylesheet">
-    <link href="/css/theme-relearn-dark.css?1681586032" rel="stylesheet" id="variant-style">
-    <link href="/css/ie.css?1681586032" rel="stylesheet">
-    <link href="/css/variant.css?1681586032" rel="stylesheet">
-    <link href="/css/print.css?1681586032" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1681586032" rel="stylesheet">
-    <script src="/js/url.js?1681586032"></script>
-    <script src="/js/variant.js?1681586032"></script>
+    <link href="/css/fontawesome-all.min.css?1681586977" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681586977" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681586977" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681586977" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681586977" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681586977" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681586977" rel="stylesheet">
+    <link href="/css/nucleus.css?1681586977" rel="stylesheet">
+    <link href="/css/fonts.css?1681586977" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681586977" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681586977" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681586977" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681586977" rel="stylesheet">
+    <link href="/css/variant.css?1681586977" rel="stylesheet">
+    <link href="/css/print.css?1681586977" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681586977" rel="stylesheet">
+    <script src="/js/url.js?1681586977"></script>
+    <script src="/js/variant.js?1681586977"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -41,7 +41,7 @@
       var baseUriFull='https:\/\/moematsuda-ai.github.io/';
       window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
     </script>
-    <script src="/js/jquery.min.js?1681586032" defer></script>
+    <script src="/js/jquery.min.js?1681586977" defer></script>
   </head>
   <body class="mobile-support print" data-url="/github/index.html">
     <div id="body" class="default-animation">
@@ -83,10 +83,10 @@
 <pre tabindex="0"><code>$ git clone https://github.com/someone/somerepo.git
 </code></pre><p>上記URLのsomeone, someprepoの部分はダウンロードしたいリポジトリによって変わる。</p>
 <h4 id="ssh接続">ssh接続</h4>
-<pre tabindex="0"><code>git clone git@github.com:bcl-exercises/21exercises-MoeMatsuda-ai.git
+<pre tabindex="0"><code>git clone git@github.com:&lt;repo&gt;.git
 </code></pre><p>cloneするときのURL以下は<strong>ブラウザ上のgithubでcloneしたいリポジトリに移動し、<code>code</code>をクリックすることで確認できる。</strong></p>
 <h4 id="publicの場合">publicの場合</h4>
-<pre tabindex="0"><code>$ git clone https://github.com/jnishii/jgr.git
+<pre tabindex="0"><code>$ git clone https://github.com/&lt;repo&gt;
 </code></pre><h4 id="privateの場合">privateの場合</h4>
 <pre tabindex="0"><code>$ git clone https://&lt;username&gt;@github.com/someone/somerepo.git
 </code></pre><p><strong>Wikiページをcloneする場合は<code>.git</code>の前に<code>.wiki</code>をつける。</strong></p>
@@ -520,6 +520,20 @@ $ git log
           </article>
 
           <article class="default">
+<h1 id="repository-access-restrictions">Repository Access Restrictions</h1>
+
+<p>group内で作成したrepositoryのアクセス権限を設定する方法</p>
+<ol>
+<li>操作したいrepositoryの<code>settings</code>をクリック</li>
+<li>左の<code>Access</code>の<code>Collaborators and teams</code>をクリックし、パスワードを入力</li>
+<li><code>Add people</code>または<code>Add teams</code>をクリックし、アクセスを許可するpeopleまたはgroupを追加する</li>
+</ol>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
 <h1 id="how-to-create-repository">How to Create Repository</h1>
 
 <h2 id="ローカルリポジトリの作成">ローカルリポジトリの作成</h2>
@@ -562,7 +576,7 @@ $ git add &lt;ファイル名&gt; #特定のファイルのみを登録
 <p><code>git add</code>で指定したファイルやディレクトリを，ローカルリポジトリに登録する。</p>
 <pre tabindex="0"><code>$ git commit -m &#34;first commit&#34;
 </code></pre><p>-mは1行コメントをつけるオプション。 更新したファイルをローカルリポジトリに反映するときにも，同様にgit addとgit commitを実行する。ここまではローカルリポジトリの管理。</p>
-<h1 id="gitサーバ上で新規リモートリポジトリを登録">gitサーバ上で新規リモートリポジトリを登録</h1>
+<h2 id="gitサーバ上で新規リモートリポジトリを登録">gitサーバ上で新規リモートリポジトリを登録</h2>
 <ol>
 <li>
 <p>GitHubにログイン</p>
@@ -603,7 +617,7 @@ git push -u origin main
 </ul>
 </li>
 </ul>
-<h1 id="トークンの作成">トークンの作成</h1>
+<h2 id="トークンの作成">トークンの作成</h2>
 <p>2021年8月13日以降、GitHubのリポジトリにアクセスするには、ユーザ名とパスワードではなくアクセストークンが必要になった。</p>
 <ol>
 <li>GitHubにログイン</li>
@@ -625,7 +639,7 @@ Select scopes : <strong>少なくともrepoの覧はチェックを入れるこ�
 </ul>
 </li>
 </ul>
-<h1 id="gitサーバへの登録">Gitサーバへの登録</h1>
+<h2 id="gitサーバへの登録">Gitサーバへの登録</h2>
 <h3 id="ローカルリポジトリとgitサーバ上のリモートリポジトリの紐付け">ローカルリポジトリとgitサーバ上のリモートリポジトリの紐付け</h3>
 <p>ローカルリポジトリ(要はgit管理したいプログラム群のあるディレクトリ)をgitサーバ上のリモートリポジトリと紐付ける。リモートリポジトリを作成した際に表示されたすべきこと（コマンドライン）を順次実行していく。
 以下はその一例。</p>
@@ -652,7 +666,7 @@ git push -u origin main
           <article class="default">
 <h1 id="settings">Settings</h1>
 
-<h1 id="アカウントの作成">アカウントの作成</h1>
+<h2 id="アカウントの作成">アカウントの作成</h2>
 <p><a href="https://github.com/">GitHubのホームページ</a>でアカウントを作成する</p>
 <h4 id="pro版github-educationへの変更方法"><strong>pro版（GitHub Education)への変更方法</strong></h4>
 <ol>
@@ -672,19 +686,19 @@ GitHubアカウントを持っていること。
 </ol>
 <h2 id="参考ページ">参考ページ</h2>
 <p><a href="https://qiita.com/Kobayashi2019/items/5adb9bde57691a770419">Qiita , @Kobayashi2019「<strong>GitHub Educationのメリットと申請方法</strong>」</a></p>
-<h1 id="gitコマンドのインストール">gitコマンドのインストール</h1>
+<h2 id="gitコマンドのインストール">gitコマンドのインストール</h2>
 <p>git コマンドをローカルマシンにインストールする。 Mac OSの場合は，Xcode コマンドラインツールをインストールしていたら，gitコマンドもインストールされている。</p>
 <p>apt-get対応のLinuxディストリビューションなら以下でたいていOK。</p>
 <pre tabindex="0"><code>$apt-get install git 
-</code></pre><h1 id="自分のアカウント情報のローカルマシンへの登録">自分のアカウント情報のローカルマシンへの登録</h1>
+</code></pre><h2 id="自分のアカウント情報のローカルマシンへの登録">自分のアカウント情報のローカルマシンへの登録</h2>
 <pre tabindex="0"><code>$git config --global user.name &lt;ユーザーネーム&gt;
 $git config --global user.email &lt;登録したメールアドレス&gt;
 $git config --global core.editer vi   #コメント編集につかいたいエディタを設定（デフォルトはvi）
 </code></pre><p><code>--global</code>は，ローカルリポジトリ作成時のデフォルト設定にするためのオプション。 特定のリポジトリでのみ別の設定にしたいときには，ダウンロードしたポジトリ内に移動してから<code>--local</code>を指定して実行する。</p>
-<h1 id="必要に応じてproxy設定">必要に応じてproxy設定</h1>
+<h2 id="必要に応じてproxy設定">必要に応じてproxy設定</h2>
 <p>外部とのネットワーク接続にproxy設定が必要な環境の場合は，Proxy設定のページを見て設定をする。ターミナルとgitのproxy設定をする。</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<h1 id="git-pull-するたびに警告が出る">git pull するたびに警告が出る…</h1>
+<h2 id="git-pull-するたびに警告が出る">git pull するたびに警告が出る…</h2>
 <ul>
 <li><a href="https://qiita.com/tearoom6/items/0237080aaf2ad46b1963">Git2.27での git pull 時の warning について</a></li>
 </ul>
@@ -696,9 +710,9 @@ $git config --global core.editer vi   #コメント編集につかいたいエ�
           </section>        </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1681586032" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1681586032" defer></script>
-    <script src="/js/featherlight.min.js?1681586032" defer></script>
-    <script src="/js/theme.js?1681586032" defer></script>
+    <script src="/js/clipboard.min.js?1681586977" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681586977" defer></script>
+    <script src="/js/featherlight.min.js?1681586977" defer></script>
+    <script src="/js/theme.js?1681586977" defer></script>
   </body>
 </html>

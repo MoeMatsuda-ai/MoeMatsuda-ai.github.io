@@ -4,7 +4,7 @@ date: 2022-11-22T09:08:59Z
 draft: false
 ---
 
-# アカウントの作成
+## アカウントの作成
 [GitHubのホームページ](https://github.com/)でアカウントを作成する
 #### **pro版（GitHub Education)への変更方法**
 1. [GitHub Education](https://education.github.com/)にアクセス
@@ -26,7 +26,7 @@ draft: false
 [Qiita , @Kobayashi2019「**GitHub Educationのメリットと申請方法**」](https://qiita.com/Kobayashi2019/items/5adb9bde57691a770419)
 
 
-# gitコマンドのインストール
+## gitコマンドのインストール
 
 git コマンドをローカルマシンにインストールする。 Mac OSの場合は，Xcode コマンドラインツールをインストールしていたら，gitコマンドもインストールされている。
 
@@ -36,7 +36,7 @@ apt-get対応のLinuxディストリビューションなら以下でたいて�
 $apt-get install git 
 ```
 
-# 自分のアカウント情報のローカルマシンへの登録
+## 自分のアカウント情報のローカルマシンへの登録
 
 ```
 $git config --global user.name <ユーザーネーム>
@@ -46,7 +46,7 @@ $git config --global core.editer vi   #コメント編集につかいたいエ�
 
 `--global`は，ローカルリポジトリ作成時のデフォルト設定にするためのオプション。 特定のリポジトリでのみ別の設定にしたいときには，ダウンロードしたポジトリ内に移動してから`--local`を指定して実行する。
 
-# 必要に応じてproxy設定
+## 必要に応じてproxy設定
 
 外部とのネットワーク接続にproxy設定が必要な環境の場合は，Proxy設定のページを見て設定をする。ターミナルとgitのproxy設定をする。
 
@@ -56,5 +56,5 @@ $git config --global core.editer vi   #コメント編集につかいたいエ�
 
 
 
-# git pull するたびに警告が出る…
+## git pull するたびに警告が出る…
 - [Git2.27での git pull 時の warning について](https://qiita.com/tearoom6/items/0237080aaf2ad46b1963)

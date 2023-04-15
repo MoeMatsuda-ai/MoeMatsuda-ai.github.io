@@ -14,8 +14,8 @@
       <guid>https://moematsuda-ai.github.io/github/repository-edit/index.html</guid>
       <description>リポジトリのダウンロード GitHubにあるリモートリポジトリをhttps接続でダウンロードする場合は以下のコマンドで。(ただし，GitHub上のリポジトリ設定で若干異なる場合もある)
 $ git clone https://github.com/someone/somerepo.git 上記URLのsomeone, someprepoの部分はダウンロードしたいリポジトリによって変わる。
-ssh接続 git clone git@github.com:bcl-exercises/21exercises-MoeMatsuda-ai.git cloneするときのURL以下はブラウザ上のgithubでcloneしたいリポジトリに移動し、codeをクリックすることで確認できる。
-publicの場合 $ git clone https://github.com/jnishii/jgr.git privateの場合 $ git clone https://&amp;lt;username&amp;gt;@github.com/someone/somerepo.git Wikiページをcloneする場合は.gitの前に.wikiをつける。
+ssh接続 git clone git@github.com:&amp;lt;repo&amp;gt;.git cloneするときのURL以下はブラウザ上のgithubでcloneしたいリポジトリに移動し、codeをクリックすることで確認できる。
+publicの場合 $ git clone https://github.com/&amp;lt;repo&amp;gt; privateの場合 $ git clone https://&amp;lt;username&amp;gt;@github.com/someone/somerepo.git Wikiページをcloneする場合は.gitの前に.wikiをつける。
 参照 リポジトリをクローンする 最新情報のダウンロード / 更新ファイルのアップロード ダウンロードしたファイルをいじるときには，まず，Gitサーバから最新バージョンをダウンロードしてから開始。
 $ git pull origin main これはサーバ(origin)から，masterブランチ(ブランチは後述)をダウンロードしてローカルリポジトリを更新し(fetch)，作業ディレクトリに反映(merge)するという意味。
 ファイルを更新したら，gitサーバ(origin)にアップロードする。
@@ -83,6 +83,14 @@ $ git branch ※アスタリスクのついているブランチが現在のブ�
 ブランチの作成
 $ git branch &amp;lt;branch name&amp;gt; ローカルブランチの作成をリモートにプッシュ
 $ git push origin &amp;lt;branch name&amp;gt; ブランチの移動</description>
+    </item>
+    <item>
+      <title>Repository Access Restrictions</title>
+      <link>https://moematsuda-ai.github.io/github/repository-access/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 09:09:35 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/github/repository-access/index.html</guid>
+      <description>group内で作成したrepositoryのアクセス権限を設定する方法
+操作したいrepositoryのsettingsをクリック 左のAccessのCollaborators and teamsをクリックし、パスワードを入力 Add peopleまたはAdd teamsをクリックし、アクセスを許可するpeopleまたはgroupを追加する </description>
     </item>
     <item>
       <title>How to Create Repository</title>

@@ -60,7 +60,7 @@ $ git commit -m "first commit"
 -mは1行コメントをつけるオプション。 更新したファイルをローカルリポジトリに反映するときにも，同様にgit addとgit commitを実行する。ここまではローカルリポジトリの管理。
 
 
-# gitサーバ上で新規リモートリポジトリを登録
+## gitサーバ上で新規リモートリポジトリを登録
 
 1. GitHubにログイン
 1. 左上の`Repositories`の隣りにある`New`のタブをクリック
@@ -86,7 +86,7 @@ $ git commit -m "first commit"
     - [ITmedia 「Git/GitHubにおける**リモートリポジトリの作成**、確認、変更、更新時の5コマンド」](https://atmarkit.itmedia.co.jp/ait/articles/1701/24/news141.html)
     - [SAMURAIENGINEER 「【Git初心者向け】リポジトリの作成からpushまで」](https://www.sejuku.net/blog/70775)
 
-# トークンの作成
+## トークンの作成
 2021年8月13日以降、GitHubのリポジトリにアクセスするには、ユーザ名とパスワードではなくアクセストークンが必要になった。
 
 1. GitHubにログイン
@@ -106,7 +106,7 @@ $ git commit -m "first commit"
 
 
 
-# Gitサーバへの登録
+## Gitサーバへの登録
 
 ### ローカルリポジトリとgitサーバ上のリモートリポジトリの紐付け
 
