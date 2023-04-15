@@ -1,5 +1,5 @@
 +++
 archetype = "chapter"
-title = "5. Hugo"
+title = "Hugo"
 weight = 5
 +++

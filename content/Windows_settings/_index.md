@@ -1,6 +1,6 @@
 +++
 archetype = "chapter"
-title = "10. Windows settings"
+title = "Windows settings"
 weight = 10
 +++
 

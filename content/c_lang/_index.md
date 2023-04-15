@@ -1,5 +1,5 @@
 +++
 archetype = "chapter"
-title = "1. C language"
+title = "C language"
 weight = 1
 +++

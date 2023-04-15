@@ -3,81 +3,81 @@ var relearn_search_index = [
     "content": "",
     "description": "",
     "tags": null,
-    "title": "1. C language",
+    "title": "C language",
     "uri": "/c_lang/index.html"
   },
   {
     "content": "",
     "description": "",
     "tags": null,
-    "title": "2. Docker",
+    "title": "Docker",
     "uri": "/docker/index.html"
   },
   {
     "content": "",
     "description": "",
     "tags": null,
-    "title": "3. Github",
+    "title": "Github",
     "uri": "/github/index.html"
   },
   {
     "content": "",
     "description": "",
     "tags": null,
-    "title": "4. Gnuplot",
+    "title": "Gnuplot",
     "uri": "/gnuplot/index.html"
   },
   {
     "content": "",
     "description": "",
     "tags": null,
-    "title": "5. Hugo",
+    "title": "Hugo",
     "uri": "/hugo/index.html"
   },
   {
     "content": "",
     "description": "",
     "tags": null,
-    "title": "6. Keyboard",
+    "title": "Keyboard",
     "uri": "/keyboard/index.html"
   },
   {
     "content": "",
     "description": "",
     "tags": null,
-    "title": "6. Latex",
+    "title": "Latex",
     "uri": "/latex/index.html"
   },
   {
     "content": "",
     "description": "",
     "tags": null,
-    "title": "7. Linux",
+    "title": "Linux",
     "uri": "/linux/index.html"
   },
   {
     "content": "",
     "description": "",
     "tags": null,
-    "title": "8. Markdown",
+    "title": "Markdown",
     "uri": "/markdown/index.html"
   },
   {
     "content": "",
     "description": "",
     "tags": null,
-    "title": "9. Python",
+    "title": "python",
     "uri": "/python/index.html"
   },
   {
     "content": "Windowsの設定についてのあれこれ\n",
     "description": "",
     "tags": null,
-    "title": "10. Windows settings",
+    "title": "Windows settings",
     "uri": "/windows_settings/index.html"
   },
   {
-    "content": "ロゴ（左上隅）の変更 layout/partials/logo.htmlを生成 logoの設定を書き込む ファビコンの変更 faviconがSVG, PNGまたはICOの場合は、ローカルのstatic/imagesディレクトリにfavicon.svg, favicon.pngまたはfavicon.icoという名前で画像を保存 layout/partials/にfavicon.htmlという名前で新しいファイルを生成し、次のように書き込む： \u003clink rel=\"icon\" href=\"/images/favicon.png\" type=\"image/png\"\u003e 参考文献 Customization :: Hugo Relearn Theme hugo-theme-relearn repo ",
+    "content": "ロゴ（左上隅）の変更 layout/partials/logo.htmlを生成 logoの設定を書き込む ファビコンの変更 faviconがSVG, PNGまたはICOの場合は、ローカルのstatic/imagesディレクトリにfavicon.svg, favicon.pngまたはfavicon.icoという名前で画像を保存 layout/partials/にfavicon.htmlという名前で新しいファイルを生成し、次のように書き込む： \u003clink rel=\"icon\" href=\"/images/favicon.png\" type=\"image/png\"\u003e メニューのChapter番号を表示 layout/partialsにmenu-pre.htmlファイルを生成し、次のように書き込む： {{ if (eq .Params.archetype \"chapter\") }}\u003cb style=\"display: inline-block; font-weight: 700; padding-left: .3rem; color: #007bff; text-align: left; width: 1.7rem;\"\u003e{{ .Params.weight }}.\u003c/b\u003e {{ end }} 参考文献 Customization :: Hugo Relearn Theme hugo-theme-relearn repo ",
     "description": "",
     "tags": null,
     "title": "Layout",
@@ -91,7 +91,7 @@ var relearn_search_index = [
     "uri": "/index.html"
   },
   {
-    "content": "baseURL = '\u003cURL\u003e' languageCode = 'ja-jp' title = \"Chiyo's blog\" theme = \"hugo-theme-relearn\" publishDir = \"docs\" [params] themeVariant = [\"relearn-dark\", \"relearn-light\", \"green\", \"black\", \"blue\", \"learn\"] [outputs] home = [\"HTML\", \"RSS\", \"SEARCH\", \"SEARCHPAGE\"] section = [\"HTML\", \"RSS\", \"PRINT\"] [Languages] [Languages.en] landingPageName = \"\u003ci class='fas fa-home'\u003e\u003c/i\u003e Home\" [[menu.shortcuts]] name = \"\u003ci class='fab fa-fw fa-github'\u003e\u003c/i\u003e GitHub repo\" identifier = \"ds\" url = \"https://github.com/MoeMatsuda-ai/MoeMatsuda-ai.github.io\" weight = 50 [[menu.shortcuts]] name = \"\u003ci class='fas fa-tags'\u003e\u003c/i\u003e Tags\" url = \"/tags\" weight = 70 baseURL: サイトのルートURL publishDie: Webサイトで公開するリポジトリ以下のディレクトリ（githubではdocsを推奨） menu.shortcuts: ショートカット（ここではGithub repoとtagsを設定） ",
+    "content": "baseURL = '\u003cURL\u003e' languageCode = 'ja-jp' title = \"Chiyo's blog\" theme = \"hugo-theme-relearn\" publishDir = \"docs\" [params] themeVariant = [\"relearn-dark\", \"relearn-light\", \"green\", \"black\", \"blue\", \"learn\"] ordersectionsby = \"title\" showVisitedLinks = true [outputs] home = [\"HTML\", \"RSS\", \"SEARCH\", \"SEARCHPAGE\"] section = [\"HTML\", \"RSS\", \"PRINT\"] [Languages] [Languages.en] landingPageName = \"\u003ci class='fas fa-home'\u003e\u003c/i\u003e Home\" [[menu.shortcuts]] name = \"\u003ci class='fab fa-fw fa-github'\u003e\u003c/i\u003e GitHub repo\" identifier = \"ds\" url = \"https://github.com/MoeMatsuda-ai/MoeMatsuda-ai.github.io\" weight = 50 [[menu.shortcuts]] name = \"\u003ci class='fas fa-tags'\u003e\u003c/i\u003e Tags\" url = \"/tags\" weight = 70 baseURL: サイトのルートURL publishDie: Webサイトで公開するリポジトリ以下のディレクトリ（githubではdocsを推奨） ordersection: titleまたはweightを選択。titleの場合はtitle順、weightの場合はweightで設定された番号順にメニューを並べる showVisitedLinks: 訪れたページにはメニューにチェックマークを付ける menu.shortcuts: ショートカット（ここではGithub repoとtagsを設定） ",
     "description": "",
     "tags": null,
     "title": "Config.tomlの設定",

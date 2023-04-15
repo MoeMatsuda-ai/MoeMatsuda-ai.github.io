@@ -1,5 +1,5 @@
 +++
 archetype = "chapter"
-title = "4. Gnuplot"
+title = "Gnuplot"
 weight = 4
 +++

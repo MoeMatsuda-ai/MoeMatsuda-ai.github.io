@@ -6,6 +6,8 @@ publishDir = "docs"
 
 [params]
   themeVariant = ["relearn-dark", "relearn-light", "green", "black", "blue", "learn"]
+  ordersectionsby = "title"
+  showVisitedLinks = true
 
 [outputs]
   home = ["HTML", "RSS", "SEARCH", "SEARCHPAGE"] 

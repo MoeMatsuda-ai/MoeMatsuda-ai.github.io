@@ -12,6 +12,8 @@ publishDir = "docs"
 
 [params]
   themeVariant = ["relearn-dark", "relearn-light", "green", "black", "blue", "learn"]
+  ordersectionsby = "title"
+  showVisitedLinks = true
 
 [outputs]
   home = ["HTML", "RSS", "SEARCH", "SEARCHPAGE"] 
@@ -35,4 +37,6 @@ weight = 70
 
 - baseURL: サイトのルートURL
 - publishDie: Webサイトで公開するリポジトリ以下のディレクトリ（githubではdocsを推奨）
+- ordersection: `title`または`weight`を選択。titleの場合はtitle順、weightの場合はweightで設定された番号順にメニューを並べる
+- showVisitedLinks: 訪れたページにはメニューにチェックマークを付ける
 - menu.shortcuts: ショートカット（ここでは`Github repo`と`tags`を設定）
