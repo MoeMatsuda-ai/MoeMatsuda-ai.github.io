@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anaconda settings on WSL on Chiyo&#39;s blog</title>
-    <link>https://moematsuda-ai.github.io/docs/windows_settings/conda_settings_onwsl/index.html</link>
+    <link>https://moematsuda-ai.github.io/windows_settings/conda_settings_onwsl/index.html</link>
     <description>Recent content in Anaconda settings on WSL on Chiyo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 13 Apr 2023 14:25:36 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/docs/windows_settings/conda_settings_onwsl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Apr 2023 14:25:36 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/windows_settings/conda_settings_onwsl/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

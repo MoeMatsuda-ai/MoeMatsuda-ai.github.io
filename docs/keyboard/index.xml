@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Keyboard on Chiyo&#39;s blog</title>
-    <link>https://moematsuda-ai.github.io/docs/keyboard/index.html</link>
+    <link>https://moematsuda-ai.github.io/keyboard/index.html</link>
     <description>Recent content in Keyboard on Chiyo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 29 Nov 2022 08:12:45 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/docs/keyboard/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Nov 2022 08:12:45 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/keyboard/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mozc_settings</title>
-      <link>https://moematsuda-ai.github.io/docs/keyboard/mozc_settings/index.html</link>
+      <link>https://moematsuda-ai.github.io/keyboard/mozc_settings/index.html</link>
       <pubDate>Tue, 29 Nov 2022 08:12:45 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/docs/keyboard/mozc_settings/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/keyboard/mozc_settings/index.html</guid>
       <description>US配列でmozc（日本語）の使用 Ubuntu 22.04 入力ソースの変更 設定の地域と言語から，入力ソースを日本語（Mozc）のみにする Mozcのみに設定すると自動的に（たぶん）US配列に対応します キー割当の変更（半角全角キーをctrl+spaceに変更） 設定の『キーボード」の設定を選択 日本語（Mozc）の右側をクリックし，設定をクリック Mozc プロパティの「キー設定の選択」の「編集」を選択し，Hankak/zenkakuのところをすべてCtrl+Spaceに変更 モード/コマンドが以下3つのところの入力キーのところを3回クリック 変換前入力/半角空白を入力 変換中/半角空白を入力 直接入力/IMEを有効化 入力文字なし/IMEを無効化 ctrl+Spaceを押す 参考 Ubuntu18.04にて，USキーボードを用いて英数字と日本語（ひらがな）の切り替えを行う方法 </description>
     </item>
   </channel>

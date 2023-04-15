@@ -1,241 +1,241 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/c_lang/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/c_lang/index.html</loc>
     <lastmod>2022-11-26T12:34:46+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/docker/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/docker/index.html</loc>
     <lastmod>2022-11-22T08:44:42+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/github/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/github/index.html</loc>
     <lastmod>2022-11-22T09:19:35+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/gnuplot/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/gnuplot/index.html</loc>
     <lastmod>2022-11-24T01:07:41+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/latex/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/latex/index.html</loc>
     <lastmod>2022-11-25T12:17:42+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/linux/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/linux/index.html</loc>
     <lastmod>2023-03-29T06:50:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/markdown/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/markdown/index.html</loc>
     <lastmod>2022-11-24T01:38:14+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/post/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/post/index.html</loc>
     <lastmod>2022-11-22T06:18:27+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/python/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/python/index.html</loc>
     <lastmod>2023-03-29T06:10:48+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/keyboard/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/keyboard/index.html</loc>
     <lastmod>2022-11-29T08:12:45+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/windows_settings/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/windows_settings/index.html</loc>
     <lastmod>2023-04-13T14:25:36+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/windows_settings/conda_settings_onwsl/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/windows_settings/conda_settings_onwsl/index.html</loc>
     <lastmod>2023-04-13T14:25:36+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/index.html</loc>
     <lastmod>2023-04-13T14:25:36+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/windows_settings/install_wsl/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/windows_settings/install_wsl/index.html</loc>
     <lastmod>2023-04-09T08:37:46+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/windows_settings/keyboard/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/windows_settings/keyboard/index.html</loc>
     <lastmod>2023-04-09T08:32:20+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/linux/shortcut/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/linux/shortcut/index.html</loc>
     <lastmod>2023-03-29T06:50:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/linux/shell_script/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/linux/shell_script/index.html</loc>
     <lastmod>2023-03-29T06:36:40+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/linux/command/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/linux/command/index.html</loc>
     <lastmod>2023-03-29T06:20:56+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/python/docstring/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/python/docstring/index.html</loc>
     <lastmod>2023-03-29T06:10:48+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/keyboard/mozc_settings/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/keyboard/mozc_settings/index.html</loc>
     <lastmod>2022-11-29T08:12:45+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/c_lang/using_gniplot/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/c_lang/using_gniplot/index.html</loc>
     <lastmod>2022-11-26T12:34:46+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/c_lang/file_sep/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/c_lang/file_sep/index.html</loc>
     <lastmod>2022-11-26T12:34:28+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/latex/myset/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/latex/myset/index.html</loc>
     <lastmod>2022-11-25T12:17:42+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/markdown/base/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/markdown/base/index.html</loc>
     <lastmod>2022-11-24T01:38:14+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/gnuplot/output_equation_on_latex/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/gnuplot/output_equation_on_latex/index.html</loc>
     <lastmod>2022-11-24T01:07:41+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/gnuplot/command_file/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/gnuplot/command_file/index.html</loc>
     <lastmod>2022-11-24T01:07:10+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/gnuplot/base/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/gnuplot/base/index.html</loc>
     <lastmod>2022-11-24T01:07:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/gnuplot/install/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/gnuplot/install/index.html</loc>
     <lastmod>2022-11-24T00:26:02+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/latex/problem/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/latex/problem/index.html</loc>
     <lastmod>2022-11-22T09:32:05+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/latex/references/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/latex/references/index.html</loc>
     <lastmod>2022-11-22T09:31:51+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/latex/item/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/latex/item/index.html</loc>
     <lastmod>2022-11-22T09:31:40+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/latex/figure/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/latex/figure/index.html</loc>
     <lastmod>2022-11-22T09:31:14+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/latex/table/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/latex/table/index.html</loc>
     <lastmod>2022-11-22T09:30:59+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/latex/base/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/latex/base/index.html</loc>
     <lastmod>2022-11-22T09:30:50+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/github/repository-edit/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/github/repository-edit/index.html</loc>
     <lastmod>2022-11-22T09:19:35+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/github/commit/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/github/commit/index.html</loc>
     <lastmod>2022-11-22T09:12:34+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/github/ssh/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/github/ssh/index.html</loc>
     <lastmod>2022-11-22T09:10:47+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/github/diff/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/github/diff/index.html</loc>
     <lastmod>2022-11-22T09:10:10+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/github/branch/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/github/branch/index.html</loc>
     <lastmod>2022-11-22T09:09:52+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/github/create-repository/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/github/create-repository/index.html</loc>
     <lastmod>2022-11-22T09:09:19+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/github/settings/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/github/settings/index.html</loc>
     <lastmod>2022-11-22T09:08:59+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/docker/post-installation-step/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/docker/post-installation-step/index.html</loc>
     <lastmod>2022-11-22T08:44:42+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/docker/copy-mount/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/docker/copy-mount/index.html</loc>
     <lastmod>2022-11-22T08:44:19+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/docker/installation-docker/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/docker/installation-docker/index.html</loc>
     <lastmod>2022-11-22T08:43:54+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/docker/container-cuda/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/docker/container-cuda/index.html</loc>
     <lastmod>2022-11-22T08:43:12+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/docker/container-ssh/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/docker/container-ssh/index.html</loc>
     <lastmod>2022-11-22T08:43:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/docker/instalation-docker-compose/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/docker/instalation-docker-compose/index.html</loc>
     <lastmod>2022-11-22T08:42:15+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/docker/docker-compose-cuda/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/docker/docker-compose-cuda/index.html</loc>
     <lastmod>2022-11-22T08:41:46+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/docker/base/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/docker/base/index.html</loc>
     <lastmod>2022-11-22T08:41:22+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/docker/appendix/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/docker/appendix/index.html</loc>
     <lastmod>2022-11-22T08:41:11+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/python/torch/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/python/torch/index.html</loc>
     <lastmod>2022-11-22T08:12:48+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/python/pickle/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/python/pickle/index.html</loc>
     <lastmod>2022-11-22T08:12:12+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/python/jupyter/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/python/jupyter/index.html</loc>
     <lastmod>2022-11-22T08:09:35+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/python/filter/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/python/filter/index.html</loc>
     <lastmod>2022-11-22T08:09:03+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/python/create-library/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/python/create-library/index.html</loc>
     <lastmod>2022-11-22T08:08:38+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/python/anaconda-update/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/python/anaconda-update/index.html</loc>
     <lastmod>2022-11-22T08:08:01+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/python/base/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/python/base/index.html</loc>
     <lastmod>2022-11-22T08:04:32+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/post/hugo-note/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/post/hugo-note/index.html</loc>
     <lastmod>2022-11-22T06:18:27+00:00</lastmod>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/categories/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/categories/index.html</loc>
   </url>
   <url>
-    <loc>https://moematsuda-ai.github.io/docs/tags/index.html</loc>
+    <loc>https://moematsuda-ai.github.io/tags/index.html</loc>
   </url>
 </urlset>

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on Chiyo&#39;s blog</title>
-    <link>https://moematsuda-ai.github.io/docs/github/index.html</link>
+    <link>https://moematsuda-ai.github.io/github/index.html</link>
     <description>Recent content in Github on Chiyo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 22 Nov 2022 09:19:35 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/docs/github/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Nov 2022 09:19:35 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Repository Operations</title>
-      <link>https://moematsuda-ai.github.io/docs/github/repository-edit/index.html</link>
+      <link>https://moematsuda-ai.github.io/github/repository-edit/index.html</link>
       <pubDate>Tue, 22 Nov 2022 09:19:35 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/docs/github/repository-edit/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/github/repository-edit/index.html</guid>
       <description>リポジトリのダウンロード GitHubにあるリモートリポジトリをhttps接続でダウンロードする場合は以下のコマンドで。(ただし，GitHub上のリポジトリ設定で若干異なる場合もある)
 $ git clone https://github.com/someone/somerepo.git 上記URLのsomeone, someprepoの部分はダウンロードしたいリポジトリによって変わる。
 ssh接続 git clone git@github.com:bcl-exercises/21exercises-MoeMatsuda-ai.git cloneするときのURL以下はブラウザ上のgithubでcloneしたいリポジトリに移動し、codeをクリックすることで確認できる。
@@ -25,9 +25,9 @@ $ git add . 新規作成ファイルと更新ファイルを全部指定 $ git a
     </item>
     <item>
       <title>About resetting commit and rm the file</title>
-      <link>https://moematsuda-ai.github.io/docs/github/commit/index.html</link>
+      <link>https://moematsuda-ai.github.io/github/commit/index.html</link>
       <pubDate>Tue, 22 Nov 2022 09:12:34 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/docs/github/commit/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/github/commit/index.html</guid>
       <description>コミットの取り消し 直前のコミットの取り消し $ git reset &amp;lt;打ち消したいコミットID&amp;gt; 直前のコミットを打ち消す場合には以下のコマンドを使用
 $ git reset --soft HEAD^ --softオプション：ワークディレクトリの内容はそのままでコミットだけを取り消したい場合に使用 --hardオプション：コミット取り消した上でワークディレクトリの内容も書き換えたい場合に使用 HEAD^: 直前のコミットを意味 HEAD~{n}n個前のコミットを意味 コミットの打ち消し $ git revert &amp;lt;コミットのハッシュ値&amp;gt; 作業ツリーを指定したコミット時点の状態にまで戻し、コミットを行う。
 コミットの上書き 直前のコミットに上書きする場合は以下のコマンドを使用
@@ -36,9 +36,9 @@ $ git rm --cached -r &amp;lt;target directory&amp;gt; reference [Git]コミッ�
     </item>
     <item>
       <title>Public key authentication settings in github</title>
-      <link>https://moematsuda-ai.github.io/docs/github/ssh/index.html</link>
+      <link>https://moematsuda-ai.github.io/github/ssh/index.html</link>
       <pubDate>Tue, 22 Nov 2022 09:10:47 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/docs/github/ssh/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/github/ssh/index.html</guid>
       <description>公開鍵を GitHub に登録することで、push 時などにパスワードを入力する手間が省略可能 公開鍵および秘密鍵の作成と登録 公開鍵および秘密鍵を作成
 ssh-keygen -t ed25519 公開鍵 を GitHub に登録
 cat ~/.ssh/id_ed25519.pub # コマンドを実行して表示されたすべての文字列を GitHub に登録 # # ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX user@host # ↑こんな感じの文字列をすべてコピペ GitHub の公開鍵登録の手順は、
@@ -49,17 +49,17 @@ Hi (User名)! You&amp;#39;ve successfully authenticated, but GitHub does not pro
     </item>
     <item>
       <title>Confirmation of difference</title>
-      <link>https://moematsuda-ai.github.io/docs/github/diff/index.html</link>
+      <link>https://moematsuda-ai.github.io/github/diff/index.html</link>
       <pubDate>Tue, 22 Nov 2022 09:10:10 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/docs/github/diff/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/github/diff/index.html</guid>
       <description>ファイルの変更差分の確認 $ git diff [変更前のコミット識別子]..[変更後のコミット識別子] ブランチ同士の差分の確認 $ git diff master..develop masterブランチにプルリクエストを送る前にdevelopブランチに追加した内容を確認できる
 git pull する前に、リモート追跡ブランチとの差分を確認する リモートリポジトリからの変更内容の取得 $ git fetch origin ローカルリポジトリのmasterブランチの最新コミット(HEAD)とリモート追跡ブランチ(origin/master)を比較 $ git diff HEAD..origin/master git push する前に、リモート追跡ブランチとの差分を確認する $ git diff origin/master..HEAD 参考 第9話 git diff で差分を確認！【連載】マンガでわかるGit ～コマンド編～ </description>
     </item>
     <item>
       <title>Branch</title>
-      <link>https://moematsuda-ai.github.io/docs/github/branch/index.html</link>
+      <link>https://moematsuda-ai.github.io/github/branch/index.html</link>
       <pubDate>Tue, 22 Nov 2022 09:09:52 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/docs/github/branch/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/github/branch/index.html</guid>
       <description>ブランチとは？ ブランチとは平行世界のようなものである。 ブランチを活用することでmasterブランチをそのまま据え置いた状態で、別のブランチで新機能を試しながら作ることができる。
 ブランチの正体は？ github公式ドキュメントによると、
 ブランチとは（中略）コミットを指す軽量なポインタに過ぎません と説明されている。
@@ -86,9 +86,9 @@ $ git push origin &amp;lt;branch name&amp;gt; ブランチの移動</description
     </item>
     <item>
       <title>How to Create Repository</title>
-      <link>https://moematsuda-ai.github.io/docs/github/create-repository/index.html</link>
+      <link>https://moematsuda-ai.github.io/github/create-repository/index.html</link>
       <pubDate>Tue, 22 Nov 2022 09:09:19 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/docs/github/create-repository/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/github/create-repository/index.html</guid>
       <description>ローカルリポジトリの作成 リモートリポジトリに登録したいディレクトリにして次のコマンドでバージョン管理のための初期化を行う。
 $ git init これで，ローカルリポジトリ(.git/)が作られ，git initを実行したディレクトリが作業ディレクトリになる。
 以下のようにgit initでローカルリポジトリ用のディレクトリを新規作成することもできる。
@@ -98,9 +98,9 @@ $ git add . # 現在のディレクトリにある全てのファイル/ディ�
     </item>
     <item>
       <title>Settings</title>
-      <link>https://moematsuda-ai.github.io/docs/github/settings/index.html</link>
+      <link>https://moematsuda-ai.github.io/github/settings/index.html</link>
       <pubDate>Tue, 22 Nov 2022 09:08:59 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/docs/github/settings/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/github/settings/index.html</guid>
       <description>アカウントの作成 GitHubのホームページでアカウントを作成する
 pro版（GitHub Education)への変更方法 GitHub Educationにアクセス 右上のBenefitsをクリック IndividualsのGet student benefitsを選択 申し込むための資格が書いてあります。 学生であること。 学校からもらったメアドがあること。 GitHubアカウントを持っていること。 13歳以上であること。 Screenshot from 2020-09-23 15-02-45.png Add an email addressから学校のアドレスを追加 How do you plan to use GitHub?にgithubの利用目的を記入 Submit your informationを押して完了 ※利用目的は形式的なものなので（多分）適当に書いてOK! 参考ページ Qiita , @Kobayashi2019「GitHub Educationのメリットと申請方法」
 gitコマンドのインストール git コマンドをローカルマシンにインストールする。 Mac OSの場合は，Xcode コマンドラインツールをインストールしていたら，gitコマンドもインストールされている。

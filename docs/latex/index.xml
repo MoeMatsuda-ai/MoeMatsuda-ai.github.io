@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Latex on Chiyo&#39;s blog</title>
-    <link>https://moematsuda-ai.github.io/docs/latex/index.html</link>
+    <link>https://moematsuda-ai.github.io/latex/index.html</link>
     <description>Recent content in Latex on Chiyo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 25 Nov 2022 12:17:42 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/docs/latex/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Nov 2022 12:17:42 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/latex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>よく使う設定</title>
-      <link>https://moematsuda-ai.github.io/docs/latex/myset/index.html</link>
+      <link>https://moematsuda-ai.github.io/latex/myset/index.html</link>
       <pubDate>Fri, 25 Nov 2022 12:17:42 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/docs/latex/myset/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/latex/myset/index.html</guid>
       <description>プリアンブル Packages \documentclass[dvipdfmx]{jsarticle} \usepackage[dvipdfmx]{graphicx} \usepackage[dvipdfmx]{color} \usepackage{amsmath} \usepackage{mathtools} \usepackage{ascmac} \usepackage{comment} \usepackage{algorithmic} \usepackage{algorithm} \usepackage{here} \usepackage{listings,jvlisting} \usepackage{bm} \usepackage{multicol} \usepackage[square,sort,comma,numbers]{natbib} \usepackage[subrefformat=simple]{subcaption}%サブキャプションを付けたいときに必要 gnuplotでlatex形式の数式を表示するための設定 % \usepackage{gnuplot-lua-tikz} % \usepackage{tikz} algorithm (疑似コード) の表示の設定 \renewcommand{\algorithmicrequire}{\textbf{Input:}} \renewcommand{\algorithmicensure}{\textbf{Output:}} ### 参考文献の文献番号の表示形式を変更 \makeatletter%再定義に＠が使用される場合に\makeatletterと\makeatotherで挟む \def\@cite#1{\textsuperscript{#1)}}%引用文献の文献番号の表示方法を変更 \def\@biblabel#1{#1)}%参考文献の先頭も変更 \makeatother 文献番号等の色やリンクの設定 \usepackage[dvipdfmx]{hyperref} \hypersetup{% hyperrefオプションリスト setpagesize=false, bookmarksnumbered=true,%ブックマークを作成 bookmarksopen=true,%ブックマークを開く colorlinks=true,%カラーリンクを使用 linkcolor=black, %内部参照リンクカラー citecolor=blue, %文献カラー % filecolor=, %ローカルファイル参照リンクカラー urlcolor=blue, } program（c言語）の記述形式についての設定 \renewcommand{\lstlistingname}{program} % %c言語の設定 気に入ってる方 \lstset{ language=c, basicstyle={\ttfamily\small}, tabsize=2, frame=trBL, numbers=left, numberstyle={\ttfamily\small}, breaklines=true, captionpos=t %キャプションを一番下にするならcaptions=b } jsreportでchapterの改行を削除する設定 % chapterの改行を削除 \makeatletter \def\@makechapterhead#1{% \vspace*{2\Cvs}% 欧文は50pt {\parindent \z@ \raggedright \normalfont \ifnum \c@secnumdepth &amp;gt;\m@ne \huge\headfont \@chapapp\thechapter\@chappos %% \par\nobreak %% \vskip \Cvs % 欧文は20pt \fi \interlinepenalty\@M%先頭の空白で、章とチャプター名の間に空白が挿入される \huge \headfont #1\par\nobreak \vskip 3\Cvs} } % 欧文は40pt \makeatother In document bibtexの表示 \bibliographystyle{junsrt} \nocite{*} \bibliography{reference} </description>
     </item>
     <item>
       <title>Problem</title>
-      <link>https://moematsuda-ai.github.io/docs/latex/problem/index.html</link>
+      <link>https://moematsuda-ai.github.io/latex/problem/index.html</link>
       <pubDate>Tue, 22 Nov 2022 09:32:05 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/docs/latex/problem/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/latex/problem/index.html</guid>
       <description>グラフが記述した位置に正しく出力されない もとのやり方 \begin{figure}[h] \end{figure} このやり方では画像を連続して出力する場合などにテキストの最後にまとめて出力されてしまう。
 解決法 usepackage{here} \begin{figure}[H]%[H]オプションで記述した位置に強制的に出力する \end{figure} 参考 TeXで図をコード記述位置に強制的に出力する
 図表番号が正しく表示されない。 問題点 \begin{figure}[H] \label{graph3_4} \begin{center} \scalebox{0.9}{\input{kadai3_4_graph.tex}} \caption{$\alpha = 1/4 $における分散$\langle x(t)\rangle$と時間$t$の関係} \end{center} \end{figure} \begin{figure}[h] \label{graph3_2} \begin{center} \scalebox{0.9}{\input{kadai3_2_graph.tex}} \caption{$\alpha = 1/2$における分散$\langle x(t)\rangle$と時間$t$の関係} \end{center} \end{figure} \begin{figure}[h] \label{graph3_1} \begin{center} \scalebox{0.9}{\input{kadai3_1_graph.tex}} \caption{$\alpha = 1$における分散$\langle x(t)\rangle$と時間$t$の関係} \end{center} \end{figure} 図\ref{graph3_4}, \ref{graph3_2}, \ref{graph3_1} と書くと図4, 4, 4と出力されてしまう
@@ -27,9 +27,9 @@
     </item>
     <item>
       <title>References</title>
-      <link>https://moematsuda-ai.github.io/docs/latex/references/index.html</link>
+      <link>https://moematsuda-ai.github.io/latex/references/index.html</link>
       <pubDate>Tue, 22 Nov 2022 09:31:51 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/docs/latex/references/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/latex/references/index.html</guid>
       <description>LaTeXでの参考文献の書き方 \begin{thebibliography}{99} \bibitem{参照ラベル名1} 文献情報 \bibitem{参照ラベル2名} 文献情報 ...... ...... \end{thebibliography} このように記述してタイプセットすると、文献番号が\bibitemの登録順に[1], [2], [3], &amp;hellip; のように表される。
 本文中で文献情報を参照するには次のように記述する
 ....といったことが指摘されている\cite{ラベル名a}\cite{ラベル名b} これをタイプセットすると....といったことが指摘されている[6][9]のように表示される。
@@ -42,9 +42,9 @@
     </item>
     <item>
       <title>Bulletins in latex</title>
-      <link>https://moematsuda-ai.github.io/docs/latex/item/index.html</link>
+      <link>https://moematsuda-ai.github.io/latex/item/index.html</link>
       <pubDate>Tue, 22 Nov 2022 09:31:40 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/docs/latex/item/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/latex/item/index.html</guid>
       <description>記号付き箇条書き 見出し記号付きの箇条書きをするためには¥itemizeを使用する。
 【入力例】
 ¥begin{itemize} ¥item aaa ¥item bbb ¥begin{itemize} ¥item ccc ¥end{itemize} ¥item ddd ¥end{itemize} 【出力例】
@@ -59,9 +59,9 @@
     </item>
     <item>
       <title>Figure</title>
-      <link>https://moematsuda-ai.github.io/docs/latex/figure/index.html</link>
+      <link>https://moematsuda-ai.github.io/latex/figure/index.html</link>
       <pubDate>Tue, 22 Nov 2022 09:31:14 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/docs/latex/figure/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/latex/figure/index.html</guid>
       <description>\begin{figure}[位置指定] \centering \includegraphics[オプション]{ファイル名} \caption{図のタイトル\label{ラベル} \end{figure} .tex拡張子の図を挿入するときは次のように記述する
 \begin{figure}[H] \centering \scalebox{0.6}{\input{ファイル名}} \caption{図のタイトル\label{ラベル}} \end{figure} 位置指定 位置指定 出力場所 h 記述した部分 t ページの上部 b ページの下部 p 独立したページ オプション オプション指定 指定方法 keepaspectratio 縦横の比を維持 scale 図のサイズの変更(例:scale=0.7) width 横幅の指定(例:width=130mm) height 高さの指定(例:height=60mm) angle 回転角の指定(例:angle=90) origin 回転角の時の原点，c:中心，tl:左上，tr:右上，bl:左下，br：右下(例:origin=c) draft 図が入る枠だけ表示 clip BoundingBoxからはみ出た分を切り取る 複数枚のグラフを横に並べて表示 figure の中で minipage を使って，画像一つ分の領域を確保してから includegraphics を使う． \linewidth, \textwidth などを使って領域の幅を調整する． subcaption を使う時は，大抵プリアンブルに次のように書くとよい．
 \usepackage[subrefformat=parens]{subcaption} subcaption パッケージが使用しているスタイルと競合する場合は諦めて， (a)や(b)などの文字を直接打ち込んで挿入する． 以下は1行2列で2つの画像を挿入する例．
@@ -69,16 +69,16 @@
     </item>
     <item>
       <title>Table</title>
-      <link>https://moematsuda-ai.github.io/docs/latex/table/index.html</link>
+      <link>https://moematsuda-ai.github.io/latex/table/index.html</link>
       <pubDate>Tue, 22 Nov 2022 09:30:59 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/docs/latex/table/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/latex/table/index.html</guid>
       <description>表の書き方 \begin{table} \label{ラベル名} \centering \caption{表題} \begin{tabular}{|c|c|c|}%3列で表示、列と列の間に縦罫線を引く \hline 西暦 &amp;amp; 測定者 &amp;amp; 測定方法 &amp;amp; 測定結果 \\ &amp;amp; &amp;amp; &amp;amp; $\times 10^8$ [m/sec] \\ \hline \hline 1638 &amp;amp; Galileo &amp;amp; 二人が離れてランプの光を見る &amp;amp; (音速10倍以上) \\ 1675 &amp;amp; Roemer &amp;amp; 木星の衛星の観測から &amp;amp; 2 \\ \hline \end{tabular} \end{table} コマンド コマンド 概要 \hline 横罫線を引く ※2回かけば2つ横罫線が引かれる \multicolmn{横に結合するマスの数}{表示形式、|c|等}{文字} 横に並んだ表の要素を結合する \cline{3-5} 任意の列に横罫線を引く(ここでは3列目から5列目に横罫線を引く) packageを用いた表作成 概要 コマンド 備考 package セルの結合（縦） \multirow{結合要素数}{*}{文字} 縦に並んだ表の要素を結合 multirow 幅を指定した横罫線 \toprule[] 表の最上部の横罫線を引きます．は線幅です．線幅を設定しないデフォルトを強く推奨します． booktabs 横罫線(列見出しと本文、幅指定) \midrule[] 列見出しと本文の間に横罫線を引きます． booktabs 横罫線(表の最下部、幅指定) \bottomrule[] 表の最下部の横罫線を引きます． booktabs 任意の行への縦罫線 \cmidrule{a-b} a 行目から b 行目まで罫線を引きます．trim の設定(lr)を強く勧めます． booktabs 行間スペース \addlinespace[] 行間にスペースを挿入します． booktabs 二重罫線(\cmidrule) \morecmidrules \cmidrule を二重罫線にするときに使います．他の罫線 (\toprule, \midrule, \bottomrule) では不要です． booktabs スペースありの罫線 \specialrule{}{}{} 上下にスペースを挿入した罫線を引きます．これを使う場合，三つの引数が必須です． booktabs ※＜wd＞は幅指定（pt,em, cmなど)</description>
     </item>
     <item>
       <title>Basic</title>
-      <link>https://moematsuda-ai.github.io/docs/latex/base/index.html</link>
+      <link>https://moematsuda-ai.github.io/latex/base/index.html</link>
       <pubDate>Tue, 22 Nov 2022 09:30:50 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/docs/latex/base/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/latex/base/index.html</guid>
       <description>LaTexコマンド集 概要 コマンド 詳細 パッケージ 文字サイズの変更 \scalebox{倍率}{文字} 特定の文字やtexファイルを＜倍率＞倍にして出力する。{倍率}の部分を{幅}[高さ]のようにかき分けてもOK! graphics 行間の調整 \begin{spacing}{倍率} 文章 \end{spacing} 指定した倍率に行間を変更する setspace 部分的に2段組みにする \begin{multicols}{2} 2段組にしたい文章 \end{multicols} 2のところをかえれば多段組にできるかも(?) multicol 特殊文字 表示 コマンド 概要 Å {\AA} 数式環境以外で単位Åを表示する。ただし数式中では\mathrm{\mathring{A}}とするか\mathrm{\AA}とする。 文字サイズ コマンド 標準を10ptとしたときの大きさ \tiny 5pt \scriptsize 7pt \footnotesize 8pt \small 9pt \normalsize 10pt \large 12pt \Large 14.4pt \LARGE 17.28pt \huge 20.74pt \Huge 24.88pt 数式環境 環境名 環境 パッケージ 特徴 equation \begin{equation}\end{equation} &amp;mdash; 1行の数式を記入でき、数式番号がつく equation \begin{equation*}・・・ amsmath equation環境とほとんど同じだが、数式番号がつかない eqnarray \begin{eqnarray} 数式 $=$ 数式\数式 $=$ 数式\end{eqnarray} &amp;mdash; 複数行の数式を、$で挟んでいる＝をそろえて表示する。※数式番号は各行に表示されるが、\nonumberを使用してはならない。 eqnarray \begin{eqnarray*}・・・ &amp;mdash; 数式番号がつかない split \begin{split} 数式 $= 数式 数式 $= 数式\end{split} amsmath eqnarray環境の代替。equation環境の中で使用し、&amp;amp;=をそろえて表示し、数式番号は複数行の中間に一つだけ表示する align \begin{align} 数式 $= 数式\・・・ amsmath {&amp;amp;= で数式の=をそろえて表示し、数式番号を各行ごとに表示する。 align \begin{align*}・・・ amsmath 数式番号がつかない aligned \begin{aligned}・・・ amsmath equation環境内で使用でき、一部分のみalign環境にすることができる gather \begin{gather}・・・ amsmath 複数の数式を中央揃えで表示し、各行ごとに数式番号をつける 数式表示 コマンド パッケージ 概要 \bm{a} bm 括弧内の文字をベクトル（太字）で表示する \label{数式のラベル} &amp;mdash; 数式にラベル付けできる。数式の数式番号やページ数を呼び出すときに使用する。数式環境下で使用する \ref{ラベル名} &amp;mdash; 数式につけた式番号をラベル名を指定することで表示できる \frac{分子}{分母} &amp;mdash; 分数表示 \int_{上限}^{下限} &amp;mdash; 積分表示 \left&amp;lt;括弧なら何でも&amp;gt;・・・\right&amp;lt;括弧&amp;gt; &amp;mdash; 括弧のサイズを括弧内の数式に自動で合わせる \hspace{50pt} &amp;mdash; { }内に指定した幅の文だけスペースを生成。使用できる単位は「pt」「pc」「mm」「cm」 \; または \: または \, 空白を生成。左に行くにつれて大きくなる \begin{pmatrix} a11 &amp;amp; a12 &amp;amp; a13\\\\ a21 &amp;amp; a22 &amp;amp; a23 \\\\ \end{pmatrix} amsmath 行列 \begin{vmatrix} a11 &amp;amp; a12 &amp;amp; a13\\\\ a21 &amp;amp; a22 &amp;amp; a23 \\\\ \end{vmatrix} amsmath 行列式 \cdot &amp;mdash; どっと(中央) \cdots &amp;mdash; 3点ドット(中央) \vdots &amp;mdash; 縦の3点ドット \ddots &amp;mdash; 斜めの3点ドット ギリシャ文字 **ギリシャ文字を使用する場合にも数式環境下で記述する必要がある。</description>
     </item>
   </channel>
