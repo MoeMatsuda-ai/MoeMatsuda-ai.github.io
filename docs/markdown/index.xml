@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Markdown on Chiyo&#39;s blog</title>
-    <link>https://moematsuda-ai.github.io/markdown/index.html</link>
+    <link>https://moematsuda-ai.github.io/docs/markdown/index.html</link>
     <description>Recent content in Markdown on Chiyo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 24 Nov 2022 01:38:14 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Nov 2022 01:38:14 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/docs/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Basic operation</title>
-      <link>https://moematsuda-ai.github.io/markdown/base/index.html</link>
+      <link>https://moematsuda-ai.github.io/docs/markdown/base/index.html</link>
       <pubDate>Thu, 24 Nov 2022 01:38:14 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/markdown/base/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/docs/markdown/base/index.html</guid>
       <description>markdown 記法 コマンド 概要 表示例 #[space] セクション &amp;mdash; ##[space] サブセクション &amp;mdash; ###[space] サブサブセクション &amp;mdash; -[space] 箇条書きリスト &amp;mdash; 1.[space] 1.[space] 番号付きリスト (数字はすべて1と記入することで順番に番号が割り振られる) &amp;mdash; - [ ] 文字 チェック付き箇条書きリスト &amp;mdash; &amp;gt;[spave] 引用 &amp;mdash; &amp;raquo;[space] 二重引用 &amp;mdash; *[文字]* イタリック体 イタリック **[文字]** bold（太字） bold ***[文字]*** 強調(イタリック&amp;amp;ボールド) 強調 ~~取り消し線~~ 取り消し線 取り消し線 *** 水平線(アスタリスクの変わりに---や___でも良い) &amp;mdash; [リンク名](URL) リンクの記述 Markdown記法 `[文字]` 文字の強調 str ```pythonprint(&amp;ldquo;Hello World) ``` ソースコードの記入(その他にもc言語やgnuplotなどでも使用できる) &amp;mdash; &amp;lt;br&amp;gt; 改行 改行します※改行後に文字を記入 &amp;amp;nbsp 半角スペース &amp;amp;ensp 半角より少し広めの空白 &amp;amp;emsp 全角スペース &amp;amp;thinsp, &amp;amp;nbsp より狭い空白 ※表示例が空欄のところは下記を参照</description>
     </item>
   </channel>

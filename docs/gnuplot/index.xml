@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gnuplot on Chiyo&#39;s blog</title>
-    <link>https://moematsuda-ai.github.io/gnuplot/index.html</link>
+    <link>https://moematsuda-ai.github.io/docs/gnuplot/index.html</link>
     <description>Recent content in Gnuplot on Chiyo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 24 Nov 2022 01:07:41 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/gnuplot/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Nov 2022 01:07:41 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/docs/gnuplot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to insert formulas like latex</title>
-      <link>https://moematsuda-ai.github.io/gnuplot/output_equation_on_latex/index.html</link>
+      <link>https://moematsuda-ai.github.io/docs/gnuplot/output_equation_on_latex/index.html</link>
       <pubDate>Thu, 24 Nov 2022 01:07:41 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/gnuplot/output_equation_on_latex/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/docs/gnuplot/output_equation_on_latex/index.html</guid>
       <description>gnuplotでlatex形式の数式を挿入 準備 gnuplot では直接pdfをつくらずLaTeX（TikZ）を経由することで美しいグラフのpdfをつくることができる。
 このグラフ作成にはtikz環境を使用し、これにより作成されたtexファイルを読み込みタイプセットすることが可能である。
 ただしこの環境と関連するファイルはTeXLiveには含まれておらず、Linux等の環境ではGnuplotのインストール時にpackageマネージャーがスタイルファイル gnuplot-lua-tikzとそれに関連するファイルをLaTeXが探索するファイルにインストールしてくれるが、Windowsでは自分で環境を整える必要がある。
@@ -21,17 +21,17 @@ set terminal tikz set output &amp;#34;filename.tex&amp;#34; plot sin(x) TeXで�
     </item>
     <item>
       <title>Command file</title>
-      <link>https://moematsuda-ai.github.io/gnuplot/command_file/index.html</link>
+      <link>https://moematsuda-ai.github.io/docs/gnuplot/command_file/index.html</link>
       <pubDate>Thu, 24 Nov 2022 01:07:10 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/gnuplot/command_file/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/docs/gnuplot/command_file/index.html</guid>
       <description>gnuplotのコマンドをファイルで保存する方法 拡張子は.plt コメントは#を使う コマンドを順に入力していけばOK!（コマンドの頭に特殊な文字を入れる必要はない） コマンドファイルの拡張子を.plt以外にした場合 下記のコマンドを打ち込む
 &amp;gt; load &amp;#34;コマンドファイル名.拡張子&amp;#34; 参考文献 コマンド・ファイルを実行する </description>
     </item>
     <item>
       <title>basic operation</title>
-      <link>https://moematsuda-ai.github.io/gnuplot/base/index.html</link>
+      <link>https://moematsuda-ai.github.io/docs/gnuplot/base/index.html</link>
       <pubDate>Thu, 24 Nov 2022 01:07:00 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/gnuplot/base/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/docs/gnuplot/base/index.html</guid>
       <description>基本コマンド 関数の表示 &amp;gt;plot x*x+2 カレントディレクトリの移動 &amp;gt;cd &amp;#39;C:\Users&amp;#39; ※ディレクトリやファイル名は&amp;rsquo;&amp;rsquo; &amp;rsquo; &amp;rsquo; &amp;lsquo;&amp;lsquo;で囲む
 データファイルの表示 &amp;gt;plot &amp;#39;test.dat&amp;#39; ※ファイル名は絶対パスまたは相対パスでOK ※ファイルデータのここの列はスペースで区切る
 データファイルのフィッティング f(x)=ax**2+bx+c fit f(x) &amp;#34;data.d&amp;#34; u 1:2 via a,b,c 【出力結果】
@@ -40,9 +40,9 @@ set terminal tikz set output &amp;#34;filename.tex&amp;#34; plot sin(x) TeXで�
     </item>
     <item>
       <title>How to install gnuplot</title>
-      <link>https://moematsuda-ai.github.io/gnuplot/install/index.html</link>
+      <link>https://moematsuda-ai.github.io/docs/gnuplot/install/index.html</link>
       <pubDate>Thu, 24 Nov 2022 00:26:02 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/gnuplot/install/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/docs/gnuplot/install/index.html</guid>
       <description>gnuplotのインストール方法 $ sudo apt update $ sudo apt install gnuplot $ sudo apt install gnuplot-x11 gnuplot-x11をインストールすると、出力端末が&amp;quot;X11&amp;quot;になる。
 出力端末は以下の3つのパッケージが使用可能。ただしこれらは 排他的なパッケージのため、どれか1つのみしかインストールできない。 （他のをインストールしようとすると、すでにインストールされていた パッケージはアンインストールされる。）
 gnuplot-qt gnuplot-x11 gnuplot-nox 参考 Ubuntuのリポジトリからインストールできるgnuplotのパッケージについて LinuxにGnuplotをインストール </description>

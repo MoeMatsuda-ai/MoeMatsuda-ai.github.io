@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Chiyo&#39;s blog</title>
-    <link>https://moematsuda-ai.github.io/python/index.html</link>
+    <link>https://moematsuda-ai.github.io/docs/python/index.html</link>
     <description>Recent content in Python on Chiyo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 29 Mar 2023 06:10:48 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Mar 2023 06:10:48 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/docs/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docstring</title>
-      <link>https://moematsuda-ai.github.io/python/docstring/index.html</link>
+      <link>https://moematsuda-ai.github.io/docs/python/docstring/index.html</link>
       <pubDate>Wed, 29 Mar 2023 06:10:48 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/python/docstring/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/docs/python/docstring/index.html</guid>
       <description>Python Docstring Docstringとはメソッドやクラスについての説明文（コメント） __doc__というアトリビュート（属性）に格納されている `で書くこともできるが，一般的には&amp;quot;で書く 対話型シェル等の環境でhelp関数を使用することで出力することも可能 VS Codeでは関数等にカーソルを合わせることで表示される Docstringは次のように定義分の先頭に記述する．
 def test_func(param1, param2): &amp;#34;&amp;#34;&amp;#34;Summary line. Extended description of function. Args: param1 (int): Description of param1 param2 (str): Description of param2 Returns: bool: Description of return value &amp;#34;&amp;#34;&amp;#34; return True Docstringの書き方には様々なスタイルが存在している．
 Googlesスタイル #!/usr/bin/python # -*- coding: utf-8 -*- &amp;#34;&amp;#34;&amp;#34;モジュールの説明タイトル - ソースコードの一番始めに記載すること - importより前に記載する Todo: TODOリストを記載 - conf.pyの``sphinx.ext.todo`` を有効にしないと使用できない - conf.pyの``todo_include_todos = True``にしないと表示されない &amp;#34;&amp;#34;&amp;#34; import json import inspect class testClass() : &amp;#34;&amp;#34;&amp;#34;クラスの説明タイトル クラスの説明文 Attributes: 属性1 (型): 説明 属性2 (:obj:`型`): 説明.</description>
     </item>
     <item>
       <title>Torch</title>
-      <link>https://moematsuda-ai.github.io/python/torch/index.html</link>
+      <link>https://moematsuda-ai.github.io/docs/python/torch/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:12:48 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/python/torch/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/docs/python/torch/index.html</guid>
       <description>About calcuration of gradient How not to calculate gradient Use no_grad For example;
 with torch.no_grad(): y = x*2 We can use as decorator
 @torch.no_grad() def doubler(x): return x*2 Use .detach() -&amp;gt; ? Use .reaquires_grad -&amp;gt; ? reference Pytorchの「.detach()」と「with no_grad():」と「.requires_grad = False」の違い PyTorchの新しい推論モードについて </description>
     </item>
     <item>
       <title>Pickle</title>
-      <link>https://moematsuda-ai.github.io/python/pickle/index.html</link>
+      <link>https://moematsuda-ai.github.io/docs/python/pickle/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:12:12 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/python/pickle/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/docs/python/pickle/index.html</guid>
       <description>pickleの使用方法 Saving with openでの保存、読み込み with open(&amp;#34;filename.pkl&amp;#34;, &amp;#34;wb&amp;#34;) as f: pickle.dump(data, f) with open(&amp;#34;filename.pkl&amp;#34;, &amp;#34;rb&amp;#34;) as f: hoge = pickle.load(f) pandasでの保存、読み込み import pandas as pd pd.to_pickle(data, &amp;#34;filename.pkl&amp;#34;) hoge = pd.read_pickle(&amp;#34;filename.pkl&amp;#34;) joblib(?)での保存、読み込み joblib.dump(data, &amp;#34;filename.jb&amp;#34;, compress=3) hoge = joblib.load(&amp;#34;filename.jb&amp;#34;) </description>
     </item>
     <item>
       <title>Jupyter notebook</title>
-      <link>https://moematsuda-ai.github.io/python/jupyter/index.html</link>
+      <link>https://moematsuda-ai.github.io/docs/python/jupyter/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:09:35 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/python/jupyter/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/docs/python/jupyter/index.html</guid>
       <description> セル 編集モードへの変更：ダブルクリックまたは&amp;quot;Enter&amp;quot; コマンドモードへの変更：ESC セルの内容の実行 Windows：Ctrl+Enter MacOS：command+Return OS共通：Shift+Enter Markdownセルとcodeセル Markdownセル：テキストを入力するためのセル Codeセル：Pythonの実行を行うセル arkdownセルの編集方法 &amp;ldquo;#&amp;ldquo;でタイトル &amp;ldquo;##&amp;ldquo;でサブタイトル &amp;ldquo;-&amp;ldquo;で箇条書き &amp;ldquo;太文字&amp;ldquo;で太文字 便利なショートカットキー（Window） コマンドモード ショートカットキー 説明 F 検索・置換 Ctrl -Shift Ctrl -Shift Enter 編集モードにする P コマンドパレットを開く Shift -Enter Ctrl -Enter Alt -Enter Y コードセルにする M マークダウンセルにする R rawセルにする 1 見出し１にする 2 見出し２にする 3 見出し３にする 4 見出し４にする 5 見出し５にする 6 見出し６にする K 上のセルを選択する Up 上のセルを選択する Down 下のセルを選択する J 下のセルを選択する Shift -K Shift -Up Shift -Down Shift -J A 上にセルを追加する B 下にセルを追加する X 選択しているセルをカット C 選択しているセルをコピー Shift -V V 下に貼り付け Z セルの削除をやり直す DD 選択しているセルを削除する Shift -M Ctrl -S S 保存する L 行番号の表示・非表示 O セルの出力結果の表示・非表示 Shift -O H キーボードショートカット表示 I×2 カーネルをインタラプト 0 カーネルを再起動 Esc ページャーを閉じる Q ページャーを閉じる Shift -L Shift -Space Space 下にスクロール 編集モード ショートカットキー 説明 Tab コード補完・タブ Shift-Tab ツールチップ Ctrl-] インデント Ctrl-[ ディデント Ctrl-A 全選択 Ctrl-Z やり直し Ctrl-Shift - Ctrl-Y やり直し Ctrl-Home セルの最初に移動 Ctrl-Up セルの最初に移動 Ctrl-End セルの最後に移動 Ctrl-Down セルの最後に移動 Ctrl-Left 一単語前に移動 Ctrl-Right 一単語後に移動 Ctrl-Backspace 前の単語を削除 Ctrl-Delete 後の単語を削除 Ctrl-M コマンドモードにする Ctrl-Shift-F コマンドパレットを開く Ctrl-Shift-P コマンドパレットを開く Esc コマンドモードにする Shift-Enter セルを実行し、下のセルを選択する Ctrl-Enter セルを実行する Alt-Enter セルを実行し、下にセルを追加する Ctrl-Shift-Minus セルを分割する Ctrl-S 保存する Down カーソルを下に移動 Up カーソルを上に移動 Ctrl-/ 選択部分をコメントアウト Kernel セルの左の &amp;ldquo;In[]&amp;rdquo; の括弧内の数字は実行を行った順番を示す。 順番によっては正常に作動しない場合もあるため最後は左上の欄から&amp;quot;Kernel &amp;gt; Restart &amp;amp; Run All&amp;quot;をクリック </description>
     </item>
     <item>
       <title>Filter with python</title>
-      <link>https://moematsuda-ai.github.io/python/filter/index.html</link>
+      <link>https://moematsuda-ai.github.io/docs/python/filter/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:09:03 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/python/filter/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/docs/python/filter/index.html</guid>
       <description>filtfiltを用いたバンドパスフィルタ(バターワースフィルタ)の記述例 #バターワースフィルタ（バンドパス） fp = np.array([25, 50]) #通過域端周波数[Hz] fs = np.array([10, 100]) #阻止域端周波数[Hz] gpass = 3 #通過域端最大損失[dB] gstop = 40 #阻止域端最小損失[dB] def bandpass(x, samplerate, fp, fs, gpass, gstop):#samplerate がサンプリング周波数 fn = samplerate / 2 #ナイキスト周波数 wp = fp / fn #ナイキスト周波数で通過域端周波数を正規化 ws = fs / fn #ナイキスト周波数で阻止域端周波数を正規化 N, Wn = signal.buttord(wp, ws, gpass, gstop) #オーダーとバターワースの正規化周波数を計算 b, a = signal.butter(N, Wn, &amp;#39;bandpass&amp;#39;) #フィルタ伝達関数の分子と分母を計算 y = signal.filtfilt(b, a, x) #信号に対してフィルタをかける return y #フィルタ後の信号を返す y = bandpass(f_biceps, samplerate, fp, fs, gpass, gstop) scipy.</description>
     </item>
     <item>
       <title>Create Library</title>
-      <link>https://moematsuda-ai.github.io/python/create-library/index.html</link>
+      <link>https://moematsuda-ai.github.io/docs/python/create-library/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:08:38 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/python/create-library/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/docs/python/create-library/index.html</guid>
       <description>ライブラリの作成方法 directory に __init.py__ ファイルを作成 site-packages ディレクトリに作成したライブラリを追加する（シンボリックリンクでも可） site-packages の場所は $ python -m site で確認できる ディレクトリをパスに追加する場合は次の通り $ export PYTHONPATH=&amp;#34;&amp;lt;path&amp;gt;:$PYTHONPATH&amp;#34; </description>
     </item>
     <item>
       <title>Anaconda Update</title>
-      <link>https://moematsuda-ai.github.io/python/anaconda-update/index.html</link>
+      <link>https://moematsuda-ai.github.io/docs/python/anaconda-update/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:08:01 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/python/anaconda-update/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/docs/python/anaconda-update/index.html</guid>
       <description>pip のアップデート pip と setuptools のアップデート $ python -m pip install --upgrade pip setuptools ※-mはインターフェイスオプションで、pythonのモジュール（パッケージ）を実行するために使用
 パッケージのアップデート $ pip install -U &amp;lt;package-name&amp;gt; または
 $ pip install --upgrade &amp;lt;package name&amp;gt; naconda のアップデート すべてのパッケージをアップデート $ conda update --all 特定のパッケージのアップデート $ conda update &amp;lt;package name1&amp;gt; &amp;lt;package name2&amp;gt; anaconda 本体のアップデート $ conda update -n base -c defaults conda または
@@ -67,9 +67,9 @@ $ conda update -n base conda ※上は(base)と作成した仮想環境両方ア
     </item>
     <item>
       <title>Pythonの基本</title>
-      <link>https://moematsuda-ai.github.io/python/base/index.html</link>
+      <link>https://moematsuda-ai.github.io/docs/python/base/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:04:32 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/python/base/index.html</guid>
+      <guid>https://moematsuda-ai.github.io/docs/python/base/index.html</guid>
       <description>Pythonのプログラムの作成と実行 方法1: C言語のように，テキスト形式でプログラムを書いて実行
 $ vi program.py # プログラム作成 $ python program.py # プログラム実行 注) Pythonはインタプリタ型言語なのでコンパイルは不要。
 方法2: jupyter notebookやIpython等を用いてインタラクティブに実行
