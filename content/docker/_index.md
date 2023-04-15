@@ -1,5 +1,5 @@
 +++
 archetype = "chapter"
-title = "Docker"
-weight = 2
+title = "2. Docker"
+weight = 2 
 +++

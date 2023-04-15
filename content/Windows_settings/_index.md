@@ -1,7 +1,7 @@
 +++
 archetype = "chapter"
-title = "Windows settings"
-weight = 30
+title = "10. Windows settings"
+weight = 10
 +++
 
 Windowsの設定についてのあれこれ

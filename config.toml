@@ -1,6 +1,6 @@
 baseURL = 'https://moematsuda-ai.github.io/'
 languageCode = 'ja-jp'
-title = "Chiyo's blog"
+title = "'Moais blog"
 theme = "hugo-theme-relearn"
 publishDir = "docs"
 

@@ -1,5 +1,5 @@
 +++
 archetype = "chapter"
-title = "Latex"
-weight = 5
+title = "6. Latex"
+weight = 6
 +++

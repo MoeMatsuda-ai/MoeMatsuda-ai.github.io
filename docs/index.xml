@@ -1,84 +1,84 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Moai&#39;s blog on Chiyo&#39;s blog</title>
+    <title>Moai&#39;s blog on &#39;Moais blog</title>
     <link>https://moematsuda-ai.github.io/index.html</link>
-    <description>Recent content in Moai&#39;s blog on Chiyo&#39;s blog</description>
+    <description>Recent content in Moai&#39;s blog on &#39;Moais blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 15 Apr 2023 19:32:31 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Apr 2023 21:41:07 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>C language</title>
+      <title>1. C language</title>
       <link>https://moematsuda-ai.github.io/c_lang/index.html</link>
       <pubDate>Sat, 26 Nov 2022 12:34:46 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/c_lang/index.html</guid>
       <description></description>
     </item>
     <item>
-      <title>Docker</title>
+      <title>2. Docker</title>
       <link>https://moematsuda-ai.github.io/docker/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:44:42 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/docker/index.html</guid>
       <description></description>
     </item>
     <item>
-      <title>Github</title>
+      <title>3. Github</title>
       <link>https://moematsuda-ai.github.io/github/index.html</link>
       <pubDate>Tue, 22 Nov 2022 09:19:35 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/github/index.html</guid>
       <description></description>
     </item>
     <item>
-      <title>Gnuplot</title>
+      <title>4. Gnuplot</title>
       <link>https://moematsuda-ai.github.io/gnuplot/index.html</link>
       <pubDate>Thu, 24 Nov 2022 01:07:41 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/gnuplot/index.html</guid>
       <description></description>
     </item>
     <item>
-      <title>Latex</title>
-      <link>https://moematsuda-ai.github.io/latex/index.html</link>
-      <pubDate>Fri, 25 Nov 2022 12:17:42 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/latex/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>https://moematsuda-ai.github.io/linux/index.html</link>
-      <pubDate>Wed, 29 Mar 2023 06:50:00 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/linux/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Markdown</title>
-      <link>https://moematsuda-ai.github.io/markdown/index.html</link>
-      <pubDate>Thu, 24 Nov 2022 01:38:14 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/markdown/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hugo</title>
+      <title>5. Hugo</title>
       <link>https://moematsuda-ai.github.io/hugo/index.html</link>
-      <pubDate>Sat, 15 Apr 2023 19:32:31 +0000</pubDate>
+      <pubDate>Sat, 15 Apr 2023 21:41:07 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/hugo/index.html</guid>
       <description></description>
     </item>
     <item>
-      <title>Python</title>
-      <link>https://moematsuda-ai.github.io/python/index.html</link>
-      <pubDate>Wed, 29 Mar 2023 06:10:48 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/python/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Keyboard</title>
+      <title>6. Keyboard</title>
       <link>https://moematsuda-ai.github.io/keyboard/index.html</link>
       <pubDate>Tue, 29 Nov 2022 08:12:45 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/keyboard/index.html</guid>
       <description></description>
     </item>
     <item>
-      <title>Windows settings</title>
+      <title>6. Latex</title>
+      <link>https://moematsuda-ai.github.io/latex/index.html</link>
+      <pubDate>Fri, 25 Nov 2022 12:17:42 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/latex/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>7. Linux</title>
+      <link>https://moematsuda-ai.github.io/linux/index.html</link>
+      <pubDate>Wed, 29 Mar 2023 06:50:00 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/linux/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>8. Markdown</title>
+      <link>https://moematsuda-ai.github.io/markdown/index.html</link>
+      <pubDate>Thu, 24 Nov 2022 01:38:14 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/markdown/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>9. Python</title>
+      <link>https://moematsuda-ai.github.io/python/index.html</link>
+      <pubDate>Wed, 29 Mar 2023 06:10:48 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>10. Windows settings</title>
       <link>https://moematsuda-ai.github.io/windows_settings/index.html</link>
       <pubDate>Thu, 13 Apr 2023 14:25:36 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/windows_settings/index.html</guid>

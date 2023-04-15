@@ -3,78 +3,92 @@ var relearn_search_index = [
     "content": "",
     "description": "",
     "tags": null,
-    "title": "C language",
+    "title": "1. C language",
     "uri": "/c_lang/index.html"
   },
   {
     "content": "",
     "description": "",
     "tags": null,
-    "title": "Docker",
+    "title": "2. Docker",
     "uri": "/docker/index.html"
   },
   {
     "content": "",
     "description": "",
     "tags": null,
-    "title": "Github",
+    "title": "3. Github",
     "uri": "/github/index.html"
   },
   {
     "content": "",
     "description": "",
     "tags": null,
-    "title": "Gnuplot",
+    "title": "4. Gnuplot",
     "uri": "/gnuplot/index.html"
   },
   {
     "content": "",
     "description": "",
     "tags": null,
-    "title": "Latex",
-    "uri": "/latex/index.html"
-  },
-  {
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "Linux",
-    "uri": "/linux/index.html"
-  },
-  {
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "Markdown",
-    "uri": "/markdown/index.html"
-  },
-  {
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "Hugo",
+    "title": "5. Hugo",
     "uri": "/hugo/index.html"
   },
   {
     "content": "",
     "description": "",
     "tags": null,
-    "title": "Python",
-    "uri": "/python/index.html"
+    "title": "6. Keyboard",
+    "uri": "/keyboard/index.html"
   },
   {
     "content": "",
     "description": "",
     "tags": null,
-    "title": "Keyboard",
-    "uri": "/keyboard/index.html"
+    "title": "6. Latex",
+    "uri": "/latex/index.html"
+  },
+  {
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "7. Linux",
+    "uri": "/linux/index.html"
+  },
+  {
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "8. Markdown",
+    "uri": "/markdown/index.html"
+  },
+  {
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "9. Python",
+    "uri": "/python/index.html"
   },
   {
     "content": "Windowsの設定についてのあれこれ\n",
     "description": "",
     "tags": null,
-    "title": "Windows settings",
+    "title": "10. Windows settings",
     "uri": "/windows_settings/index.html"
+  },
+  {
+    "content": "ロゴ（左上隅）の変更 layout/partials/logo.htmlを生成 logoの設定を書き込む ファビコンの変更 faviconがSVG, PNGまたはICOの場合は、ローカルのstatic/imagesディレクトリにfavicon.svg, favicon.pngまたはfavicon.icoという名前で画像を保存 layout/partials/にfavicon.htmlという名前で新しいファイルを生成し、次のように書き込む： \u003clink rel=\"icon\" href=\"/images/favicon.png\" type=\"image/png\"\u003e 参考文献 Customization :: Hugo Relearn Theme hugo-theme-relearn repo ",
+    "description": "",
+    "tags": null,
+    "title": "Layout",
+    "uri": "/hugo/layout/index.html"
+  },
+  {
+    "content": " プログラミング言語やら何やらかんやらのメモ…\n",
+    "description": "",
+    "tags": null,
+    "title": "Moai's blog",
+    "uri": "/index.html"
   },
   {
     "content": "baseURL = '\u003cURL\u003e' languageCode = 'ja-jp' title = \"Chiyo's blog\" theme = \"hugo-theme-relearn\" publishDir = \"docs\" [params] themeVariant = [\"relearn-dark\", \"relearn-light\", \"green\", \"black\", \"blue\", \"learn\"] [outputs] home = [\"HTML\", \"RSS\", \"SEARCH\", \"SEARCHPAGE\"] section = [\"HTML\", \"RSS\", \"PRINT\"] [Languages] [Languages.en] landingPageName = \"\u003ci class='fas fa-home'\u003e\u003c/i\u003e Home\" [[menu.shortcuts]] name = \"\u003ci class='fab fa-fw fa-github'\u003e\u003c/i\u003e GitHub repo\" identifier = \"ds\" url = \"https://github.com/MoeMatsuda-ai/MoeMatsuda-ai.github.io\" weight = 50 [[menu.shortcuts]] name = \"\u003ci class='fas fa-tags'\u003e\u003c/i\u003e Tags\" url = \"/tags\" weight = 70 baseURL: サイトのルートURL publishDie: Webサイトで公開するリポジトリ以下のディレクトリ（githubではdocsを推奨） menu.shortcuts: ショートカット（ここではGithub repoとtagsを設定） ",
@@ -82,13 +96,6 @@ var relearn_search_index = [
     "tags": null,
     "title": "Config.tomlの設定",
     "uri": "/hugo/config/index.html"
-  },
-  {
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "Moai's blog",
-    "uri": "/index.html"
   },
   {
     "content": "出力用DISPLAYの設定 x11のインストール wslにX11をインストール $ sudo apt install x11 VcXsrvのインストールと設定 SourceForge.netからインストーラーをダウンロード インストーラーを実行し，VcXsrvをインストール（推奨の設定でOK！） VcXsrvを起動 Display settings: Multiple windowsを選択し，次へをクリック Client startup: Start no clientを選択肢，次へをクリック Extra settings: ClipboardとPrimary Selection, Native openglにチェックが入っていることを確認し，Disable access controlにチェックを入れてから次へをクリック Finish configuration: Save configurationをクリックしてデスクトップ等にconfigを保存してから完了をクリック Windows+Rでダイアログボックスを開き，shell:startupと入力してエクスプローラーのスタートアップアプリを開く デスクトップ等に保存していたVcXsrvのconfigファイルをスタートアップアプリに移動させる Display環境変数のエクスポート 以下の1文を.bashrcに追加\nexport DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0 参照 WSL上にXサーバをインストールしてGUIを実現する（VcXsrv編）, メディアID Windows10のWSL上でX11アプリケーションを実行してみた，DevelopersIO errorについて ",

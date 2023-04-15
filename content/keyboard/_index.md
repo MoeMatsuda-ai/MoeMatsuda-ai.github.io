@@ -1,5 +1,5 @@
 +++
 archetype = "chapter"
-title = "Keyboard"
-weight = 11
+title = "6. Keyboard"
+weight = 6
 +++
