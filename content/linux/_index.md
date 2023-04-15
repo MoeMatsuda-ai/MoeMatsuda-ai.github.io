@@ -1,5 +1,5 @@
 +++
 archetype = "chapter"
 title = "Linux"
-weight = 7
+weight = 8
 +++

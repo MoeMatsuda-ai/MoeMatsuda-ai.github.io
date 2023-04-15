@@ -1,5 +1,5 @@
 +++
 archetype = "chapter"
 title = "python"
-weight = 9
+weight = 10
 +++
