@@ -6,9 +6,9 @@
     <meta name="generator" content="Hugo 0.104.3">
     <meta name="generator" content="Relearn 5.6.5+tip">
     <meta name="description" content="">
-    <title>Linux :: Chiyo&#39;s blog</title>
-    <link href="/linux/index.xml" rel="alternate" type="application/rss+xml" title="Linux :: Chiyo&#39;s blog">
-    <link href="/linux/index.print.html" rel="alternate" type="text/html" title="Linux :: Chiyo&#39;s blog">
+    <title>Config.tomlの設定 :: Chiyo&#39;s blog</title>
+    <link href="/hugo/config/index.xml" rel="alternate" type="application/rss+xml" title="Config.tomlの設定 :: Chiyo&#39;s blog">
+    <link href="/hugo/config/index.print.html" rel="alternate" type="text/html" title="Config.tomlの設定 :: Chiyo&#39;s blog">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1681587756" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681587756" rel="stylesheet"></noscript>
     <link href="/css/featherlight.min.css?1681587756" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681587756" rel="stylesheet"></noscript>
@@ -42,20 +42,20 @@
     </script>
     <script src="/js/jquery.min.js?1681587756" defer></script>
   </head>
-  <body class="mobile-support html" data-url="/linux/index.html">
+  <body class="mobile-support html" data-url="/hugo/config/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
       <nav id="topbar" class="highlightable" dir="ltr">
         <div>
           <div class="navigation">
-            <a class="nav nav-next" href="/linux/shortcut/index.html" title="Shortcut (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
+            <a class="nav nav-next" href="/hugo/hugo-note/index.html" title="hugo note (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
           </div>
           <div class="navigation">
-            <a class="nav nav-prev" href="/latex/base/index.html" title="Basic (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+            <a class="nav nav-prev" href="/hugo/index.html" title="Hugo (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
           </div>
           <div id="top-print-link">
-            <a class="print-link" title='Print whole chapter (CTRL+ALT+p)' href="/linux/index.print.html">
+            <a class="print-link" title='Print whole chapter (CTRL+ALT+p)' href="/hugo/config/index.print.html">
               <i class="fas fa-print fa-fw"></i>
             </a>
           </div>
@@ -65,19 +65,51 @@
             </span>
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Linux</span><meta itemprop="position" content="2"></li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/hugo/index.html"><span itemprop="name">Hugo</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Config.tomlの設定</span><meta itemprop="position" content="3"></li>
             </ol>
           </div>
         </div>
       </nav>
-      <main id="body-inner" class="highlightable chapter narrow" tabindex="-1">
+      <main id="body-inner" class="highlightable default" tabindex="-1">
         <div class="flex-block-wrapper">
           <div id="head-tags">
           </div>
-          <article class="chapter">
-<div class="article-subheading">Chapter 6</div>
-<h1 id="linux">Linux</h1>
+          <article class="default">
+<h1 id="config.toml%E3%81%AE%E8%A8%AD%E5%AE%9A">Config.tomlの設定</h1>
 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#39;&lt;URL&gt;&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#39;ja-jp&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;Chiyo&#39;s blog&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;hugo-theme-relearn&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">publishDir</span> = <span style="color:#e6db74">&#34;docs&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">themeVariant</span> = [<span style="color:#e6db74">&#34;relearn-dark&#34;</span>, <span style="color:#e6db74">&#34;relearn-light&#34;</span>, <span style="color:#e6db74">&#34;green&#34;</span>, <span style="color:#e6db74">&#34;black&#34;</span>, <span style="color:#e6db74">&#34;blue&#34;</span>, <span style="color:#e6db74">&#34;learn&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">outputs</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">home</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;SEARCH&#34;</span>, <span style="color:#e6db74">&#34;SEARCHPAGE&#34;</span>] 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">section</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;PRINT&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">Languages</span>]
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">Languages</span>.<span style="color:#a6e22e">en</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">landingPageName</span> = <span style="color:#e6db74">&#34;&lt;i class=&#39;fas fa-home&#39;&gt;&lt;/i&gt; Home&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">shortcuts</span>]]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;&lt;i class=&#39;fab fa-fw fa-github&#39;&gt;&lt;/i&gt; GitHub repo&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;ds&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://github.com/MoeMatsuda-ai/MoeMatsuda-ai.github.io&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">50</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">shortcuts</span>]]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;&lt;i class=&#39;fas fa-tags&#39;&gt;&lt;/i&gt; Tags&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/tags&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">70</span>
+</span></span></code></pre></div><ul>
+<li>baseURL: サイトのルートURL</li>
+<li>publishDie: Webサイトで公開するリポジトリ以下のディレクトリ（githubではdocsを推奨）</li>
+<li>menu.shortcuts: ショートカット（ここでは<code>Github repo</code>と<code>tags</code>を設定）</li>
+</ul>
 
             <footer class="footline">
             </footer>
@@ -208,14 +240,14 @@
           <li data-nav-id="/latex/figure/index.html" class="dd-item"><a href="/latex/figure/index.html">Figure</a></li>
           <li data-nav-id="/latex/table/index.html" class="dd-item"><a href="/latex/table/index.html">Table</a></li>
           <li data-nav-id="/latex/base/index.html" class="dd-item"><a href="/latex/base/index.html">Basic</a></li></ul></li>
-          <li data-nav-id="/linux/index.html" class="dd-item active parent"><a href="/linux/index.html">Linux</a><ul id="subsections-db801fcabe18fdefdb1b34d275e81669">
+          <li data-nav-id="/linux/index.html" class="dd-item"><a href="/linux/index.html">Linux</a><ul id="subsections-db801fcabe18fdefdb1b34d275e81669">
           <li data-nav-id="/linux/shortcut/index.html" class="dd-item"><a href="/linux/shortcut/index.html">Shortcut</a></li>
           <li data-nav-id="/linux/shell_script/index.html" class="dd-item"><a href="/linux/shell_script/index.html">シェルスクリプト</a></li>
           <li data-nav-id="/linux/command/index.html" class="dd-item"><a href="/linux/command/index.html">Command</a></li></ul></li>
           <li data-nav-id="/markdown/index.html" class="dd-item"><a href="/markdown/index.html">Markdown</a><ul id="subsections-585a39e92be72923254254ae75dcacef">
           <li data-nav-id="/markdown/base/index.html" class="dd-item"><a href="/markdown/base/index.html">Basic operation</a></li></ul></li>
-          <li data-nav-id="/hugo/index.html" class="dd-item"><a href="/hugo/index.html">Hugo</a><ul id="subsections-113cf8e677282e463bfca274df11f63e">
-          <li data-nav-id="/hugo/config/index.html" class="dd-item"><a href="/hugo/config/index.html">Config.tomlの設定</a></li>
+          <li data-nav-id="/hugo/index.html" class="dd-item parent"><a href="/hugo/index.html">Hugo</a><ul id="subsections-113cf8e677282e463bfca274df11f63e">
+          <li data-nav-id="/hugo/config/index.html" class="dd-item active"><a href="/hugo/config/index.html">Config.tomlの設定</a></li>
           <li data-nav-id="/hugo/hugo-note/index.html" class="dd-item"><a href="/hugo/hugo-note/index.html">hugo note</a></li></ul></li>
           <li data-nav-id="/python/index.html" class="dd-item"><a href="/python/index.html">Python</a><ul id="subsections-c8861a2651b27ee3930a98ce392020d1">
           <li data-nav-id="/python/docstring/index.html" class="dd-item"><a href="/python/docstring/index.html">Docstring</a></li>

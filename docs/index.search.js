@@ -77,11 +77,11 @@ var relearn_search_index = [
     "uri": "/windows_settings/index.html"
   },
   {
-    "content": "出力用DISPLAYの設定 x11のインストール wslにX11をインストール $ sudo apt install x11 VcXsrvのインストールと設定 SourceForge.netからインストーラーをダウンロード インストーラーを実行し，VcXsrvをインストール（推奨の設定でOK！） VcXsrvを起動 Display settings: Multiple windowsを選択し，次へをクリック Client startup: Start no clientを選択肢，次へをクリック Extra settings: ClipboardとPrimary Selection, Native openglにチェックが入っていることを確認し，Disable access controlにチェックを入れてから次へをクリック Finish configuration: Save configurationをクリックしてデスクトップ等にconfigを保存してから完了をクリック Windows+Rでダイアログボックスを開き，shell:startupと入力してエクスプローラーのスタートアップアプリを開く デスクトップ等に保存していたVcXsrvのconfigファイルをスタートアップアプリに移動させる Display環境変数のエクスポート 以下の1文を.bashrcに追加\nexport DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0 参照 WSL上にXサーバをインストールしてGUIを実現する（VcXsrv編）, メディアID Windows10のWSL上でX11アプリケーションを実行してみた，DevelopersIO errorについて ",
+    "content": "baseURL = '\u003cURL\u003e' languageCode = 'ja-jp' title = \"Chiyo's blog\" theme = \"hugo-theme-relearn\" publishDir = \"docs\" [params] themeVariant = [\"relearn-dark\", \"relearn-light\", \"green\", \"black\", \"blue\", \"learn\"] [outputs] home = [\"HTML\", \"RSS\", \"SEARCH\", \"SEARCHPAGE\"] section = [\"HTML\", \"RSS\", \"PRINT\"] [Languages] [Languages.en] landingPageName = \"\u003ci class='fas fa-home'\u003e\u003c/i\u003e Home\" [[menu.shortcuts]] name = \"\u003ci class='fab fa-fw fa-github'\u003e\u003c/i\u003e GitHub repo\" identifier = \"ds\" url = \"https://github.com/MoeMatsuda-ai/MoeMatsuda-ai.github.io\" weight = 50 [[menu.shortcuts]] name = \"\u003ci class='fas fa-tags'\u003e\u003c/i\u003e Tags\" url = \"/tags\" weight = 70 baseURL: サイトのルートURL publishDie: Webサイトで公開するリポジトリ以下のディレクトリ（githubではdocsを推奨） menu.shortcuts: ショートカット（ここではGithub repoとtagsを設定） ",
     "description": "",
     "tags": null,
-    "title": "Anaconda settings on WSL",
-    "uri": "/windows_settings/conda_settings_onwsl/index.html"
+    "title": "Config.tomlの設定",
+    "uri": "/hugo/config/index.html"
   },
   {
     "content": "",
@@ -89,6 +89,13 @@ var relearn_search_index = [
     "tags": null,
     "title": "Moai's blog",
     "uri": "/index.html"
+  },
+  {
+    "content": "出力用DISPLAYの設定 x11のインストール wslにX11をインストール $ sudo apt install x11 VcXsrvのインストールと設定 SourceForge.netからインストーラーをダウンロード インストーラーを実行し，VcXsrvをインストール（推奨の設定でOK！） VcXsrvを起動 Display settings: Multiple windowsを選択し，次へをクリック Client startup: Start no clientを選択肢，次へをクリック Extra settings: ClipboardとPrimary Selection, Native openglにチェックが入っていることを確認し，Disable access controlにチェックを入れてから次へをクリック Finish configuration: Save configurationをクリックしてデスクトップ等にconfigを保存してから完了をクリック Windows+Rでダイアログボックスを開き，shell:startupと入力してエクスプローラーのスタートアップアプリを開く デスクトップ等に保存していたVcXsrvのconfigファイルをスタートアップアプリに移動させる Display環境変数のエクスポート 以下の1文を.bashrcに追加\nexport DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0 参照 WSL上にXサーバをインストールしてGUIを実現する（VcXsrv編）, メディアID Windows10のWSL上でX11アプリケーションを実行してみた，DevelopersIO errorについて ",
+    "description": "",
+    "tags": null,
+    "title": "Anaconda settings on WSL",
+    "uri": "/windows_settings/conda_settings_onwsl/index.html"
   },
   {
     "content": " 機能の有効化\nコントロールパネル＞プログラム＞Windowsの機能の有効化または無効化をクリック 以下の２つのチェックを入れる Linux用Windowsサブシステム 仮想マシンプラットフォーム wslのインストール\nwsl --install Linuxディストリビューションをインストール\nオンラインストアからダウンロードできるLinuxディストリビューションの一覧を表示 $ wsl --list --online wsl --l -o 任意のLinuxディストリビューションをインストール $ wsl --install -d \u003cDistribution Name\u003e Linuxディストリビューションを起動し、User NameとPasswordを設定\nerror: 0x800701bcが出てすぐにwslが落ちてしまう場合はwsl1からwsl2へアップグレード Linuxカーネル更新プログラムパッケージをダウンロード 更新ぷろぐらぺっケージをダブルクリックして実行 以下のコマンドでwsl2を既定のバージョンとして設定 $ wsl --set-default-version 2 参考 WSL を使用して Windows に Linux をインストールする 古いバージョンの WSL の手動インストール手順 Windows10 HomeでもDockerの環境構築ができる ！！　WSL1 からWSL2に変更する際に出るエラー　error : 0x800701bc の解決方！　（2020年9月） ",
