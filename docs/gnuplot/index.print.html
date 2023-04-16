@@ -10,20 +10,20 @@
     <link href="https://moematsuda-ai.github.io/gnuplot/index.html" rel="canonical" type="text/html" title="Gnuplot :: &#39;Moais blog">
     <link href="/gnuplot/index.xml" rel="alternate" type="application/rss+xml" title="Gnuplot :: &#39;Moais blog"><link rel="icon" href="/images/favicon.png" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1681601079" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681601079" rel="stylesheet"></noscript>
-    <link href="/css/featherlight.min.css?1681601079" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681601079" rel="stylesheet"></noscript>
-    <link href="/css/auto-complete.css?1681601079" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681601079" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1681601079" rel="stylesheet">
-    <link href="/css/nucleus.css?1681601079" rel="stylesheet">
-    <link href="/css/fonts.css?1681601079" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681601079" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1681601079" rel="stylesheet">
-    <link href="/css/theme-relearn-dark.css?1681601079" rel="stylesheet" id="variant-style">
-    <link href="/css/ie.css?1681601079" rel="stylesheet">
-    <link href="/css/variant.css?1681601079" rel="stylesheet">
-    <link href="/css/print.css?1681601079" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1681601079" rel="stylesheet">
-    <script src="/js/url.js?1681601079"></script>
-    <script src="/js/variant.js?1681601079"></script>
+    <link href="/css/fontawesome-all.min.css?1681603617" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681603617" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681603617" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681603617" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681603617" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681603617" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681603617" rel="stylesheet">
+    <link href="/css/nucleus.css?1681603617" rel="stylesheet">
+    <link href="/css/fonts.css?1681603617" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681603617" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681603617" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681603617" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681603617" rel="stylesheet">
+    <link href="/css/variant.css?1681603617" rel="stylesheet">
+    <link href="/css/print.css?1681603617" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681603617" rel="stylesheet">
+    <script src="/js/url.js?1681603617"></script>
+    <script src="/js/variant.js?1681603617"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -41,7 +41,7 @@
       var baseUriFull='https:\/\/moematsuda-ai.github.io/';
       window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
     </script>
-    <script src="/js/jquery.min.js?1681601079" defer></script>
+    <script src="/js/jquery.min.js?1681603617" defer></script>
   </head>
   <body class="mobile-support print" data-url="/gnuplot/index.html">
     <div id="body" class="default-animation">
@@ -75,6 +75,66 @@
 
           <section>
             <h1 class="a11y-only">Subsections of Gnuplot</h1>
+          <article class="default">
+<h1 id="how-to-insert-formulas-like-latex">How to insert formulas like latex</h1>
+
+<h2 id="gnuplotでlatex形式の数式を挿入">gnuplotでlatex形式の数式を挿入</h2>
+<h3 id="準備">準備</h3>
+<p>gnuplot では直接pdfをつくらず<code>LaTeX（TikZ）</code>を経由することで美しいグラフのpdfをつくることができる。</p>
+<p>このグラフ作成には<code>tikz</code>環境を使用し、これにより作成されたtexファイルを読み込みタイプセットすることが可能である。</p>
+<p>ただしこの環境と関連するファイルは<code>TeXLive</code>には含まれておらず、Linux等の環境ではGnuplotのインストール時にpackageマネージャーがスタイルファイル
+<code>gnuplot-lua-tikz</code>とそれに関連するファイルをLaTeXが探索するファイルにインストールしてくれるが、Windowsでは自分で環境を整える必要がある。</p>
+<ol>
+<li>ターミナル（コマンドプロンプト）で<code>c/texlive/texmx-local/tex/latex</code>に移動し、<code>gnuplot</code>ファイルを作成する。</li>
+<li><code>gnuplot</code>を起動して<code>texlive/texmx-local/tex/latex/gnuplot</code>に移動し、以下のコマンドを実行する。
+<code>set terminal tikz createstyle</code></li>
+<li>コマンドプロンプト上で<code>gnuplot</code>ファイルに移動し、<code>mktexlsr</code>を実行して<code>ls-IR</code>を更新する。</li>
+</ol>
+<h3 id="texソースコードの生成">TeXソースコードの生成</h3>
+<p>次のように入力し、出力をtilzにしてプロットする。</p>
+<pre tabindex="0"><code class="language-gnuolot" data-lang="gnuolot">set terminal tikz
+set output &#34;filename.tex&#34;
+plot sin(x)
+</code></pre><h3 id="texで画像を出力">TeXで画像を出力</h3>
+<p>次のようにTeXファイルに記入することで<code>filename.tex</code>の画像を出力することができる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[dvipdfmx]</span>{jarticle}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{tikz}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{gnuplot-lua-tikz}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">\input</span>{filename.tex}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span></code></pre></div><h3 id="参考文献">【参考文献】</h3>
+<ul>
+<li><a href="https://geniusium.hatenablog.com/entry/2018/09/16/114600">gnuplotからTikZを介してpdfを生成</a></li>
+<li><a href="https://mano.xyz/post/2017-03-22-gnuplot-latex-graph/">Gnuplot で LaTex 用の綺麗なグラフを作成する</a></li>
+<li><a href="http://irotorishink.web.fc2.com/pc/gnuplot_memo/tikz/tikz.pdf">gnuplotでTeXフォントを用いる</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+<h1 id="command-file">Command file</h1>
+
+<h2 id="gnuplotのコマンドをファイルで保存する方法">gnuplotのコマンドをファイルで保存する方法</h2>
+<ul>
+<li>拡張子は<code>.plt</code></li>
+<li>コメントは<code>#</code>を使う</li>
+<li>コマンドを順に入力していけばOK!（コマンドの頭に特殊な文字を入れる必要はない）</li>
+</ul>
+<h2 id="コマンドファイルの拡張子をplt以外にした場合">コマンドファイルの拡張子を<code>.plt</code>以外にした場合</h2>
+<p>下記のコマンドを打ち込む</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gnuplot" data-lang="gnuplot"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#66d9ef">load</span> <span style="color:#e6db74">&#34;コマンドファイル名.拡張子&#34;</span>
+</span></span></code></pre></div><h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="http://nalab.mind.meiji.ac.jp/~mk/labo/howto/intro-gnuplot/node10.html">コマンド・ファイルを実行する</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
           <article class="default">
 <h1 id="basic-operation">basic operation</h1>
 
@@ -197,66 +257,6 @@ c               = 0.970465         +/- 0.04439      (4.574%)
           </article>
 
           <article class="default">
-<h1 id="command-file">Command file</h1>
-
-<h2 id="gnuplotのコマンドをファイルで保存する方法">gnuplotのコマンドをファイルで保存する方法</h2>
-<ul>
-<li>拡張子は<code>.plt</code></li>
-<li>コメントは<code>#</code>を使う</li>
-<li>コマンドを順に入力していけばOK!（コマンドの頭に特殊な文字を入れる必要はない）</li>
-</ul>
-<h2 id="コマンドファイルの拡張子をplt以外にした場合">コマンドファイルの拡張子を<code>.plt</code>以外にした場合</h2>
-<p>下記のコマンドを打ち込む</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gnuplot" data-lang="gnuplot"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#66d9ef">load</span> <span style="color:#e6db74">&#34;コマンドファイル名.拡張子&#34;</span>
-</span></span></code></pre></div><h2 id="参考文献">参考文献</h2>
-<ul>
-<li><a href="http://nalab.mind.meiji.ac.jp/~mk/labo/howto/intro-gnuplot/node10.html">コマンド・ファイルを実行する</a></li>
-</ul>
-
-            <footer class="footline">
-            </footer>
-          </article>
-
-          <article class="default">
-<h1 id="how-to-insert-formulas-like-latex">How to insert formulas like latex</h1>
-
-<h2 id="gnuplotでlatex形式の数式を挿入">gnuplotでlatex形式の数式を挿入</h2>
-<h3 id="準備">準備</h3>
-<p>gnuplot では直接pdfをつくらず<code>LaTeX（TikZ）</code>を経由することで美しいグラフのpdfをつくることができる。</p>
-<p>このグラフ作成には<code>tikz</code>環境を使用し、これにより作成されたtexファイルを読み込みタイプセットすることが可能である。</p>
-<p>ただしこの環境と関連するファイルは<code>TeXLive</code>には含まれておらず、Linux等の環境ではGnuplotのインストール時にpackageマネージャーがスタイルファイル
-<code>gnuplot-lua-tikz</code>とそれに関連するファイルをLaTeXが探索するファイルにインストールしてくれるが、Windowsでは自分で環境を整える必要がある。</p>
-<ol>
-<li>ターミナル（コマンドプロンプト）で<code>c/texlive/texmx-local/tex/latex</code>に移動し、<code>gnuplot</code>ファイルを作成する。</li>
-<li><code>gnuplot</code>を起動して<code>texlive/texmx-local/tex/latex/gnuplot</code>に移動し、以下のコマンドを実行する。
-<code>set terminal tikz createstyle</code></li>
-<li>コマンドプロンプト上で<code>gnuplot</code>ファイルに移動し、<code>mktexlsr</code>を実行して<code>ls-IR</code>を更新する。</li>
-</ol>
-<h3 id="texソースコードの生成">TeXソースコードの生成</h3>
-<p>次のように入力し、出力をtilzにしてプロットする。</p>
-<pre tabindex="0"><code class="language-gnuolot" data-lang="gnuolot">set terminal tikz
-set output &#34;filename.tex&#34;
-plot sin(x)
-</code></pre><h3 id="texで画像を出力">TeXで画像を出力</h3>
-<p>次のようにTeXファイルに記入することで<code>filename.tex</code>の画像を出力することができる。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[dvipdfmx]</span>{jarticle}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{tikz}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{gnuplot-lua-tikz}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">\input</span>{filename.tex}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
-</span></span></code></pre></div><h3 id="参考文献">【参考文献】</h3>
-<ul>
-<li><a href="https://geniusium.hatenablog.com/entry/2018/09/16/114600">gnuplotからTikZを介してpdfを生成</a></li>
-<li><a href="https://mano.xyz/post/2017-03-22-gnuplot-latex-graph/">Gnuplot で LaTex 用の綺麗なグラフを作成する</a></li>
-<li><a href="http://irotorishink.web.fc2.com/pc/gnuplot_memo/tikz/tikz.pdf">gnuplotでTeXフォントを用いる</a></li>
-</ul>
-
-            <footer class="footline">
-            </footer>
-          </article>
-
-          <article class="default">
 <h1 id="how-to-install-gnuplot">How to install gnuplot</h1>
 
 <h2 id="gnuplotのインストール方法">gnuplotのインストール方法</h2>
@@ -286,9 +286,9 @@ plot sin(x)
           </section>        </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1681601079" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1681601079" defer></script>
-    <script src="/js/featherlight.min.js?1681601079" defer></script>
-    <script src="/js/theme.js?1681601079" defer></script>
+    <script src="/js/clipboard.min.js?1681603617" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681603617" defer></script>
+    <script src="/js/featherlight.min.js?1681603617" defer></script>
+    <script src="/js/theme.js?1681603617" defer></script>
   </body>
 </html>

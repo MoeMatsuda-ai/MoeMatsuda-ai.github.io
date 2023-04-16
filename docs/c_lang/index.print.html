@@ -10,20 +10,20 @@
     <link href="https://moematsuda-ai.github.io/c_lang/index.html" rel="canonical" type="text/html" title="C language :: &#39;Moais blog">
     <link href="/c_lang/index.xml" rel="alternate" type="application/rss+xml" title="C language :: &#39;Moais blog"><link rel="icon" href="/images/favicon.png" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1681601079" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681601079" rel="stylesheet"></noscript>
-    <link href="/css/featherlight.min.css?1681601079" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681601079" rel="stylesheet"></noscript>
-    <link href="/css/auto-complete.css?1681601079" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681601079" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1681601079" rel="stylesheet">
-    <link href="/css/nucleus.css?1681601079" rel="stylesheet">
-    <link href="/css/fonts.css?1681601079" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681601079" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1681601079" rel="stylesheet">
-    <link href="/css/theme-relearn-dark.css?1681601079" rel="stylesheet" id="variant-style">
-    <link href="/css/ie.css?1681601079" rel="stylesheet">
-    <link href="/css/variant.css?1681601079" rel="stylesheet">
-    <link href="/css/print.css?1681601079" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1681601079" rel="stylesheet">
-    <script src="/js/url.js?1681601079"></script>
-    <script src="/js/variant.js?1681601079"></script>
+    <link href="/css/fontawesome-all.min.css?1681603617" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681603617" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1681603617" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681603617" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1681603617" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681603617" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1681603617" rel="stylesheet">
+    <link href="/css/nucleus.css?1681603617" rel="stylesheet">
+    <link href="/css/fonts.css?1681603617" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681603617" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1681603617" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1681603617" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1681603617" rel="stylesheet">
+    <link href="/css/variant.css?1681603617" rel="stylesheet">
+    <link href="/css/print.css?1681603617" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1681603617" rel="stylesheet">
+    <script src="/js/url.js?1681603617"></script>
+    <script src="/js/variant.js?1681603617"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -41,7 +41,7 @@
       var baseUriFull='https:\/\/moematsuda-ai.github.io/';
       window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
     </script>
-    <script src="/js/jquery.min.js?1681601079" defer></script>
+    <script src="/js/jquery.min.js?1681603617" defer></script>
   </head>
   <body class="mobile-support print" data-url="/c_lang/index.html">
     <div id="body" class="default-animation">
@@ -75,6 +75,58 @@
 
           <section>
             <h1 class="a11y-only">Subsections of C language</h1>
+          <article class="default">
+<h1 id="using-gniplot-on-c">Using gniplot on C</h1>
+
+<h2 id="操作方法">操作方法</h2>
+<p>gnuplotをC言語のプログラムから制御するには，パイプを使うのが最も簡単である．ここでは，C言語のプログラムによりパイプの生成しgnuplotを起動を行い，パイプを通してコマンドを送る．C言語のプログラム内にコマンドを記述することにより，プログラマーの意図したとおりにgnuplotを操作することができる．</p>
+<ol>
+<li>
+<p>パイプを開く</p>
+<ol>
+<li>パイプを開くためには，ファイルポインターをつかう．そのためファイルポインターを格 納する変数を用意しなくてはならない．パイプの先もファイルとして扱われるのである．
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>FILE <span style="color:#f92672">*</span>hoge;
+</span></span></code></pre></div></li>
+<li>次にgnuplotを立ち上げて，そこにパイプを接続する必要がある．次のようにする．
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>hoge <span style="color:#f92672">=</span> popen(<span style="color:#e6db74">&#34;gnuplot -persist&#34;</span>,<span style="color:#e6db74">&#34;w&#34;</span>);
+</span></span></code></pre></div></li>
+<li>popen()関数がパイプを開く命令である．これで，gnuplot が立ち上がり，パイプを 通して，コマンドを送ることができる．オプションのpersistで，gnuplotが終了し てもグラフが残るようにしている．そうしないと，コンピューターの動作は高速なので， gnuplotは一瞬にして終了し，グラフが消えてしまい，ほとんど動作内容が分からなく なる．popen()関数の戻り値はパイプの情報を示すファイルポインターである．この ファイルポインターを指定して，コマンドを送ることになる．</li>
+</ol>
+</li>
+<li>
+<p>パイプを通してコマンドを送る
+パイプを通して，gnuplotにコマンドを送るのはfprintf()関数を使う．
+<code>c fprintf(hoge, &quot;plot sin(x)\n&quot;); </code>
+このfprintfを使って，gnuplotにいくらでもコマンドを送ることができる．あたかも，C言語の向こう側でgnuplotが立ち上がって，それから命令を送っているかのように動作する．このようなことができるのが，コマンドを打ち込むCharacter-based User Interface(CUI)の良いところである．</p>
+</li>
+<li>
+<p>パイプを閉じる
+すべての動作が終了したならば，パイプを閉じなくてはならない．これも，ファイルの操作と全く同じである．
+<code>c pclose(hoge);  </code></p>
+</li>
+</ol>
+<p><em><strong>（例）三角関数のグラフ作成プログラム</strong></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ae81ff">1</span> <span style="color:#960050;background-color:#1e0010">#</span>include <span style="color:#f92672">&lt;</span>stdio.h<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span> <span style="color:#66d9ef">int</span> main(<span style="color:#66d9ef">void</span>){
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span>   FILE <span style="color:#f92672">*</span>gp;
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span>   gp <span style="color:#f92672">=</span> popen(<span style="color:#e6db74">&#34;gnuplot -persist&#34;</span>,<span style="color:#e6db74">&#34;w&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">7</span>   <span style="color:#a6e22e">fprintf</span>(gp, <span style="color:#e6db74">&#34;plot sin(x)</span><span style="color:#960050;background-color:#1e0010">\</span>n<span style="color:#e6db74">&#34;)</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">9</span>   <span style="color:#a6e22e">pclose</span>(gp);
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">11</span>   <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">12</span> }
+</span></span></code></pre></div><h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="http://www.yamamo10.jp/yamamoto/lecture/2007/5E_comp_app/gnuplot/html/node4.html">c言語からgnuplotを操作する(平成19年7月11日、山本昌志)</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
           <article class="default">
 <h1 id="method-of-file-division">Method of file division</h1>
 
@@ -173,64 +225,12 @@ $ gcc main.o calc.o
             </footer>
           </article>
 
-          <article class="default">
-<h1 id="using-gniplot-on-c">Using gniplot on C</h1>
-
-<h2 id="操作方法">操作方法</h2>
-<p>gnuplotをC言語のプログラムから制御するには，パイプを使うのが最も簡単である．ここでは，C言語のプログラムによりパイプの生成しgnuplotを起動を行い，パイプを通してコマンドを送る．C言語のプログラム内にコマンドを記述することにより，プログラマーの意図したとおりにgnuplotを操作することができる．</p>
-<ol>
-<li>
-<p>パイプを開く</p>
-<ol>
-<li>パイプを開くためには，ファイルポインターをつかう．そのためファイルポインターを格 納する変数を用意しなくてはならない．パイプの先もファイルとして扱われるのである．
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>FILE <span style="color:#f92672">*</span>hoge;
-</span></span></code></pre></div></li>
-<li>次にgnuplotを立ち上げて，そこにパイプを接続する必要がある．次のようにする．
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>hoge <span style="color:#f92672">=</span> popen(<span style="color:#e6db74">&#34;gnuplot -persist&#34;</span>,<span style="color:#e6db74">&#34;w&#34;</span>);
-</span></span></code></pre></div></li>
-<li>popen()関数がパイプを開く命令である．これで，gnuplot が立ち上がり，パイプを 通して，コマンドを送ることができる．オプションのpersistで，gnuplotが終了し てもグラフが残るようにしている．そうしないと，コンピューターの動作は高速なので， gnuplotは一瞬にして終了し，グラフが消えてしまい，ほとんど動作内容が分からなく なる．popen()関数の戻り値はパイプの情報を示すファイルポインターである．この ファイルポインターを指定して，コマンドを送ることになる．</li>
-</ol>
-</li>
-<li>
-<p>パイプを通してコマンドを送る
-パイプを通して，gnuplotにコマンドを送るのはfprintf()関数を使う．
-<code>c fprintf(hoge, &quot;plot sin(x)\n&quot;); </code>
-このfprintfを使って，gnuplotにいくらでもコマンドを送ることができる．あたかも，C言語の向こう側でgnuplotが立ち上がって，それから命令を送っているかのように動作する．このようなことができるのが，コマンドを打ち込むCharacter-based User Interface(CUI)の良いところである．</p>
-</li>
-<li>
-<p>パイプを閉じる
-すべての動作が終了したならば，パイプを閉じなくてはならない．これも，ファイルの操作と全く同じである．
-<code>c pclose(hoge);  </code></p>
-</li>
-</ol>
-<p><em><strong>（例）三角関数のグラフ作成プログラム</strong></em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ae81ff">1</span> <span style="color:#960050;background-color:#1e0010">#</span>include <span style="color:#f92672">&lt;</span>stdio.h<span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> 
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span> <span style="color:#66d9ef">int</span> main(<span style="color:#66d9ef">void</span>){
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span>   FILE <span style="color:#f92672">*</span>gp;
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span> 
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span>   gp <span style="color:#f92672">=</span> popen(<span style="color:#e6db74">&#34;gnuplot -persist&#34;</span>,<span style="color:#e6db74">&#34;w&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">7</span>   <span style="color:#a6e22e">fprintf</span>(gp, <span style="color:#e6db74">&#34;plot sin(x)</span><span style="color:#960050;background-color:#1e0010">\</span>n<span style="color:#e6db74">&#34;)</span>;
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8</span> 
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">9</span>   <span style="color:#a6e22e">pclose</span>(gp);
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10</span> 
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">11</span>   <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">12</span> }
-</span></span></code></pre></div><h2 id="参考文献">参考文献</h2>
-<ul>
-<li><a href="http://www.yamamo10.jp/yamamoto/lecture/2007/5E_comp_app/gnuplot/html/node4.html">c言語からgnuplotを操作する(平成19年7月11日、山本昌志)</a></li>
-</ul>
-
-            <footer class="footline">
-            </footer>
-          </article>
-
           </section>        </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1681601079" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1681601079" defer></script>
-    <script src="/js/featherlight.min.js?1681601079" defer></script>
-    <script src="/js/theme.js?1681601079" defer></script>
+    <script src="/js/clipboard.min.js?1681603617" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1681603617" defer></script>
+    <script src="/js/featherlight.min.js?1681603617" defer></script>
+    <script src="/js/theme.js?1681603617" defer></script>
   </body>
 </html>
