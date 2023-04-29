@@ -84,6 +84,13 @@ var relearn_search_index = [
     "uri": "/index.html"
   },
   {
+    "content": "/etc/environmentの設定 ",
+    "description": "",
+    "tags": null,
+    "title": "Proxy settings",
+    "uri": "/linux/proxy_settings/index.html"
+  },
+  {
     "content": "プロセッサー，グラフィック，OSは「設定」で確認可能\nOSのバージョン $ cat /etc/issue CPUコア数 $ cat /proc/cpuinfo processor: プロセッサのID model name: cpuの種類 cpu cores: コアの数 メモリ $ sudo dmidecode --type memory demidecodeコマンドではハードウェアの物理RAMサイズと情報を確認でき， コンピュータのDMIテーブル（SMBIOS）情報を表示してくれる．\nメモリ以外にも以下の項目を確認可能 0. bios\nsystem baseboard chassis processor memory (memory controller) memory (memory module) cache connector (port connector) slots (system slots) (on board devices) cpuやmemoryの使用率等の確認 $ top or\n$ htop or\n$ ps aus | less or\n$ free -h: 単位などを見やすく表示 -m: MB単位で表示（デフォルトはkB） -g: GB単位で表示 ディスク確認方法 SSD or HDD $ cat /sys/block/sda/queue/rotational 0: SSD 1: HDD 型番の確認 $ sudo lshw -c disc ディスク使用率 $ df -h その他 sudo fdisk -l sudo blkid df -Th sudo du -sm ./* | sort -rn | head -5 GPU確認方法 GPUの種類 $ lspci | grep -u nvidia nvidia driverのバージョン $ cat /proc/driver/nvidia/version GPUの使用状況 $ nvidia-smi -l ",
     "description": "",
     "tags": null,
