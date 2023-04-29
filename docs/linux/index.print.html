@@ -10,20 +10,20 @@
     <link href="https://moematsuda-ai.github.io/linux/index.html" rel="canonical" type="text/html" title="Linux :: &#39;Moais blog">
     <link href="/linux/index.xml" rel="alternate" type="application/rss+xml" title="Linux :: &#39;Moais blog"><link rel="icon" href="/images/favicon.png" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1681603617" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1681603617" rel="stylesheet"></noscript>
-    <link href="/css/featherlight.min.css?1681603617" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1681603617" rel="stylesheet"></noscript>
-    <link href="/css/auto-complete.css?1681603617" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1681603617" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1681603617" rel="stylesheet">
-    <link href="/css/nucleus.css?1681603617" rel="stylesheet">
-    <link href="/css/fonts.css?1681603617" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1681603617" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1681603617" rel="stylesheet">
-    <link href="/css/theme-relearn-dark.css?1681603617" rel="stylesheet" id="variant-style">
-    <link href="/css/ie.css?1681603617" rel="stylesheet">
-    <link href="/css/variant.css?1681603617" rel="stylesheet">
-    <link href="/css/print.css?1681603617" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1681603617" rel="stylesheet">
-    <script src="/js/url.js?1681603617"></script>
-    <script src="/js/variant.js?1681603617"></script>
+    <link href="/css/fontawesome-all.min.css?1682747886" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1682747886" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1682747886" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1682747886" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1682747886" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1682747886" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1682747886" rel="stylesheet">
+    <link href="/css/nucleus.css?1682747886" rel="stylesheet">
+    <link href="/css/fonts.css?1682747886" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1682747886" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1682747886" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1682747886" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1682747886" rel="stylesheet">
+    <link href="/css/variant.css?1682747886" rel="stylesheet">
+    <link href="/css/print.css?1682747886" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1682747886" rel="stylesheet">
+    <script src="/js/url.js?1682747886"></script>
+    <script src="/js/variant.js?1682747886"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -41,7 +41,7 @@
       var baseUriFull='https:\/\/moematsuda-ai.github.io/';
       window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
     </script>
-    <script src="/js/jquery.min.js?1681603617" defer></script>
+    <script src="/js/jquery.min.js?1682747886" defer></script>
   </head>
   <body class="mobile-support print" data-url="/linux/index.html">
     <div id="body" class="default-animation">
@@ -75,6 +75,80 @@
 
           <section>
             <h1 class="a11y-only">Subsections of Linux</h1>
+          <article class="default">
+<h1 id="%E3%82%B9%E3%83%9A%E3%83%83%E3%82%AF%E7%A2%BA%E8%AA%8D%E6%96%B9%E6%B3%95ubuntu">スペック確認方法（Ubuntu）</h1>
+
+<p>プロセッサー，グラフィック，OSは「設定」で確認可能</p>
+<h2 id="osのバージョン">OSのバージョン</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat /etc/issue
+</span></span></code></pre></div><h2 id="cpuコア数">CPUコア数</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat /proc/cpuinfo
+</span></span></code></pre></div><ul>
+<li><code>processor</code>: プロセッサのID</li>
+<li><code>model name</code>: cpuの種類</li>
+<li><code>cpu cores</code>: コアの数</li>
+</ul>
+<h2 id="メモリ">メモリ</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo dmidecode --type memory
+</span></span></code></pre></div><p><code>demidecode</code>コマンドではハードウェアの物理RAMサイズと情報を確認でき，
+コンピュータのDMIテーブル（SMBIOS）情報を表示してくれる．</p>
+<p>メモリ以外にも以下の項目を確認可能
+0. bios</p>
+<ol>
+<li>system</li>
+<li>baseboard</li>
+<li>chassis</li>
+<li>processor</li>
+<li>memory (memory controller)</li>
+<li>memory (memory module)</li>
+<li>cache</li>
+<li>connector (port connector)</li>
+<li>slots (system slots)</li>
+<li>(on board devices)</li>
+</ol>
+<h2 id="cpuやmemoryの使用率等の確認">cpuやmemoryの使用率等の確認</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ top
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ htop
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ps aus | less
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ free
+</span></span></code></pre></div><ul>
+<li><code>-h</code>: 単位などを見やすく表示</li>
+<li><code>-m</code>: MB単位で表示（デフォルトはkB）</li>
+<li><code>-g</code>: GB単位で表示</li>
+</ul>
+<h2 id="ディスク確認方法">ディスク確認方法</h2>
+<h3 id="ssd-or-hdd">SSD or HDD</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat /sys/block/sda/queue/rotational
+</span></span></code></pre></div><ul>
+<li>0: SSD</li>
+<li>1: HDD</li>
+</ul>
+<h3 id="型番の確認">型番の確認</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo lshw -c disc
+</span></span></code></pre></div><h3 id="ディスク使用率">ディスク使用率</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ df -h
+</span></span></code></pre></div><h3 id="その他">その他</h3>
+<ul>
+<li><code>sudo fdisk -l</code></li>
+<li><code>sudo blkid</code></li>
+<li><code>df -Th</code></li>
+<li><code>sudo du -sm ./* | sort -rn | head -5</code></li>
+</ul>
+<h2 id="gpu確認方法">GPU確認方法</h2>
+<h3 id="gpuの種類">GPUの種類</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ lspci | grep -u nvidia
+</span></span></code></pre></div><h3 id="nvidia-driverのバージョン">nvidia driverのバージョン</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat /proc/driver/nvidia/version
+</span></span></code></pre></div><h3 id="gpuの使用状況">GPUの使用状況</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ nvidia-smi -l
+</span></span></code></pre></div>
+            <footer class="footline">
+            </footer>
+          </article>
+
           <article class="default">
 <h1 id="shortcut">Shortcut</h1>
 
@@ -470,9 +544,9 @@ $ locate math.h
           </section>        </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1681603617" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1681603617" defer></script>
-    <script src="/js/featherlight.min.js?1681603617" defer></script>
-    <script src="/js/theme.js?1681603617" defer></script>
+    <script src="/js/clipboard.min.js?1682747886" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1682747886" defer></script>
+    <script src="/js/featherlight.min.js?1682747886" defer></script>
+    <script src="/js/theme.js?1682747886" defer></script>
   </body>
 </html>

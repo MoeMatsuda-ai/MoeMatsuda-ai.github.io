@@ -6,9 +6,9 @@
     <meta name="generator" content="Hugo 0.104.3">
     <meta name="generator" content="Relearn 5.6.5+tip">
     <meta name="description" content="">
-    <title>How to install gnuplot :: &#39;Moais blog</title>
-    <link href="/gnuplot/install/index.xml" rel="alternate" type="application/rss+xml" title="How to install gnuplot :: &#39;Moais blog">
-    <link href="/gnuplot/install/index.print.html" rel="alternate" type="text/html" title="How to install gnuplot :: &#39;Moais blog"><link rel="icon" href="/images/favicon.png" type="image/png">
+    <title>スペック確認方法（Ubuntu） :: &#39;Moais blog</title>
+    <link href="/linux/spec_confirmation/index.xml" rel="alternate" type="application/rss+xml" title="スペック確認方法（Ubuntu） :: &#39;Moais blog">
+    <link href="/linux/spec_confirmation/index.print.html" rel="alternate" type="text/html" title="スペック確認方法（Ubuntu） :: &#39;Moais blog"><link rel="icon" href="/images/favicon.png" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1682747886" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1682747886" rel="stylesheet"></noscript>
     <link href="/css/featherlight.min.css?1682747886" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1682747886" rel="stylesheet"></noscript>
@@ -42,20 +42,20 @@
     </script>
     <script src="/js/jquery.min.js?1682747886" defer></script>
   </head>
-  <body class="mobile-support html" data-url="/gnuplot/install/index.html">
+  <body class="mobile-support html" data-url="/linux/spec_confirmation/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
       <nav id="topbar" class="highlightable" dir="ltr">
         <div>
           <div class="navigation">
-            <a class="nav nav-next" href="/hugo/index.html" title="Hugo (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
+            <a class="nav nav-next" href="/linux/shortcut/index.html" title="Shortcut (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
           </div>
           <div class="navigation">
-            <a class="nav nav-prev" href="/gnuplot/base/index.html" title="basic operation (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+            <a class="nav nav-prev" href="/linux/index.html" title="Linux (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
           </div>
           <div id="top-print-link">
-            <a class="print-link" title='Print whole chapter (CTRL+ALT+p)' href="/gnuplot/install/index.print.html">
+            <a class="print-link" title='Print whole chapter (CTRL+ALT+p)' href="/linux/spec_confirmation/index.print.html">
               <i class="fas fa-print fa-fw"></i>
             </a>
           </div>
@@ -66,16 +66,33 @@
             <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/gnuplot/index.html"><span itemprop="name">Gnuplot</span></a><meta itemprop="position" content="2"> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">How to install gnuplot</span><meta itemprop="position" content="3"></li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/linux/index.html"><span itemprop="name">Linux</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">スペック確認方法（Ubuntu）</span><meta itemprop="position" content="3"></li>
             </ol>
           </div>
           <div class="default-animation progress">
             <div class="toc-wrapper" dir="ltr">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#gnuplotのインストール方法">gnuplotのインストール方法</a></li>
-    <li><a href="#参考">参考</a></li>
+    <li><a href="#osのバージョン">OSのバージョン</a></li>
+    <li><a href="#cpuコア数">CPUコア数</a></li>
+    <li><a href="#メモリ">メモリ</a></li>
+    <li><a href="#cpuやmemoryの使用率等の確認">cpuやmemoryの使用率等の確認</a></li>
+    <li><a href="#ディスク確認方法">ディスク確認方法</a>
+      <ul>
+        <li><a href="#ssd-or-hdd">SSD or HDD</a></li>
+        <li><a href="#型番の確認">型番の確認</a></li>
+        <li><a href="#ディスク使用率">ディスク使用率</a></li>
+        <li><a href="#その他">その他</a></li>
+      </ul>
+    </li>
+    <li><a href="#gpu確認方法">GPU確認方法</a>
+      <ul>
+        <li><a href="#gpuの種類">GPUの種類</a></li>
+        <li><a href="#nvidia-driverのバージョン">nvidia driverのバージョン</a></li>
+        <li><a href="#gpuの使用状況">GPUの使用状況</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
             </div>
@@ -87,28 +104,75 @@
           <div id="head-tags">
           </div>
           <article class="default">
-<h1 id="how-to-install-gnuplot">How to install gnuplot</h1>
+<h1 id="%E3%82%B9%E3%83%9A%E3%83%83%E3%82%AF%E7%A2%BA%E8%AA%8D%E6%96%B9%E6%B3%95ubuntu">スペック確認方法（Ubuntu）</h1>
 
-<h2 id="gnuplotのインストール方法">gnuplotのインストール方法</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update
-</span></span><span style="display:flex;"><span>$ sudo apt install gnuplot
-</span></span><span style="display:flex;"><span>$ sudo apt install gnuplot-x11
-</span></span></code></pre></div><p><strong>gnuplot-x11をインストールすると、出力端末が&quot;X11&quot;になる。</strong></p>
-<p>出力端末は以下の3つのパッケージが使用可能。ただしこれらは
-排他的なパッケージのため、どれか1つのみしかインストールできない。
-（他のをインストールしようとすると、すでにインストールされていた
-パッケージはアンインストールされる。）</p>
-<ul>
-<li>gnuplot-qt</li>
-<li>gnuplot-x11</li>
-<li>gnuplot-nox</li>
+<p>プロセッサー，グラフィック，OSは「設定」で確認可能</p>
+<h2 id="osのバージョン">OSのバージョン</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat /etc/issue
+</span></span></code></pre></div><h2 id="cpuコア数">CPUコア数</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat /proc/cpuinfo
+</span></span></code></pre></div><ul>
+<li><code>processor</code>: プロセッサのID</li>
+<li><code>model name</code>: cpuの種類</li>
+<li><code>cpu cores</code>: コアの数</li>
 </ul>
-<h2 id="参考">参考</h2>
-<ul>
-<li><a href="https://yutarine.blogspot.com/2019/12/ubuntu-gnuplot-packages.html">Ubuntuのリポジトリからインストールできるgnuplotのパッケージについて</a></li>
-<li><a href="https://qiita.com/python_walker/items/0307cda7299608c6bb21">LinuxにGnuplotをインストール</a></li>
+<h2 id="メモリ">メモリ</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo dmidecode --type memory
+</span></span></code></pre></div><p><code>demidecode</code>コマンドではハードウェアの物理RAMサイズと情報を確認でき，
+コンピュータのDMIテーブル（SMBIOS）情報を表示してくれる．</p>
+<p>メモリ以外にも以下の項目を確認可能
+0. bios</p>
+<ol>
+<li>system</li>
+<li>baseboard</li>
+<li>chassis</li>
+<li>processor</li>
+<li>memory (memory controller)</li>
+<li>memory (memory module)</li>
+<li>cache</li>
+<li>connector (port connector)</li>
+<li>slots (system slots)</li>
+<li>(on board devices)</li>
+</ol>
+<h2 id="cpuやmemoryの使用率等の確認">cpuやmemoryの使用率等の確認</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ top
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ htop
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ps aus | less
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ free
+</span></span></code></pre></div><ul>
+<li><code>-h</code>: 単位などを見やすく表示</li>
+<li><code>-m</code>: MB単位で表示（デフォルトはkB）</li>
+<li><code>-g</code>: GB単位で表示</li>
 </ul>
-
+<h2 id="ディスク確認方法">ディスク確認方法</h2>
+<h3 id="ssd-or-hdd">SSD or HDD</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat /sys/block/sda/queue/rotational
+</span></span></code></pre></div><ul>
+<li>0: SSD</li>
+<li>1: HDD</li>
+</ul>
+<h3 id="型番の確認">型番の確認</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo lshw -c disc
+</span></span></code></pre></div><h3 id="ディスク使用率">ディスク使用率</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ df -h
+</span></span></code></pre></div><h3 id="その他">その他</h3>
+<ul>
+<li><code>sudo fdisk -l</code></li>
+<li><code>sudo blkid</code></li>
+<li><code>df -Th</code></li>
+<li><code>sudo du -sm ./* | sort -rn | head -5</code></li>
+</ul>
+<h2 id="gpu確認方法">GPU確認方法</h2>
+<h3 id="gpuの種類">GPUの種類</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ lspci | grep -u nvidia
+</span></span></code></pre></div><h3 id="nvidia-driverのバージョン">nvidia driverのバージョン</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat /proc/driver/nvidia/version
+</span></span></code></pre></div><h3 id="gpuの使用状況">GPUの使用状況</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ nvidia-smi -l
+</span></span></code></pre></div>
             <footer class="footline">
             </footer>
           </article>
@@ -294,7 +358,7 @@ Repository Access Restrictions<i class="fas fa-check read-icon"></i></a></li>
 How to Create Repository<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/github/settings/index.html" class="dd-item"><a href="/github/settings/index.html">
 Settings<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/gnuplot/index.html" class="dd-item parent"><a href="/gnuplot/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">4.</b> 
+          <li data-nav-id="/gnuplot/index.html" class="dd-item"><a href="/gnuplot/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">4.</b> 
 Gnuplot<i class="fas fa-check read-icon"></i></a><ul id="subsections-96e1c1d59e724966aa5bbafac0938a58">
           <li data-nav-id="/gnuplot/output_equation_on_latex/index.html" class="dd-item"><a href="/gnuplot/output_equation_on_latex/index.html">
 How to insert formulas like latex<i class="fas fa-check read-icon"></i></a></li>
@@ -302,7 +366,7 @@ How to insert formulas like latex<i class="fas fa-check read-icon"></i></a></li>
 Command file<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/gnuplot/base/index.html" class="dd-item"><a href="/gnuplot/base/index.html">
 basic operation<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/gnuplot/install/index.html" class="dd-item active"><a href="/gnuplot/install/index.html">
+          <li data-nav-id="/gnuplot/install/index.html" class="dd-item"><a href="/gnuplot/install/index.html">
 How to install gnuplot<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/hugo/index.html" class="dd-item"><a href="/hugo/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">5.</b> 
 Hugo<i class="fas fa-check read-icon"></i></a><ul id="subsections-113cf8e677282e463bfca274df11f63e">
@@ -332,9 +396,9 @@ Figure<i class="fas fa-check read-icon"></i></a></li>
 Table<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/latex/base/index.html" class="dd-item"><a href="/latex/base/index.html">
 Basic<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/linux/index.html" class="dd-item"><a href="/linux/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">8.</b> 
+          <li data-nav-id="/linux/index.html" class="dd-item parent"><a href="/linux/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">8.</b> 
 Linux<i class="fas fa-check read-icon"></i></a><ul id="subsections-db801fcabe18fdefdb1b34d275e81669">
-          <li data-nav-id="/linux/spec_confirmation/index.html" class="dd-item"><a href="/linux/spec_confirmation/index.html">
+          <li data-nav-id="/linux/spec_confirmation/index.html" class="dd-item active"><a href="/linux/spec_confirmation/index.html">
 スペック確認方法（Ubuntu）<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/linux/shortcut/index.html" class="dd-item"><a href="/linux/shortcut/index.html">
 Shortcut<i class="fas fa-check read-icon"></i></a></li>

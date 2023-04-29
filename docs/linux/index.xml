@@ -6,7 +6,20 @@
     <description>Recent content in Linux on &#39;Moais blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 29 Mar 2023 06:50:00 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Apr 2023 05:05:56 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>スペック確認方法（Ubuntu）</title>
+      <link>https://moematsuda-ai.github.io/linux/spec_confirmation/index.html</link>
+      <pubDate>Sat, 29 Apr 2023 05:05:56 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/linux/spec_confirmation/index.html</guid>
+      <description>プロセッサー，グラフィック，OSは「設定」で確認可能
+OSのバージョン $ cat /etc/issue CPUコア数 $ cat /proc/cpuinfo processor: プロセッサのID model name: cpuの種類 cpu cores: コアの数 メモリ $ sudo dmidecode --type memory demidecodeコマンドではハードウェアの物理RAMサイズと情報を確認でき， コンピュータのDMIテーブル（SMBIOS）情報を表示してくれる．
+メモリ以外にも以下の項目を確認可能 0. bios
+system baseboard chassis processor memory (memory controller) memory (memory module) cache connector (port connector) slots (system slots) (on board devices) cpuやmemoryの使用率等の確認 $ top or
+$ htop or
+$ ps aus | less or
+$ free -h: 単位などを見やすく表示 -m: MB単位で表示（デフォルトはkB） -g: GB単位で表示 ディスク確認方法 SSD or HDD $ cat /sys/block/sda/queue/rotational 0: SSD 1: HDD 型番の確認 $ sudo lshw -c disc ディスク使用率 $ df -h その他 sudo fdisk -l sudo blkid df -Th sudo du -sm .</description>
+    </item>
     <item>
       <title>Shortcut</title>
       <link>https://moematsuda-ai.github.io/linux/shortcut/index.html</link>

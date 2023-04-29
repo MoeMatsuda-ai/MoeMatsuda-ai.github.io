@@ -77,18 +77,25 @@ var relearn_search_index = [
     "uri": "/windows_settings/index.html"
   },
   {
-    "content": "ロゴ（左上隅）の変更 layout/partials/logo.htmlを生成 logoの設定を書き込む ファビコンの変更 faviconがSVG, PNGまたはICOの場合は、ローカルのstatic/imagesディレクトリにfavicon.svg, favicon.pngまたはfavicon.icoという名前で画像を保存 layout/partials/にfavicon.htmlという名前で新しいファイルを生成し、次のように書き込む： \u003clink rel=\"icon\" href=\"/images/favicon.png\" type=\"image/png\"\u003e メニューのChapter番号を表示 layout/partialsにmenu-pre.htmlファイルを生成し、次のように書き込む： {{ if (eq .Params.archetype \"chapter\") }}\u003cb style=\"display: inline-block; font-weight: 700; padding-left: .3rem; color: #007bff; text-align: left; width: 1.7rem;\"\u003e{{ .Params.weight }}.\u003c/b\u003e {{ end }} 参考文献 Customization :: Hugo Relearn Theme hugo-theme-relearn repo ",
-    "description": "",
-    "tags": null,
-    "title": "Layout",
-    "uri": "/hugo/layout/index.html"
-  },
-  {
     "content": " プログラミング言語やら何やらかんやらのメモ…\n",
     "description": "",
     "tags": null,
     "title": "Moai's blog",
     "uri": "/index.html"
+  },
+  {
+    "content": "プロセッサー，グラフィック，OSは「設定」で確認可能\nOSのバージョン $ cat /etc/issue CPUコア数 $ cat /proc/cpuinfo processor: プロセッサのID model name: cpuの種類 cpu cores: コアの数 メモリ $ sudo dmidecode --type memory demidecodeコマンドではハードウェアの物理RAMサイズと情報を確認でき， コンピュータのDMIテーブル（SMBIOS）情報を表示してくれる．\nメモリ以外にも以下の項目を確認可能 0. bios\nsystem baseboard chassis processor memory (memory controller) memory (memory module) cache connector (port connector) slots (system slots) (on board devices) cpuやmemoryの使用率等の確認 $ top or\n$ htop or\n$ ps aus | less or\n$ free -h: 単位などを見やすく表示 -m: MB単位で表示（デフォルトはkB） -g: GB単位で表示 ディスク確認方法 SSD or HDD $ cat /sys/block/sda/queue/rotational 0: SSD 1: HDD 型番の確認 $ sudo lshw -c disc ディスク使用率 $ df -h その他 sudo fdisk -l sudo blkid df -Th sudo du -sm ./* | sort -rn | head -5 GPU確認方法 GPUの種類 $ lspci | grep -u nvidia nvidia driverのバージョン $ cat /proc/driver/nvidia/version GPUの使用状況 $ nvidia-smi -l ",
+    "description": "",
+    "tags": null,
+    "title": "スペック確認方法（Ubuntu）",
+    "uri": "/linux/spec_confirmation/index.html"
+  },
+  {
+    "content": "ロゴ（左上隅）の変更 layout/partials/logo.htmlを生成 logoの設定を書き込む ファビコンの変更 faviconがSVG, PNGまたはICOの場合は、ローカルのstatic/imagesディレクトリにfavicon.svg, favicon.pngまたはfavicon.icoという名前で画像を保存 layout/partials/にfavicon.htmlという名前で新しいファイルを生成し、次のように書き込む： \u003clink rel=\"icon\" href=\"/images/favicon.png\" type=\"image/png\"\u003e メニューのChapter番号を表示 layout/partialsにmenu-pre.htmlファイルを生成し、次のように書き込む： {{ if (eq .Params.archetype \"chapter\") }}\u003cb style=\"display: inline-block; font-weight: 700; padding-left: .3rem; color: #007bff; text-align: left; width: 1.7rem;\"\u003e{{ .Params.weight }}.\u003c/b\u003e {{ end }} 参考文献 Customization :: Hugo Relearn Theme hugo-theme-relearn repo ",
+    "description": "",
+    "tags": null,
+    "title": "Layout",
+    "uri": "/hugo/layout/index.html"
   },
   {
     "content": "baseURL = '\u003cURL\u003e' languageCode = 'ja-jp' title = \"Chiyo's blog\" theme = \"hugo-theme-relearn\" publishDir = \"docs\" [params] themeVariant = [\"relearn-dark\", \"relearn-light\", \"green\", \"black\", \"blue\", \"learn\"] ordersectionsby = \"title\" showVisitedLinks = true [outputs] home = [\"HTML\", \"RSS\", \"SEARCH\", \"SEARCHPAGE\"] section = [\"HTML\", \"RSS\", \"PRINT\"] [Languages] [Languages.en] landingPageName = \"\u003ci class='fas fa-home'\u003e\u003c/i\u003e Home\" [[menu.shortcuts]] name = \"\u003ci class='fab fa-fw fa-github'\u003e\u003c/i\u003e GitHub repo\" identifier = \"ds\" url = \"https://github.com/MoeMatsuda-ai/MoeMatsuda-ai.github.io\" weight = 50 [[menu.shortcuts]] name = \"\u003ci class='fas fa-tags'\u003e\u003c/i\u003e Tags\" url = \"/tags\" weight = 70 baseURL: サイトのルートURL publishDie: Webサイトで公開するリポジトリ以下のディレクトリ（githubではdocsを推奨） ordersection: titleまたはweightを選択。titleの場合はtitle順、weightの場合はweightで設定された番号順にメニューを並べる showVisitedLinks: 訪れたページにはメニューにチェックマークを付ける menu.shortcuts: ショートカット（ここではGithub repoとtagsを設定） ",
