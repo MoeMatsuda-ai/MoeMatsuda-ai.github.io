@@ -1,5 +1,5 @@
 ---
-title: "スペック確認方法（Ubuntu）"
+title: "Spec confirmation (Ubuntu)"
 date: 2023-04-29T05:05:56Z
 draft: false
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Mozc_settings"
+title: "Mozc settings"
 date: 2022-11-29T08:12:45Z
 draft: false
 ---

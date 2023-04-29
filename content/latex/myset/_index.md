@@ -1,5 +1,5 @@
 ---
-title: "よく使う設定"
+title: "Commonly used commands"
 date: 2022-11-25T12:17:42Z
 draft: false
 ---

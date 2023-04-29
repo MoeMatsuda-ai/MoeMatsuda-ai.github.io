@@ -8,7 +8,7 @@
     <language>ja-jp</language>
     <lastBuildDate>Sat, 29 Apr 2023 05:05:56 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>スペック確認方法（Ubuntu）</title>
+      <title>Spec confirmation (Ubuntu)</title>
       <link>https://moematsuda-ai.github.io/linux/spec_confirmation/index.html</link>
       <pubDate>Sat, 29 Apr 2023 05:05:56 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/linux/spec_confirmation/index.html</guid>
@@ -28,7 +28,7 @@ $ free -h: 単位などを見やすく表示 -m: MB単位で表示（デフォ�
       <description>エディタのショートカットキー 移動系 ショートカットキー 概要 Ctrl+Home ファイルの先頭に移動 Ctrl＋End ファイルの末尾に移動 Home 行頭に移動 End 行末に移動 Ctrl＋← 単語の先頭に移動 Ctrl+→ 単語の末尾に移動 分割 ショートカットキー 概要 ショートカットキー 概要 Ctrl＋\ ※\は右上の｜のキーボード 編集画面を分割表示 Ctrl＋１or２or 3 &amp;hellip; 分割した画面間を移動 ファイルやディレクトリの開き方 ショートカットキー 概要 Ctrl＋N 新規ファイル Ctrl＋Shift＋N 新規ウィンドウ Ctrl＋o ファイルを開く 文字列検索 ショートカットキー 概要 Ctrl＋F エディタ内検索 Ctrl＋H エディタ内置換 F3 次の検索結果にジャンプ Shift＋F3 前の検索結果にジャンプ </description>
     </item>
     <item>
-      <title>シェルスクリプト</title>
+      <title>Shell script</title>
       <link>https://moematsuda-ai.github.io/linux/shell_script/index.html</link>
       <pubDate>Wed, 29 Mar 2023 06:36:40 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/linux/shell_script/index.html</guid>

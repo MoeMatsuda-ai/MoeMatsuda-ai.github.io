@@ -1,5 +1,5 @@
 ---
-title: "Pythonの基本"
+title: "Python Basics"
 date: 2022-11-22T08:04:32Z
 draft: false
 ---

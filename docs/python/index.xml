@@ -66,7 +66,7 @@ $ conda update -n base conda ※上は(base)と作成した仮想環境両方ア
 -n は --name の略で、環境名の指定 -c は --channel の略で、デフォルトリポジトリだけでなくチャネルを追加で指定 参考 Anaconda パッケージ アップデート方法 pipでアップデートするときのコマンド pip update </description>
     </item>
     <item>
-      <title>Pythonの基本</title>
+      <title>Python Basics</title>
       <link>https://moematsuda-ai.github.io/python/base/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:04:32 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/python/base/index.html</guid>

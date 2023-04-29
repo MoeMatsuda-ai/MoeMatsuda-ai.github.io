@@ -87,7 +87,7 @@ var relearn_search_index = [
     "content": "プロセッサー，グラフィック，OSは「設定」で確認可能\nOSのバージョン $ cat /etc/issue CPUコア数 $ cat /proc/cpuinfo processor: プロセッサのID model name: cpuの種類 cpu cores: コアの数 メモリ $ sudo dmidecode --type memory demidecodeコマンドではハードウェアの物理RAMサイズと情報を確認でき， コンピュータのDMIテーブル（SMBIOS）情報を表示してくれる．\nメモリ以外にも以下の項目を確認可能 0. bios\nsystem baseboard chassis processor memory (memory controller) memory (memory module) cache connector (port connector) slots (system slots) (on board devices) cpuやmemoryの使用率等の確認 $ top or\n$ htop or\n$ ps aus | less or\n$ free -h: 単位などを見やすく表示 -m: MB単位で表示（デフォルトはkB） -g: GB単位で表示 ディスク確認方法 SSD or HDD $ cat /sys/block/sda/queue/rotational 0: SSD 1: HDD 型番の確認 $ sudo lshw -c disc ディスク使用率 $ df -h その他 sudo fdisk -l sudo blkid df -Th sudo du -sm ./* | sort -rn | head -5 GPU確認方法 GPUの種類 $ lspci | grep -u nvidia nvidia driverのバージョン $ cat /proc/driver/nvidia/version GPUの使用状況 $ nvidia-smi -l ",
     "description": "",
     "tags": null,
-    "title": "スペック確認方法（Ubuntu）",
+    "title": "Spec confirmation (Ubuntu)",
     "uri": "/linux/spec_confirmation/index.html"
   },
   {
@@ -136,7 +136,7 @@ var relearn_search_index = [
     "content": "シェルスクリプト $mv arg.sh ~/bin/arg.sh ※このあとパス設定が必要だけど、すでにbinにパスが設定されてた… パスの確認方法は\n$printenv PATH シェルスクリプトの作成手順 ~/bin にbzdirファイルを作成\nファイルに書き込めたら次のコマンドを実行\n$chmod +x bzdir.sh ファイル内容は　~/bin/bzdir を参照 ~/.bashrcに下記の記述を書き込む\n\"alias bzdir='bzdir.sh' $source ~/.bashrcを実行\n",
     "description": "",
     "tags": null,
-    "title": "シェルスクリプト",
+    "title": "Shell script",
     "uri": "/linux/shell_script/index.html"
   },
   {
@@ -157,7 +157,7 @@ var relearn_search_index = [
     "content": "US配列でmozc（日本語）の使用 Ubuntu 22.04 入力ソースの変更 設定の地域と言語から，入力ソースを日本語（Mozc）のみにする Mozcのみに設定すると自動的に（たぶん）US配列に対応します キー割当の変更（半角全角キーをctrl+spaceに変更） 設定の『キーボード」の設定を選択 日本語（Mozc）の右側をクリックし，設定をクリック Mozc プロパティの「キー設定の選択」の「編集」を選択し，Hankak/zenkakuのところをすべてCtrl+Spaceに変更 モード/コマンドが以下3つのところの入力キーのところを3回クリック 変換前入力/半角空白を入力 変換中/半角空白を入力 直接入力/IMEを有効化 入力文字なし/IMEを無効化 ctrl+Spaceを押す 参考 Ubuntu18.04にて，USキーボードを用いて英数字と日本語（ひらがな）の切り替えを行う方法 ",
     "description": "",
     "tags": null,
-    "title": "Mozc_settings",
+    "title": "Mozc settings",
     "uri": "/keyboard/mozc_settings/index.html"
   },
   {
@@ -178,7 +178,7 @@ var relearn_search_index = [
     "content": "プリアンブル Packages \\documentclass[dvipdfmx]{jsarticle} \\usepackage[dvipdfmx]{graphicx} \\usepackage[dvipdfmx]{color} \\usepackage{amsmath} \\usepackage{mathtools} \\usepackage{ascmac} \\usepackage{comment} \\usepackage{algorithmic} \\usepackage{algorithm} \\usepackage{here} \\usepackage{listings,jvlisting} \\usepackage{bm} \\usepackage{multicol} \\usepackage[square,sort,comma,numbers]{natbib} \\usepackage[subrefformat=simple]{subcaption}%サブキャプションを付けたいときに必要 gnuplotでlatex形式の数式を表示するための設定 % \\usepackage{gnuplot-lua-tikz} % \\usepackage{tikz} algorithm (疑似コード) の表示の設定 \\renewcommand{\\algorithmicrequire}{\\textbf{Input:}} \\renewcommand{\\algorithmicensure}{\\textbf{Output:}} ### 参考文献の文献番号の表示形式を変更 \\makeatletter%再定義に＠が使用される場合に\\makeatletterと\\makeatotherで挟む \\def\\@cite#1{\\textsuperscript{#1)}}%引用文献の文献番号の表示方法を変更 \\def\\@biblabel#1{#1)}%参考文献の先頭も変更 \\makeatother 文献番号等の色やリンクの設定 \\usepackage[dvipdfmx]{hyperref} \\hypersetup{% hyperrefオプションリスト setpagesize=false, bookmarksnumbered=true,%ブックマークを作成 bookmarksopen=true,%ブックマークを開く colorlinks=true,%カラーリンクを使用 linkcolor=black, %内部参照リンクカラー citecolor=blue, %文献カラー % filecolor=, %ローカルファイル参照リンクカラー urlcolor=blue, } program（c言語）の記述形式についての設定 \\renewcommand{\\lstlistingname}{program} % %c言語の設定 気に入ってる方 \\lstset{ language=c, basicstyle={\\ttfamily\\small}, tabsize=2, frame=trBL, numbers=left, numberstyle={\\ttfamily\\small}, breaklines=true, captionpos=t %キャプションを一番下にするならcaptions=b } jsreportでchapterの改行を削除する設定 % chapterの改行を削除 \\makeatletter \\def\\@makechapterhead#1{% \\vspace*{2\\Cvs}% 欧文は50pt {\\parindent \\z@ \\raggedright \\normalfont \\ifnum \\c@secnumdepth \u003e\\m@ne \\huge\\headfont \\@chapapp\\thechapter\\@chappos %% \\par\\nobreak %% \\vskip \\Cvs % 欧文は20pt \\fi \\interlinepenalty\\@M%先頭の空白で、章とチャプター名の間に空白が挿入される \\huge \\headfont #1\\par\\nobreak \\vskip 3\\Cvs} } % 欧文は40pt \\makeatother In document bibtexの表示 \\bibliographystyle{junsrt} \\nocite{*} \\bibliography{reference} ",
     "description": "",
     "tags": null,
-    "title": "よく使う設定",
+    "title": "Commonly used commands",
     "uri": "/latex/myset/index.html"
   },
   {
@@ -423,7 +423,7 @@ var relearn_search_index = [
     "content": "Pythonのプログラムの作成と実行 方法1: C言語のように，テキスト形式でプログラムを書いて実行\n$ vi program.py # プログラム作成 $ python program.py # プログラム実行 注) Pythonはインタプリタ型言語なのでコンパイルは不要。\n方法2: jupyter notebookやIpython等を用いてインタラクティブに実行\nコメント #：1行コメント 複数行コメント：“““コメント”””　※ダブルクォートの代わりにシングルを使っても良い →ドックストリング モジュール・パッケージ・ライブラリ モジュール: クラスや関数を記述したファイル(.py) パッケージ: いくつかのモジュールを一つのディレクトリ(フォルダ)にまとめたもの ライブラリ: いくつかのパッケージをまとめたもの。モジュールやパッケージをライブラリと呼ぶこともある 標準ライブラリ math: 数学関数モジュール random: 乱数発生モジュール 外部ライブラリ：追加インストール必要 NumPy: 数値計算用の多次元配列ライブラリ。C言語で作られているので高速 SciPy: 科学計算ライブラリ pandas: データフレーム(エクセルのような表形式)のデータ解析ライブラリ scikit-learn: 機械学習ライブラリ モジュールやパッケージ，ライブラリに含まれるオブジェクト(クラスや関数等)を使うには，以下の例のようにimportを用いて読み込みを行う。\nPythonのデータ型について すべてのPythonオブジェクトはC言語の構造体で定義されており、C言語等の静的型付言語などと比べてオーバーヘッドが生じる\n【例】 integer(long)型\nstruct _longobject{ long ob_refcnt; PyTypeObject ob_type; size_t ob_size; long ob_digit[1]; }; ob_refcnt : Pythonが目盛りの割当と解除を自動的に行うための参照カウンタ ob_type : 変数の方を表すコード ob_size : この後に続くデータの大きさ ob_digit : このPython変数が持つ実際の整数値 PythonリストとNumpy配列 種類 概要 Pytonリスト ポインタ列へのポインタを格納した動的配列。各ポインタは完全なPythonオブジェクトを示すため、柔軟性に利点を持つ一方ですべての変数が同じ方であるケースでは情報が冗長になる。 Numpy配列 すべてのデータの型が同じ固定型の配列のため柔軟性に欠ける一方でデータの保存と操作がはるかに効率的 immutable と mutable 関数の引数(仮引数)の値を関数内で変更した場合，引数が**immutable(変更不可)**な型ならば呼び出した側の引数(実引数)は変化しない。**mutable(変更可能)**ならば，実引数も変化。\nimmutable: int, float, str, tuple 等 mutable: list, dict, set 等(これらについては後述) immutableな引数については， 返り値を使って更新するようにする。\n",
     "description": "",
     "tags": null,
-    "title": "Pythonの基本",
+    "title": "Python Basics",
     "uri": "/python/base/index.html"
   },
   {
