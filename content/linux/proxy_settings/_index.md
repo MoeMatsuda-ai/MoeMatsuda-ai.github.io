@@ -4,7 +4,7 @@ date: 2023-04-29T06:12:44Z
 draft: 
 ---
 
-### `/etc/environment`の設定
+### /etc/environment の設定
 ```
 export no_proxy=localhost,127.0.0.1,localhost,*<domain>
 export ftp_proxy=http://<proxy server>:<port>/
@@ -17,7 +17,7 @@ export HTTPS_PROXY=http://<proxy server>:<port>/
 export ALL_PROXY=socks://<proxy server>:<port>/
 ```
 
-### `/etc/apt/apt.conf` or `/etc/apt/apt.conf.d/proxy.conf`の設定
+### /etc/apt/apt.conf or /etc/apt/apt.conf.d/proxy.conf の設定
 ```
 Acquire::http::Proxy "http://proxy.cc.yamaguchi-u.ac.jp:8080/";
 ```
