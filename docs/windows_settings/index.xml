@@ -6,7 +6,14 @@
     <description>Recent content in Windows settings on &#39;Moais blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 13 Apr 2023 14:25:36 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/windows_settings/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Apr 2023 06:30:35 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/windows_settings/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proxy settings on WSL</title>
+      <link>https://moematsuda-ai.github.io/windows_settings/proxy_settings_wsl/index.html</link>
+      <pubDate>Sat, 29 Apr 2023 06:30:35 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/windows_settings/proxy_settings_wsl/index.html</guid>
+      <description>/etc/environment http_proxy=http://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt; https_proxy=https://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt; /etc/bash.bashrc export http_proxy=http://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt; export https_proxy=https://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt; /etc/apt/apt.conf Acquire::http::Proxy &amp;#34;http://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt;&amp;#34;; Acquire::https::Proxy &amp;#34;http://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt;&amp;#34;; /etc/wgetrc https_proxy = http://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt; ftp_proxy = http://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt; </description>
+    </item>
     <item>
       <title>Anaconda settings on WSL</title>
       <link>https://moematsuda-ai.github.io/windows_settings/conda_settings_onwsl/index.html</link>

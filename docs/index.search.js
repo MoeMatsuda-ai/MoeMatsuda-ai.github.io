@@ -84,10 +84,17 @@ var relearn_search_index = [
     "uri": "/index.html"
   },
   {
-    "content": "/etc/environmentの設定 ",
+    "content": "/etc/environment http_proxy=http://\u003cproxy\u003e:\u003cport\u003e https_proxy=https://\u003cproxy\u003e:\u003cport\u003e /etc/bash.bashrc export http_proxy=http://\u003cproxy\u003e:\u003cport\u003e export https_proxy=https://\u003cproxy\u003e:\u003cport\u003e /etc/apt/apt.conf Acquire::http::Proxy \"http://\u003cproxy\u003e:\u003cport\u003e\"; Acquire::https::Proxy \"http://\u003cproxy\u003e:\u003cport\u003e\"; /etc/wgetrc https_proxy = http://\u003cproxy\u003e:\u003cport\u003e ftp_proxy = http://\u003cproxy\u003e:\u003cport\u003e ",
     "description": "",
     "tags": null,
-    "title": "Proxy settings",
+    "title": "Proxy settings on WSL",
+    "uri": "/windows_settings/proxy_settings_wsl/index.html"
+  },
+  {
+    "content": "/etc/environmentの設定 export no_proxy=localhost,127.0.0.1,localhost,*\u003cdomain\u003e export ftp_proxy=http://\u003cproxy server\u003e:\u003cport\u003e/ export http_proxy=http://\u003cproxy server\u003e:\u003cport\u003e/ export https_proxy=http://\u003cproxy server\u003e:\u003cport\u003e/ export all_proxy=socks://\u003cproxy server\u003e:\u003cport\u003e/ export FTP_PROXY=http://\u003cproxy server\u003e:\u003cport\u003e/ export HTTP_PROXY=http://\u003cproxy server\u003e:\u003cport\u003e/ export HTTPS_PROXY=http://\u003cproxy server\u003e:\u003cport\u003e/ export ALL_PROXY=socks://\u003cproxy server\u003e:\u003cport\u003e/ /etc/apt/apt.conf or /etc/apt/apt.conf.d/proxy.confの設定 Acquire::http::Proxy \"http://proxy.cc.yamaguchi-u.ac.jp:8080/\"; ",
+    "description": "",
+    "tags": null,
+    "title": "Proxy settings  ",
     "uri": "/linux/proxy_settings/index.html"
   },
   {
