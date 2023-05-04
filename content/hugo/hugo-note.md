@@ -2,6 +2,8 @@
 title: "hugo note"
 date: 2022-11-22T06:18:27Z
 draft: false
+categories: ["c"]
+tags: ["c", "gnuplot"]
 ---
 
 ## hugoでプロジェクトを作成
@@ -78,7 +80,7 @@ $ hugo new posts/test.md
 ## localで表示
 また、次のコマンドを実行すると`localhost:1313`でプレビューが見れるようになる。
 
-```
+```bash
 $ hugo server -D
 ```
 
