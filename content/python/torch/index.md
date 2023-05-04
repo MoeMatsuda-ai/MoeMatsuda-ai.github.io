@@ -1,4 +1,5 @@
 ---
+tags: ["python", "pytorch"]
 title: "Torch"
 date: 2022-11-22T08:12:48Z
 draft: false 

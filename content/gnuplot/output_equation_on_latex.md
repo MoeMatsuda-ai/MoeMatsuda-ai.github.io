@@ -1,4 +1,5 @@
 ---
+tags: ["gnuplot", "latex"]
 title: "How to insert formulas like latex"
 date: 2022-11-24T01:07:41Z
 draft: false 

@@ -1,4 +1,5 @@
 ---
+tags: ["gnuplot"]
 title: "basic operation"
 date: 2022-11-24T01:07:00Z
 draft: false

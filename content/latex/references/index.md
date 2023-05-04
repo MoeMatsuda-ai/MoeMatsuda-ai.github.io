@@ -1,4 +1,5 @@
 ---
+tags: ["latex"]
 title: "References"
 date: 2022-11-22T09:31:51Z
 draft: false 

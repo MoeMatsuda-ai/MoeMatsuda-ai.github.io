@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/linux/index.html</link>
+    <description>Recent content in linux on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 29 Apr 2023 06:12:44 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux</title>
+      <link>https://moematsuda-ai.github.io/linux/index.html</link>
+      <pubDate>Sat, 29 Apr 2023 06:12:44 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/linux/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proxy settings  </title>
+      <link>https://moematsuda-ai.github.io/linux/proxy_settings/index.html</link>
+      <pubDate>Sat, 29 Apr 2023 06:12:44 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/linux/proxy_settings/index.html</guid>
+      <description>/etc/environment export no_proxy=localhost,127.0.0.1,localhost,*&amp;lt;domain&amp;gt; export ftp_proxy=http://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ export http_proxy=http://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ export https_proxy=http://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ export all_proxy=socks://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ export FTP_PROXY=http://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ export HTTP_PROXY=http://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ export HTTPS_PROXY=http://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ export ALL_PROXY=socks://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ /etc/apt/apt.conf or /etc/apt/apt.conf.d/proxy.conf Acquire::http::Proxy &amp;#34;http://proxy.cc.yamaguchi-u.ac.jp:8080/&amp;#34;; </description>
+    </item>
+    <item>
+      <title>Spec confirmation (Ubuntu)</title>
+      <link>https://moematsuda-ai.github.io/linux/spec_confirmation/index.html</link>
+      <pubDate>Sat, 29 Apr 2023 05:05:56 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/linux/spec_confirmation/index.html</guid>
+      <description>プロセッサー，グラフィック，OSは「設定」で確認可能
+OSのバージョン $ cat /etc/issue CPUコア数 $ cat /proc/cpuinfo processor: プロセッサのID model name: cpuの種類 cpu cores: コアの数 メモリ $ sudo dmidecode --type memory demidecodeコマンドではハードウェアの物理RAMサイズと情報を確認でき， コンピュータのDMIテーブル（SMBIOS）情報を表示してくれる．
+メモリ以外にも以下の項目を確認可能 0. bios
+system baseboard chassis processor memory (memory controller) memory (memory module) cache connector (port connector) slots (system slots) (on board devices) cpuやmemoryの使用率等の確認 $ top or
+$ htop or
+$ ps aus | less or
+$ free -h: 単位などを見やすく表示 -m: MB単位で表示（デフォルトはkB） -g: GB単位で表示 ディスク確認方法 SSD or HDD $ cat /sys/block/sda/queue/rotational 0: SSD 1: HDD 型番の確認 $ sudo lshw -c disc ディスク使用率 $ df -h その他 sudo fdisk -l sudo blkid df -Th sudo du -sm .</description>
+    </item>
+    <item>
+      <title>Shortcut</title>
+      <link>https://moematsuda-ai.github.io/linux/shortcut/index.html</link>
+      <pubDate>Wed, 29 Mar 2023 06:50:00 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/linux/shortcut/index.html</guid>
+      <description>エディタのショートカットキー 移動系 ショートカットキー 概要 Ctrl+Home ファイルの先頭に移動 Ctrl＋End ファイルの末尾に移動 Home 行頭に移動 End 行末に移動 Ctrl＋← 単語の先頭に移動 Ctrl+→ 単語の末尾に移動 分割 ショートカットキー 概要 ショートカットキー 概要 Ctrl＋\ ※\は右上の｜のキーボード 編集画面を分割表示 Ctrl＋１or２or 3 &amp;hellip; 分割した画面間を移動 ファイルやディレクトリの開き方 ショートカットキー 概要 Ctrl＋N 新規ファイル Ctrl＋Shift＋N 新規ウィンドウ Ctrl＋o ファイルを開く 文字列検索 ショートカットキー 概要 Ctrl＋F エディタ内検索 Ctrl＋H エディタ内置換 F3 次の検索結果にジャンプ Shift＋F3 前の検索結果にジャンプ </description>
+    </item>
+    <item>
+      <title>Shell script</title>
+      <link>https://moematsuda-ai.github.io/linux/shell_script/index.html</link>
+      <pubDate>Wed, 29 Mar 2023 06:36:40 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/linux/shell_script/index.html</guid>
+      <description>シェルスクリプト $mv arg.sh ~/bin/arg.sh ※このあとパス設定が必要だけど、すでにbinにパスが設定されてた… パスの確認方法は
+$printenv PATH シェルスクリプトの作成手順 ~/bin にbzdirファイルを作成
+ファイルに書き込めたら次のコマンドを実行
+$chmod +x bzdir.sh ファイル内容は　~/bin/bzdir を参照 ~/.bashrcに下記の記述を書き込む
+&amp;#34;alias bzdir=&amp;#39;bzdir.sh&amp;#39; $source ~/.bashrcを実行</description>
+    </item>
+    <item>
+      <title>Command</title>
+      <link>https://moematsuda-ai.github.io/linux/command/index.html</link>
+      <pubDate>Wed, 29 Mar 2023 06:20:56 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/linux/command/index.html</guid>
+      <description>コンソールの起動 Ctel+F[2~3] 以下のコマンドを実行することでコンソール画面からXwindowを起動することもできる $ startx ログインするアカウント名を入力 passwordを入力 X windowへの復帰 Ctrl-Alt-F7 コマンド停止方法 Ctrl + C コマンド kill ps r を入力 PID（プロセスID）を確認 kill [PID] を入力 コマンド kill② ps auxw | grep yes （axでもOK）で実行しているコマンドyesのPID（2列目）を検索 kill [PID] を入力 コマンド kill③ topでPIDを確認 topコマンド実行中にkをタイプ killしたいPIDを入力＆Enter Send PID &amp;lt;PID&amp;gt; signalでEnter killall yesと入力　→※同じコマンド名のものはすべてkillされる topコマンド topコマンドでよく使う or 便利そうな機能
+コンソール上で入出力を受け付けない際の対処法 Ctrl-sで入出力を受け付けなくなる Ctrl-q で復帰 aptコマンド(Ubuntu Linux等) コマンド 概要 インストールされているパッケージの一覧を表示する $apt list &amp;ndash;installed インストールされているパッケージを最新状態にする $apt-get update パッケージをインストールする $apt-get install package [package &amp;hellip;] ユーザーの追加方法 $ useradd &amp;lt;option&amp;gt; &amp;lt;user name&amp;gt; オプション m: ホームディレクトリを追加 パーミッション 権限の変更 $ chmod u+w ユーザー所有権の変更 $ chown &amp;lt;user name&amp;gt;:&amp;lt;group name&amp;gt; &amp;lt;file name&amp;gt; &amp;lt;user name&amp;gt;:&amp;lt;group name&amp;gt;はユーザー所有権とグループ所有権 グループ所有権は省略可 パスワードの変更 $ passwd &amp;lt;user name&amp;gt; バックグラウンド処理 $ &amp;lt;command&amp;gt; &amp;amp; &amp;amp;をつけ忘れた場合 コマンド実行中にCtrl-zでコマンドを中断 bgとタイプ　→　バックグラウンド処理に移行 fgとタイプ　→　コンソール上で処理を再開 エイリアス エイリアスの作成 alias em=`emacs` ※ここではemという名前でemacsのエイリアスを作成</description>
+    </item>
+    <item>
+      <title>Mozc settings</title>
+      <link>https://moematsuda-ai.github.io/keyboard/mozc_settings/index.html</link>
+      <pubDate>Tue, 29 Nov 2022 08:12:45 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/keyboard/mozc_settings/index.html</guid>
+      <description>US配列でmozc（日本語）の使用 Ubuntu 22.04 入力ソースの変更 設定の地域と言語から，入力ソースを日本語（Mozc）のみにする Mozcのみに設定すると自動的に（たぶん）US配列に対応します キー割当の変更（半角全角キーをctrl+spaceに変更） 設定の『キーボード」の設定を選択 日本語（Mozc）の右側をクリックし，設定をクリック Mozc プロパティの「キー設定の選択」の「編集」を選択し，Hankak/zenkakuのところをすべてCtrl+Spaceに変更 モード/コマンドが以下3つのところの入力キーのところを3回クリック 変換前入力/半角空白を入力 変換中/半角空白を入力 直接入力/IMEを有効化 入力文字なし/IMEを無効化 ctrl+Spaceを押す 参考 Ubuntu18.04にて，USキーボードを用いて英数字と日本語（ひらがな）の切り替えを行う方法 </description>
+    </item>
+  </channel>
+</rss>

@@ -1,4 +1,5 @@
 ---
+tags: ["python"]
 title: "Function"
 date: 2022-11-22T08:09:22Z
 draft: true

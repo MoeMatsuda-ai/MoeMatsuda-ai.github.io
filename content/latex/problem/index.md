@@ -1,4 +1,5 @@
 ---
+tags: ["latex"]
 title: "Problem"
 date: 2022-11-22T09:32:05Z
 draft: false

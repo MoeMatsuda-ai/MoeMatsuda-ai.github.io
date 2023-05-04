@@ -1,4 +1,5 @@
 ---
+tags: ["python"]
 title: "Docstring"
 date: 2023-03-29T06:10:48Z
 draft: false

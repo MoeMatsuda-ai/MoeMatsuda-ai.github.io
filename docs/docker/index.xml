@@ -16,7 +16,7 @@
 $ sudo systemctl disable docker.service $ sudo systemctl disable containerd.service インストール後の設定はこちら</description>
     </item>
     <item>
-      <title>Copy and Mount from Docker container or to Docker container</title>
+      <title>Copy and Mount Methods</title>
       <link>https://moematsuda-ai.github.io/docker/copy-mount/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:44:19 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/docker/copy-mount/index.html</guid>
@@ -57,7 +57,7 @@ $ echo \ &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyr
 $ export PYTHONPATH=&amp;#34;/root/.local/lib/python3.8/site-pachages/:$PYTHONPATH&amp;#34; moysnn ライブラリのシンボリックリンクを&amp;quot;/root/.local/lib/python3.8/site-pachages/&amp;ldquo;以下に作成 3. コマンドのインストール tree trash </description>
     </item>
     <item>
-      <title>Connect to Docker Container via ssh</title>
+      <title>Connect to Container via ssh</title>
       <link>https://moematsuda-ai.github.io/docker/container-ssh/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:43:00 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/docker/container-ssh/index.html</guid>

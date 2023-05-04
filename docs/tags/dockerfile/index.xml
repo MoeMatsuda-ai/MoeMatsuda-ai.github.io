@@ -8,7 +8,7 @@
     <language>ja-jp</language>
     <lastBuildDate>Tue, 22 Nov 2022 08:43:00 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/dockerfile/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Connect to Docker Container via ssh</title>
+      <title>Connect to Container via ssh</title>
       <link>https://moematsuda-ai.github.io/docker/container-ssh/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:43:00 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/docker/container-ssh/index.html</guid>

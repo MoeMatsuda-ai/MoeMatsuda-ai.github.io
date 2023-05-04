@@ -1,4 +1,5 @@
 ---
+tags: ["windows", "wsl"]
 title: "Installing WSL"
 date: 2023-04-09T08:37:46Z
 draft: false

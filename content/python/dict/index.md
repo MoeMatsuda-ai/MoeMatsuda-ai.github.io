@@ -1,4 +1,5 @@
 ---
+tags: ["python"]
 title: "Dict"
 date: 2022-11-22T08:08:52Z
 draft: true

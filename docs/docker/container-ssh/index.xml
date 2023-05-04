@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Connect to Docker Container via ssh on &#39;Moais blog</title>
+    <title>Connect to Container via ssh on &#39;Moais blog</title>
     <link>https://moematsuda-ai.github.io/docker/container-ssh/index.html</link>
-    <description>Recent content in Connect to Docker Container via ssh on &#39;Moais blog</description>
+    <description>Recent content in Connect to Container via ssh on &#39;Moais blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Tue, 22 Nov 2022 08:43:00 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/docker/container-ssh/index.xml" rel="self" type="application/rss+xml" />

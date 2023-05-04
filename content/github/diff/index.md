@@ -1,4 +1,5 @@
 ---
+tags: ["github"]
 title: "Confirmation of difference"
 date: 2022-11-22T09:10:10Z
 draft: false

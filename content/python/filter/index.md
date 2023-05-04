@@ -1,4 +1,5 @@
 ---
+tags: ["python", "filter"]
 title: "Filter with python"
 date: 2022-11-22T08:09:03Z
 draft: false 

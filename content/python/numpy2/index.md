@@ -1,4 +1,5 @@
 ---
+tags: ["python", "numpy"]
 title: "Numpy2"
 date: 2022-11-22T08:10:50Z
 draft: true

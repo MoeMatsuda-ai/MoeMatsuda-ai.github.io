@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jupyter on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/jupyter/index.html</link>
+    <description>Recent content in jupyter on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 22 Nov 2022 08:09:35 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jupyter notebook</title>
+      <link>https://moematsuda-ai.github.io/python/jupyter/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:09:35 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/jupyter/index.html</guid>
+      <description> セル 編集モードへの変更：ダブルクリックまたは&amp;quot;Enter&amp;quot; コマンドモードへの変更：ESC セルの内容の実行 Windows：Ctrl+Enter MacOS：command+Return OS共通：Shift+Enter Markdownセルとcodeセル Markdownセル：テキストを入力するためのセル Codeセル：Pythonの実行を行うセル arkdownセルの編集方法 &amp;ldquo;#&amp;ldquo;でタイトル &amp;ldquo;##&amp;ldquo;でサブタイトル &amp;ldquo;-&amp;ldquo;で箇条書き &amp;ldquo;太文字&amp;ldquo;で太文字 便利なショートカットキー（Window） コマンドモード ショートカットキー 説明 F 検索・置換 Ctrl -Shift Ctrl -Shift Enter 編集モードにする P コマンドパレットを開く Shift -Enter Ctrl -Enter Alt -Enter Y コードセルにする M マークダウンセルにする R rawセルにする 1 見出し１にする 2 見出し２にする 3 見出し３にする 4 見出し４にする 5 見出し５にする 6 見出し６にする K 上のセルを選択する Up 上のセルを選択する Down 下のセルを選択する J 下のセルを選択する Shift -K Shift -Up Shift -Down Shift -J A 上にセルを追加する B 下にセルを追加する X 選択しているセルをカット C 選択しているセルをコピー Shift -V V 下に貼り付け Z セルの削除をやり直す DD 選択しているセルを削除する Shift -M Ctrl -S S 保存する L 行番号の表示・非表示 O セルの出力結果の表示・非表示 Shift -O H キーボードショートカット表示 I×2 カーネルをインタラプト 0 カーネルを再起動 Esc ページャーを閉じる Q ページャーを閉じる Shift -L Shift -Space Space 下にスクロール 編集モード ショートカットキー 説明 Tab コード補完・タブ Shift-Tab ツールチップ Ctrl-] インデント Ctrl-[ ディデント Ctrl-A 全選択 Ctrl-Z やり直し Ctrl-Shift - Ctrl-Y やり直し Ctrl-Home セルの最初に移動 Ctrl-Up セルの最初に移動 Ctrl-End セルの最後に移動 Ctrl-Down セルの最後に移動 Ctrl-Left 一単語前に移動 Ctrl-Right 一単語後に移動 Ctrl-Backspace 前の単語を削除 Ctrl-Delete 後の単語を削除 Ctrl-M コマンドモードにする Ctrl-Shift-F コマンドパレットを開く Ctrl-Shift-P コマンドパレットを開く Esc コマンドモードにする Shift-Enter セルを実行し、下のセルを選択する Ctrl-Enter セルを実行する Alt-Enter セルを実行し、下にセルを追加する Ctrl-Shift-Minus セルを分割する Ctrl-S 保存する Down カーソルを下に移動 Up カーソルを上に移動 Ctrl-/ 選択部分をコメントアウト Kernel セルの左の &amp;ldquo;In[]&amp;rdquo; の括弧内の数字は実行を行った順番を示す。 順番によっては正常に作動しない場合もあるため最後は左上の欄から&amp;quot;Kernel &amp;gt; Restart &amp;amp; Run All&amp;quot;をクリック </description>
+    </item>
+  </channel>
+</rss>

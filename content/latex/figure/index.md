@@ -1,4 +1,5 @@
 ---
+tags: ["latex"]
 title: "Figure"
 date: 2022-11-22T09:31:14Z
 draft: false

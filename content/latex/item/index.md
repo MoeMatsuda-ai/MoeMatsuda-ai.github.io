@@ -1,4 +1,5 @@
 ---
+tags: ["latex"]
 title: "Bulletins in latex"
 date: 2022-11-22T09:31:40Z
 draft: false

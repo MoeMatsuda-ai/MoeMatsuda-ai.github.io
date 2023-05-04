@@ -1,4 +1,5 @@
 ---
+tags: ["github"]
 title: "About resetting commit and rm the file"
 date: 2022-11-22T09:12:34Z
 draft: false

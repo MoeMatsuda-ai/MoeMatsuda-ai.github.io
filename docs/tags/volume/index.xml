@@ -8,7 +8,7 @@
     <language>ja-jp</language>
     <lastBuildDate>Tue, 22 Nov 2022 08:44:19 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/volume/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Copy and Mount from Docker container or to Docker container</title>
+      <title>Copy and Mount Methods</title>
       <link>https://moematsuda-ai.github.io/docker/copy-mount/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:44:19 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/docker/copy-mount/index.html</guid>

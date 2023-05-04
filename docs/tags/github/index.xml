@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/github/index.html</link>
+    <description>Recent content in github on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 22 Nov 2022 09:19:35 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github</title>
+      <link>https://moematsuda-ai.github.io/github/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 09:19:35 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/github/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Repository Operations</title>
+      <link>https://moematsuda-ai.github.io/github/repository-edit/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 09:19:35 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/github/repository-edit/index.html</guid>
+      <description>リポジトリのダウンロード GitHubにあるリモートリポジトリをhttps接続でダウンロードする場合は以下のコマンドで。(ただし，GitHub上のリポジトリ設定で若干異なる場合もある)
+$ git clone https://github.com/someone/somerepo.git 上記URLのsomeone, someprepoの部分はダウンロードしたいリポジトリによって変わる。
+ssh接続 git clone git@github.com:&amp;lt;repo&amp;gt;.git cloneするときのURL以下はブラウザ上のgithubでcloneしたいリポジトリに移動し、codeをクリックすることで確認できる。
+publicの場合 $ git clone https://github.com/&amp;lt;repo&amp;gt; privateの場合 $ git clone https://&amp;lt;username&amp;gt;@github.com/someone/somerepo.git Wikiページをcloneする場合は.gitの前に.wikiをつける。
+参照 リポジトリをクローンする 最新情報のダウンロード / 更新ファイルのアップロード ダウンロードしたファイルをいじるときには，まず，Gitサーバから最新バージョンをダウンロードしてから開始。
+$ git pull origin main これはサーバ(origin)から，masterブランチ(ブランチは後述)をダウンロードしてローカルリポジトリを更新し(fetch)，作業ディレクトリに反映(merge)するという意味。
+ファイルを更新したら，gitサーバ(origin)にアップロードする。
+$ git add &amp;lt;更新したファイル名&amp;gt; $ git commit -m “修正点を少し書く” &amp;lt;=ローカルリポジトリ(手元)に登録 $ git push origin main &amp;lt;=リモートリポジトリに反映 とりあえず，これで最低限のファイル共有/共同編集はできる。
+git addは，更新したファイルのうち，リモートリポジトリに反映したいファイルを指定(stagingとよぶ。これにより対象ファイルはstaging areaに移動)する。指定方法は以下のようにいろいろある。
+$ git add . 新規作成ファイルと更新ファイルを全部指定 $ git add -u 前回から更新したファイルのみ指定(新規作成ファイルは含まない) $ git add -A .</description>
+    </item>
+    <item>
+      <title>About resetting commit and rm the file</title>
+      <link>https://moematsuda-ai.github.io/github/commit/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 09:12:34 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/github/commit/index.html</guid>
+      <description>コミットの取り消し 直前のコミットの取り消し $ git reset &amp;lt;打ち消したいコミットID&amp;gt; 直前のコミットを打ち消す場合には以下のコマンドを使用
+$ git reset --soft HEAD^ --softオプション：ワークディレクトリの内容はそのままでコミットだけを取り消したい場合に使用 --hardオプション：コミット取り消した上でワークディレクトリの内容も書き換えたい場合に使用 HEAD^: 直前のコミットを意味 HEAD~{n}n個前のコミットを意味 コミットの打ち消し $ git revert &amp;lt;コミットのハッシュ値&amp;gt; 作業ツリーを指定したコミット時点の状態にまで戻し、コミットを行う。
+コミットの上書き 直前のコミットに上書きする場合は以下のコマンドを使用
+$ git commit --amend リモートリポジトリからのみ特定のファイルを削除 git rm --cached &amp;lt;target file&amp;gt; ディレクトリを削除する場合は
+$ git rm --cached -r &amp;lt;target directory&amp;gt; reference [Git]コミットの取り消し、打ち消し、上書き 【Git入門】git commitを取り消したい、元に戻す方法まとめ Gitのリモートリポジトリから特定のファイルを削除する方法 </description>
+    </item>
+    <item>
+      <title>Public key authentication settings in github</title>
+      <link>https://moematsuda-ai.github.io/github/ssh/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 09:10:47 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/github/ssh/index.html</guid>
+      <description>公開鍵を GitHub に登録することで、push 時などにパスワードを入力する手間が省略可能 公開鍵および秘密鍵の作成と登録 公開鍵および秘密鍵を作成
+ssh-keygen -t ed25519 公開鍵 を GitHub に登録
+cat ~/.ssh/id_ed25519.pub # コマンドを実行して表示されたすべての文字列を GitHub に登録 # # ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX user@host # ↑こんな感じの文字列をすべてコピペ GitHub の公開鍵登録の手順は、
+Settings SSH and GPG keys [New SSH key] タイトルをつけ公開鍵をコピペし [Add SSH key] SSH の設定 GitHub で使用する秘密鍵を設定するため、~/.ssh/config に設定を記述
+最終行 (ProxyCommand の部分) は学内のコンピューターの場合にのみ設定
+接続の確認 $ ssh -T git@github.com ターミナルで実行して以下のように表示されればOK!
+Hi (User名)! You&amp;#39;ve successfully authenticated, but GitHub does not provide shell access. ※途中で以下のプロンプトメッセージが表示されたらyesと入力 The authenticity of host &#39;[ssh.</description>
+    </item>
+    <item>
+      <title>Confirmation of difference</title>
+      <link>https://moematsuda-ai.github.io/github/diff/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 09:10:10 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/github/diff/index.html</guid>
+      <description>ファイルの変更差分の確認 $ git diff [変更前のコミット識別子]..[変更後のコミット識別子] ブランチ同士の差分の確認 $ git diff master..develop masterブランチにプルリクエストを送る前にdevelopブランチに追加した内容を確認できる
+git pull する前に、リモート追跡ブランチとの差分を確認する リモートリポジトリからの変更内容の取得 $ git fetch origin ローカルリポジトリのmasterブランチの最新コミット(HEAD)とリモート追跡ブランチ(origin/master)を比較 $ git diff HEAD..origin/master git push する前に、リモート追跡ブランチとの差分を確認する $ git diff origin/master..HEAD 参考 第9話 git diff で差分を確認！【連載】マンガでわかるGit ～コマンド編～ </description>
+    </item>
+    <item>
+      <title>Branch</title>
+      <link>https://moematsuda-ai.github.io/github/branch/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 09:09:52 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/github/branch/index.html</guid>
+      <description>ブランチとは？ ブランチとは平行世界のようなものである。 ブランチを活用することでmasterブランチをそのまま据え置いた状態で、別のブランチで新機能を試しながら作ることができる。
+ブランチの正体は？ github公式ドキュメントによると、
+ブランチとは（中略）コミットを指す軽量なポインタに過ぎません と説明されている。
+リポジトリの正体は.gitという隠しフォルダのことであり、この中にあるrefs/heads/masterファイルこそがブランチの正体である。 このファイルの中身をcatしてみると
+dd95ddf066d452949bb54304bbf43ab3dadfee25 のように英数字の羅列が保存してある。これはコミットIDまたはコミットハッシュ値と呼ばれている。またコミットによって生成されたデータのことをコミットオブジェクトといい、一つのコミットオブジェクトに対して４０文字のIDを割り当てるのがコミットIDである。
+つまりブランチとはただ単に特定のコミットIDを指しているだけである。
+またコミットオブジェクトにはそれぞれ
+tree parent author committer の情報が保存されており、parentが一つ前のコミットIDを示している。
+例 作成したsample.txtに何かしらの変更を加え、
+$ git add sample.text $ git commit -m &amp;#34;2回目のコミット&amp;#34; $ git log とすると、次のような結果が得られる。
+このとき以下のように実行すると、コミットオブジェクトを確認することができる
+$ git cat-file -p 0e9556 tree e290b48b356d721ae54d1edb03993802cc98bad8
+parent 02f11b759bfeb461e117c5da18bb2dcbe06d862a
+author llminatolllXXX@mail.coml1562052826 +0900
+commit errllminatolllXXX@mail.coml1562052826 +0900
+このparentの部分が前のコミットのコミットIDを表しており、一番はじめのコミットではpaerntは保存されていない
+ひとことメモ　** コミットIDは何を元に作られているの？** コミットID（コミットハッシュ値）は、実はこのコミットオブジェクトのバイト数と中身を使い、計算されて作られています。よって、コミットした人の名前やコミットした時間、指し示すparent、treeが違えばコミットハッシュ値も違うものになります。
+その証拠に、同じ内容をコミットしていても、あなたの練習用リポジトリとわかばちゃんのコミットIDは違うはずです。コミットハッシュ値についてもっと深く知りたい方は、こちらの記事が詳しいのでおすすめです。
+Gitのコミットハッシュ値は何を元にどうやって生成されているのか ブランチの操作 今存在するブランチの確認
+$ git branch ※アスタリスクのついているブランチが現在のブランチ
+ブランチの作成
+$ git branch &amp;lt;branch name&amp;gt; ローカルブランチの作成をリモートにプッシュ
+$ git push origin &amp;lt;branch name&amp;gt; ブランチの移動</description>
+    </item>
+    <item>
+      <title>Repository Access Restrictions</title>
+      <link>https://moematsuda-ai.github.io/github/repository-access/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 09:09:35 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/github/repository-access/index.html</guid>
+      <description>group内で作成したrepositoryのアクセス権限を設定する方法
+操作したいrepositoryのsettingsをクリック 左のAccessのCollaborators and teamsをクリックし、パスワードを入力 Add peopleまたはAdd teamsをクリックし、アクセスを許可するpeopleまたはgroupを追加する </description>
+    </item>
+    <item>
+      <title>How to Create Repository</title>
+      <link>https://moematsuda-ai.github.io/github/create-repository/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 09:09:19 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/github/create-repository/index.html</guid>
+      <description>ローカルリポジトリの作成 リモートリポジトリに登録したいディレクトリにして次のコマンドでバージョン管理のための初期化を行う。
+$ git init これで，ローカルリポジトリ(.git/)が作られ，git initを実行したディレクトリが作業ディレクトリになる。
+以下のようにgit initでローカルリポジトリ用のディレクトリを新規作成することもできる。
+$ git init &amp;lt;target directory&amp;gt; $ cd &amp;lt;target directory&amp;gt; .gitignoreの作成 gitコマンドでは無視したいファイルが有る時(LaTeXの一時ファイル等)は，.gitignoreという名前のファイルを作っておく。 以下は例。latex関連の一時ファイルを無視するように設定している。
+$ cat .gitignore *.aux *.idx *.log *.toc *.ist *.bbl *.blg *.dvi *.ilg *.ind *.lot *.out *.synctex.gz *~ ローカルリポジトリに登録するファイルやディレクトリの指定 下記のいずれかのコマンドで登録するファイルやディレクトリを指定
+$ git add . # 現在のディレクトリにある全てのファイル/ディレクトリを登録 $ git add figures/ # ディレクトリ figures/ 以下のファイルを登録 $ git add *.tex # すべての .tex ファイルを登録 $ git add &amp;lt;ファイル名&amp;gt; #特定のファイルのみを登録 ローカルリポジトリにファイル登録 git addで指定したファイルやディレクトリを，ローカルリポジトリに登録する。</description>
+    </item>
+    <item>
+      <title>Settings</title>
+      <link>https://moematsuda-ai.github.io/github/settings/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 09:08:59 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/github/settings/index.html</guid>
+      <description>アカウントの作成 GitHubのホームページでアカウントを作成する
+pro版（GitHub Education)への変更方法 GitHub Educationにアクセス 右上のBenefitsをクリック IndividualsのGet student benefitsを選択 申し込むための資格が書いてあります。 学生であること。 学校からもらったメアドがあること。 GitHubアカウントを持っていること。 13歳以上であること。 Screenshot from 2020-09-23 15-02-45.png Add an email addressから学校のアドレスを追加 How do you plan to use GitHub?にgithubの利用目的を記入 Submit your informationを押して完了 ※利用目的は形式的なものなので（多分）適当に書いてOK! 参考ページ Qiita , @Kobayashi2019「GitHub Educationのメリットと申請方法」
+gitコマンドのインストール git コマンドをローカルマシンにインストールする。 Mac OSの場合は，Xcode コマンドラインツールをインストールしていたら，gitコマンドもインストールされている。
+apt-get対応のLinuxディストリビューションなら以下でたいていOK。
+$apt-get install git 自分のアカウント情報のローカルマシンへの登録 $git config --global user.name &amp;lt;ユーザーネーム&amp;gt; $git config --global user.email &amp;lt;登録したメールアドレス&amp;gt; $git config --global core.editer vi #コメント編集につかいたいエディタを設定（デフォルトはvi） --globalは，ローカルリポジトリ作成時のデフォルト設定にするためのオプション。 特定のリポジトリでのみ別の設定にしたいときには，ダウンロードしたポジトリ内に移動してから--localを指定して実行する。
+必要に応じてproxy設定 外部とのネットワーク接続にproxy設定が必要な環境の場合は，Proxy設定のページを見て設定をする。ターミナルとgitのproxy設定をする。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,4 +1,5 @@
 ---
+tags: ["python", "matplotlib"]
 title: "Matplotlib"
 date: 2022-11-22T08:10:00Z
 draft: true

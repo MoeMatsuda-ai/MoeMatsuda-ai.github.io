@@ -1,4 +1,5 @@
 ---
+tags: ["gnuplot"]
 title: "Command file"
 date: 2022-11-24T01:07:10Z
 draft: false

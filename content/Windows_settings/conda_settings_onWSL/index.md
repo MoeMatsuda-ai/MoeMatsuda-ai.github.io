@@ -1,4 +1,5 @@
 ---
+tags: ["python", "conda", "windows", "wsl", "x11"]
 title: "Anaconda settings on WSL"
 date: 2023-04-13T14:25:36Z
 draft: false

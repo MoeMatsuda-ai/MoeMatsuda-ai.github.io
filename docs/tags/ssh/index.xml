@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssh on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/ssh/index.html</link>
+    <description>Recent content in ssh on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 22 Nov 2022 09:10:47 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Public key authentication settings in github</title>
+      <link>https://moematsuda-ai.github.io/github/ssh/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 09:10:47 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/github/ssh/index.html</guid>
+      <description>公開鍵を GitHub に登録することで、push 時などにパスワードを入力する手間が省略可能 公開鍵および秘密鍵の作成と登録 公開鍵および秘密鍵を作成
+ssh-keygen -t ed25519 公開鍵 を GitHub に登録
+cat ~/.ssh/id_ed25519.pub # コマンドを実行して表示されたすべての文字列を GitHub に登録 # # ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX user@host # ↑こんな感じの文字列をすべてコピペ GitHub の公開鍵登録の手順は、
+Settings SSH and GPG keys [New SSH key] タイトルをつけ公開鍵をコピペし [Add SSH key] SSH の設定 GitHub で使用する秘密鍵を設定するため、~/.ssh/config に設定を記述
+最終行 (ProxyCommand の部分) は学内のコンピューターの場合にのみ設定
+接続の確認 $ ssh -T git@github.com ターミナルで実行して以下のように表示されればOK!
+Hi (User名)! You&amp;#39;ve successfully authenticated, but GitHub does not provide shell access. ※途中で以下のプロンプトメッセージが表示されたらyesと入力 The authenticity of host &#39;[ssh.</description>
+    </item>
+  </channel>
+</rss>

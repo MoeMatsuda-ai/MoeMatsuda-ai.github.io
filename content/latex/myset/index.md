@@ -1,8 +1,11 @@
 ---
+tags: ["latex"]
 title: "Commonly used commands"
 date: 2022-11-25T12:17:42Z
 draft: false
 ---
+
+よく使うものをとりあえずメモ
 
 ## プリアンブル
 ### Packages

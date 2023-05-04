@@ -1,4 +1,5 @@
 ---
+tags: ["latex"]
 title: "Basic"
 date: 2022-11-22T09:30:50Z
 draft: false

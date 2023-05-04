@@ -1,4 +1,5 @@
 ---
+tags: ["hugo"]
 title: "Layout"
 date: 2023-04-15T21:41:07Z
 draft: false

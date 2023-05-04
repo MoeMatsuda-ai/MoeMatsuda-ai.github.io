@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/hugo/index.html</link>
+    <description>Recent content in hugo on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 15 Apr 2023 21:41:07 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://moematsuda-ai.github.io/hugo/index.html</link>
+      <pubDate>Sat, 15 Apr 2023 21:41:07 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/hugo/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Layout</title>
+      <link>https://moematsuda-ai.github.io/hugo/layout/index.html</link>
+      <pubDate>Sat, 15 Apr 2023 21:41:07 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/hugo/layout/index.html</guid>
+      <description>ロゴ（左上隅）の変更 layout/partials/logo.htmlを生成 logoの設定を書き込む ファビコンの変更 faviconがSVG, PNGまたはICOの場合は、ローカルのstatic/imagesディレクトリにfavicon.svg, favicon.pngまたはfavicon.icoという名前で画像を保存 layout/partials/にfavicon.htmlという名前で新しいファイルを生成し、次のように書き込む： &amp;lt;link rel=&amp;#34;icon&amp;#34; href=&amp;#34;/images/favicon.png&amp;#34; type=&amp;#34;image/png&amp;#34;&amp;gt; メニューのChapter番号を表示 layout/partialsにmenu-pre.htmlファイルを生成し、次のように書き込む： {{ if (eq .Params.archetype &amp;#34;chapter&amp;#34;) }}&amp;lt;b style=&amp;#34;display: inline-block; font-weight: 700; padding-left: .3rem; color: #007bff; text-align: left; width: 1.7rem;&amp;#34;&amp;gt;{{ .Params.weight }}.&amp;lt;/b&amp;gt; {{ end }} 参考文献 Customization :: Hugo Relearn Theme hugo-theme-relearn repo </description>
+    </item>
+    <item>
+      <title>Config.tomlの設定</title>
+      <link>https://moematsuda-ai.github.io/hugo/config/index.html</link>
+      <pubDate>Sat, 15 Apr 2023 19:32:31 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/hugo/config/index.html</guid>
+      <description>baseURL = &amp;#39;&amp;lt;URL&amp;gt;&amp;#39; languageCode = &amp;#39;ja-jp&amp;#39; title = &amp;#34;Chiyo&amp;#39;s blog&amp;#34; theme = &amp;#34;hugo-theme-relearn&amp;#34; publishDir = &amp;#34;docs&amp;#34; [params] themeVariant = [&amp;#34;relearn-dark&amp;#34;, &amp;#34;relearn-light&amp;#34;, &amp;#34;green&amp;#34;, &amp;#34;black&amp;#34;, &amp;#34;blue&amp;#34;, &amp;#34;learn&amp;#34;] ordersectionsby = &amp;#34;title&amp;#34; showVisitedLinks = true [outputs] home = [&amp;#34;HTML&amp;#34;, &amp;#34;RSS&amp;#34;, &amp;#34;SEARCH&amp;#34;, &amp;#34;SEARCHPAGE&amp;#34;] section = [&amp;#34;HTML&amp;#34;, &amp;#34;RSS&amp;#34;, &amp;#34;PRINT&amp;#34;] [Languages] [Languages.en] landingPageName = &amp;#34;&amp;lt;i class=&amp;#39;fas fa-home&amp;#39;&amp;gt;&amp;lt;/i&amp;gt; Home&amp;#34; [[menu.shortcuts]] name = &amp;#34;&amp;lt;i class=&amp;#39;fab fa-fw fa-github&amp;#39;&amp;gt;&amp;lt;/i&amp;gt; GitHub repo&amp;#34; identifier = &amp;#34;ds&amp;#34; url = &amp;#34;https://github.com/MoeMatsuda-ai/MoeMatsuda-ai.github.io&amp;#34; weight = 50 [[menu.shortcuts]] name = &amp;#34;&amp;lt;i class=&amp;#39;fas fa-tags&amp;#39;&amp;gt;&amp;lt;/i&amp;gt; Tags&amp;#34; url = &amp;#34;/tags&amp;#34; weight = 70 baseURL: サイトのルートURL publishDie: Webサイトで公開するリポジトリ以下のディレクトリ（githubではdocsを推奨） ordersection: titleまたはweightを選択。titleの場合はtitle順、weightの場合はweightで設定された番号順にメニューを並べる showVisitedLinks: 訪れたページにはメニューにチェックマークを付ける menu.</description>
+    </item>
+    <item>
+      <title>hugo note</title>
+      <link>https://moematsuda-ai.github.io/hugo/hugo-note/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 06:18:27 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/hugo/hugo-note/index.html</guid>
+      <description>hugoでプロジェクトを作成 $ hugo new site &amp;lt;プロジェクト名&amp;gt; Congratulations! Your new Hugo site is created in PATH/hugo/test. Just a few more steps and you&amp;#39;re ready to go: 1. Download a theme into the same-named folder. Choose a theme from https://themes.gohugo.io/ or create your own with the &amp;#34;hugo new theme &amp;lt;THEMENAME&amp;gt;&amp;#34; command. 2. Perhaps you want to add some content. You can add single files with &amp;#34;hugo new &amp;lt;SECTIONNAME&amp;gt;/&amp;lt;FILENAME&amp;gt;.&amp;lt;FORMAT&amp;gt;&amp;#34;. 3. Start the built-in live server via &amp;#34;hugo server&amp;#34;.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,4 +1,5 @@
 ---
+tags: ["linux", "vscode"]
 title: "Shortcut"
 date: 2023-03-29T06:50:00Z
 draft: false

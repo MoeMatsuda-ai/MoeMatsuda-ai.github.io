@@ -1,4 +1,5 @@
 ---
+tags: ["github"]
 title: "Settings"
 date: 2022-11-22T09:08:59Z
 draft: false

@@ -1,4 +1,5 @@
 ---
+tags: ["python"]
 title: "Class"
 date: 2022-11-22T08:08:17Z
 draft: true 

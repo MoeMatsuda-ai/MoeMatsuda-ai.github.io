@@ -1,4 +1,5 @@
 ---
+tags: ["python"]
 title: "pythonの基本2"
 date: 2022-11-22T08:07:24Z
 draft: true

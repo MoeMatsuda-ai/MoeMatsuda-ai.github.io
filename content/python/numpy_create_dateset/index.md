@@ -1,4 +1,5 @@
 ---
+tags: ["python", "numpy"]
 title: "Creating dateset by Numpy"
 date: 2023-04-29T06:44:22Z
 draft: false

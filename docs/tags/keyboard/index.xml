@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>keyboard on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/keyboard/index.html</link>
+    <description>Recent content in keyboard on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 09 Apr 2023 08:32:20 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/keyboard/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Keyboard</title>
+      <link>https://moematsuda-ai.github.io/keyboard/index.html</link>
+      <pubDate>Tue, 29 Nov 2022 08:12:45 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/keyboard/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>setting Keyboard</title>
+      <link>https://moematsuda-ai.github.io/windows_settings/keyboard/index.html</link>
+      <pubDate>Sun, 09 Apr 2023 08:32:20 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/windows_settings/keyboard/index.html</guid>
+      <description>CapsLockとCtrlの入れ替え installする場合 このリンクからCtrl2Capをダウンロードし、任意の場所に展開． cmdを管理者権限で開き、展開した場所に移動 $ ctrl2cap /instalを実行. 再起動 uninstallする場合 cmdを管理者権限で開き、Ctrl2Capをダウンロードした場所に移動． $ ctrl2cap /uninstallを実行． </description>
+    </item>
+  </channel>
+</rss>

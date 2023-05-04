@@ -1,4 +1,5 @@
 ---
+tags: ["python", "pandas"]
 title: "Pandas"
 date: 2022-11-22T08:11:35Z
 draft: true

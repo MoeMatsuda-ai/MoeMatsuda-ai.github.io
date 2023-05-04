@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>anaconda on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/anaconda/index.html</link>
+    <description>Recent content in anaconda on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 22 Nov 2022 08:08:01 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/anaconda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anaconda Update</title>
+      <link>https://moematsuda-ai.github.io/python/anaconda-update/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:08:01 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/anaconda-update/index.html</guid>
+      <description>pip のアップデート pip と setuptools のアップデート $ python -m pip install --upgrade pip setuptools ※-mはインターフェイスオプションで、pythonのモジュール（パッケージ）を実行するために使用
+パッケージのアップデート $ pip install -U &amp;lt;package-name&amp;gt; または
+$ pip install --upgrade &amp;lt;package name&amp;gt; naconda のアップデート すべてのパッケージをアップデート $ conda update --all 特定のパッケージのアップデート $ conda update &amp;lt;package name1&amp;gt; &amp;lt;package name2&amp;gt; anaconda 本体のアップデート $ conda update -n base -c defaults conda または
+$ conda update -n base conda ※上は(base)と作成した仮想環境両方アップデートされた…（下のコマンドは不明）
+※よく使うオプションは以下の通り
+-n は --name の略で、環境名の指定 -c は --channel の略で、デフォルトリポジトリだけでなくチャネルを追加で指定 参考 Anaconda パッケージ アップデート方法 pipでアップデートするときのコマンド pip update </description>
+    </item>
+  </channel>
+</rss>

@@ -1,4 +1,5 @@
 ---
+tags: ["windows", "wsl", "proxy"]
 title: "Proxy settings on WSL"
 date: 2023-04-29T06:30:35Z
 draft: false 

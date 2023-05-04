@@ -1,4 +1,5 @@
 ---
+tags: ["python"]
 title: "Tuple"
 date: 2022-11-22T08:07:41Z
 draft: true

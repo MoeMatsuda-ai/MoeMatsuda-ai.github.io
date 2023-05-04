@@ -1,4 +1,5 @@
 ---
+tags: ["hugo", "toml"]
 title: "Config.tomlの設定"
 date: 2023-04-15T19:32:31Z
 draft: false

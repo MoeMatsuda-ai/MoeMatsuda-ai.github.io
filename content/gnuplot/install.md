@@ -1,4 +1,5 @@
 ---
+tags: ["gnuplot"]
 title: "How to install gnuplot"
 date: 2022-11-24T00:26:02Z
 draft: false

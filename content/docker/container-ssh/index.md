@@ -1,6 +1,6 @@
 ---
 tags: ["docker", "dockerfile"]
-title: "Connect to Docker Container via ssh"
+title: "Connect to Container via ssh"
 date: 2022-11-22T08:43:00Z
 draft: false 
 ---
@@ -40,7 +40,7 @@ $ service ssh start
 $ service ssh stop
 ```
 
-# trouble
+## trouble
 #### 何度もuser名などを変えているとssh接続できない…
 known_hostsファイルの情報と異なるためsshできなくなる
 ```bash

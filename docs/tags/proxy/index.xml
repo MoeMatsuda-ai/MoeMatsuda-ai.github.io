@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>proxy on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/proxy/index.html</link>
+    <description>Recent content in proxy on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 29 Apr 2023 06:30:35 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proxy settings on WSL</title>
+      <link>https://moematsuda-ai.github.io/windows_settings/proxy_settings_wsl/index.html</link>
+      <pubDate>Sat, 29 Apr 2023 06:30:35 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/windows_settings/proxy_settings_wsl/index.html</guid>
+      <description>/etc/environment http_proxy=http://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt; https_proxy=https://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt; /etc/bash.bashrc export http_proxy=http://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt; export https_proxy=https://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt; /etc/apt/apt.conf Acquire::http::Proxy &amp;#34;http://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt;&amp;#34;; Acquire::https::Proxy &amp;#34;http://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt;&amp;#34;; /etc/wgetrc https_proxy = http://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt; ftp_proxy = http://&amp;lt;proxy&amp;gt;:&amp;lt;port&amp;gt; </description>
+    </item>
+    <item>
+      <title>Proxy settings  </title>
+      <link>https://moematsuda-ai.github.io/linux/proxy_settings/index.html</link>
+      <pubDate>Sat, 29 Apr 2023 06:12:44 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/linux/proxy_settings/index.html</guid>
+      <description>/etc/environment export no_proxy=localhost,127.0.0.1,localhost,*&amp;lt;domain&amp;gt; export ftp_proxy=http://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ export http_proxy=http://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ export https_proxy=http://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ export all_proxy=socks://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ export FTP_PROXY=http://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ export HTTP_PROXY=http://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ export HTTPS_PROXY=http://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ export ALL_PROXY=socks://&amp;lt;proxy server&amp;gt;:&amp;lt;port&amp;gt;/ /etc/apt/apt.conf or /etc/apt/apt.conf.d/proxy.conf Acquire::http::Proxy &amp;#34;http://proxy.cc.yamaguchi-u.ac.jp:8080/&amp;#34;; </description>
+    </item>
+  </channel>
+</rss>

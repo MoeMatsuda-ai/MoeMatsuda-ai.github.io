@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pandas on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/pandas/index.html</link>
+    <description>Recent content in pandas on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 22 Nov 2022 08:12:12 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/pandas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pickle</title>
+      <link>https://moematsuda-ai.github.io/python/pickle/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:12:12 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/pickle/index.html</guid>
+      <description>pickleの使用方法 Saving with openでの保存、読み込み with open(&amp;#34;filename.pkl&amp;#34;, &amp;#34;wb&amp;#34;) as f: pickle.dump(data, f) with open(&amp;#34;filename.pkl&amp;#34;, &amp;#34;rb&amp;#34;) as f: hoge = pickle.load(f) pandasでの保存、読み込み import pandas as pd pd.to_pickle(data, &amp;#34;filename.pkl&amp;#34;) hoge = pd.read_pickle(&amp;#34;filename.pkl&amp;#34;) joblib(?)での保存、読み込み joblib.dump(data, &amp;#34;filename.jb&amp;#34;, compress=3) hoge = joblib.load(&amp;#34;filename.jb&amp;#34;) </description>
+    </item>
+  </channel>
+</rss>

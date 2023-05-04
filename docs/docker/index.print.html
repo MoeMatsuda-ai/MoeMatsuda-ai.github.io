@@ -10,20 +10,20 @@
     <link href="https://moematsuda-ai.github.io/docker/index.html" rel="canonical" type="text/html" title="Docker :: &#39;Moais blog">
     <link href="/docker/index.xml" rel="alternate" type="application/rss+xml" title="Docker :: &#39;Moais blog"><link rel="icon" href="/images/favicon.png" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1683171963" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1683171963" rel="stylesheet"></noscript>
-    <link href="/css/featherlight.min.css?1683171963" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1683171963" rel="stylesheet"></noscript>
-    <link href="/css/auto-complete.css?1683171963" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1683171963" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1683171963" rel="stylesheet">
-    <link href="/css/nucleus.css?1683171963" rel="stylesheet">
-    <link href="/css/fonts.css?1683171963" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1683171963" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1683171963" rel="stylesheet">
-    <link href="/css/theme-relearn-dark.css?1683171963" rel="stylesheet" id="variant-style">
-    <link href="/css/ie.css?1683171963" rel="stylesheet">
-    <link href="/css/variant.css?1683171963" rel="stylesheet">
-    <link href="/css/print.css?1683171963" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1683171963" rel="stylesheet">
-    <script src="/js/url.js?1683171963"></script>
-    <script src="/js/variant.js?1683171963"></script>
+    <link href="/css/fontawesome-all.min.css?1683173756" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1683173756" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1683173756" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1683173756" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1683173756" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1683173756" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1683173756" rel="stylesheet">
+    <link href="/css/nucleus.css?1683173756" rel="stylesheet">
+    <link href="/css/fonts.css?1683173756" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1683173756" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1683173756" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1683173756" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1683173756" rel="stylesheet">
+    <link href="/css/variant.css?1683173756" rel="stylesheet">
+    <link href="/css/print.css?1683173756" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1683173756" rel="stylesheet">
+    <script src="/js/url.js?1683173756"></script>
+    <script src="/js/variant.js?1683173756"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -41,7 +41,7 @@
       var baseUriFull='https:\/\/moematsuda-ai.github.io/';
       window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
     </script>
-    <script src="/js/jquery.min.js?1683171963" defer></script>
+    <script src="/js/jquery.min.js?1683173756" defer></script>
   </head>
   <body class="mobile-support print" data-url="/docker/index.html">
     <div id="body" class="default-animation">
@@ -96,7 +96,7 @@
           </article>
 
           <article class="default">
-<h1 id="copy-and-mount-from-docker-container-or-to-docker-container">Copy and Mount from Docker container or to Docker container</h1>
+<h1 id="copy-and-mount-methods">Copy and Mount Methods</h1>
 
 <h1 id="docker-での-copy-と-mount">docker での copy と mount</h1>
 <h2 id="コピー">コピー</h2>
@@ -441,7 +441,7 @@ gpg:               読込み: 1  (RSA: 1)
           </article>
 
           <article class="default">
-<h1 id="connect-to-docker-container-via-ssh">Connect to Docker Container via ssh</h1>
+<h1 id="connect-to-container-via-ssh">Connect to Container via ssh</h1>
 
 <p>dockerでsshを行う場合にはopensshd-serverをインストールし、設定を行う必要がある。</p>
 <blockquote>
@@ -465,7 +465,7 @@ gpg:               読込み: 1  (RSA: 1)
 </span></span></code></pre></div><h4 id="start-or-stop-ssh">start or stop ssh</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ service ssh start
 </span></span></code></pre></div><pre tabindex="0"><code>$ service ssh stop
-</code></pre><h1 id="trouble">trouble</h1>
+</code></pre><h2 id="trouble">trouble</h2>
 <h4 id="何度もuser名などを変えているとssh接続できない">何度もuser名などを変えているとssh接続できない…</h4>
 <p>known_hostsファイルの情報と異なるためsshできなくなる</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh-keygen -f <span style="color:#e6db74">&#34;&lt;path of known-hosts file&gt;&#34;</span> -R <span style="color:#e6db74">&#34;[&lt;host&gt;]:&lt;port&gt;&#34;</span>
@@ -952,9 +952,9 @@ Ctrl+P, Ctrl+Q</p>
           </section>        </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1683171963" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1683171963" defer></script>
-    <script src="/js/featherlight.min.js?1683171963" defer></script>
-    <script src="/js/theme.js?1683171963" defer></script>
+    <script src="/js/clipboard.min.js?1683173756" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1683173756" defer></script>
+    <script src="/js/featherlight.min.js?1683173756" defer></script>
+    <script src="/js/theme.js?1683173756" defer></script>
   </body>
 </html>

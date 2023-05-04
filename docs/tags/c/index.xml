@@ -38,12 +38,5 @@
 main関数を書き込むmain.cファイル
 #include &amp;lt;stdio.h&amp;gt; #include &amp;#34;calc.h&amp;#34; void main(){ double d1,d2,d3; double a = 1.2,b = 3.4,c = 2.7; // 同じ計算が3回(関数を呼び出して計算） d1 = avg(a,b); d2 = avg(4.</description>
     </item>
-    <item>
-      <title>hugo note</title>
-      <link>https://moematsuda-ai.github.io/hugo/hugo-note/index.html</link>
-      <pubDate>Tue, 22 Nov 2022 06:18:27 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/hugo/hugo-note/index.html</guid>
-      <description>hugoでプロジェクトを作成 $ hugo new site &amp;lt;プロジェクト名&amp;gt; Congratulations! Your new Hugo site is created in PATH/hugo/test. Just a few more steps and you&amp;#39;re ready to go: 1. Download a theme into the same-named folder. Choose a theme from https://themes.gohugo.io/ or create your own with the &amp;#34;hugo new theme &amp;lt;THEMENAME&amp;gt;&amp;#34; command. 2. Perhaps you want to add some content. You can add single files with &amp;#34;hugo new &amp;lt;SECTIONNAME&amp;gt;/&amp;lt;FILENAME&amp;gt;.&amp;lt;FORMAT&amp;gt;&amp;#34;. 3. Start the built-in live server via &amp;#34;hugo server&amp;#34;.</description>
-    </item>
   </channel>
 </rss>

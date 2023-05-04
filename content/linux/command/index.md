@@ -1,4 +1,5 @@
 ---
+tags: ["linux", "bash"]
 title: "Command"
 date: 2023-03-29T06:20:56Z
 draft: false

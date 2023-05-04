@@ -1,4 +1,5 @@
 ---
+tags: ["linux", "bash", "shell script"]
 title: "Shell script"
 date: 2023-03-29T06:36:40Z
 draft: false

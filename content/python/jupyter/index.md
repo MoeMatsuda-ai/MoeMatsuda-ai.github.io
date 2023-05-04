@@ -1,4 +1,5 @@
 ---
+tags: ["python", "jupyter"]
 title: "Jupyter notebook"
 date: 2022-11-22T08:09:35Z
 draft: false 

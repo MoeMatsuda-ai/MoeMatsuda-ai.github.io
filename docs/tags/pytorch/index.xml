@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pytorch on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/pytorch/index.html</link>
+    <description>Recent content in pytorch on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 22 Nov 2022 08:12:48 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Torch</title>
+      <link>https://moematsuda-ai.github.io/python/torch/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:12:48 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/torch/index.html</guid>
+      <description>About calcuration of gradient How not to calculate gradient Use no_grad For example;
+with torch.no_grad(): y = x*2 We can use as decorator
+@torch.no_grad() def doubler(x): return x*2 Use .detach() -&amp;gt; ? Use .reaquires_grad -&amp;gt; ? reference Pytorchの「.detach()」と「with no_grad():」と「.requires_grad = False」の違い PyTorchの新しい推論モードについて </description>
+    </item>
+  </channel>
+</rss>

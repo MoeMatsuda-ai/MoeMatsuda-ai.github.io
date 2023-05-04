@@ -1,4 +1,5 @@
 +++
+tags = ["windows"]
 archetype = "chapter"
 title = "Windows settings"
 weight = 11

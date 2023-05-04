@@ -1,4 +1,5 @@
 ---
+tags: ["python", "pandas", "pickle"]
 title: "Pickle"
 date: 2022-11-22T08:12:12Z
 draft: false 

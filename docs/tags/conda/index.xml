@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>conda on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/conda/index.html</link>
+    <description>Recent content in conda on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 13 Apr 2023 14:25:36 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/conda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anaconda settings on WSL</title>
+      <link>https://moematsuda-ai.github.io/windows_settings/conda_settings_onwsl/index.html</link>
+      <pubDate>Thu, 13 Apr 2023 14:25:36 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/windows_settings/conda_settings_onwsl/index.html</guid>
+      <description>出力用DISPLAYの設定 x11のインストール wslにX11をインストール $ sudo apt install x11 VcXsrvのインストールと設定 SourceForge.netからインストーラーをダウンロード インストーラーを実行し，VcXsrvをインストール（推奨の設定でOK！） VcXsrvを起動 Display settings: Multiple windowsを選択し，次へをクリック Client startup: Start no clientを選択肢，次へをクリック Extra settings: ClipboardとPrimary Selection, Native openglにチェックが入っていることを確認し，Disable access controlにチェックを入れてから次へをクリック Finish configuration: Save configurationをクリックしてデスクトップ等にconfigを保存してから完了をクリック Windows+Rでダイアログボックスを開き，shell:startupと入力してエクスプローラーのスタートアップアプリを開く デスクトップ等に保存していたVcXsrvのconfigファイルをスタートアップアプリに移動させる Display環境変数のエクスポート 以下の1文を.bashrcに追加
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk &amp;#39;{print $2}&amp;#39;):0.0 参照 WSL上にXサーバをインストールしてGUIを実現する（VcXsrv編）, メディアID Windows10のWSL上でX11アプリケーションを実行してみた，DevelopersIO errorについて </description>
+    </item>
+  </channel>
+</rss>

@@ -1,5 +1,5 @@
 ---
-tags: ["c", "gnuplot"]
+tags: ["hugo"]
 title: "hugo note"
 date: 2022-11-22T06:18:27Z
 draft: false

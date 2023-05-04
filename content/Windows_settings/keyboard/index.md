@@ -1,4 +1,5 @@
 ---
+tags: ["windows", "keyboard"]
 title: "setting Keyboard"
 date: 2023-04-09T08:32:20Z
 draft: false

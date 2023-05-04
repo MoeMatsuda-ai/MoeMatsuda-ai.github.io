@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>branch on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/branch/index.html</link>
+    <description>Recent content in branch on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 22 Nov 2022 09:09:52 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/branch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Branch</title>
+      <link>https://moematsuda-ai.github.io/github/branch/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 09:09:52 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/github/branch/index.html</guid>
+      <description>ブランチとは？ ブランチとは平行世界のようなものである。 ブランチを活用することでmasterブランチをそのまま据え置いた状態で、別のブランチで新機能を試しながら作ることができる。
+ブランチの正体は？ github公式ドキュメントによると、
+ブランチとは（中略）コミットを指す軽量なポインタに過ぎません と説明されている。
+リポジトリの正体は.gitという隠しフォルダのことであり、この中にあるrefs/heads/masterファイルこそがブランチの正体である。 このファイルの中身をcatしてみると
+dd95ddf066d452949bb54304bbf43ab3dadfee25 のように英数字の羅列が保存してある。これはコミットIDまたはコミットハッシュ値と呼ばれている。またコミットによって生成されたデータのことをコミットオブジェクトといい、一つのコミットオブジェクトに対して４０文字のIDを割り当てるのがコミットIDである。
+つまりブランチとはただ単に特定のコミットIDを指しているだけである。
+またコミットオブジェクトにはそれぞれ
+tree parent author committer の情報が保存されており、parentが一つ前のコミットIDを示している。
+例 作成したsample.txtに何かしらの変更を加え、
+$ git add sample.text $ git commit -m &amp;#34;2回目のコミット&amp;#34; $ git log とすると、次のような結果が得られる。
+このとき以下のように実行すると、コミットオブジェクトを確認することができる
+$ git cat-file -p 0e9556 tree e290b48b356d721ae54d1edb03993802cc98bad8
+parent 02f11b759bfeb461e117c5da18bb2dcbe06d862a
+author llminatolllXXX@mail.coml1562052826 +0900
+commit errllminatolllXXX@mail.coml1562052826 +0900
+このparentの部分が前のコミットのコミットIDを表しており、一番はじめのコミットではpaerntは保存されていない
+ひとことメモ　** コミットIDは何を元に作られているの？** コミットID（コミットハッシュ値）は、実はこのコミットオブジェクトのバイト数と中身を使い、計算されて作られています。よって、コミットした人の名前やコミットした時間、指し示すparent、treeが違えばコミットハッシュ値も違うものになります。
+その証拠に、同じ内容をコミットしていても、あなたの練習用リポジトリとわかばちゃんのコミットIDは違うはずです。コミットハッシュ値についてもっと深く知りたい方は、こちらの記事が詳しいのでおすすめです。
+Gitのコミットハッシュ値は何を元にどうやって生成されているのか ブランチの操作 今存在するブランチの確認
+$ git branch ※アスタリスクのついているブランチが現在のブランチ
+ブランチの作成
+$ git branch &amp;lt;branch name&amp;gt; ローカルブランチの作成をリモートにプッシュ
+$ git push origin &amp;lt;branch name&amp;gt; ブランチの移動</description>
+    </item>
+  </channel>
+</rss>

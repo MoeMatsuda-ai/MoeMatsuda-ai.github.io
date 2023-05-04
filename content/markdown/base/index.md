@@ -1,4 +1,5 @@
 ---
+tags: ["markdown"]
 title: "Basic operation"
 date: 2022-11-24T01:38:14Z
 draft: false

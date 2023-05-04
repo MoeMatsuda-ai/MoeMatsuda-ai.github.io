@@ -1,4 +1,5 @@
 ---
+tags: ["python", "anaconda", "pip"]
 title: "Anaconda Update"
 date: 2022-11-22T08:08:01Z
 draft: false 

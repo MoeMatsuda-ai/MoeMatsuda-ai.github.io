@@ -1,4 +1,5 @@
 ---
+tags: ["python", "ipython"]
 title: "Ipython"
 date: 2022-11-22T07:59:06Z
 draft: true

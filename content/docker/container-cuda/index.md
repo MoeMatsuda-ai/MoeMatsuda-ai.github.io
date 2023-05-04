@@ -1,5 +1,5 @@
 ---
-tags: ["docker", "cuda", "docker container"]
+tags: ["docker", "cuda", "container"]
 title: "Docker Container for Cuda"
 date: 2022-11-22T08:43:12Z
 draft: false 

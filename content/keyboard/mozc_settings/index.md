@@ -1,4 +1,5 @@
 ---
+tags: ["linux", "ubuntu", "us-keyboard"]
 title: "Mozc settings"
 date: 2022-11-29T08:12:45Z
 draft: false
