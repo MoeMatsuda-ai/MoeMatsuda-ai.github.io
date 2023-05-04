@@ -26,11 +26,11 @@ url = "https://github.com/MoeMatsuda-ai/MoeMatsuda-ai.github.io"
 weight = 50
 
 [[menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bookmark'></i> RELEAEN"
+url = "https://mcshelby.github.io/hugo-theme-relearn/index.html"
+weight = 60
+
+[[menu.shortcuts]]
 name = "<i class='fas fa-tags'></i> Tags"
 url = "/tags"
 weight = 70
-
-[[menu.shortcuts]]
-name = "<i class='fas fa-tags'></i> RELEAEN"
-url = "https://mcshelby.github.io/hugo-theme-relearn/index.html"
-weight = 80
