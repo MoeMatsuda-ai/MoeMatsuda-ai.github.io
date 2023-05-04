@@ -29,3 +29,8 @@ weight = 50
 name = "<i class='fas fa-tags'></i> Tags"
 url = "/tags"
 weight = 70
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-tags'></i> RELEAEN"
+url = "https://mcshelby.github.io/hugo-theme-relearn/index.html"
+weight = 80

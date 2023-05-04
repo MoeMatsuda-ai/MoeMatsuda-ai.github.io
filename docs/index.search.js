@@ -90,6 +90,15 @@ var relearn_search_index = [
     "uri": "/python/index.html"
   },
   {
+    "content": "読んだ論文をメモしたりしなかったり．．．\n",
+    "description": "",
+    "tags": [
+      "paper"
+    ],
+    "title": "Papers",
+    "uri": "/papers/index.html"
+  },
+  {
     "content": "Windowsの設定についてのあれこれ\n",
     "description": "",
     "tags": [
@@ -890,5 +899,12 @@ var relearn_search_index = [
     "tags": null,
     "title": "Categories",
     "uri": "/categories/index.html"
+  },
+  {
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "paper",
+    "uri": "/tags/paper/index.html"
   }
 ]
