@@ -1,9 +1,8 @@
 ---
+tags: ["c", "gnuplot"]
 title: "hugo note"
 date: 2022-11-22T06:18:27Z
 draft: false
-categories: ["c"]
-tags: ["c", "gnuplot"]
 ---
 
 ## hugoでプロジェクトを作成

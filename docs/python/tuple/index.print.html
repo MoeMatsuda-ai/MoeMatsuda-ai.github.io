@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Tuple :: &#39;Moais blog</title>
+    <link href="https://moematsuda-ai.github.io/python/tuple/index.html" rel="canonical" type="text/html" title="Tuple :: &#39;Moais blog">
+    <link href="/python/tuple/index.xml" rel="alternate" type="application/rss+xml" title="Tuple :: &#39;Moais blog"><link rel="icon" href="/images/favicon.png" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1683171048" rel="stylesheet">
+    <link href="/css/nucleus.css?1683171048" rel="stylesheet">
+    <link href="/css/fonts.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1683171048" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1683171048" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1683171048" rel="stylesheet">
+    <link href="/css/variant.css?1683171048" rel="stylesheet">
+    <link href="/css/print.css?1683171048" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1683171048" rel="stylesheet">
+    <script src="/js/url.js?1683171048"></script>
+    <script src="/js/variant.js?1683171048"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1683171048" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/python/tuple/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/python/index.html"><span itemprop="name">python</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Tuple</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="tuple">Tuple</h1>
+
+<h2 id="タプルtuple">タプル(tuple)</h2>
+<!-- raw HTML omitted -->
+<p>Pythonにはデータの集合を扱うための様々なデータ型がある。</p>
+<p>以下は標準で用意されているもの。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">名前</th>
+<th style="text-align:left">例</th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">リスト(list)</td>
+<td style="text-align:left"><code>L=[&quot;kiwi&quot;, &quot;banana&quot;, &quot;apple&quot;]</code></td>
+<td style="text-align:left">インデックス番号付き集合</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>タプル(tuple)</strong></td>
+<td style="text-align:left"><code>T=(&quot;kiwi&quot;, &quot;banana&quot;, &quot;apple&quot;)</code></td>
+<td style="text-align:left"><strong>インデックス番号付き集合(代入不可)</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">辞書(dict)</td>
+<td style="text-align:left"><code>D={&quot;kiwi&quot;:3, &quot;banana&quot;:2, &quot;apple&quot;:3}</code></td>
+<td style="text-align:left">インデックス番号無し (key,value) 対応表</td>
+</tr>
+<tr>
+<td style="text-align:left">集合(set)</td>
+<td style="text-align:left"><code>S={&quot;kiwi&quot;, &quot;banana&quot;, &quot;apple&quot;}</code></td>
+<td style="text-align:left">インデックス番号無し集合</td>
+</tr>
+</tbody>
+</table>
+<p>以下は拡張モジュールを利用するもの。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">名前</th>
+<th style="text-align:left">例</th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">numpy.ndarray</td>
+<td style="text-align:left"><code>N=np.array([1,2,3])</code></td>
+<td style="text-align:left">数値計算用の多次元配列</td>
+</tr>
+<tr>
+<td style="text-align:left">pandas.Series</td>
+<td style="text-align:left"><code>s=pd.Series([280,198],index=['tomato','banana'])</code></td>
+<td style="text-align:left">行に名前がある1次元配列</td>
+</tr>
+<tr>
+<td style="text-align:left">pandas.DataFrame</td>
+<td style="text-align:left"><code>df=pd.DataFrame([['tomato',280],['banana', 198]], columns=['name','price'])</code></td>
+<td style="text-align:left">列や行に名前がある2次元配列</td>
+</tr>
+</tbody>
+</table>
+<h2 id="タプルの特徴">タプルの特徴</h2>
+<ul>
+<li>タプルの定義，要素へのアクセス，スライス等はリストとほぼ同様</li>
+<li>リストは要素を<code>[]</code>で囲むが，タプルは<code>()</code>で囲む</li>
+<li>リストと異なり，一度定義したら<strong>要素の書き換えはできない</strong></li>
+</ul>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h4 id="タプルの定義">タプルの定義</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>fruits<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;prange&#34;</span>, <span style="color:#e6db74">&#34;apple&#34;</span>)
+</span></span><span style="display:flex;"><span>a, b, c <span style="color:#f92672">=</span> fruits<span style="color:#75715e">#変数a,b,cへそれぞれ一括代入</span>
+</span></span><span style="display:flex;"><span>L <span style="color:#f92672">=</span> tuple(range(<span style="color:#ae81ff">5</span>))
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h4 id="タプルへの代入">タプルへの代入</h4>
+<p>一度定義したタプルの要素を後で書き換えることはできない。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>a[<span style="color:#ae81ff">3</span>]<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>      <span style="color:#75715e"># 要素を書き換えようとするとエラーが出る(試してみること)</span>
+</span></span></code></pre></div><p>ただし，以下のように変数に代入されているタプルを別のタプルに置き換えることはできる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>a<span style="color:#f92672">=</span>(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>)   <span style="color:#75715e"># タプルの置き換え (タプル(5,2,3)のidがaの参照先に)</span>
+</span></span></code></pre></div>
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1683171048" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1683171048" defer></script>
+    <script src="/js/featherlight.min.js?1683171048" defer></script>
+    <script src="/js/theme.js?1683171048" defer></script>
+  </body>
+</html>

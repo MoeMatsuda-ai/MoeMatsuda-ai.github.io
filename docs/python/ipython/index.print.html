@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Ipython :: &#39;Moais blog</title>
+    <link href="https://moematsuda-ai.github.io/python/ipython/index.html" rel="canonical" type="text/html" title="Ipython :: &#39;Moais blog">
+    <link href="/python/ipython/index.xml" rel="alternate" type="application/rss+xml" title="Ipython :: &#39;Moais blog"><link rel="icon" href="/images/favicon.png" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1683171048" rel="stylesheet">
+    <link href="/css/nucleus.css?1683171048" rel="stylesheet">
+    <link href="/css/fonts.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1683171048" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1683171048" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1683171048" rel="stylesheet">
+    <link href="/css/variant.css?1683171048" rel="stylesheet">
+    <link href="/css/print.css?1683171048" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1683171048" rel="stylesheet">
+    <script src="/js/url.js?1683171048"></script>
+    <script src="/js/variant.js?1683171048"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1683171048" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/python/ipython/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/python/index.html"><span itemprop="name">python</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Ipython</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="ipython">Ipython</h1>
+
+<h2 id="ipythonについて">IPythonについて</h2>
+<p>2001年にフェルナンド・ペレスの片手間のプロジェクトとして始められた。良い対話型のインタプリタを作ることを目的として制作され、2012年にはPythonによる科学技術計算作業の中でなくてはならない位置を占めるように！</p>
+<p>IPython自体は何ら計算機能や分析機能を提供するものではないものの、対話的な（インタラクティブな）計算及びツール開発の生産性を向上させるのに大きく役立っている。</p>
+<p>IPythonを使用することで、<strong>編集ーコンパイルー実行</strong>サイクルから脱却し、<strong>実行ーデータ探索</strong>サイクルに乗ってデータ分析を進めることができ、またOS及びファイルシステムとも厳密に連携するため、IPythonはそのほとんどの場面で作業の高速化を手助けしてくれる。</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="ipython-の基本">IPython の基本</h2>
+<ol>
+<li>
+<p><strong>IPython の起動</strong></p>
+<p>コマンドラインで以下のように入力することで起動</p>
+<pre tabindex="0"><code>$ ipython
+</code></pre></li>
+<li>
+<p><strong>変数の表示</strong></p>
+<p>単に変数名のみを記述し実行した場合にはその変数オブジェクトの文字列表現が返る。特に標準Python環境のprint関数による変数表示と比べ、多くのPythonオブジェクト型が読みやすく、きれいに整形される。</p>
+</li>
+<li>
+<p><strong>タブ補完</strong></p>
+<p>IPythonにはPython標準インタプリタにはない<strong>タブ補完機能</strong>が搭載されている。</p>
+<p>タブ補完の探索範囲は「利用中の名前空間」、「オブジェクト属性」あるいは「モジュール属性」にとどまらず、ユーザがファイル名の一部（のような文字列）を入力してタブ補完した場合、そのコンピュータファイルシステムを大賞に候補を出してくれる。また、関数のキーワード引数に対してもタブ補完することができる！！</p>
+<p>※デフォルトではIPythonが補完候補に表示しないメソッドや属性がいくつかある。候補表示が乱雑になるのを防ぐため、アンダースコア(_)から始まるマジックメソッドやプライベートメソッド、プライベート属性と言ったものを候補から除外する。これらの候補を明示的に表示したい場合は、IPythonシェルにアンドースコアを入力してタブ補完を呼び出す。これらの候補を常に表示させるように、IPython構成機能で設定することができる。</p>
+</li>
+<li>
+<p><strong>オブジェクトイントロスペクション</strong></p>
+<p>変数や関数などの前や後に<code>?</code>をつけることでそのオブジェクトの一般情報を見ることができる機能</p>
+<ul>
+<li>
+<p>変数 →　<code>Type</code> や 長さ など</p>
+</li>
+<li>
+<p>関数やインスタンスメソッド　→　存在していれば <strong>ドキュメンテーション文字列（docstring）</strong> が表示される。</p>
+<p>※<code>?</code> の代わりに <code>??</code> とすると関数のソースコードも表示される</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>ワイルドカード</strong></p>
+<p>UNIXやWindowsのコマンドラインシェル上で使用するワイルドカード(<code>*</code>)機能を, IPythonでは<code>?</code>で使用する。</p>
+</li>
+<li>
+<p>マジックコマンド</p>
+<p>コマンドの先頭が<code>%</code>で始まるコマンドのことを<strong>マジックコマンド</strong>とよぶ。IPythonでの特別なコマンドであり、デフォルトでは同名の変数が定義されていない限り<code>%</code>を付けなくても実行が可能（automagic(オードマジック)機能）</p>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%quickref</td>
+<td>IPythonのクイックリファレンスを表示</td>
+</tr>
+<tr>
+<td>%magic</td>
+<td>全マジックコマンドの詳細記述を表示</td>
+</tr>
+<tr>
+<td>%lsmagic</td>
+<td>利用可能なMagicコマンドの単純な一覧を表示</td>
+</tr>
+<tr>
+<td>%debug</td>
+<td>対話的デバッガの起動。直前に発生した例外に対して、トレースバックの最下層から開始</td>
+</tr>
+<tr>
+<td>%hist</td>
+<td>コマンド入力の履歴を表示(オプション指定により出力履歴も表示)</td>
+</tr>
+<tr>
+<td>%pdb</td>
+<td>例外発生時のデバッガ自動起動の切り替え(ON</td>
+</tr>
+<tr>
+<td>%paste</td>
+<td>クリップボード内の整形済みPythonコード片の実行</td>
+</tr>
+<tr>
+<td>%cpaste</td>
+<td>クリップボード内Pythonコードの実行のための特別なプロンプトを表示</td>
+</tr>
+<tr>
+<td>%reset</td>
+<td>名前空間から変数を含めた名前を消去</td>
+</tr>
+<tr>
+<td>%page <em>OBJECT</em></td>
+<td>引数OBJECTをきれいに表示。ページャを起動</td>
+</tr>
+<tr>
+<td>%run <em>script.py</em></td>
+<td>引数script.pyをPythonスクリプトとみなしてIPython内で実行。</td>
+</tr>
+<tr>
+<td>%prun <em>statement</em></td>
+<td>cProfile付きの命令を実行し、プロファイラ出力を表示</td>
+</tr>
+<tr>
+<td>%time <em>statement</em></td>
+<td>引数で与えられた命令の実行時間を計測</td>
+</tr>
+<tr>
+<td>%timeit <em>statement</em></td>
+<td>引数で与えられた命令の実行時間を複数回計測。実行時間のごく短い命令の計測に有効</td>
+</tr>
+<tr>
+<td>%who, %who_ls, %whos</td>
+<td>引数に型名、関数名などを取る。利用中の名前空間の中で定義された、その種類の変数のリストを戻す。3種類の違いは戻り値のフォーマット。%who は単に一覧を戻し、%whos_ls はリストとして戻す。%whos は整形して見やすく表示してくれる。</td>
+</tr>
+<tr>
+<td>%xdel *variable</td>
+<td>IPython内のオブジェクトを削除し、可能な限りオブジェクトへの参照をも削除する。</td>
+</tr>
+</tbody>
+</table>
+<p>※マジックコマンドのヘルプは<code>%command?</code>のようにマジックコマンドの後ろに<code>?</code>をつけることで確認できる</p>
+</li>
+<li>
+<p>**<code>%run</code>**コマンド</p>
+<p><code>%run</code>コマンドを使用するとPythonプログラムを起動することができる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ipython_script_test.py ファイルの内容</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(x, y, z):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>(x<span style="color:#f92672">+</span>y)<span style="color:#f92672">/</span>z
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> <span style="color:#ae81ff">7.5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> f(a, b, c)
+</span></span></code></pre></div><p>このファイルについて以下のようにスクリプトを起動させることでそのスクリプトで定義したあらゆる変数(importしたもの、関数群、グローバル変数)に対して後から参照が可能になる</p>
+<pre tabindex="0"><code>%run ipython_script_test.py
+</code></pre><p>※実行するスクリプトが実行引数(sys.arg)を必要とする場合、スクリプトのファイルパス名の後ろに書く</p>
+</li>
+<li>
+<p>実行中コードの中断</p>
+<p>IPythonでのあらゆるコード（%run で実行させたスクリプト、長時間実行中となってしまったコマンドなど）の実行中に <code>Ctrl + C</code> を押すと KeyboardInterrupt 例外が発生し、ほとんどすべてのPythonプログラムを即時に停止することができる。</p>
+<p>※実行中コードがコンパイル済みのモジュールを呼び出すケースがあり、そのモジュール内の命令の実行中は Ctrl + C　による停止要求は受け付けられない。こういった場合には制御がインタプリタに戻るまで待つか、OSのタスク管理機能から直接Pythonプロセスを停止させる。</p>
+</li>
+<li>
+<p>クリップボード経由の実行</p>
+<p>クリップボードからのコード片の貼り付けには、多くの環境で<code>Ctrl + Shift + V</code>を使用する。ただし空行がある場合にはそこで<code>return</code>が押されたものとみなされ問題が発生するため、こういった場合にはマジック関数の <code>%paste</code> や <code>%cpaste</code> を使う。</p>
+<p>※<code>%paste</code>はクリップボードの中身を1つのブロックとして扱う。<code>%cpaste</code> は貼り付け時にプロンプトを出してくれ、<code>--</code> または <code>Ctrl + D</code> を押すまでペーストを繰り返すことができる。</p>
+</li>
+<li>
+<p><strong>キーボードショートカット</strong></p>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl-p または ↑</td>
+<td>コマンド履歴から入力した文字列で始まるものを遡って検索</td>
+</tr>
+<tr>
+<td>Ctrl-n または ↓</td>
+<td>コマンド履歴から、入力した文字列で始まるものを時間順に検索</td>
+</tr>
+<tr>
+<td>Ctrl-r</td>
+<td>コマンド履歴を遡ってのインクリメンタルサーチ（部分一致）</td>
+</tr>
+<tr>
+<td>Ctrl-Shift-v</td>
+<td>クリップボードから貼り付け</td>
+</tr>
+<tr>
+<td>Ctrl-c</td>
+<td>実行中コードの中断指示（割り込み）</td>
+</tr>
+<tr>
+<td>Ctrl-a</td>
+<td>カーソルを行頭へ</td>
+</tr>
+<tr>
+<td>Ctrl-e</td>
+<td>カーソルを行末へ</td>
+</tr>
+<tr>
+<td>Ctrl-k</td>
+<td>カーソル位置から行末までのテキストを消去(消去した文字列は<code>Ctrl-y</code>で貼り付け可能)</td>
+</tr>
+<tr>
+<td>Ctrl-u</td>
+<td>現在入力中の行内のすべての文字列を消去（消去した文字列は<code>Ctrl-y</code>で貼り付け可能</td>
+</tr>
+<tr>
+<td>Ctrl-f</td>
+<td>カーソルを一文字分進める</td>
+</tr>
+<tr>
+<td>Ctrl-b</td>
+<td>カーソルを一文字分戻す</td>
+</tr>
+<tr>
+<td>Ctrl-l</td>
+<td>画面全体消去</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>例外とトレースバック</p>
+<p>IPythonでスクリプトの%runでの実行時、あるいは何らかのPython命令の実行時に例外が発生した場合、<strong>トレースバック</strong>と呼ばれる、その時点の全スタックのトレース情報を生成しそれぞれのスタック情報を表示する際に、その命令の前後数行のコードを含めて表示してくれる。</p>
+<p>前後どの程度の量を表示させるかは<code>%xmode</code>マジックコマンドでカスタマイズでき、最小レベル（標準Pythonインタプリタと同等）から冗長レベル（関数の引数値などまで表示）を選択可能。</p>
+</li>
+<li>
+<p>matplotlibとの連携</p>
+<p>IPython を Mtplotlib 機能付きで起動するには以下のようにオプションを指定する。
+これによりIPythonの起動とともにデフォルトで指定されたGUIバックエンド機能が活動化され、これによりmatplotlibウィンドウが描画可能になる。続いてNumpyおよびmatplotlibの主だったパッケージが読み込まれ、名前空間のトップレベルにimportされる。これらの機能は従来のMATLABなどの数値計算パッケージに相当する機能を提供してくれるものである。
+なお、ここまでの流れと同様の準備を手動で行う必要がある場合、マジックコマンドの<code>%gui</code>を呼び出すことになる（詳細は<code>%gui?</code>でヘルプを確認）</p>
+<pre tabindex="0"><code>$ ipython --pylab
+</code></pre></li>
+<li>
+<p>Qtベースの高機能GUIコンソールの活用</p>
+<p>PyQtやPysideをインストールしている環境（anacondaでもOK!）では高性能なテキストウィジェット、組み込み画像表示、複数行編集、構文ハイライトといった機能群を提供するQtフレームワークでのGUIコンソール機能を使用することができる。</p>
+<pre tabindex="0"><code>$ ipython qtconsole --pylab=inline
+</code></pre><p>このQtコンソールでは複数のIPythonプロセスをそれぞれのタブに起動させることができるため、複数の作業を用意に切り替えたり IPython HTML ノートブックとも用意に連携したりできる。</p>
+</li>
+</ol>
+<h2 id="補足">補足</h2>
+<h3 id="自作の関数やクラス等を修正した場合のリロードについて">自作の関数やクラス等を修正した場合のリロードについて</h3>
+<p>自作の関数やクラスを修正してimportし直しても，ipythonでは反映されない．
+反映させるには以下のコマンドを実行！</p>
+<pre tabindex="0"><code class="language-ipython" data-lang="ipython">%load_ext autoreload
+%autoreload 2
+</code></pre><ul>
+<li>%autoreload は %autoreload が実行される度にインポートしたモジュールをリロードする．</li>
+<li>%autoreload 1 は<code>%aimport &lt;module&gt;</code>のコマンドで実行したもの（<!-- raw HTML omitted -->）のみリロードしてくれる．</li>
+<li>%autoreload 2 は実行する度にインポートしたモジュールをリロードする．</li>
+</ul>
+<p>※個人的には<code>autoreload 2</code>が使いやすい！</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1683171048" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1683171048" defer></script>
+    <script src="/js/featherlight.min.js?1683171048" defer></script>
+    <script src="/js/theme.js?1683171048" defer></script>
+  </body>
+</html>

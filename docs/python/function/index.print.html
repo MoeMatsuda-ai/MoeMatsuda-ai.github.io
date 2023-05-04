@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Function :: &#39;Moais blog</title>
+    <link href="https://moematsuda-ai.github.io/python/function/index.html" rel="canonical" type="text/html" title="Function :: &#39;Moais blog">
+    <link href="/python/function/index.xml" rel="alternate" type="application/rss+xml" title="Function :: &#39;Moais blog"><link rel="icon" href="/images/favicon.png" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1683171048" rel="stylesheet">
+    <link href="/css/nucleus.css?1683171048" rel="stylesheet">
+    <link href="/css/fonts.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1683171048" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1683171048" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1683171048" rel="stylesheet">
+    <link href="/css/variant.css?1683171048" rel="stylesheet">
+    <link href="/css/print.css?1683171048" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1683171048" rel="stylesheet">
+    <script src="/js/url.js?1683171048"></script>
+    <script src="/js/variant.js?1683171048"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1683171048" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/python/function/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/python/index.html"><span itemprop="name">python</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Function</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="function">Function</h1>
+
+<h2 id="基本演算">基本演算</h2>
+<ul>
+<li>Cとおおむね同じ</li>
+<li><code>++</code>, <code>--</code>は使えないが<code>+=</code>, <code>-=</code>は使える</li>
+</ul>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="関数の定義">関数の定義</h2>
+<ul>
+<li><code>def</code>で始まる行で関数名と引数を定義</li>
+<li><strong>次行から関数の終わりまではインデント</strong>して命令文を書く</li>
+<li>返り値は省略可</li>
+<li>Docstring（ドックストリング） は　<code>help(function_name)</code> を実行したときに出力される文字列（<code>function_name</code>関数の説明文）のこと。一般的に関数名の直後に書き、三重引用符で囲む
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">function_name</span>(args):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Docstring&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    命令文       <span style="color:#75715e">#ここから関数の終わりまでインデントをする</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result
+</span></span></code></pre></div></li>
+<li>引数にデフォルト値を設定することもでき，デフォルト値の設定されている引数は呼び出し時に省略可能
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_name</span>(family<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Momo&#34;</span>,first<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Taro&#34;</span>): <span style="color:#75715e"># family: 姓,  first: 名</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;My name is </span><span style="color:#e6db74">{0}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{1}</span><span style="color:#e6db74">.&#34;</span><span style="color:#f92672">.</span>format(first, family))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print_name(first<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Daisuki&#34;</span>)
+</span></span></code></pre></div></li>
+<li>C言語と同様に引数を設定して呼び出すことで実行
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print_name(<span style="color:#e6db74">&#34;Yamaguchi&#34;</span>,<span style="color:#e6db74">&#34;Daisuki&#34;</span>)
+</span></span><span style="display:flex;"><span>My name <span style="color:#f92672">is</span> Daisuki Yamaguchi<span style="color:#f92672">.</span>
+</span></span></code></pre></div></li>
+<li>引数名をつけて，引数の値を指定することもできる。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print_name(family<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Yamaguchi&#34;</span>,first<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Daisuki&#34;</span>)
+</span></span><span style="display:flex;"><span>My name <span style="color:#f92672">is</span> Daisuki Yamaguchi<span style="color:#f92672">.</span>
+</span></span></code></pre></div></li>
+<li>引数名をつければ，引数の順番はランダムでも良い
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print_name(first<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Daisuki&#34;</span>,family<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Yamaguchi&#34;</span>)
+</span></span><span style="display:flex;"><span>My name <span style="color:#f92672">is</span> Daisuki Yamaguchi<span style="color:#f92672">.</span>
+</span></span></code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<h3 id="複数の返り値をもつ関数">複数の返り値をもつ関数</h3>
+<p>Pythonの関数では，<strong>返り値を複数</strong>指定できる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">interval</span>(mean,sd): <span style="color:#75715e"># 平均mean, 標準偏差sdから，サンプルの約68%が含まれる区間を出力</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> mean<span style="color:#f92672">-</span>sd, mean<span style="color:#f92672">+</span>sd
+</span></span></code></pre></div><p>複数の返り値を，それぞれ別の変数で受け取ることができる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>low,high<span style="color:#f92672">=</span>interval(<span style="color:#ae81ff">70</span>,<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>print(low,high)
+</span></span></code></pre></div><ul>
+<li>実行結果
+60 80</li>
+</ul>
+<p>複数の返り値を，一つの変数でまとめて受け取ることもできる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ret<span style="color:#f92672">=</span>interval(<span style="color:#ae81ff">70</span>,<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>print(ret[<span style="color:#ae81ff">0</span>], ret[<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>print(type(ret))      <span style="color:#75715e">## 返り値の型はタプル(要素の書き換えを出来ないリスト。タプルの詳細については後述)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## ret[0]=3            # 返り値の要素を変更するとエラーが出る。(タプルの要素は書き換え不可。後述)</span>
+</span></span></code></pre></div><ul>
+<li>実行結果
+60 80
+&lt;class &rsquo;tuple'&gt;</li>
+</ul>
+<h3 id="関数定義における型の明記">関数定義における型の明記</h3>
+<p>Python3.0以降では関数アノテーション（Function Annotations）という仕組みが導入され，
+関数の引数や返り値に直接型を記述することができる．
+ただしあくまで注釈のため，（環境によっては処理に使用されることもあるが）実行時に
+チェックされたりはしない．</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_func</span>(param1: str, param2: int) <span style="color:#f92672">-&gt;</span> tuple[str, int]:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (param1, param2)
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="print文">print文</h2>
+<h3 id="フォーマット指定その1-printf形式">フォーマット指定その1: printf形式</h3>
+<p>print(&ldquo;x=%d, y=%e&rdquo; % (x, y))</p>
+<!-- raw HTML omitted -->
+<h3 id="フォーマット指定方法その2-format-method">フォーマット指定方法その2: format method</h3>
+<p>今後おすすめの方法は，文字列に対するメソッド<code>format()</code>を使う<a href="https://docs.python.org/ja/3.8/tutorial/inputoutput.html#the-string-format-method">&ldquo;format()メソッド&rdquo;</a>と呼ばれる方法。</p>
+<ul>
+<li>実行例
+print(&ldquo;x={0}, y={1}&quot;.format(x, y)) # {}の中の数字で，format()の何番目の引数か指定
+print(&ldquo;x={}, y={}&quot;.format(x, y))   # format()の引数順に表示するなら{}内の数字は省略可
+print(&ldquo;x={1}, y={0}&quot;.format(x, y)) # {}内の数字を変えてみた
+print(&ldquo;x={0:+d}, y={1:4.2f}&quot;.format(x, y)) # 数値フォーマットの指定も可能</li>
+<li>実行結果
+x=9, y=False
+x=9, y=False
+x=False, y=9
+x=+9, y=0.00</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="フォーマット指定方法その3-その他他にも色々">フォーマット指定方法その3: その他（他にも色々&hellip;）</h2>
+<ul>
+<li>実行例
+x=5
+print(f&quot;x={x}&rdquo;)
+print(&ldquo;x=&quot;+str(x))</li>
+<li>実行結果
+x=5
+x=5</li>
+</ul>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="if文">if文</h2>
+<!-- raw HTML omitted -->
+<h3 id="if文-1">if文</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> x <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>    print(x, <span style="color:#e6db74">&#34;is zero&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elif</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>    print(x, <span style="color:#e6db74">&#34;is positive&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(x, <span style="color:#e6db74">&#34;is negative&#34;</span>)
+</span></span></code></pre></div><p>注) pythonはC言語のように<code>{}</code>を使わない。インデント(空白4文字)で構文単位を表現</p>
+<!-- raw HTML omitted -->
+<h3 id="if-elseを1行で書く">if-elseを1行で書く</h3>
+<p><strong>1行if文の書式</strong> : <code>返り値 if 条件式 else 返り値</code></p>
+<p>例えば，絶対値を求める関数<code>absval</code>を<code>def</code>を使って書くと以下のようになる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">absval</span>(x):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> x<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        absval<span style="color:#f92672">=</span>x
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        absval<span style="color:#f92672">=-</span>x
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> absval
+</span></span></code></pre></div><p>この関数を1行にまとめて書くと，以下のようにとても簡潔になる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">absval</span>(x):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> x <span style="color:#66d9ef">if</span> x<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">-</span>x
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="while文">While文</h2>
+<!-- raw HTML omitted -->
+<h3 id="while文-1">while文</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>:
+</span></span><span style="display:flex;"><span>    print(i, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; &#39;</span>)
+</span></span><span style="display:flex;"><span>    i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="for文">for文</h2>
+<ul>
+<li>
+<p><strong>for文の特徴</strong></p>
+<p>Pythonのデフォルト実装では、動的に解釈を行う（型が柔軟である)という言語の性質上、CやFortranなどのように効率的なマシンコードへのコンパイルができないという特徴を持つ。この弱点を克服するための手法として</p>
+<ul>
+<li>PyPyプロジェクト：PythonのJust-In-Time実装</li>
+<li>Cythonプロジェクト：PythonコードをCコードに変換する</li>
+<li>Numbaプロジェクト：Pythonコードブロックを高速LLVMバイトコードに変換する</li>
+</ul>
+<p>などが知られているが、このどれもが標準CPythonエンジンほどには普及していない。このようなPythonの低速性はfor文などの小さな操作を大量に繰り返す状況で顕著になる。</p>
+</li>
+<li>
+<p><strong>for文の構造</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> 変数 <span style="color:#f92672">in</span> イテラブル:
+</span></span><span style="display:flex;"><span>    実行文
+</span></span></code></pre></div><ul>
+<li><strong>イテラブル</strong>: 順に一つずつ要素を取り出すことができるオブジェクト
+<ul>
+<li>ex) リスト, <code>range()</code> でつくるシーケンスなど(後述)</li>
+</ul>
+</li>
+<li><code>for</code> と <code>in</code> の間の変数にイテラブルの要素が順に代入される</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h4 id="リストの使用">リストの使用</h4>
+<p><strong>リスト</strong>とはPythonに用意されている<strong>配列の一種</strong>で，要素を<code>[]</code>内に列挙する。要素の取り出しは，例えば以下のように<code>for</code>文で行える。
+リストの詳細は今後の課題でも扱う。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">9</span>]:
+</span></span><span style="display:flex;"><span>    print(x, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span>)
+</span></span></code></pre></div><ul>
+<li>実行結果
+1 5 9</li>
+</ul>
+<p>リストの要素を順に変数に代入することも簡単にできる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>numlist <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">9</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> numlist:
+</span></span><span style="display:flex;"><span>    print(i, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span>)
+</span></span></code></pre></div><ul>
+<li>実行結果
+1 5 9</li>
+</ul>
+<!-- raw HTML omitted -->
+<h4 id="range関数">range()関数</h4>
+<ul>
+<li><code>range(end)</code>: 0以上end<strong>未満</strong>の数列を生成</li>
+<li><strong><code>range(begin, end)</code></strong>: begin以上end<strong>未満</strong>の数列を生成</li>
+<li><strong><code>range(begin, end, step)</code></strong>: begin以上end<strong>未満</strong>の数列を生成。stepは要素間の間隔</li>
+</ul>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1683171048" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1683171048" defer></script>
+    <script src="/js/featherlight.min.js?1683171048" defer></script>
+    <script src="/js/theme.js?1683171048" defer></script>
+  </body>
+</html>

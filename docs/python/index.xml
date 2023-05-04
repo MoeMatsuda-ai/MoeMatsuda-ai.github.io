@@ -6,7 +6,18 @@
     <description>Recent content in python on &#39;Moais blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 29 Mar 2023 06:10:48 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Apr 2023 06:44:22 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating dateset by Numpy</title>
+      <link>https://moematsuda-ai.github.io/python/numpy_create_dateset/index.html</link>
+      <pubDate>Sat, 29 Apr 2023 06:44:22 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/numpy_create_dateset/index.html</guid>
+      <description>データの生成 等差数列の生成 np.arange(start, stop, step) 要素数を指定した等差数列の生成 np.linspace(start, stop, num, endpoint=True) endpoint: stopを数列に含むか否か（デフォルトはTrue） 同じ値で初期化した配列の生成 0で初期化
+np.zeros(shape) np.zeros_like(arr) 1で初期化
+np.ones(shape) np.ones_like(arr) 任意の値 (fill_value) で初期化
+np.full(shape, fill_value) np.full_like(arr, fill_value) 空の配列を生成
+np.empty(shape) np.empty_like(arr) 単位テンソルの生成 np.eye(shape) </description>
+    </item>
     <item>
       <title>Docstring</title>
       <link>https://moematsuda-ai.github.io/python/docstring/index.html</link>
@@ -26,11 +37,91 @@ with torch.no_grad(): y = x*2 We can use as decorator
 @torch.no_grad() def doubler(x): return x*2 Use .detach() -&amp;gt; ? Use .reaquires_grad -&amp;gt; ? reference Pytorchの「.detach()」と「with no_grad():」と「.requires_grad = False」の違い PyTorchの新しい推論モードについて </description>
     </item>
     <item>
+      <title>Pygame install</title>
+      <link>https://moematsuda-ai.github.io/python/pygame_install/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:12:30 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/pygame_install/index.html</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Pickle</title>
       <link>https://moematsuda-ai.github.io/python/pickle/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:12:12 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/python/pickle/index.html</guid>
       <description>pickleの使用方法 Saving with openでの保存、読み込み with open(&amp;#34;filename.pkl&amp;#34;, &amp;#34;wb&amp;#34;) as f: pickle.dump(data, f) with open(&amp;#34;filename.pkl&amp;#34;, &amp;#34;rb&amp;#34;) as f: hoge = pickle.load(f) pandasでの保存、読み込み import pandas as pd pd.to_pickle(data, &amp;#34;filename.pkl&amp;#34;) hoge = pd.read_pickle(&amp;#34;filename.pkl&amp;#34;) joblib(?)での保存、読み込み joblib.dump(data, &amp;#34;filename.jb&amp;#34;, compress=3) hoge = joblib.load(&amp;#34;filename.jb&amp;#34;) </description>
+    </item>
+    <item>
+      <title>Pandas</title>
+      <link>https://moematsuda-ai.github.io/python/pandas/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:11:35 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/pandas/index.html</guid>
+      <description>Pandasの概要 データ解析を容易にするライブラリ データ解析などに有用なツール NumpyのようにC言語で実装されており，配列演算の高速化が図られているため大規模データの扱いが容易 PyDataとは？ Pythonによるデータ管理/分析ツールのユーザと開発者のコミュニティ PyDataで話題とされるPythonツール群を総称してPyData Stackなどと呼ぶ。 Pandasでできること さまざまな形式で保存されたデータを読み込み、データを分析・処理したり 可視化，保存したりできる
+データを入出力する機能(CSV, Excel, RDB/Relational DataBase, HDF5など) データを効率的かつ高速に処理できる形式でデータを格納 データのNaN（Not a Number、欠損値）処理 データの一部取り出しや結合 データの柔軟な変更やピボット(pivot)を処理 データに対する統計処理や回帰処理等 データの集約とグループ演算 Pandasのデータ型 pandasのデータ構造には以下の3つがある
+Series: 1次元配列 DataFrame: 2次元配列 panel: 3次元配列 ←　廃止済み それぞれのデータの位置や属性を行ラベル、列ラベル、アイテム名で表現
+1. Series 1次元データ保存用のデータ構造 格納するデータに制限はなく、すべての要素が同じデータ型である必要もない dat = pd.Serie([1, 3, 6, 12]) dat = pd.Series(np.array([1, 3, np.nan, 12])) dat = pd.Series([1, &amp;#39;aa&amp;#39;, 2.34, &amp;#39;d&amp;#39;]) 行ラベルを指定しなかった場合には行ラベルは自動的に0から割り振られるが，生成時に引数としてindexを指定したり辞書型を渡すことで表ラベルを指定することも可能 dat = pd.Series([1, 3, 5, 12], index=[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;, &amp;#39;a&amp;#39;]) dat = pd.</description>
+    </item>
+    <item>
+      <title>Trouble</title>
+      <link>https://moematsuda-ai.github.io/python/trouble/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:11:18 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/trouble/index.html</guid>
+      <description>よくあるトラブル 標準関数名と同じ名前の関数や変数を作ってしまうと，標準関数にアクセスできなくなるので要注意。
+関数名の頭に?をつけて，例えば
+?sum として実行すると，指定した関数の使い方が表示される。動作が怪しいときには，これを使って参照されている関数の確認できる。
+定義した変数や関数を消去したいときにはdel()を使う
+Q1) Pythonの標準関数に最大値を返す関数max()がある。
+max(3,5)の返り値が5であることを，次のセルで実行して確認しなさい。
+max(3,5)
+Q2) max=3を実行した後に max(3,5)を実行するとどのようなエラーがでるか，次セルで実行して確認しなさい。
+max=3 print(max(3,5)) max = 3 del(max) print(max(3, 5)) 実行結果 5 Q3) 前のセルの&amp;rsquo;max=3&amp;rsquo;の次の行に，変数maxを削除して標準関数max()を再び使えるようにする命令を追加しなさい。その結果，エラーが出なくなることを確認しなさい。
+max=3 ここに何か命令文を入れる print(max(3,5)) # エラーが出なくなることを確認する </description>
+    </item>
+    <item>
+      <title>Numpy</title>
+      <link>https://moematsuda-ai.github.io/python/numpy/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:11:04 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/numpy/index.html</guid>
+      <description>Pythonではfor文などのループが低速 一般的にPythonではfor文を多様せず、numpyやPandas等の高速なライブラリを利用 Numpyは多くの操作に対して静的型付きでコンパイルされた関数（c言語）への便利なインターフェースを提供 Numpyではベクトル化操作により配列に対して操作を実行するだけで、各要素に適用される Numpyのベクトル化演算は、ufunc(ユニバーサル関数)を使用して実装されており、このufuncの主な目的は、Numpyの各要素に対して繰り返し演算を素早くすること 便利なNumpy関数 以下ではimport numpy as npとしてnumpyをimportしているものとする
+npはnumpy, shapeは配列の形状, arrは任意の配列を示す
+Numpyで実装されている演算子とその等価なufunc
+関数 等価なufunc 説明 + np.add(arr, x) 加算(arrやxの順序はとわない。また配列同士、変数同士でも演算可) - np.subtract(arr, x) 減算（以下同文） - np.negative(arr) 単行マイナス * np.multiply(以下略) 乗算 / np.divide 除算 // np.floor_divide 整数除算(小数点以下切り捨て) ** np.power べき乗 % np.mod 剰余 Numpyで実装されている比較演算子とその等価なufunc
+演算子 等価なufunc == np.equal != np.not_equal &amp;lt; np.less &amp;lt;= np.less_equal &amp;gt; np.greater &amp;gt;= np.greater_equal Numpyのufunc
+関数 説明 引数 arr.reshape(shape) 配列arrを指定したshapeの型に変形 shape arr[np.axis] 新しく次元を追加 &amp;mdash; np.concatenate([arr1, arr2, arr3]) 次元の同じ複数の配列を結合 連結する配列(タプルまたは配列のリスト), axis=0で第1の軸方向に結合（デフォルト）, axis=1で第2の軸方向 np.</description>
+    </item>
+    <item>
+      <title>Numpy2</title>
+      <link>https://moematsuda-ai.github.io/python/numpy2/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:10:50 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/numpy2/index.html</guid>
+      <description>1. Numpy　概要 Pythonにはデータの集合を扱うための様々なデータ型がある。
+標準で用意されているもの 名前 例 リスト(list) L=[&amp;quot;kiwi&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;apple&amp;quot;] インデックス番号付き集合 タプル(tuple) T=(&amp;quot;kiwi&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;apple&amp;quot;) インデックス番号付き集合(代入不可) 辞書(dict) D={&amp;quot;kiwi&amp;quot;:3, &amp;quot;banana&amp;quot;:2, &amp;quot;apple&amp;quot;:3} インデックス番号無し (key,value) 対応表 集合(set) S={&amp;quot;kiwi&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;apple&amp;quot;} インデックス番号無し集合 拡張モジュールを利用するもの。 名前 例 numpy.ndarray N=np.array([1,2,3]) 数値計算用の多次元配列（ブロードキャストを提供する高速で目盛り効率の良い多次元配列が実装されている。 ） pandas.Series s=pd.Series([280,198],index=[&#39;tomato&#39;,&#39;banana&#39;]) 行に名前がある1次元配列 pandas.DataFrame df=pd.DataFrame([[&#39;tomato&#39;,280],[&#39;banana&#39;, 198]], columns=[&#39;name&#39;,&#39;price&#39;]) 列や行に名前がある2次元配列 Numpyとは？ NumpyとはN次元配列(N-dimensional array, ndarray)を定義し、ベクトルや行列をはじめとする数値計算を行うためのモジュールであり、以下のような特徴を持つ。
+C言語で記述されているため高速処理可能 高速に動作し、呼び出しにループ記法を必要としない標準的な数学関数 Numpyモジュールで生成する配列の型名はnumpy.ndarray ディスクへの読み書きに加え、メモリマップファイル機能を提供する入出力 行列計算、乱数生成、フーリエ変換の各機能 C, C++, Fortran へのインタフェース(C言語呼び出しのAPIがあることで、NumpyからC言語で書かれた外部ライブラリへデータを渡したり、逆に外部ライブラリの計算結果をNumpyに戻し、ndarrayとして扱うこともできる。) ※Numpyはデータ演算の基盤を提供するが、実際に構造化データや表形式データを分析する場面ではpandasを用いるのが一般的
+モジュールの読み込み NumPyモジュールは慣例的にnpの名称で利用される。
+import numpy as np print(np.__version__) Numpyのマニュアル参照 np? Numpyの関数とメソッド 配列ndarrayの生成や，複数の配列に対する操作(結合等)には, NumPyの関数を使う すで生成されているndarrayオブジェクトの加工には，ndarrayに対するメソッドを使う ※　以下では，NumPyの関数とメソッドの説明の際に，両者を以下のように書いて区別する</description>
+    </item>
+    <item>
+      <title>Matplotlib</title>
+      <link>https://moematsuda-ai.github.io/python/matplotlib/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:10:00 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/matplotlib/index.html</guid>
+      <description>Matplotlibとは？ グラフやそれ以外の2次元の形式で行うデータの可視化に用いるライブラリ。
+出版に適したグラフを作るのに非常に適しており、IPythonとうまく統合されているためIPythonとmatplotlibはデータのグラフ化や探索を容易に行えるインタラクティブな環境を提供。 ウィンドウに表示されているツールバーからプロットの特定の領域をズームしたり、プロットで表示されれる範囲を変更することができる。
+Matplotlibにおけるグラフを書く方法 pypplot インターフェース
+単純なグラフの描画には便利 オズジェクト指向インターフェース
+サブグラフを用意するなど細かい指定をするときに便利 Pyplotインターフェース plt.から始まる命令で簡単にグラフをかける 単純なグラフ作成向け Numpyモジュールの使用 数学関数の描画には、ベクトル・行列演算用のNumPyモジュールを使うと便利。Numpyはリストと似ているが数値データの処理に特化したメソッドが色々用意されている。
+(例)
+import numpy as np step=0.1 time=np.arange(0,20+step,step) sint=np.sin(time) cost=np.cos(time) plt.figure(figsize=(8, 4)) plt.plot(time, sint, label=&amp;#34;sin t&amp;#34;) plt.plot(time, cost, label=&amp;#34;cos t&amp;#34;) plt.show() 以下のようにグラフをカスタマイズできる。
+# ラベルの追加 plt.xlabel(&amp;#34;time [s]&amp;#34;) plt.ylabel(&amp;#34;y&amp;#34;) # 凡例の追加 plt.legend(loc=&amp;#34;upper right&amp;#34;) # png, jpg, pdf等へのグラフの出力 plt.savefig(&amp;#39;figure.png&amp;#39;) オブジェクト指向インターフェース グラフの見栄え等に関する細かい設定をすることができる。 コンテナと呼ばれるオブジェクトの中に、描画パーツやさらにコンテナを配置していくことでグラフを作成する。 matplotlibのオブジェクト指向インターフェースの基本構造 matplotlibのオブジェクト指向インタフェースでは，以下のように階層的にコンテナや基本パーツを配置する。
+Figure (図)コンテナ 全ての描画オブジェクトに対して，一番上の階層にあるクラス。 複数のグラフ等(Axesオブジェクト等)を配置するキャンバス的な役割のオブジェクト Axes (座標系)コンテナ 個々のグラフ等に対応するオブジェクト 以下の座標軸(Axis)や描画グラフ(Primitives)を要素として登録する Axis (座標軸)コンテナ 個々の座標軸を表現するオブジェクト ラベルや目盛りなどを要素とする Primitives (基本パーツ) 直線オブジェクト(Line2D), テキストオブジェクト(Text)など各グラフに描画するオブジェクト コンテナの中に配置する (例)</description>
+    </item>
+    <item>
+      <title>List</title>
+      <link>https://moematsuda-ai.github.io/python/list/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:09:47 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/list/index.html</guid>
+      <description>データの集合を扱うためのデータ型 以下は標準で用意されているもの。
+名前 例 リスト(list) L=[&amp;quot;kiwi&amp;quot;, &amp;quot;banana&amp;quot;, 100 ] インデックス番号付き集合 タプル(tuple) T=(&amp;quot;kiwi&amp;quot;, &amp;quot;banana&amp;quot;, 100 ) インデックス番号付き集合(代入不可) 辞書(dict) D={&amp;quot;kiwi&amp;quot;:3, &amp;quot;banana&amp;quot;:2, &amp;quot;apple&amp;quot;:3} インデックス番号無し (key,value) 対応表 集合(set) S={&amp;quot;kiwi&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;apple&amp;quot;} インデックス番号無し集合 以下は拡張モジュールを利用するもの。
+名前 例 numpy.ndarray N=np.array([1,2,3]) 数値計算用の多次元配列 pandas.Series s=pd.Series([280,198],index=[&#39;tomato&#39;,&#39;banana&#39;]) 行に名前がある1次元配列 pandas.DataFrame df=pd.DataFrame([[&#39;tomato&#39;,280],[&#39;banana&#39;, 198]], columns=[&#39;name&#39;,&#39;price&#39;]) 列や行に名前がある2次元配列 リストの定義の仕方 定義の仕方 コマンド printによる出力結果 </description>
     </item>
     <item>
       <title>Jupyter notebook</title>
@@ -40,6 +131,15 @@ with torch.no_grad(): y = x*2 We can use as decorator
       <description> セル 編集モードへの変更：ダブルクリックまたは&amp;quot;Enter&amp;quot; コマンドモードへの変更：ESC セルの内容の実行 Windows：Ctrl+Enter MacOS：command+Return OS共通：Shift+Enter Markdownセルとcodeセル Markdownセル：テキストを入力するためのセル Codeセル：Pythonの実行を行うセル arkdownセルの編集方法 &amp;ldquo;#&amp;ldquo;でタイトル &amp;ldquo;##&amp;ldquo;でサブタイトル &amp;ldquo;-&amp;ldquo;で箇条書き &amp;ldquo;太文字&amp;ldquo;で太文字 便利なショートカットキー（Window） コマンドモード ショートカットキー 説明 F 検索・置換 Ctrl -Shift Ctrl -Shift Enter 編集モードにする P コマンドパレットを開く Shift -Enter Ctrl -Enter Alt -Enter Y コードセルにする M マークダウンセルにする R rawセルにする 1 見出し１にする 2 見出し２にする 3 見出し３にする 4 見出し４にする 5 見出し５にする 6 見出し６にする K 上のセルを選択する Up 上のセルを選択する Down 下のセルを選択する J 下のセルを選択する Shift -K Shift -Up Shift -Down Shift -J A 上にセルを追加する B 下にセルを追加する X 選択しているセルをカット C 選択しているセルをコピー Shift -V V 下に貼り付け Z セルの削除をやり直す DD 選択しているセルを削除する Shift -M Ctrl -S S 保存する L 行番号の表示・非表示 O セルの出力結果の表示・非表示 Shift -O H キーボードショートカット表示 I×2 カーネルをインタラプト 0 カーネルを再起動 Esc ページャーを閉じる Q ページャーを閉じる Shift -L Shift -Space Space 下にスクロール 編集モード ショートカットキー 説明 Tab コード補完・タブ Shift-Tab ツールチップ Ctrl-] インデント Ctrl-[ ディデント Ctrl-A 全選択 Ctrl-Z やり直し Ctrl-Shift - Ctrl-Y やり直し Ctrl-Home セルの最初に移動 Ctrl-Up セルの最初に移動 Ctrl-End セルの最後に移動 Ctrl-Down セルの最後に移動 Ctrl-Left 一単語前に移動 Ctrl-Right 一単語後に移動 Ctrl-Backspace 前の単語を削除 Ctrl-Delete 後の単語を削除 Ctrl-M コマンドモードにする Ctrl-Shift-F コマンドパレットを開く Ctrl-Shift-P コマンドパレットを開く Esc コマンドモードにする Shift-Enter セルを実行し、下のセルを選択する Ctrl-Enter セルを実行する Alt-Enter セルを実行し、下にセルを追加する Ctrl-Shift-Minus セルを分割する Ctrl-S 保存する Down カーソルを下に移動 Up カーソルを上に移動 Ctrl-/ 選択部分をコメントアウト Kernel セルの左の &amp;ldquo;In[]&amp;rdquo; の括弧内の数字は実行を行った順番を示す。 順番によっては正常に作動しない場合もあるため最後は左上の欄から&amp;quot;Kernel &amp;gt; Restart &amp;amp; Run All&amp;quot;をクリック </description>
     </item>
     <item>
+      <title>Function</title>
+      <link>https://moematsuda-ai.github.io/python/function/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:09:22 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/function/index.html</guid>
+      <description>基本演算 Cとおおむね同じ ++, --は使えないが+=, -=は使える 関数の定義 defで始まる行で関数名と引数を定義 次行から関数の終わりまではインデントして命令文を書く 返り値は省略可 Docstring（ドックストリング） は　help(function_name) を実行したときに出力される文字列（function_name関数の説明文）のこと。一般的に関数名の直後に書き、三重引用符で囲む def function_name(args): &amp;#34;&amp;#34;&amp;#34;Docstring&amp;#34;&amp;#34;&amp;#34; 命令文 #ここから関数の終わりまでインデントをする return result 引数にデフォルト値を設定することもでき，デフォルト値の設定されている引数は呼び出し時に省略可能 def print_name(family=&amp;#34;Momo&amp;#34;,first=&amp;#34;Taro&amp;#34;): # family: 姓, first: 名 print(&amp;#34;My name is {0} {1}.&amp;#34;.format(first, family)) print_name(first=&amp;#34;Daisuki&amp;#34;) C言語と同様に引数を設定して呼び出すことで実行 print_name(&amp;#34;Yamaguchi&amp;#34;,&amp;#34;Daisuki&amp;#34;) My name is Daisuki Yamaguchi. 引数名をつけて，引数の値を指定することもできる。 print_name(family=&amp;#34;Yamaguchi&amp;#34;,first=&amp;#34;Daisuki&amp;#34;) My name is Daisuki Yamaguchi. 引数名をつければ，引数の順番はランダムでも良い print_name(first=&amp;#34;Daisuki&amp;#34;,family=&amp;#34;Yamaguchi&amp;#34;) My name is Daisuki Yamaguchi. 複数の返り値をもつ関数 Pythonの関数では，返り値を複数指定できる。
+def interval(mean,sd): # 平均mean, 標準偏差sdから，サンプルの約68%が含まれる区間を出力 return mean-sd, mean+sd 複数の返り値を，それぞれ別の変数で受け取ることができる。
+low,high=interval(70,10) print(low,high) 実行結果 60 80 複数の返り値を，一つの変数でまとめて受け取ることもできる。</description>
+    </item>
+    <item>
       <title>Filter with python</title>
       <link>https://moematsuda-ai.github.io/python/filter/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:09:03 +0000</pubDate>
@@ -47,11 +147,32 @@ with torch.no_grad(): y = x*2 We can use as decorator
       <description>filtfiltを用いたバンドパスフィルタ(バターワースフィルタ)の記述例 #バターワースフィルタ（バンドパス） fp = np.array([25, 50]) #通過域端周波数[Hz] fs = np.array([10, 100]) #阻止域端周波数[Hz] gpass = 3 #通過域端最大損失[dB] gstop = 40 #阻止域端最小損失[dB] def bandpass(x, samplerate, fp, fs, gpass, gstop):#samplerate がサンプリング周波数 fn = samplerate / 2 #ナイキスト周波数 wp = fp / fn #ナイキスト周波数で通過域端周波数を正規化 ws = fs / fn #ナイキスト周波数で阻止域端周波数を正規化 N, Wn = signal.buttord(wp, ws, gpass, gstop) #オーダーとバターワースの正規化周波数を計算 b, a = signal.butter(N, Wn, &amp;#39;bandpass&amp;#39;) #フィルタ伝達関数の分子と分母を計算 y = signal.filtfilt(b, a, x) #信号に対してフィルタをかける return y #フィルタ後の信号を返す y = bandpass(f_biceps, samplerate, fp, fs, gpass, gstop) scipy.</description>
     </item>
     <item>
+      <title>Dict</title>
+      <link>https://moematsuda-ai.github.io/python/dict/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:08:52 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/dict/index.html</guid>
+      <description>1. 辞書(dict)の特徴 名前 例 リスト(list) L=[&amp;quot;kiwi&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;apple&amp;quot;] インデックス番号付き集合 タプル(tuple) T=(&amp;quot;kiwi&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;apple&amp;quot;) インデックス番号付き集合(代入不可) 辞書(dict) D={&amp;quot;kiwi&amp;quot;:3, &amp;quot;banana&amp;quot;:2, &amp;quot;apple&amp;quot;:3} インデックス番号無し (key,value) 対応表 集合(set) S={&amp;quot;kiwi&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;apple&amp;quot;} インデックス番号無し集合 書式: dict_name={key 1: value 1, key 2: value 2, ...} 辞書(dict)には，検索のためのkeyと，検索キーに紐付けられるvalueのペアを登録する。 各要素に対するインデックスは存在しない。 注意:
+Python 3.5以前 ではdictに対する要素の登録順序と，実際に保存されている順序と異なることがある。(順序非保存) Python 3.7以降 ではdictでも順序は保存(順序保存) Python 3.6では非公式に順序保存 2. dictの定義 reward={&amp;#34;cheese&amp;#34; : 100 , # リストや辞書等では，折返し記号&amp;#34;\&amp;#34;なしで改行可 &amp;#34;enemy&amp;#34; : -10, &amp;#34;friend&amp;#34; : -1} print(reward) print(reward[&amp;#34;friend&amp;#34;]) # 辞書の参照は dict[key] Qvalue={(1,&amp;#34;right&amp;#34;) : 0.5, (1,&amp;#34;left&amp;#34;) : 1.</description>
+    </item>
+    <item>
       <title>Create Library</title>
       <link>https://moematsuda-ai.github.io/python/create-library/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:08:38 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/python/create-library/index.html</guid>
       <description>ライブラリの作成方法 directory に __init.py__ ファイルを作成 site-packages ディレクトリに作成したライブラリを追加する（シンボリックリンクでも可） site-packages の場所は $ python -m site で確認できる ディレクトリをパスに追加する場合は次の通り $ export PYTHONPATH=&amp;#34;&amp;lt;path&amp;gt;:$PYTHONPATH&amp;#34; </description>
+    </item>
+    <item>
+      <title>Class</title>
+      <link>https://moematsuda-ai.github.io/python/class/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:08:17 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/class/index.html</guid>
+      <description>クラス(class) 1. 用語(クラス, インスタンス，オブジェクト) クラス
+c言語でいう構造体のようなもの。クラス内で変数を定義することもできる。
+int float list tuple dictなど インスタンス (instance)
+クラス(型)から生成されるデータのこと。インスタンス・オブジェクトともいう。
+int（クラス）に対して，1, 2, ..はインスタンス list（クラス）に対して, [1, 3]はインスタンス オブジェクト(object)
+定義できるものは大体オブジェクト
+クラス インスタンス メソッドなど 2. クラスの定義 キーワード 初期化メソッド 定義したクラスによりインスタンスを生成するときに実行される関数 インスタンス変数 クラス内の様々なメソッド(関数)で使うことができる変数。クラス内でのみ使える大域変数のようなもの。 大抵，初期化メソッドで生成・参照。 クラス内では，self.nameのようにself.をつけて参照 (具体例は次のセルの問に) インスタンス化したオブジェクトからはオブジェクト名.変数名 (taro.nameなど)で参照(具体例は次のセルの問に) インスタンス・メソッド クラス内で第一引数にselfを指定して定義する関数 クラス内ではself.関数名 で相互参照できる(引数からはselfは省略) インスタンス化したオブジェクトからは，オブジェクト名.関数名 で参照(呼び出し時に第一引数selfは省略) 例 class Name_list: def __init__(self, family=&amp;#34;Momo&amp;#34;, first=&amp;#34;Taro&amp;#34;): # 初期化メソッド(インスタンス生成時に実行) self.family = family # インスタンス変数 family の生成 self.first = first # インスタンス変数には&amp;#34;self.&amp;#34;をつける def print(self): # インスタンス・メソッド(第一引数は必ずself) print(&amp;#34;My name is {} {}.</description>
     </item>
     <item>
       <title>Anaconda Update</title>
@@ -66,6 +187,37 @@ $ conda update -n base conda ※上は(base)と作成した仮想環境両方ア
 -n は --name の略で、環境名の指定 -c は --channel の略で、デフォルトリポジトリだけでなくチャネルを追加で指定 参考 Anaconda パッケージ アップデート方法 pipでアップデートするときのコマンド pip update </description>
     </item>
     <item>
+      <title>Tuple</title>
+      <link>https://moematsuda-ai.github.io/python/tuple/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:07:41 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/tuple/index.html</guid>
+      <description>タプル(tuple) Pythonにはデータの集合を扱うための様々なデータ型がある。
+以下は標準で用意されているもの。
+名前 例 リスト(list) L=[&amp;quot;kiwi&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;apple&amp;quot;] インデックス番号付き集合 タプル(tuple) T=(&amp;quot;kiwi&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;apple&amp;quot;) インデックス番号付き集合(代入不可) 辞書(dict) D={&amp;quot;kiwi&amp;quot;:3, &amp;quot;banana&amp;quot;:2, &amp;quot;apple&amp;quot;:3} インデックス番号無し (key,value) 対応表 集合(set) S={&amp;quot;kiwi&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;apple&amp;quot;} インデックス番号無し集合 以下は拡張モジュールを利用するもの。
+名前 例 numpy.ndarray N=np.array([1,2,3]) 数値計算用の多次元配列 pandas.Series s=pd.Series([280,198],index=[&#39;tomato&#39;,&#39;banana&#39;]) 行に名前がある1次元配列 pandas.DataFrame df=pd.DataFrame([[&#39;tomato&#39;,280],[&#39;banana&#39;, 198]], columns=[&#39;name&#39;,&#39;price&#39;]) 列や行に名前がある2次元配列 タプルの特徴 タプルの定義，要素へのアクセス，スライス等はリストとほぼ同様 リストは要素を[]で囲むが，タプルは()で囲む リストと異なり，一度定義したら要素の書き換えはできない タプルの定義 fruits=(&amp;#34;banana&amp;#34;, &amp;#34;prange&amp;#34;, &amp;#34;apple&amp;#34;) a, b, c = fruits#変数a,b,cへそれぞれ一括代入 L = tuple(range(5)) タプルへの代入 一度定義したタプルの要素を後で書き換えることはできない。
+a=(1,2,3,5) a[3]=4 # 要素を書き換えようとするとエラーが出る(試してみること) ただし，以下のように変数に代入されているタプルを別のタプルに置き換えることはできる。
+a=(1,2,3,5) a=(5,2,3) # タプルの置き換え (タプル(5,2,3)のidがaの参照先に) </description>
+    </item>
+    <item>
+      <title>pythonの基本2</title>
+      <link>https://moematsuda-ai.github.io/python/base2/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:07:24 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/base2/index.html</guid>
+      <description>Pythonの便利なモジュール モジュール・パッケージ・ライブラリの違い ライブラリ
+クラスや関数を記述したファイル(.py)
+パッケージ
+いくつかのモジュールを一つのディレクトリにまとめたもの
+ライブラリ
+いくつかのパッケージをまとめたもの。モジュールやパッケージをライブラリと呼ぶこともある
+pythonのライブラリ Numpy
+N次元配列(N-dimensional array, ndarray)でベクトルや行列などの数値計算を行うためのモジュール C言語で記述されているため高速処理可能 Numpyモジュールで生成する配列の型名はnumpy.ndarray pandas
+データ解析を容易にするPythonのサードパーティライブラリ データ構造に対して様々な処理を施す機能を提供しており、他のライブラリをバックエンドとして利用して連携して動作できることやデータに対する豊富な処理機能を備えているため、高度なデータ解析に有用なツール NumpyのようにC言語による実装であるため，配列演算が高速で大規模データの扱いが容易 matplotlib
+グラフなどのデータの可視化に用いるライブラリ 出版に適したグラフを作るのに非常に適しており，IPythonとうまく統合されているためIPythonとmatplotlibはデータのグラフ化や探索を容易に行えるインタラクティブな環境を提供 IPython
+インタラクティブで探索的な計算を行うことができ、ロバスト性と生産性を持つ環境を提供 Pythonのシェルを拡張したもので、Pythonのコードの記述、テスト、デバッグを加速するように設計されている。特に、インタラクティブなデータ操作とmatplotlibによるデータの可視化に非常に便利。 標準的なターミナル操作形式のIPythonシェル以外にも、以下のものも提供 Webブラウザを通じてIPythonと接続することができる、mathematica風のHTMLノートブック インラインのグラフ描画、複数行の編集、文法のハイライトが可能なQtフレームワークを用いたGUIコンソール 並列・分散コンピューティングをインタラクティブに行える基盤 Scipy
+科学計算の計算における様々な一般的な問題に取り組めるパッケージ群。
+scipy.integrate：数値積分ルーチンや微分方程式ソルバ scipy.linalg：線形代数ルーチンやnumpy.linalgで提供されている機能を拡張した行列の分解機能 scipy.optimaze：関数の最適化（最短化）と求根アルゴリズム scipy.signal：信号処理ツール scipy.sparse：疎（スパース）なデータを持つ行列や線形システムの解法 scipy.special：ガンマ関数のような多数の一般的な数学の関数を実装したFortanのライブラリSPECFUNを使うためのラッパー scipy.stats：標準的な連続分布や離散分布（密度関数、サンプラー、連続分布関数）、様々な統計検定、その他の記述統計 scipy.weave：配列計算の加速のために用いるインラインでのC++コードを利用するためのツール 標準モジュール モジュール名 記述法 概要 print print(&amp;ldquo;出力1&amp;rdquo;, &amp;ldquo;出力2&amp;rdquo;, sep=&amp;lsquo;sep&amp;rsquo;, end=&amp;lsquo;end&amp;rsquo;) 引数を出力する。sepには値の間に挿入される文字列（デフォルトはsep=&amp;rsquo; &amp;lsquo;）、endには最後の値の後につかされる文字列（デフォルトはend=&amp;rsquo;\n&amp;rsquo;）を指定 dir dir(オブジェクト名) オブジェクトのすべての属性（含まれる関数やメソッド等）を表示 type type(オブジェクト名) どのような型のオブジェクトであるかを確認できる。 sum sum(リスト) リスト要素の数値の合計を返却する input input(&amp;ldquo;文字列&amp;rdquo;) 文字列を出力し、キーボードからの入力を返却する max max(x,y,z,key=function) x,y,zの中で最も大きい値を返却する。key&#39;に任意の関数f(x)を渡すと argmax f(x)&amp;lsquo;を計算する（関数f(x), f(y), f(z) の計算結果が最大となる変数を返す) Jupyter notebook コマンド 記述法 概要 %timeit %timeit function() 指定した関数の実行時間を計算 NumPyライブラリ モジュール名 記述法 import 概要 arange np.</description>
+    </item>
+    <item>
       <title>Python Basics</title>
       <link>https://moematsuda-ai.github.io/python/base/index.html</link>
       <pubDate>Tue, 22 Nov 2022 08:04:32 +0000</pubDate>
@@ -77,6 +229,33 @@ $ vi program.py # プログラム作成 $ python program.py # プログラム実
 Pythonのデータ型について すべてのPythonオブジェクトはC言語の構造体で定義されており、C言語等の静的型付言語などと比べてオーバーヘッドが生じる
 【例】 integer(long)型
 struct _longobject{ long ob_refcnt; PyTypeObject ob_type; size_t ob_size; long ob_digit[1]; }; ob_refcnt : Pythonが目盛りの割当と解除を自動的に行うための参照カウンタ ob_type : 変数の方を表すコード ob_size : この後に続くデータの大きさ ob_digit : このPython変数が持つ実際の整数値 PythonリストとNumpy配列 種類 概要 Pytonリスト ポインタ列へのポインタを格納した動的配列。各ポインタは完全なPythonオブジェクトを示すため、柔軟性に利点を持つ一方ですべての変数が同じ方であるケースでは情報が冗長になる。 Numpy配列 すべてのデータの型が同じ固定型の配列のため柔軟性に欠ける一方でデータの保存と操作がはるかに効率的 immutable と mutable 関数の引数(仮引数)の値を関数内で変更した場合，引数が**immutable(変更不可)**な型ならば呼び出した側の引数(実引数)は変化しない。**mutable(変更可能)**ならば，実引数も変化。</description>
+    </item>
+    <item>
+      <title>Ipython</title>
+      <link>https://moematsuda-ai.github.io/python/ipython/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 07:59:06 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/ipython/index.html</guid>
+      <description>IPythonについて 2001年にフェルナンド・ペレスの片手間のプロジェクトとして始められた。良い対話型のインタプリタを作ることを目的として制作され、2012年にはPythonによる科学技術計算作業の中でなくてはならない位置を占めるように！
+IPython自体は何ら計算機能や分析機能を提供するものではないものの、対話的な（インタラクティブな）計算及びツール開発の生産性を向上させるのに大きく役立っている。
+IPythonを使用することで、編集ーコンパイルー実行サイクルから脱却し、実行ーデータ探索サイクルに乗ってデータ分析を進めることができ、またOS及びファイルシステムとも厳密に連携するため、IPythonはそのほとんどの場面で作業の高速化を手助けしてくれる。
+IPython の基本 IPython の起動
+コマンドラインで以下のように入力することで起動
+$ ipython 変数の表示
+単に変数名のみを記述し実行した場合にはその変数オブジェクトの文字列表現が返る。特に標準Python環境のprint関数による変数表示と比べ、多くのPythonオブジェクト型が読みやすく、きれいに整形される。
+タブ補完
+IPythonにはPython標準インタプリタにはないタブ補完機能が搭載されている。
+タブ補完の探索範囲は「利用中の名前空間」、「オブジェクト属性」あるいは「モジュール属性」にとどまらず、ユーザがファイル名の一部（のような文字列）を入力してタブ補完した場合、そのコンピュータファイルシステムを大賞に候補を出してくれる。また、関数のキーワード引数に対してもタブ補完することができる！！
+※デフォルトではIPythonが補完候補に表示しないメソッドや属性がいくつかある。候補表示が乱雑になるのを防ぐため、アンダースコア(_)から始まるマジックメソッドやプライベートメソッド、プライベート属性と言ったものを候補から除外する。これらの候補を明示的に表示したい場合は、IPythonシェルにアンドースコアを入力してタブ補完を呼び出す。これらの候補を常に表示させるように、IPython構成機能で設定することができる。
+オブジェクトイントロスペクション
+変数や関数などの前や後に?をつけることでそのオブジェクトの一般情報を見ることができる機能
+変数 →　Type や 長さ など
+関数やインスタンスメソッド　→　存在していれば ドキュメンテーション文字列（docstring） が表示される。
+※? の代わりに ?? とすると関数のソースコードも表示される
+ワイルドカード
+UNIXやWindowsのコマンドラインシェル上で使用するワイルドカード(*)機能を, IPythonでは?で使用する。
+マジックコマンド
+コマンドの先頭が%で始まるコマンドのことをマジックコマンドとよぶ。IPythonでの特別なコマンドであり、デフォルトでは同名の変数が定義されていない限り%を付けなくても実行が可能（automagic(オードマジック)機能）
+コマンド 説明 %quickref IPythonのクイックリファレンスを表示 %magic 全マジックコマンドの詳細記述を表示 %lsmagic 利用可能なMagicコマンドの単純な一覧を表示 %debug 対話的デバッガの起動。直前に発生した例外に対して、トレースバックの最下層から開始 %hist コマンド入力の履歴を表示(オプション指定により出力履歴も表示) %pdb 例外発生時のデバッガ自動起動の切り替え(ON %paste クリップボード内の整形済みPythonコード片の実行 %cpaste クリップボード内Pythonコードの実行のための特別なプロンプトを表示 %reset 名前空間から変数を含めた名前を消去 %page OBJECT 引数OBJECTをきれいに表示。ページャを起動 %run script.py 引数script.pyをPythonスクリプトとみなしてIPython内で実行。 %prun statement cProfile付きの命令を実行し、プロファイラ出力を表示 %time statement 引数で与えられた命令の実行時間を計測 %timeit statement 引数で与えられた命令の実行時間を複数回計測。実行時間のごく短い命令の計測に有効 %who, %who_ls, %whos 引数に型名、関数名などを取る。利用中の名前空間の中で定義された、その種類の変数のリストを戻す。3種類の違いは戻り値のフォーマット。%who は単に一覧を戻し、%whos_ls はリストとして戻す。%whos は整形して見やすく表示してくれる。 %xdel *variable IPython内のオブジェクトを削除し、可能な限りオブジェクトへの参照をも削除する。 ※マジックコマンドのヘルプは%command?</description>
     </item>
   </channel>
 </rss>

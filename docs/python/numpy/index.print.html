@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Numpy :: &#39;Moais blog</title>
+    <link href="https://moematsuda-ai.github.io/python/numpy/index.html" rel="canonical" type="text/html" title="Numpy :: &#39;Moais blog">
+    <link href="/python/numpy/index.xml" rel="alternate" type="application/rss+xml" title="Numpy :: &#39;Moais blog"><link rel="icon" href="/images/favicon.png" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1683171048" rel="stylesheet">
+    <link href="/css/nucleus.css?1683171048" rel="stylesheet">
+    <link href="/css/fonts.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1683171048" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1683171048" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1683171048" rel="stylesheet">
+    <link href="/css/variant.css?1683171048" rel="stylesheet">
+    <link href="/css/print.css?1683171048" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1683171048" rel="stylesheet">
+    <script src="/js/url.js?1683171048"></script>
+    <script src="/js/variant.js?1683171048"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1683171048" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/python/numpy/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/python/index.html"><span itemprop="name">python</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Numpy</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="numpy">Numpy</h1>
+
+<ul>
+<li>Pythonではfor文などのループが低速</li>
+<li>一般的にPythonではfor文を多様せず、numpyやPandas等の高速なライブラリを利用</li>
+<li>Numpyは多くの操作に対して静的型付きでコンパイルされた関数（c言語）への便利なインターフェースを提供</li>
+<li>Numpyではベクトル化操作により配列に対して操作を実行するだけで、各要素に適用される</li>
+<li>Numpyのベクトル化演算は、ufunc(ユニバーサル関数)を使用して実装されており、このufuncの主な目的は、Numpyの各要素に対して繰り返し演算を素早くすること</li>
+</ul>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="便利なnumpy関数">便利なNumpy関数</h3>
+<ul>
+<li>
+<p>以下では<code>import numpy as np</code>としてnumpyをimportしているものとする</p>
+</li>
+<li>
+<p>npはnumpy, shapeは配列の形状, arrは任意の配列を示す</p>
+</li>
+<li>
+<p><strong>Numpyで実装されている演算子とその等価なufunc</strong></p>
+<table>
+<thead>
+<tr>
+<th>関数</th>
+<th>等価なufunc</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>np.add(arr, x)</td>
+<td>加算(arrやxの順序はとわない。また配列同士、変数同士でも演算可)</td>
+</tr>
+<tr>
+<td>-</td>
+<td>np.subtract(arr, x)</td>
+<td>減算（以下同文）</td>
+</tr>
+<tr>
+<td>-</td>
+<td>np.negative(arr)</td>
+<td>単行マイナス</td>
+</tr>
+<tr>
+<td>*</td>
+<td>np.multiply(以下略)</td>
+<td>乗算</td>
+</tr>
+<tr>
+<td>/</td>
+<td>np.divide</td>
+<td>除算</td>
+</tr>
+<tr>
+<td>//</td>
+<td>np.floor_divide</td>
+<td>整数除算(小数点以下切り捨て)</td>
+</tr>
+<tr>
+<td>**</td>
+<td>np.power</td>
+<td>べき乗</td>
+</tr>
+<tr>
+<td>%</td>
+<td>np.mod</td>
+<td>剰余</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+</li>
+<li>
+<p><strong>Numpyで実装されている比較演算子とその等価なufunc</strong></p>
+<table>
+<thead>
+<tr>
+<th>演算子</th>
+<th>等価なufunc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>np.equal</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>np.not_equal</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>np.less</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>np.less_equal</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>np.greater</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>np.greater_equal</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Numpyのufunc</strong></p>
+<table>
+<thead>
+<tr>
+<th>関数</th>
+<th>説明</th>
+<th>引数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>arr.reshape(shape)</td>
+<td>配列arrを指定したshapeの型に変形</td>
+<td>shape</td>
+</tr>
+<tr>
+<td>arr[np.axis]</td>
+<td>新しく次元を追加</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>np.concatenate([arr1, arr2, arr3])</td>
+<td>次元の同じ複数の配列を結合</td>
+<td>連結する配列(タプルまたは配列のリスト), <code>axis=0</code>で第1の軸方向に結合（デフォルト）, <code>axis=1</code>で第2の軸方向</td>
+</tr>
+<tr>
+<td>np.vstack([arr1, arr2])</td>
+<td>混合次元の配列を垂直に重ねる</td>
+<td>連結する配列</td>
+</tr>
+<tr>
+<td>np.hstack([arr1, arr2])</td>
+<td>混合次元の配列を水平に重ねる</td>
+<td>連結する配列</td>
+</tr>
+<tr>
+<td>np.split([arr], [a,b])</td>
+<td>配列を分割</td>
+<td>分割する配列, [a,b]は分割点を与えるインデクスのリスト</td>
+</tr>
+<tr>
+<td>np.vsplit([arr], [a])</td>
+<td>配列の垂直方向の成分を分割</td>
+<td>分割する配列, [a]は分割点を与えるインデクスのリスト</td>
+</tr>
+<tr>
+<td>np.hsplit([arr], [a])</td>
+<td>配列の水平方向の成分を分割</td>
+<td>分割する配列, [a]は分割点を与えるインデクスのリスト</td>
+</tr>
+<tr>
+<td>np.dsplit([arr], [a])</td>
+<td>配列を第3軸に沿って分割</td>
+<td>分割する配列, [a]は分割点を与えるインデクスのリスト</td>
+</tr>
+<tr>
+<td>np.absolute(arr) または np.abs(arr)</td>
+<td>絶対値を返却（複素数データも扱える）</td>
+<td></td>
+</tr>
+<tr>
+<td>np.sin(arr)</td>
+<td>sin関数の計算結果を返却(cos, tanも同様)</td>
+<td></td>
+</tr>
+<tr>
+<td>np.arcsin(arr)</td>
+<td>arcsin関数の計算結果を返却(cos, tanも同様)</td>
+<td></td>
+</tr>
+<tr>
+<td>np.exp(arr)</td>
+<td>指数関数の計算結果を返却</td>
+<td></td>
+</tr>
+<tr>
+<td>np.power(x, arr)</td>
+<td>x^arrの値を返却</td>
+<td></td>
+</tr>
+<tr>
+<td>np.log(x)</td>
+<td>ln(x)の値を返却</td>
+<td></td>
+</tr>
+<tr>
+<td>np.log2(x)</td>
+<td>log2(x)の値を返却</td>
+<td></td>
+</tr>
+<tr>
+<td>np.expm1(x)</td>
+<td><code>exp(x)-1</code> の値を返却(xの値が非常に小さいときに<code>np.exp</code> よりも良い制度で計算する)</td>
+<td></td>
+</tr>
+<tr>
+<td>np.log1p(x)</td>
+<td><code>log(1+x)</code> の値を返却(xの値が非常に小さいときに<code>np.log</code> よりも良い制度で計算する)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p><strong>numpyの集約関数</strong></p>
+<table>
+<thead>
+<tr>
+<th>関数名</th>
+<th>NaNセーフ版</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>np.sum</td>
+<td>np.nansum</td>
+<td>要素の合計を計算する</td>
+</tr>
+<tr>
+<td>np.prod</td>
+<td>np.nanprod</td>
+<td>要素の積を計算する</td>
+</tr>
+<tr>
+<td>np.mean</td>
+<td>np.nanmean</td>
+<td>要素の平均値を計算する</td>
+</tr>
+<tr>
+<td>np.std</td>
+<td>np.nanstd</td>
+<td>要素の標準偏差を計算する</td>
+</tr>
+<tr>
+<td>np.var</td>
+<td>np.nanvar</td>
+<td>要素の分散を計算する</td>
+</tr>
+<tr>
+<td>np.min</td>
+<td>np.nanmin</td>
+<td>最小値を見つける</td>
+</tr>
+<tr>
+<td>np.max</td>
+<td>np.nanmax</td>
+<td>最大値を見つける</td>
+</tr>
+<tr>
+<td>np.argmin</td>
+<td>np.nanargmin</td>
+<td>最小値のインデクスを返す</td>
+</tr>
+<tr>
+<td>np.argmax</td>
+<td>np.nanargmax</td>
+<td>最大値のインデクスを返す</td>
+</tr>
+<tr>
+<td>np.median</td>
+<td>np.nanmedian</td>
+<td>要素の中央値を計算する</td>
+</tr>
+<tr>
+<td>np.percentile</td>
+<td>np.nanpercentile</td>
+<td>パーセンタイルを計算する</td>
+</tr>
+<tr>
+<td>np.any</td>
+<td>N/A</td>
+<td>いずれかの要素がtrueであるかを評価する</td>
+</tr>
+<tr>
+<td>np.all</td>
+<td>N/A</td>
+<td>すべての要素がtrueであるかを評価する</td>
+</tr>
+</tbody>
+</table>
+<p>※arr.sum()のように配列に<code>.</code>をつけることで計算もできる</p>
+</li>
+<li>
+<p><strong>ufuncの特殊な機能</strong></p>
+<table>
+<thead>
+<tr>
+<th>概要</th>
+<th>書き方</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>書き込み</td>
+<td>np.power(2, arr, out=arr2)</td>
+<td>powerの出力結果を<code>out=</code>で指定した配列arr2に直接書き込む。<code>arr2 = np.power(2, arr)</code>と等価だが、一時的な配列を作成しなくてすむため、非常に大きな配列などの場合にはメモリの節約につながる</td>
+</tr>
+<tr>
+<td>reduceメソッド</td>
+<td>np.multiply.reduce(x)</td>
+<td>任意のnumpy関数に対して<code>.reduce(x)</code>のようにすることで要素が1つになるまで演算を行う。ここではすべての要素の積を計算している。</td>
+</tr>
+<tr>
+<td>accumelateメソッド</td>
+<td>np.multiply.accumelate(x)</td>
+<td>reduceの中間バージョン)</td>
+</tr>
+<tr>
+<td>outerメソッド</td>
+<td>np.multiply.outer(x, x)</td>
+<td>2つの入力のすべての要素間で任意の計算が行える。ここではすべての要素間での積（外積）を求めている。</td>
+</tr>
+</tbody>
+</table>
+<p>※異なるサイズと形状の配列間で操作を可能とする<strong>ブロードキャスト</strong>機能と呼ばれるものもある</p>
+</li>
+</ul>
+<p>※その他にも<code>scipy.special</code>でガンマ関数や誤差関数などが実装されていたりもするので難しい計算などは検索してみること！</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="ブロードキャスト">ブロードキャスト</h3>
+<p>ブロードキャストとは異なるサイズの配列に対して二項ufunc（加算、減算、乗算など）を適用するための一連のルールである。</p>
+<h4 id="1-ブロードキャストの基礎">1. ブロードキャストの基礎</h4>
+<ol>
+<li>
+<p>同じサイズの配列に対しての二項演算は要素ごとに実行される</p>
+</li>
+<li>
+<p>ブロードキャストでは次のルールに従って行われる</p>
+<ol>
+<li>
+<p>２つの配列の次元数が異なる場合、次元数の少ない方の形状は、先頭の（左側）に１を補い次元数を揃える。</p>
+</li>
+<li>
+<p>２つの配列の形状がいずれの次元でも一致しない場合、各次元のうち長さが１に等しい次元は、他方の配列形状と一致するように引き伸ばされる。</p>
+</li>
+<li>
+<p>いずれかの次元でサイズが不一致で、長さが１に等しくもない場合は、エラーとなる。</p>
+</li>
+</ol>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1683171048" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1683171048" defer></script>
+    <script src="/js/featherlight.min.js?1683171048" defer></script>
+    <script src="/js/theme.js?1683171048" defer></script>
+  </body>
+</html>

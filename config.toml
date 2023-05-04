@@ -3,6 +3,7 @@ languageCode = 'ja-jp'
 title = "'Moais blog"
 theme = "hugo-theme-relearn"
 publishDir = "docs"
+buildDraft = false
 
 [params]
   themeVariant = ["relearn-dark", "relearn-light", "green", "black", "blue", "learn"]

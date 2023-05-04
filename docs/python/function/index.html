@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>Function :: &#39;Moais blog</title>
+    <link href="/python/function/index.xml" rel="alternate" type="application/rss+xml" title="Function :: &#39;Moais blog">
+    <link href="/python/function/index.print.html" rel="alternate" type="text/html" title="Function :: &#39;Moais blog"><link rel="icon" href="/images/favicon.png" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1683171048" rel="stylesheet">
+    <link href="/css/nucleus.css?1683171048" rel="stylesheet">
+    <link href="/css/fonts.css?1683171048" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1683171048" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1683171048" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1683171048" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1683171048" rel="stylesheet">
+    <link href="/css/variant.css?1683171048" rel="stylesheet">
+    <link href="/css/print.css?1683171048" rel="stylesheet" media="print">
+    <script src="/js/url.js?1683171048"></script>
+    <script src="/js/variant.js?1683171048"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1683171048" defer></script>
+  </head>
+  <body class="mobile-support html" data-url="/python/function/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div class="navigation">
+            <a class="nav nav-next" href="/python/filter/index.html" title="Filter with python (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
+          </div>
+          <div class="navigation">
+            <a class="nav nav-prev" href="/python/jupyter/index.html" title="Jupyter notebook (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="top-print-link">
+            <a class="print-link" title='Print whole chapter (CTRL+ALT+p)' href="/python/function/index.print.html">
+              <i class="fas fa-print fa-fw"></i>
+            </a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/python/index.html"><span itemprop="name">python</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Function</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper" dir="ltr">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#基本演算">基本演算</a></li>
+    <li><a href="#関数の定義">関数の定義</a>
+      <ul>
+        <li><a href="#複数の返り値をもつ関数">複数の返り値をもつ関数</a></li>
+        <li><a href="#関数定義における型の明記">関数定義における型の明記</a></li>
+      </ul>
+    </li>
+    <li><a href="#print文">print文</a>
+      <ul>
+        <li><a href="#フォーマット指定その1-printf形式">フォーマット指定その1: printf形式</a></li>
+        <li><a href="#フォーマット指定方法その2-format-method">フォーマット指定方法その2: format method</a></li>
+      </ul>
+    </li>
+    <li><a href="#フォーマット指定方法その3-その他他にも色々">フォーマット指定方法その3: その他（他にも色々&hellip;）</a></li>
+    <li><a href="#if文">if文</a>
+      <ul>
+        <li><a href="#if文-1">if文</a></li>
+        <li><a href="#if-elseを1行で書く">if-elseを1行で書く</a></li>
+      </ul>
+    </li>
+    <li><a href="#while文">While文</a>
+      <ul>
+        <li><a href="#while文-1">while文</a></li>
+      </ul>
+    </li>
+    <li><a href="#for文">for文</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="function">Function</h1>
+
+<h2 id="基本演算">基本演算</h2>
+<ul>
+<li>Cとおおむね同じ</li>
+<li><code>++</code>, <code>--</code>は使えないが<code>+=</code>, <code>-=</code>は使える</li>
+</ul>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="関数の定義">関数の定義</h2>
+<ul>
+<li><code>def</code>で始まる行で関数名と引数を定義</li>
+<li><strong>次行から関数の終わりまではインデント</strong>して命令文を書く</li>
+<li>返り値は省略可</li>
+<li>Docstring（ドックストリング） は　<code>help(function_name)</code> を実行したときに出力される文字列（<code>function_name</code>関数の説明文）のこと。一般的に関数名の直後に書き、三重引用符で囲む
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">function_name</span>(args):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Docstring&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    命令文       <span style="color:#75715e">#ここから関数の終わりまでインデントをする</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result
+</span></span></code></pre></div></li>
+<li>引数にデフォルト値を設定することもでき，デフォルト値の設定されている引数は呼び出し時に省略可能
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_name</span>(family<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Momo&#34;</span>,first<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Taro&#34;</span>): <span style="color:#75715e"># family: 姓,  first: 名</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;My name is </span><span style="color:#e6db74">{0}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{1}</span><span style="color:#e6db74">.&#34;</span><span style="color:#f92672">.</span>format(first, family))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print_name(first<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Daisuki&#34;</span>)
+</span></span></code></pre></div></li>
+<li>C言語と同様に引数を設定して呼び出すことで実行
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print_name(<span style="color:#e6db74">&#34;Yamaguchi&#34;</span>,<span style="color:#e6db74">&#34;Daisuki&#34;</span>)
+</span></span><span style="display:flex;"><span>My name <span style="color:#f92672">is</span> Daisuki Yamaguchi<span style="color:#f92672">.</span>
+</span></span></code></pre></div></li>
+<li>引数名をつけて，引数の値を指定することもできる。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print_name(family<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Yamaguchi&#34;</span>,first<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Daisuki&#34;</span>)
+</span></span><span style="display:flex;"><span>My name <span style="color:#f92672">is</span> Daisuki Yamaguchi<span style="color:#f92672">.</span>
+</span></span></code></pre></div></li>
+<li>引数名をつければ，引数の順番はランダムでも良い
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print_name(first<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Daisuki&#34;</span>,family<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Yamaguchi&#34;</span>)
+</span></span><span style="display:flex;"><span>My name <span style="color:#f92672">is</span> Daisuki Yamaguchi<span style="color:#f92672">.</span>
+</span></span></code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<h3 id="複数の返り値をもつ関数">複数の返り値をもつ関数</h3>
+<p>Pythonの関数では，<strong>返り値を複数</strong>指定できる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">interval</span>(mean,sd): <span style="color:#75715e"># 平均mean, 標準偏差sdから，サンプルの約68%が含まれる区間を出力</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> mean<span style="color:#f92672">-</span>sd, mean<span style="color:#f92672">+</span>sd
+</span></span></code></pre></div><p>複数の返り値を，それぞれ別の変数で受け取ることができる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>low,high<span style="color:#f92672">=</span>interval(<span style="color:#ae81ff">70</span>,<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>print(low,high)
+</span></span></code></pre></div><ul>
+<li>実行結果
+60 80</li>
+</ul>
+<p>複数の返り値を，一つの変数でまとめて受け取ることもできる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ret<span style="color:#f92672">=</span>interval(<span style="color:#ae81ff">70</span>,<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>print(ret[<span style="color:#ae81ff">0</span>], ret[<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>print(type(ret))      <span style="color:#75715e">## 返り値の型はタプル(要素の書き換えを出来ないリスト。タプルの詳細については後述)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## ret[0]=3            # 返り値の要素を変更するとエラーが出る。(タプルの要素は書き換え不可。後述)</span>
+</span></span></code></pre></div><ul>
+<li>実行結果
+60 80
+&lt;class &rsquo;tuple'&gt;</li>
+</ul>
+<h3 id="関数定義における型の明記">関数定義における型の明記</h3>
+<p>Python3.0以降では関数アノテーション（Function Annotations）という仕組みが導入され，
+関数の引数や返り値に直接型を記述することができる．
+ただしあくまで注釈のため，（環境によっては処理に使用されることもあるが）実行時に
+チェックされたりはしない．</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_func</span>(param1: str, param2: int) <span style="color:#f92672">-&gt;</span> tuple[str, int]:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (param1, param2)
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="print文">print文</h2>
+<h3 id="フォーマット指定その1-printf形式">フォーマット指定その1: printf形式</h3>
+<p>print(&ldquo;x=%d, y=%e&rdquo; % (x, y))</p>
+<!-- raw HTML omitted -->
+<h3 id="フォーマット指定方法その2-format-method">フォーマット指定方法その2: format method</h3>
+<p>今後おすすめの方法は，文字列に対するメソッド<code>format()</code>を使う<a href="https://docs.python.org/ja/3.8/tutorial/inputoutput.html#the-string-format-method">&ldquo;format()メソッド&rdquo;</a>と呼ばれる方法。</p>
+<ul>
+<li>実行例
+print(&ldquo;x={0}, y={1}&quot;.format(x, y)) # {}の中の数字で，format()の何番目の引数か指定
+print(&ldquo;x={}, y={}&quot;.format(x, y))   # format()の引数順に表示するなら{}内の数字は省略可
+print(&ldquo;x={1}, y={0}&quot;.format(x, y)) # {}内の数字を変えてみた
+print(&ldquo;x={0:+d}, y={1:4.2f}&quot;.format(x, y)) # 数値フォーマットの指定も可能</li>
+<li>実行結果
+x=9, y=False
+x=9, y=False
+x=False, y=9
+x=+9, y=0.00</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="フォーマット指定方法その3-その他他にも色々">フォーマット指定方法その3: その他（他にも色々&hellip;）</h2>
+<ul>
+<li>実行例
+x=5
+print(f&quot;x={x}&rdquo;)
+print(&ldquo;x=&quot;+str(x))</li>
+<li>実行結果
+x=5
+x=5</li>
+</ul>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="if文">if文</h2>
+<!-- raw HTML omitted -->
+<h3 id="if文-1">if文</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> x <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>    print(x, <span style="color:#e6db74">&#34;is zero&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elif</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>    print(x, <span style="color:#e6db74">&#34;is positive&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(x, <span style="color:#e6db74">&#34;is negative&#34;</span>)
+</span></span></code></pre></div><p>注) pythonはC言語のように<code>{}</code>を使わない。インデント(空白4文字)で構文単位を表現</p>
+<!-- raw HTML omitted -->
+<h3 id="if-elseを1行で書く">if-elseを1行で書く</h3>
+<p><strong>1行if文の書式</strong> : <code>返り値 if 条件式 else 返り値</code></p>
+<p>例えば，絶対値を求める関数<code>absval</code>を<code>def</code>を使って書くと以下のようになる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">absval</span>(x):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> x<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        absval<span style="color:#f92672">=</span>x
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        absval<span style="color:#f92672">=-</span>x
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> absval
+</span></span></code></pre></div><p>この関数を1行にまとめて書くと，以下のようにとても簡潔になる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">absval</span>(x):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> x <span style="color:#66d9ef">if</span> x<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">-</span>x
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="while文">While文</h2>
+<!-- raw HTML omitted -->
+<h3 id="while文-1">while文</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>:
+</span></span><span style="display:flex;"><span>    print(i, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; &#39;</span>)
+</span></span><span style="display:flex;"><span>    i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="for文">for文</h2>
+<ul>
+<li>
+<p><strong>for文の特徴</strong></p>
+<p>Pythonのデフォルト実装では、動的に解釈を行う（型が柔軟である)という言語の性質上、CやFortranなどのように効率的なマシンコードへのコンパイルができないという特徴を持つ。この弱点を克服するための手法として</p>
+<ul>
+<li>PyPyプロジェクト：PythonのJust-In-Time実装</li>
+<li>Cythonプロジェクト：PythonコードをCコードに変換する</li>
+<li>Numbaプロジェクト：Pythonコードブロックを高速LLVMバイトコードに変換する</li>
+</ul>
+<p>などが知られているが、このどれもが標準CPythonエンジンほどには普及していない。このようなPythonの低速性はfor文などの小さな操作を大量に繰り返す状況で顕著になる。</p>
+</li>
+<li>
+<p><strong>for文の構造</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> 変数 <span style="color:#f92672">in</span> イテラブル:
+</span></span><span style="display:flex;"><span>    実行文
+</span></span></code></pre></div><ul>
+<li><strong>イテラブル</strong>: 順に一つずつ要素を取り出すことができるオブジェクト
+<ul>
+<li>ex) リスト, <code>range()</code> でつくるシーケンスなど(後述)</li>
+</ul>
+</li>
+<li><code>for</code> と <code>in</code> の間の変数にイテラブルの要素が順に代入される</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h4 id="リストの使用">リストの使用</h4>
+<p><strong>リスト</strong>とはPythonに用意されている<strong>配列の一種</strong>で，要素を<code>[]</code>内に列挙する。要素の取り出しは，例えば以下のように<code>for</code>文で行える。
+リストの詳細は今後の課題でも扱う。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">9</span>]:
+</span></span><span style="display:flex;"><span>    print(x, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span>)
+</span></span></code></pre></div><ul>
+<li>実行結果
+1 5 9</li>
+</ul>
+<p>リストの要素を順に変数に代入することも簡単にできる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>numlist <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">9</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> numlist:
+</span></span><span style="display:flex;"><span>    print(i, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span>)
+</span></span></code></pre></div><ul>
+<li>実行結果
+1 5 9</li>
+</ul>
+<!-- raw HTML omitted -->
+<h4 id="range関数">range()関数</h4>
+<ul>
+<li><code>range(end)</code>: 0以上end<strong>未満</strong>の数列を生成</li>
+<li><strong><code>range(begin, end)</code></strong>: begin以上end<strong>未満</strong>の数列を生成</li>
+<li><strong><code>range(begin, end, step)</code></strong>: begin以上end<strong>未満</strong>の数列を生成。stepは要素間の間隔</li>
+</ul>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks" dir="ltr">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+<style>
+#logo svg,
+#logo svg * {
+    color: #282828;
+    color: var(--MENU-SECTIONS-BG-color);
+    fill: #282828 !important;
+    fill: var(--MENU-SECTIONS-BG-color) !important;
+    opacity: .945;
+}
+a#logo {
+    color: #282828;
+    color: var(--MENU-SECTIONS-BG-color);
+    font-family: 'Work Sans', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+    font-size: 1.875rem;
+    font-weight: 300;
+    margin-top: -.8125rem;
+    max-width: 50%;
+    text-transform: none;
+    width: 5.125rem;
+    white-space: nowrap;
+}
+a#logo:hover {
+    color: #ffffff;
+     
+}
+#logo svg {
+    margin-bottom: -1.25rem;
+    margin-inline-start: -3.00rem;
+    width: 40.5%;
+}
+@media only all and (max-width: 60rem) {
+    a#logo {
+    font-size: 1.5625rem;
+    margin-top: -.1875rem;
+    }
+    #logo svg {
+    margin-bottom: -.75rem;
+    margin-inline-start: -3.00rem;
+    }
+}
+@media all and (-ms-high-contrast:none) {
+    /* IE11s understanding of positioning is weird at best */
+    a#logo {
+    margin-top: -3.625rem;
+    }
+    #logo svg {
+    margin-bottom: -3.875rem;
+    margin-left: -3.00rem;
+    }
+}
+@media only all and (-ms-high-contrast:none) and (max-width: 60rem) {
+    #logo svg {
+    margin-left: -3.00rem;
+    }
+}
+</style>
+<a id="logo" href="/index.html">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ viewBox="0 0 375.000000 512.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M430 5109 c-32 -13 -78 -56 -96 -91 -8 -16 -14 -56 -14 -97 0 -169
+106 -305 271 -348 l69 -17 0 -401 c0 -445 8 -530 60 -687 108 -322 352 -581
+668 -710 136 -56 182 -106 182 -198 0 -92 -46 -142 -182 -198 -316 -129 -560
+-388 -668 -710 -52 -157 -60 -242 -60 -689 l0 -401 -42 -7 c-162 -27 -287
+-167 -296 -332 -5 -92 0 -114 40 -159 58 -66 37 -64 678 -64 353 0 588 4 599
+10 10 5 24 22 30 39 10 24 10 34 -3 60 -9 17 -18 32 -19 33 -1 2 -265 5 -587
+8 l-585 5 -3 34 c-6 58 7 96 45 141 74 86 -35 80 1303 80 1338 0 1229 6 1303
+-80 38 -45 51 -83 45 -141 l-3 -34 -646 -5 c-618 -5 -648 -6 -668 -24 -31 -28
+-28 -79 5 -105 26 -21 34 -21 675 -21 433 0 657 4 676 11 34 13 80 55 99 91 8
+16 14 56 14 100 -1 83 -27 159 -76 222 -45 57 -136 113 -205 127 l-59 12 0
+401 c0 446 -8 531 -60 688 -108 322 -352 581 -668 710 -136 56 -182 106 -182
+198 0 92 46 142 182 198 354 144 608 443 700 822 19 78 21 123 25 532 l4 446
+42 7 c108 18 219 104 266 205 26 56 40 173 27 225 -9 35 -65 95 -103 111 -27
+12 -240 14 -1186 14 l-1154 0 -21 -23 c-29 -31 -29 -77 1 -105 l23 -22 1145
+-2 1144 -3 3 -34 c6 -58 -7 -96 -45 -141 -74 -86 35 -80 -1303 -80 -1338 0
+-1229 -6 -1303 80 -38 45 -51 83 -45 141 l3 34 65 3 c93 3 108 8 126 43 13 26
+13 36 3 60 -6 17 -20 34 -30 39 -23 13 -177 12 -209 -1z m2400 -943 c0 -229
+-5 -427 -11 -472 -30 -214 -132 -419 -288 -575 -113 -112 -181 -155 -418 -259
+-67 -30 -129 -91 -162 -160 -22 -46 -26 -69 -26 -140 0 -71 4 -94 26 -140 33
+-69 95 -130 162 -160 237 -104 305 -147 418 -259 90 -91 147 -172 204 -295 86
+-182 88 -201 93 -704 l3 -442 -84 0 -84 0 -21 88 c-12 48 -44 133 -72 189
+-113 228 -351 407 -595 446 l-73 11 -4 129 c-3 127 -3 129 -31 153 -35 30 -59
+30 -94 0 -28 -24 -28 -26 -31 -154 l-4 -129 -53 -7 c-78 -9 -217 -59 -299
+-107 -88 -52 -240 -202 -288 -284 -46 -80 -85 -178 -104 -265 l-16 -70 -85 0
+-84 0 3 442 c4 424 5 447 27 527 74 271 241 495 467 627 24 14 94 48 156 75
+92 40 122 59 164 101 68 71 97 147 92 243 -7 131 -76 232 -198 287 -36 17 -97
+45 -137 63 -266 123 -461 363 -545 670 -20 75 -22 106 -26 523 l-3 442 1010 0
+1011 0 0 -394z m-815 -3047 c252 -78 429 -270 489 -531 l6 -28 -690 0 -690 0
+6 28 c33 144 92 250 199 357 105 105 225 168 373 195 75 14 228 4 307 -21z"/>
+<path d="M2225 4076 c-50 -13 -172 -60 -270 -103 -209 -93 -284 -119 -377
+-132 -106 -15 -259 10 -406 65 -75 28 -123 30 -157 8 -39 -26 -48 -70 -35
+-176 40 -333 257 -598 580 -710 92 -32 100 -33 260 -33 164 0 166 0 267 36
+167 59 295 149 397 280 110 140 170 302 182 493 8 130 0 187 -33 226 -44 53
+-76 63 -203 67 -97 3 -130 -1 -205 -21z m284 -135 c18 -12 9 -186 -14 -276
+-81 -313 -354 -525 -675 -525 -274 0 -509 148 -626 395 -52 109 -80 233 -50
+222 133 -51 322 -80 441 -66 107 12 197 41 395 129 155 68 263 109 325 123 37
+9 190 7 204 -2z"/>
+<path d="M1778 2139 c-24 -14 -38 -71 -38 -159 0 -122 23 -169 80 -169 57 0
+80 47 80 169 0 126 -22 170 -82 170 -13 0 -31 -5 -40 -11z"/>
+</g>
+</svg>
+Moai&#39;s blog
+</a>
+        </div>
+        <form action="/search.html" method="get"><div class="searchbox default-animation">
+          <button type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+          <label class="a11y-only" for="search-by">Search</label>
+          <input data-search-input id="search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div></form>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/js/auto-complete.js?1683171048" defer></script>
+        <script src="/js/lunr.min.js?1683171048" defer></script>
+        <script src="/js/lunr.stemmer.support.min.js?1683171048" defer></script>
+        <script src="/js/lunr.multi.min.js?1683171048" defer></script>
+        <script src="/js/lunr.en.min.js?1683171048" defer></script>
+        <script src="/js/search.js?1683171048" defer></script>
+      </div>
+      <div id="homelinks" class="default-animation">
+        <ul>
+          <li>
+              <a class="padding" href="/index.html"><i class='fas fa-home'></i> Home</a>
+          </li>
+        </ul>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics">
+          <li data-nav-id="/c_lang/index.html" class="dd-item"><a href="/c_lang/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">1.</b> 
+C language<i class="fas fa-check read-icon"></i></a><ul id="subsections-7ac7a5eae77deba6d48a0522153b2edc">
+          <li data-nav-id="/c_lang/using_gniplot/index.html" class="dd-item"><a href="/c_lang/using_gniplot/index.html">
+Using gniplot on C<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/c_lang/file_sep/index.html" class="dd-item"><a href="/c_lang/file_sep/index.html">
+Method of file division<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/docker/index.html" class="dd-item"><a href="/docker/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">2.</b> 
+Docker<i class="fas fa-check read-icon"></i></a><ul id="subsections-138bddd2d1dc51245528eafa51e353d0">
+          <li data-nav-id="/docker/post-installation-step/index.html" class="dd-item"><a href="/docker/post-installation-step/index.html">
+Post Installation Steps for linux<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/copy-mount/index.html" class="dd-item"><a href="/docker/copy-mount/index.html">
+Copy and Mount from Docker container or to Docker container<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/installation-docker/index.html" class="dd-item"><a href="/docker/installation-docker/index.html">
+How to install Docker<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/container-cuda/index.html" class="dd-item"><a href="/docker/container-cuda/index.html">
+Docker Container for Cuda<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/container-ssh/index.html" class="dd-item"><a href="/docker/container-ssh/index.html">
+Connect to Docker Container via ssh<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/instalation-docker-compose/index.html" class="dd-item"><a href="/docker/instalation-docker-compose/index.html">
+How to install Docker Compose<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/docker-compose-cuda/index.html" class="dd-item"><a href="/docker/docker-compose-cuda/index.html">
+Docker Compose<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/base/index.html" class="dd-item"><a href="/docker/base/index.html">
+Basic docker usage<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/appendix/index.html" class="dd-item"><a href="/docker/appendix/index.html">
+Appendix<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/github/index.html" class="dd-item"><a href="/github/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">3.</b> 
+Github<i class="fas fa-check read-icon"></i></a><ul id="subsections-0e2ea9080d0c677f89981a4536faf1bb">
+          <li data-nav-id="/github/repository-edit/index.html" class="dd-item"><a href="/github/repository-edit/index.html">
+Repository Operations<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/github/commit/index.html" class="dd-item"><a href="/github/commit/index.html">
+About resetting commit and rm the file<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/github/url/index.html" class="dd-item"><a href="/github/url/index.html">
+Url<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/github/ssh/index.html" class="dd-item"><a href="/github/ssh/index.html">
+Public key authentication settings in github<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/github/base/index.html" class="dd-item"><a href="/github/base/index.html">
+Base<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/github/diff/index.html" class="dd-item"><a href="/github/diff/index.html">
+Confirmation of difference<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/github/branch/index.html" class="dd-item"><a href="/github/branch/index.html">
+Branch<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/github/repository-access/index.html" class="dd-item"><a href="/github/repository-access/index.html">
+Repository Access Restrictions<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/github/create-repository/index.html" class="dd-item"><a href="/github/create-repository/index.html">
+How to Create Repository<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/github/settings/index.html" class="dd-item"><a href="/github/settings/index.html">
+Settings<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/gnuplot/index.html" class="dd-item"><a href="/gnuplot/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">4.</b> 
+Gnuplot<i class="fas fa-check read-icon"></i></a><ul id="subsections-96e1c1d59e724966aa5bbafac0938a58">
+          <li data-nav-id="/gnuplot/output_equation_on_latex/index.html" class="dd-item"><a href="/gnuplot/output_equation_on_latex/index.html">
+How to insert formulas like latex<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/gnuplot/command_file/index.html" class="dd-item"><a href="/gnuplot/command_file/index.html">
+Command file<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/gnuplot/base/index.html" class="dd-item"><a href="/gnuplot/base/index.html">
+basic operation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/gnuplot/install/index.html" class="dd-item"><a href="/gnuplot/install/index.html">
+How to install gnuplot<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/hugo/index.html" class="dd-item"><a href="/hugo/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">5.</b> 
+Hugo<i class="fas fa-check read-icon"></i></a><ul id="subsections-113cf8e677282e463bfca274df11f63e">
+          <li data-nav-id="/hugo/layout/index.html" class="dd-item"><a href="/hugo/layout/index.html">
+Layout<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/hugo/config/index.html" class="dd-item"><a href="/hugo/config/index.html">
+Config.tomlの設定<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/hugo/hugo-note/index.html" class="dd-item"><a href="/hugo/hugo-note/index.html">
+hugo note<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/keyboard/index.html" class="dd-item"><a href="/keyboard/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">6.</b> 
+Keyboard<i class="fas fa-check read-icon"></i></a><ul id="subsections-f707ce68a790924677ecac4c9c398da3">
+          <li data-nav-id="/keyboard/mozc_settings/index.html" class="dd-item"><a href="/keyboard/mozc_settings/index.html">
+Mozc settings<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/latex/index.html" class="dd-item"><a href="/latex/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">7.</b> 
+Latex<i class="fas fa-check read-icon"></i></a><ul id="subsections-e514a696637a00c4d532475690a2be70">
+          <li data-nav-id="/latex/myset/index.html" class="dd-item"><a href="/latex/myset/index.html">
+Commonly used commands<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/latex/problem/index.html" class="dd-item"><a href="/latex/problem/index.html">
+Problem<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/latex/references/index.html" class="dd-item"><a href="/latex/references/index.html">
+References<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/latex/item/index.html" class="dd-item"><a href="/latex/item/index.html">
+Bulletins in latex<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/latex/figure/index.html" class="dd-item"><a href="/latex/figure/index.html">
+Figure<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/latex/table/index.html" class="dd-item"><a href="/latex/table/index.html">
+Table<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/latex/base/index.html" class="dd-item"><a href="/latex/base/index.html">
+Basic<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/linux/index.html" class="dd-item"><a href="/linux/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">8.</b> 
+Linux<i class="fas fa-check read-icon"></i></a><ul id="subsections-db801fcabe18fdefdb1b34d275e81669">
+          <li data-nav-id="/linux/proxy_settings/index.html" class="dd-item"><a href="/linux/proxy_settings/index.html">
+Proxy settings  <i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/linux/spec_confirmation/index.html" class="dd-item"><a href="/linux/spec_confirmation/index.html">
+Spec confirmation (Ubuntu)<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/linux/shortcut/index.html" class="dd-item"><a href="/linux/shortcut/index.html">
+Shortcut<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/linux/shell_script/index.html" class="dd-item"><a href="/linux/shell_script/index.html">
+Shell script<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/linux/command/index.html" class="dd-item"><a href="/linux/command/index.html">
+Command<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/markdown/index.html" class="dd-item"><a href="/markdown/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">9.</b> 
+Markdown<i class="fas fa-check read-icon"></i></a><ul id="subsections-585a39e92be72923254254ae75dcacef">
+          <li data-nav-id="/markdown/base/index.html" class="dd-item"><a href="/markdown/base/index.html">
+Basic operation<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/python/index.html" class="dd-item parent"><a href="/python/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">10.</b> 
+python<i class="fas fa-check read-icon"></i></a><ul id="subsections-c8861a2651b27ee3930a98ce392020d1">
+          <li data-nav-id="/python/numpy_create_dateset/index.html" class="dd-item"><a href="/python/numpy_create_dateset/index.html">
+Creating dateset by Numpy<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/docstring/index.html" class="dd-item"><a href="/python/docstring/index.html">
+Docstring<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/torch/index.html" class="dd-item"><a href="/python/torch/index.html">
+Torch<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/pygame_install/index.html" class="dd-item"><a href="/python/pygame_install/index.html">
+Pygame install<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/pickle/index.html" class="dd-item"><a href="/python/pickle/index.html">
+Pickle<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/pandas/index.html" class="dd-item"><a href="/python/pandas/index.html">
+Pandas<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/trouble/index.html" class="dd-item"><a href="/python/trouble/index.html">
+Trouble<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/numpy/index.html" class="dd-item"><a href="/python/numpy/index.html">
+Numpy<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/numpy2/index.html" class="dd-item"><a href="/python/numpy2/index.html">
+Numpy2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/matplotlib/index.html" class="dd-item"><a href="/python/matplotlib/index.html">
+Matplotlib<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/list/index.html" class="dd-item"><a href="/python/list/index.html">
+List<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/jupyter/index.html" class="dd-item"><a href="/python/jupyter/index.html">
+Jupyter notebook<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/function/index.html" class="dd-item active"><a href="/python/function/index.html">
+Function<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/filter/index.html" class="dd-item"><a href="/python/filter/index.html">
+Filter with python<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/dict/index.html" class="dd-item"><a href="/python/dict/index.html">
+Dict<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/create-library/index.html" class="dd-item"><a href="/python/create-library/index.html">
+Create Library<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/class/index.html" class="dd-item"><a href="/python/class/index.html">
+Class<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/anaconda-update/index.html" class="dd-item"><a href="/python/anaconda-update/index.html">
+Anaconda Update<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/tuple/index.html" class="dd-item"><a href="/python/tuple/index.html">
+Tuple<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/base2/index.html" class="dd-item"><a href="/python/base2/index.html">
+pythonの基本2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/base/index.html" class="dd-item"><a href="/python/base/index.html">
+Python Basics<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/python/ipython/index.html" class="dd-item"><a href="/python/ipython/index.html">
+Ipython<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/windows_settings/index.html" class="dd-item"><a href="/windows_settings/index.html"><b style="display: inline-block; font-weight: 500; padding-left: .3rem; text-align: left; width: 1.7rem;">11.</b> 
+Windows settings<i class="fas fa-check read-icon"></i></a><ul id="subsections-73b3b7483ab1642983b1d099498c08f0">
+          <li data-nav-id="/windows_settings/proxy_settings_wsl/index.html" class="dd-item"><a href="/windows_settings/proxy_settings_wsl/index.html">
+Proxy settings on WSL<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/windows_settings/conda_settings_onwsl/index.html" class="dd-item"><a href="/windows_settings/conda_settings_onwsl/index.html">
+Anaconda settings on WSL<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/windows_settings/install_wsl/index.html" class="dd-item"><a href="/windows_settings/install_wsl/index.html">
+Installing WSL<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/windows_settings/keyboard/index.html" class="dd-item"><a href="/windows_settings/keyboard/index.html">
+setting Keyboard<i class="fas fa-check read-icon"></i></a></li></ul></li>
+        </ul>
+        <div id="shortcuts">
+          <div class="nav-title">More</div>
+          <ul>
+            <li><a class="padding" href="https://github.com/MoeMatsuda-ai/MoeMatsuda-ai.github.io"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
+            <li><a class="padding" href="/tags/index.html"><i class='fas fa-tags'></i> Tags</a></li>
+          </ul>
+        </div>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showVisitedLinks showFooter">
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-language">Language</label>
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch showVariantSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-variant">Theme</label>
+                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                    <option id="relearn-dark" value="relearn-dark" selected>Relearn Dark</option>
+                    <option id="relearn-light" value="relearn-light">Relearn Light</option>
+                    <option id="green" value="green">Green</option>
+                    <option id="black" value="black">Black</option>
+                    <option id="blue" value="blue">Blue</option>
+                    <option id="learn" value="learn">Learn</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+              <script>window.variants && variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><button class="padding" onclick="clearHistory();"><i class="fas fa-history fa-fw"></i> Clear History</button></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter"><p><b style="padding-left: 2.8rem; font-size: smaller;">Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></b></p>
+
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1683171048" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1683171048" defer></script>
+    <script src="/js/featherlight.min.js?1683171048" defer></script>
+    <script src="/js/theme.js?1683171048" defer></script>
+  </body>
+</html>
