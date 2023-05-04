@@ -1,4 +1,5 @@
 ---
+tags: ["docker"]
 title: "How to install Docker"
 date: 2022-11-22T08:43:54Z
 draft: false

@@ -35,13 +35,6 @@ $ git commit --amend リモートリポジトリからのみ特定のファイ�
 $ git rm --cached -r &amp;lt;target directory&amp;gt; reference [Git]コミットの取り消し、打ち消し、上書き 【Git入門】git commitを取り消したい、元に戻す方法まとめ Gitのリモートリポジトリから特定のファイルを削除する方法 </description>
     </item>
     <item>
-      <title>Url</title>
-      <link>https://moematsuda-ai.github.io/github/url/index.html</link>
-      <pubDate>Tue, 22 Nov 2022 09:10:59 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/github/url/index.html</guid>
-      <description>おすすめサイト github </description>
-    </item>
-    <item>
       <title>Public key authentication settings in github</title>
       <link>https://moematsuda-ai.github.io/github/ssh/index.html</link>
       <pubDate>Tue, 22 Nov 2022 09:10:47 +0000</pubDate>
@@ -53,13 +46,6 @@ Settings SSH and GPG keys [New SSH key] タイトルをつけ公開鍵をコピ�
 最終行 (ProxyCommand の部分) は学内のコンピューターの場合にのみ設定
 接続の確認 $ ssh -T git@github.com ターミナルで実行して以下のように表示されればOK!
 Hi (User名)! You&amp;#39;ve successfully authenticated, but GitHub does not provide shell access. ※途中で以下のプロンプトメッセージが表示されたらyesと入力 The authenticity of host &#39;[ssh.</description>
-    </item>
-    <item>
-      <title>Base</title>
-      <link>https://moematsuda-ai.github.io/github/base/index.html</link>
-      <pubDate>Tue, 22 Nov 2022 09:10:35 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/github/base/index.html</guid>
-      <description></description>
     </item>
     <item>
       <title>Confirmation of difference</title>

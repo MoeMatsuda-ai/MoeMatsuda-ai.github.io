@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>volume on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/volume/index.html</link>
+    <description>Recent content in volume on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 22 Nov 2022 08:44:19 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/volume/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Copy and Mount from Docker container or to Docker container</title>
+      <link>https://moematsuda-ai.github.io/docker/copy-mount/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:44:19 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/copy-mount/index.html</guid>
+      <description>docker での copy と mount コピー ホストとコンテナ間でファイルをコピーするときは次のようにする
+$ docker cp &amp;lt;option&amp;gt; &amp;lt;コピー元path&amp;gt; &amp;lt;コピー先path&amp;gt; コンテナのパスは&amp;lt;container name&amp;gt;:&amp;lt;path&amp;gt;のように書く
+マウント ※マウントはコンテナをrunするときにオプションとして指定する
+バインドマウント 既存（ホスト側）のファイルやフォルダをマウントする方法のこと。
+普通のファイル同様に編集やバックアップが可能となるため、頻繁にアクセスするファイルなどはこちらに置く。
+$ docker run (省略) -v &amp;lt;マウント元のパス&amp;gt;:&amp;lt;マウントポイント&amp;gt; (省略) ボリュームマウント ボリュームを作成し、マウントする方法のこと。
+Dockerホストから変更を加えたくないようなファイルなどはこちらに置く。
+ボリュームの作成
+$ docker volume create &amp;lt;volume name&amp;gt; ボリュームの削除
+$ docker volume rm &amp;lt;volume name&amp;gt; マウント方法
+$ docker run (省略) -v &amp;lt;ボリューム名&amp;gt;:&amp;lt;マウントポイント&amp;gt; (省略) ※ただしボリュームが存在しないときには新規作成される。
+docker volume コマンドにおけるサブコマンド
+サブコマンド 意味 create ボリュームの作成 inspect ボリュームの詳細情報を確認 ls ボリューム一覧を確認 prune コンテナからマウントされていないボリュームをすべて削除 rm ボリュームの削除 ボリュームマウントとバインドマウントを明示的に指定した設定方法 $ --mount type=&amp;lt;bind or volume&amp;gt;,src=&amp;lt;マウント元&amp;gt;,dst=&amp;lt;マウント先&amp;gt; ※この方法ではバインドマウントとボリュームマウントが明示的に指定されているためわかりやすく、 ボリュームが存在しない場合には新規作成されずエラーが出力される。そのため-vオプションより --mountオプションを使用することが推奨されている。</description>
+    </item>
+  </channel>
+</rss>

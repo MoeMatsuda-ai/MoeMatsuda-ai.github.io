@@ -1,4 +1,5 @@
 ---
+tags: ["docker", "systemctl"]
 title: "Basic docker usage"
 date: 2022-11-22T08:41:22Z
 draft: false

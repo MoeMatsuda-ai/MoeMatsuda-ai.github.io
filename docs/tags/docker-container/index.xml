@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker container on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/docker-container/index.html</link>
+    <description>Recent content in docker container on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 22 Nov 2022 08:43:12 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/docker-container/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker Container for Cuda</title>
+      <link>https://moematsuda-ai.github.io/docker/container-cuda/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:43:12 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/container-cuda/index.html</guid>
+      <description>docker の cuda コンテナの追加設定 1. .bashrc の変更 /home/ と /root/ 以下に保存 /home/ はボリュームマウントしているので、新しくコンテナを作成する場合は設定ファイルを /home/ の保存し、作成したコンテナで /home/ 以下の設定ファイルをコピーすること！ 2. python のライブラリの追加 ライブラリを追加するディレクトリにパスを通す
+$ export PYTHONPATH=&amp;#34;/root/.local/lib/python3.8/site-pachages/:$PYTHONPATH&amp;#34; moysnn ライブラリのシンボリックリンクを&amp;quot;/root/.local/lib/python3.8/site-pachages/&amp;ldquo;以下に作成 3. コマンドのインストール tree trash </description>
+    </item>
+  </channel>
+</rss>

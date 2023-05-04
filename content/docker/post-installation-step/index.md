@@ -1,4 +1,5 @@
 ---
+tags: ["docker", "systemctl"]
 title: "Post Installation Steps for linux"
 date: 2022-11-22T08:44:42Z
 draft: false 

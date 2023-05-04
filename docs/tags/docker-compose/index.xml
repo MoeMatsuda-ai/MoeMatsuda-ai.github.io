@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker compose on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/docker-compose/index.html</link>
+    <description>Recent content in docker compose on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 22 Nov 2022 08:42:15 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/docker-compose/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to install Docker Compose</title>
+      <link>https://moematsuda-ai.github.io/docker/instalation-docker-compose/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:42:15 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/instalation-docker-compose/index.html</guid>
+      <description>update $ sudo apt update $ sudo apt upgrade file のダウンロード $ sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose 権限の付与 $ sudo chmod +x /usr/local/bin/docker-compose 動作確認 $ docker-compose --version docker compose のアップグレード docker compose の v1 系をインストールしてしまっていたので v2 系にグレードアップ
+1系のDocker compose の削除 /usr/local/bin/にあるdocker-composeディレクトリを削除
+$ sudo trash docker-compose 新しいDocker compose のインストール 以下のコマンドを実行して Docker Compose の現時点での最新安定版をダウンロードします。
+$ DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker} $ mkdir -p $DOCKER_CONFIG/cli-plugins $ curl -SL https://github.com/docker/compose/releases/download/v2.4.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose このコマンドによって、アクティブユーザーの$HOMEディレクトリ配下に Compose がインストールされます。 システム上の全ユーザー向けに Docker Compose をインストールする場合は、~/.</description>
+    </item>
+    <item>
+      <title>Docker Compose</title>
+      <link>https://moematsuda-ai.github.io/docker/docker-compose-cuda/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:41:46 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/docker-compose-cuda/index.html</guid>
+      <description>dockerでcudaコンテナの作成 cuda の　GPG key 登録 古いキーの削除
+$ sudo apt-key del 7fa2af80 ヘルパーパッケージを利用したキーの登録 nvidia が提供している、nvidia リポジトリ用の新しい署名キーのインストールを自動化する新しいヘルパーパッケージを利用して鍵を登録
+$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb $ sudo dpkg -i cuda-keyring_1.0-1_all.deb ※ubuntu2204とx86_64は該当のものに書き換える
+remove の仕方 ※インストール時にターミナルに表示された文
+A deprecated public CUDA GPG key appear to be installed. To remove the key, run this command: sudo apt-key del 7fa2af80 結局必要だったのかわからなかったけどとりあえずやったこと Setting up NVIDIA Container Toolkit パッケージリポジトリと GPG key のセットアップ
+$ distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \ &amp;amp;&amp;amp; curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.</description>
+    </item>
+  </channel>
+</rss>

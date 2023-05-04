@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>systemctl on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/systemctl/index.html</link>
+    <description>Recent content in systemctl on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 22 Nov 2022 08:44:42 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/systemctl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post Installation Steps for linux</title>
+      <link>https://moematsuda-ai.github.io/docker/post-installation-step/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:44:42 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/post-installation-step/index.html</guid>
+      <description>Docker のインストール後の設定 docker group に追加 Docker サービスをデフォルトで起動時に開始するように設定 $ sudo systemctl enable docker.service $ sudo systemctl enable containerd.service 無効化は以下の通り
+$ sudo systemctl disable docker.service $ sudo systemctl disable containerd.service インストール後の設定はこちら</description>
+    </item>
+    <item>
+      <title>Basic docker usage</title>
+      <link>https://moematsuda-ai.github.io/docker/base/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:41:22 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/base/index.html</guid>
+      <description>systemctl の使い方 Docker の起動と停止 $ systemctl start docker.service $ systemctl stop docker.service $ systemctl stop docker.socket 設定の反映と再起動 $ systemctl deamon-reload $ systemctl restart docker.service docker コマンド $ docker &amp;lt;上位コマンド&amp;gt; &amp;lt;副コマンド&amp;gt; &amp;lt;オプション&amp;gt; &amp;lt;対象&amp;gt; &amp;lt;引数&amp;gt; option オプションの書式 内容 &amp;ndash;name &amp;lt;コンテナ名&amp;gt; コンテナ名の指定 -p &amp;lt;ホストのポート番号&amp;gt;:&amp;lt;コンテナのポート番号&amp;gt; ポート番号の指定 -v &amp;lt;ホストのディスク&amp;gt;:&amp;lt;コンテナのディレクトリ&amp;gt; ボリュームのマウント &amp;ndash;net=&amp;lt;ネットワーク&amp;gt; コンテナをネットワークに接続 -e &amp;lt;環境変数名&amp;gt;=&amp;lt;値&amp;gt; 環境変数の指定 -d バックグラウンドで実行(detach: デタッチモードの略) -i コンテナに操作端末（キーボード）をつなぐ -t 特殊キーを使用可能にする -help ヘルプの表示 &amp;ndash;rm コンテナ終了時に自動的にコンテナを削除する &amp;ndash;workdir , -w コンテナ内部の作業ディレクトリを変更する Docker container の作成 $ docker run &amp;lt;option&amp;gt; &amp;lt;container image&amp;gt; &amp;lt;引数&amp;gt; docker runコマンドは、イメージをダウンロードするdocker pull, コンテナを作成するdocker create, コンテナを起動するdocker startコマンドを一つにまとめたもの。</description>
+    </item>
+  </channel>
+</rss>

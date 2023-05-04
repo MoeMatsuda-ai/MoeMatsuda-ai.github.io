@@ -1,4 +1,5 @@
 ---
+tags: ["docker", "dockerfile"]
 title: "Connect to Docker Container via ssh"
 date: 2022-11-22T08:43:00Z
 draft: false 

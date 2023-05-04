@@ -1,4 +1,5 @@
 ---
+tags: ["c"]
 title: "Using gniplot on C"
 date: 2022-11-26T12:34:46Z
 draft: false

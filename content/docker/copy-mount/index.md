@@ -1,4 +1,5 @@
 ---
+tags: ["docker", "volume"]
 title: "Copy and Mount from Docker container or to Docker container"
 date: 2022-11-22T08:44:19Z
 draft: false

@@ -1,4 +1,5 @@
 ---
+tags: ["c"]
 title: "Method of file division"
 date: 2022-11-26T12:34:28Z
 draft: false

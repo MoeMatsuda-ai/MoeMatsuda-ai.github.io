@@ -1,4 +1,5 @@
 ---
+tags: ["docker", "docker compose"]
 title: "How to install Docker Compose"
 date: 2022-11-22T08:42:15Z
 draft: false

@@ -1,4 +1,5 @@
 ---
+tags: ["docker", "docker compose"]
 title: "Docker Compose"
 date: 2022-11-22T08:41:46Z
 draft: false 

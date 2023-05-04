@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dockerfile on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/tags/dockerfile/index.html</link>
+    <description>Recent content in dockerfile on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 22 Nov 2022 08:43:00 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/dockerfile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Connect to Docker Container via ssh</title>
+      <link>https://moematsuda-ai.github.io/docker/container-ssh/index.html</link>
+      <pubDate>Tue, 22 Nov 2022 08:43:00 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/docker/container-ssh/index.html</guid>
+      <description>dockerでsshを行う場合にはopensshd-serverをインストールし、設定を行う必要がある。
+settings.sh
+export DEBIAN_FRONTEND=noninteractive apt-get install -y openssh-server export mkdir /var/run/sshd export ENV=NOTVISIBLE &amp;#34;in users profile&amp;#34; echo &amp;#34;export VISIBLE=now&amp;#34; &amp;gt;&amp;gt; /etc/profile echo &amp;#34;service ssh start&amp;#34; &amp;gt;&amp;gt; /etc/profile Dockerfile
+RUN bash /tmp/setting.sh EXPOSE &amp;lt;port&amp;gt; CMD [&amp;#34;/usr/sbin/sshd&amp;#34;, &amp;#34;-D&amp;#34;] ただしssh-serverが起動していなければ接続できない。そのため、コンテナ内で以下のコマンドを使用し、サーバーが止まっていないかを確認すること。
+$ service ssh status start or stop ssh $ service ssh start $ service ssh stop trouble 何度もuser名などを変えているとssh接続できない… known_hostsファイルの情報と異なるためsshできなくなる
+$ ssh-keygen -f &amp;#34;&amp;lt;path of known-hosts file&amp;gt;&amp;#34; -R &amp;#34;[&amp;lt;host&amp;gt;]:&amp;lt;port&amp;gt;&amp;#34; と実行すればOK! (log標準出力でも表示されるのでそちらを参照！）
+詳しくはこちら 参照 docker 「コンテナを ssh 接続できるようにするDockerfile」チュートリアル解説 Docker Ubuntu18.</description>
+    </item>
+  </channel>
+</rss>
