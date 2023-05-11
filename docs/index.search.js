@@ -273,6 +273,23 @@ var relearn_search_index = [
     "uri": "/tags/conda/index.html"
   },
   {
+    "content": "あまりPowerShellを使用しないため知らなかったPowerShellでの例外処理について\n実行環境 使用するPowerShellのバージョンは以下の通り（詳細は省略）\n\u003e $PSVersionTable Name Value ---- ----- PSVersion 7.3.4 リダイレクト PowerShellでは複数の出力ストリームが用意されており，これらのストリームには特定のコマンド（PowerShellでいうコマンドレット）やリダイレクトを使用して書き込むことが可能。 一部を除き，出力ストリームのリダイレクトがサポートされている。\nリダイレクト演算子 PowerShellのリダイレクトでは次のような演算子が用意されている。 ただし成功ストリーム（1）は規定値なので省略可能。\n|演算子|概要|構文| | :– | :—— | : –| |\u003e|指定したストリームのファイルへの書き込み（上書き）|n\u003e| |»|指定したストリームのファイルへの書き込み（追加）|n»| |\u003e\u00261|指定したストリームをSuccessストリームにリダイレクト|n\u003e\u00261|\nここで，nはストリーム番号を表す。\n出力ストリーム ストリーム 詳細 導入バージョン Writeコマンドレット 1 Successストリーム PowerShell 2.0 Write-Output 2 Errorストリーム PowerHhell 2.0 Write-Error 3 Warningストリーム PowerShell 3.0 Write-Warning 4 Verboseストリーム PowerShell 3.0 Write-Warning 5 Debugストリーム PowerShell 3.0 Write-Debug 6 Informationストリーム PowerShell 5.0 Write-Information, Write-Host N/A Progresssストリーム PowerShell 2.0 Write-Progress * すべてのストリーム PowerShell 3.0 ※ただしProgressリダイレクトはサポートなし\nPowerShellのエラー処理 PowerShellでは終了エラーと終了しないエラーが存在する。\nステートメント終了エラー及びスクリプト終了エラーはtryステートメントを使用してトラップすることができる。\n\u003e try{ date -j } catch{ echo ($PSItem.Exception.Message) \u003e .\\test.log continue } エラーは$errorや$PSItem.Exception.Messageで参照できる。\n",
+    "description": "",
+    "tags": [
+      "windows",
+      "PowerShell"
+    ],
+    "title": "Exception handling on PowerShell ",
+    "uri": "/windows_settings/ps_error/index.html"
+  },
+  {
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "PowerShell",
+    "uri": "/tags/powershell/index.html"
+  },
+  {
     "content": "",
     "description": "",
     "tags": null,

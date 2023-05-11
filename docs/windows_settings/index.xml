@@ -23,6 +23,19 @@
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk &amp;#39;{print $2}&amp;#39;):0.0 参照 WSL上にXサーバをインストールしてGUIを実現する（VcXsrv編）, メディアID Windows10のWSL上でX11アプリケーションを実行してみた，DevelopersIO errorについて </description>
     </item>
     <item>
+      <title>Exception handling on PowerShell </title>
+      <link>https://moematsuda-ai.github.io/windows_settings/ps_error/index.html</link>
+      <pubDate>Thu, 13 Apr 2023 14:25:36 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/windows_settings/ps_error/index.html</guid>
+      <description>あまりPowerShellを使用しないため知らなかったPowerShellでの例外処理について
+実行環境 使用するPowerShellのバージョンは以下の通り（詳細は省略）
+&amp;gt; $PSVersionTable Name Value ---- ----- PSVersion 7.3.4 リダイレクト PowerShellでは複数の出力ストリームが用意されており，これらのストリームには特定のコマンド（PowerShellでいうコマンドレット）やリダイレクトを使用して書き込むことが可能。 一部を除き，出力ストリームのリダイレクトがサポートされている。
+リダイレクト演算子 PowerShellのリダイレクトでは次のような演算子が用意されている。 ただし成功ストリーム（1）は規定値なので省略可能。
+|演算子|概要|構文| | :&amp;ndash; | :&amp;mdash;&amp;mdash; | : &amp;ndash;| |&amp;gt;|指定したストリームのファイルへの書き込み（上書き）|n&amp;gt;| |&amp;raquo;|指定したストリームのファイルへの書き込み（追加）|n&amp;raquo;| |&amp;gt;&amp;amp;1|指定したストリームをSuccessストリームにリダイレクト|n&amp;gt;&amp;amp;1|
+ここで，nはストリーム番号を表す。
+出力ストリーム ストリーム 詳細 導入バージョン Writeコマンドレット 1 Successストリーム PowerShell 2.0 Write-Output 2 Errorストリーム PowerHhell 2.0 Write-Error 3 Warningストリーム PowerShell 3.0 Write-Warning 4 Verboseストリーム PowerShell 3.0 Write-Warning 5 Debugストリーム PowerShell 3.0 Write-Debug 6 Informationストリーム PowerShell 5.0 Write-Information, Write-Host N/A Progresssストリーム PowerShell 2.0 Write-Progress * すべてのストリーム PowerShell 3.</description>
+    </item>
+    <item>
       <title>Installing WSL</title>
       <link>https://moematsuda-ai.github.io/windows_settings/install_wsl/index.html</link>
       <pubDate>Sun, 09 Apr 2023 08:37:46 +0000</pubDate>
