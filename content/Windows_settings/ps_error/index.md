@@ -65,3 +65,9 @@ catch{
 ```
 
 エラーは`$error`や`$PSItem.Exception.Message`で参照できる。
+
+## 参照
+- [PowerShell のエラーハンドリングを（今度こそ）理解する](https://qiita.com/mkht/items/24da4850f9d000b35fc4)
+- [about_Redirection](https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_redirection?view=powershell-7.3)
+- [about_Output_Streams](https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_output_streams?view=powershell-7.3)
+- [例外について知りたかったことのすべて](https://learn.microsoft.com/ja-jp/powershell/scripting/learn/deep-dives/everything-about-exceptions?view=powershell-7.3)
