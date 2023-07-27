@@ -24,7 +24,21 @@ Acquire::https::Proxy "http://<proxy>:<port>";
 ```
 
 ### /etc/wgetrc
-```http_proxy = http://<proxy>:<port>
+```
+http_proxy = http://<proxy>:<port>
 https_proxy = http://<proxy>:<port>
 ftp_proxy = http://<proxy>:<port>
 ```
+
+### anaconda3/envs/<env name>
+```
+proxy_servers:
+    http: http://<proxy server>:<port>
+    https: https://<proxy server>:<port>
+```
+
+次のコマンドで設定内容を確認
+```bash
+$ conda config --show
+```
+

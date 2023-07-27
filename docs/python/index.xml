@@ -6,7 +6,17 @@
     <description>Recent content in python on &#39;Moais blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 29 Apr 2023 06:44:22 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Jul 2023 09:47:46 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Animation</title>
+      <link>https://moematsuda-ai.github.io/python/animation/animation/index.html</link>
+      <pubDate>Thu, 27 Jul 2023 09:47:46 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/python/animation/animation/index.html</guid>
+      <description>FuncAnimation def plot(i, *fargs): plt.cla() y = fargs[] ax.plot(x, y) fig = plt.figure() ax = fig.add_subplot(111) fargs = (np.arange(10)) anim = FuncAnimation(fig, plot_posture, frames=len(args[0]), interval=100, fargs=fargs) plt.show() 保存する場合は以下のように書く
+anim.save(&amp;#34;animation.fig&amp;#34;, writer=&amp;#34;pillow&amp;#34;) または
+anim.save(&amp;#34;anim.mp4&amp;#34;, writer=&amp;#34;ffmpeg&amp;#34;, dpi=100) ffmpegでエラーが出る場合 次のようにffmpegをインストール
+$ conda install -c anaconda ffmpeg </description>
+    </item>
     <item>
       <title>Creating dateset by Numpy</title>
       <link>https://moematsuda-ai.github.io/python/numpy_create_dateset/index.html</link>

@@ -108,6 +108,20 @@ var relearn_search_index = [
     "uri": "/windows_settings/index.html"
   },
   {
+    "content": "FuncAnimation def plot(i, *fargs): plt.cla() y = fargs[] ax.plot(x, y) fig = plt.figure() ax = fig.add_subplot(111) fargs = (np.arange(10)) anim = FuncAnimation(fig, plot_posture, frames=len(args[0]), interval=100, fargs=fargs) plt.show() 保存する場合は以下のように書く\nanim.save(\"animation.fig\", writer=\"pillow\") または\nanim.save(\"anim.mp4\", writer=\"ffmpeg\", dpi=100) ffmpegでエラーが出る場合 次のようにffmpegをインストール\n$ conda install -c anaconda ffmpeg ",
+    "description": "",
+    "tags": null,
+    "title": "Animation",
+    "uri": "/python/animation/animation/index.html"
+  },
+  {
+    "content": " プログラミング言語やら何やらかんやらのメモ…\n",
+    "description": "",
+    "tags": null,
+    "title": "Moai's blog",
+    "uri": "/index.html"
+  },
+  {
     "content": "データの生成 等差数列の生成 np.arange(start, stop, step) 要素数を指定した等差数列の生成 np.linspace(start, stop, num, endpoint=True) endpoint: stopを数列に含むか否か（デフォルトはTrue） 同じ値で初期化した配列の生成 0で初期化\nnp.zeros(shape) np.zeros_like(arr) 1で初期化\nnp.ones(shape) np.ones_like(arr) 任意の値 (fill_value) で初期化\nnp.full(shape, fill_value) np.full_like(arr, fill_value) 空の配列を生成\nnp.empty(shape) np.empty_like(arr) 単位テンソルの生成 np.eye(shape) ",
     "description": "",
     "tags": [
@@ -116,13 +130,6 @@ var relearn_search_index = [
     ],
     "title": "Creating dateset by Numpy",
     "uri": "/python/numpy_create_dateset/index.html"
-  },
-  {
-    "content": " プログラミング言語やら何やらかんやらのメモ…\n",
-    "description": "",
-    "tags": null,
-    "title": "Moai's blog",
-    "uri": "/index.html"
   },
   {
     "content": "",
@@ -153,7 +160,7 @@ var relearn_search_index = [
     "uri": "/tags/proxy/index.html"
   },
   {
-    "content": "/etc/environment http_proxy=http://\u003cproxy\u003e:\u003cport\u003e https_proxy=https://\u003cproxy\u003e:\u003cport\u003e /etc/bash.bashrc export http_proxy=http://\u003cproxy\u003e:\u003cport\u003e export https_proxy=https://\u003cproxy\u003e:\u003cport\u003e /etc/apt/apt.conf Acquire::http::Proxy \"http://\u003cproxy\u003e:\u003cport\u003e\"; Acquire::https::Proxy \"http://\u003cproxy\u003e:\u003cport\u003e\"; /etc/wgetrc https_proxy = http://\u003cproxy\u003e:\u003cport\u003e ftp_proxy = http://\u003cproxy\u003e:\u003cport\u003e ",
+    "content": "/etc/environment http_proxy=http://\u003cproxy\u003e:\u003cport\u003e https_proxy=https://\u003cproxy\u003e:\u003cport\u003e /etc/bash.bashrc export http_proxy=http://\u003cproxy\u003e:\u003cport\u003e export https_proxy=https://\u003cproxy\u003e:\u003cport\u003e /etc/apt/apt.conf Acquire::http::Proxy \"http://\u003cproxy\u003e:\u003cport\u003e\"; Acquire::https::Proxy \"http://\u003cproxy\u003e:\u003cport\u003e\"; /etc/wgetrc http_proxy = http://\u003cproxy\u003e:\u003cport\u003e https_proxy = http://\u003cproxy\u003e:\u003cport\u003e ftp_proxy = http://\u003cproxy\u003e:\u003cport\u003e anaconda3/envs/ proxy_servers: http: http://\u003cproxy server\u003e:\u003cport\u003e https: https://\u003cproxy server\u003e:\u003cport\u003e 次のコマンドで設定内容を確認\n$ conda config --show ",
     "description": "",
     "tags": [
       "windows",
