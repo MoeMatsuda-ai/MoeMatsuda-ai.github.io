@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Installation for linter (Flake8) and Formatter (Black Formatter) on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/vscode/linter_formatter/index.html</link>
+    <description>Recent content in Installation for linter (Flake8) and Formatter (Black Formatter) on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 04 Oct 2023 07:53:44 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/vscode/linter_formatter/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

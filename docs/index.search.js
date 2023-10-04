@@ -99,6 +99,13 @@ var relearn_search_index = [
     "uri": "/papers/index.html"
   },
   {
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "VSCode",
+    "uri": "/vscode/index.html"
+  },
+  {
     "content": "Windowsの設定についてのあれこれ\n",
     "description": "",
     "tags": [
@@ -108,11 +115,11 @@ var relearn_search_index = [
     "uri": "/windows_settings/index.html"
   },
   {
-    "content": "FuncAnimation def plot(i, *fargs): plt.cla() y = fargs[] ax.plot(x, y) fig = plt.figure() ax = fig.add_subplot(111) fargs = (np.arange(10)) anim = FuncAnimation(fig, plot_posture, frames=len(args[0]), interval=100, fargs=fargs) plt.show() 保存する場合は以下のように書く\nanim.save(\"animation.fig\", writer=\"pillow\") または\nanim.save(\"anim.mp4\", writer=\"ffmpeg\", dpi=100) ffmpegでエラーが出る場合 次のようにffmpegをインストール\n$ conda install -c anaconda ffmpeg ",
+    "content": "Usage for Linter on the VSCode 拡張機能\"Flake8\"をインストール settings.jsonを開き，以下を追記 \"flake8.args\": [ \"--max-line-length=88\", \"--ignore=E203,W503,W504\" ] max-line-length：1文の文字数\nE203: :の前後にスペースがあるとエラー\nW503: 演算子の前に改行があるとエラー\nW504: 演算子の後に改行があるとエラー\nしかしながら、PEP 8（Python の公式スタイルガイド）は、過去のバージョンとの互換性の ために古い指針を維持していますが、実際には二項演算子の前での改行を推奨しています。\nこれにはいくつかの理由がありますが、主に次のような利点が挙げられます。\n行の終わりに演算子があると、その演算子を見逃しやすくなる 一般的に、行の先頭に演算子があると、複数行にわたる式を読む際に整理されていると感じられる black はこの「新しい」スタイルを採用しています。したがって、black でフォーマットされた コードは、W503 に違反する可能性があります。\nblack と flake8 を一緒に使用する場合、W503 の警告を無視するのが一般的です。\n【引用元】PythonのLinterとFormatter設定\nUsage for Formatter on the VSCode “Black Formatter\"をインストール\nsettingsを開き，Editor: Format On Saveにチェック\n「Blackフォーマッタ拡張機能がインストールされていますが，それを既定のフォーマッタとして使用しますか？」というメッセージが現れたら「はい」をクリック\n以下の文がsettings.jsonに追記されていることを確認\n\"[python]\": { \"editor.formatOnType\": true, \"editor.defaultFormatter\": \"ms-python.black-formatter\" }, \"editor.formatOnSave\": true, // \"python.formatting.provider\": \"none\", ※ただし最後の1文は今後非推奨になる予定らしいので削除（削除しても動作に問題はない！）\nMemo flake8とかをpipでインストールしてsettings.jsonでpython.linting.pylintEnabledとか を設定するという記事がいくつかあるが，2022年からこの方法は非推奨（今後廃止予定？）とな り，VSCodeの拡張機能で設定することが推奨されているらしい（Migration to Python Tools Extensions参照） Installation by pip and excusing Black on a terminal flake8とautopep8がインストールされているか確認\n$ pip show flake8 Name: flake8 Version: 6.0.0 ... $ pip show autopep8 Name: autopep8 Version: 1.6.0 ... のように出力されればインストール済み！\nエラーが出力された場合は次のコマンドでインストール\n$ pip install flake8 $ pip install autopep8 次のコマンドで確認可能\n$ autopep8 --in-place --aggressive --aggressive \u003cfile name\u003e 詳しくはこちらを参照\n※VSCodeの拡張機能を使用する場合はpipでのインストールは不要！（VSCode側でインストールされるらしい）\n参考 Pythonのコードフォーマッター(black)、リンター(flake8)をVSCode拡張機能で導入 PythonのLinterとFormatter設定 Flake8 extension for Visual Studio Code ",
     "description": "",
     "tags": null,
-    "title": "Animation",
-    "uri": "/python/animation/animation/index.html"
+    "title": "Installation for linter (Flake8) and Formatter (Black Formatter)",
+    "uri": "/vscode/linter_formatter/index.html"
   },
   {
     "content": " プログラミング言語やら何やらかんやらのメモ…\n",
@@ -120,6 +127,13 @@ var relearn_search_index = [
     "tags": null,
     "title": "Moai's blog",
     "uri": "/index.html"
+  },
+  {
+    "content": "FuncAnimation def plot(i, *fargs): plt.cla() y = fargs[] ax.plot(x, y) fig = plt.figure() ax = fig.add_subplot(111) fargs = (np.arange(10)) anim = FuncAnimation(fig, plot_posture, frames=len(args[0]), interval=100, fargs=fargs) plt.show() 保存する場合は以下のように書く\nanim.save(\"animation.fig\", writer=\"pillow\") または\nanim.save(\"anim.mp4\", writer=\"ffmpeg\", dpi=100) ffmpegでエラーが出る場合 次のようにffmpegをインストール\n$ conda install -c anaconda ffmpeg ",
+    "description": "",
+    "tags": null,
+    "title": "Animation",
+    "uri": "/python/animation/animation/index.html"
   },
   {
     "content": "データの生成 等差数列の生成 np.arange(start, stop, step) 要素数を指定した等差数列の生成 np.linspace(start, stop, num, endpoint=True) endpoint: stopを数列に含むか否か（デフォルトはTrue） 同じ値で初期化した配列の生成 0で初期化\nnp.zeros(shape) np.zeros_like(arr) 1で初期化\nnp.ones(shape) np.ones_like(arr) 任意の値 (fill_value) で初期化\nnp.full(shape, fill_value) np.full_like(arr, fill_value) 空の配列を生成\nnp.empty(shape) np.empty_like(arr) 単位テンソルの生成 np.eye(shape) ",

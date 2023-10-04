@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.3">
+    <meta name="generator" content="Relearn 5.6.5+tip">
+    <meta name="description" content="">
+    <title>VSCode :: &#39;Moais blog</title>
+    <link href="https://moematsuda-ai.github.io/vscode/index.html" rel="canonical" type="text/html" title="VSCode :: &#39;Moais blog">
+    <link href="/vscode/index.xml" rel="alternate" type="application/rss+xml" title="VSCode :: &#39;Moais blog"><link rel="icon" href="/images/favicon.png" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1696408484" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1696408484" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1696408484" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1696408484" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1696408484" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1696408484" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1696408484" rel="stylesheet">
+    <link href="/css/nucleus.css?1696408484" rel="stylesheet">
+    <link href="/css/fonts.css?1696408484" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1696408484" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1696408484" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1696408484" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1696408484" rel="stylesheet">
+    <link href="/css/variant.css?1696408484" rel="stylesheet">
+    <link href="/css/print.css?1696408484" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1696408484" rel="stylesheet">
+    <script src="/js/url.js?1696408484"></script>
+    <script src="/js/variant.js?1696408484"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/moematsuda-ai.github.io/';
+      window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
+    </script>
+    <script src="/js/jquery.min.js?1696408484" defer></script>
+  </head>
+  <body class="mobile-support print" data-url="/vscode/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Moai&#39;s blog</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">VSCode</span><meta itemprop="position" content="2"></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable chapter narrow" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="chapter">
+<div class="article-subheading">Chapter 12</div>
+<h1 id="vscode">VSCode</h1>
+
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <section>
+            <h1 class="a11y-only">Subsections of VSCode</h1>
+          <article class="default">
+<h1 id="installation-for-linter-flake8-and-formatter-black-formatter">Installation for linter (Flake8) and Formatter (Black Formatter)</h1>
+
+<h2 id="usage-for-linter-on-the-vscode">Usage for Linter on the VSCode</h2>
+<ol>
+<li>拡張機能&quot;Flake8&quot;をインストール</li>
+<li>settings.jsonを開き，以下を追記
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;flake8.args&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;--max-line-length=88&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;--ignore=E203,W503,W504&#34;</span>
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><ul>
+<li>
+<p><code>max-line-length</code>：1文の文字数</p>
+</li>
+<li>
+<p><code>E203</code>: <code>:</code>の前後にスペースがあるとエラー</p>
+</li>
+<li>
+<p><code>W503</code>: 演算子の前に改行があるとエラー</p>
+</li>
+<li>
+<p><code>W504</code>: 演算子の後に改行があるとエラー</p>
+<blockquote>
+<p>しかしながら、PEP 8（Python の公式スタイルガイド）は、過去のバージョンとの互換性の
+ために古い指針を維持していますが、実際には二項演算子の前での改行を推奨しています。</p>
+<p>これにはいくつかの理由がありますが、主に次のような利点が挙げられます。</p>
+<p>行の終わりに演算子があると、その演算子を見逃しやすくなる
+一般的に、行の先頭に演算子があると、複数行にわたる式を読む際に整理されていると感じられる
+black はこの「新しい」スタイルを採用しています。したがって、black でフォーマットされた
+コードは、W503 に違反する可能性があります。</p>
+<p>black と flake8 を一緒に使用する場合、W503 の警告を無視するのが一般的です。</p>
+</blockquote>
+<p>【引用元】<a href="https://zenn.dev/yamaden/articles/23d3805fc85d99">PythonのLinterとFormatter設定</a></p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="usage-for-formatter-on-the-vscode">Usage for Formatter on the VSCode</h2>
+<ol>
+<li>
+<p>&ldquo;Black Formatter&quot;をインストール</p>
+</li>
+<li>
+<p>settingsを開き，<code>Editor: Format On Save</code>にチェック</p>
+</li>
+<li>
+<p>「Blackフォーマッタ拡張機能がインストールされていますが，それを既定のフォーマッタとして使用しますか？」というメッセージが現れたら「はい」をクリック</p>
+</li>
+<li>
+<p>以下の文がsettings.jsonに追記されていることを確認</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;[python]&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;editor.formatOnType&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;editor.defaultFormatter&#34;</span>: <span style="color:#e6db74">&#34;ms-python.black-formatter&#34;</span>
+</span></span><span style="display:flex;"><span>}<span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;editor.formatOnSave&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">true</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// &#34;python.formatting.provider&#34;: &#34;none&#34;,
+</span></span></span></code></pre></div><p>※ただし最後の1文は今後非推奨になる予定らしいので削除（削除しても動作に問題はない！）</p>
+</li>
+</ol>
+<h2 id="memo">Memo</h2>
+<ul>
+<li>flake8とかをpipでインストールしてsettings.jsonで<code>python.linting.pylintEnabled</code>とか
+を設定するという記事がいくつかあるが，2022年からこの方法は非推奨（今後廃止予定？）とな
+り，VSCodeの拡張機能で設定することが推奨されているらしい（<a href="https://github.com/microsoft/vscode-python/wiki/Migration-to-Python-Tools-Extensions">Migration to Python Tools Extensions</a>参照）</li>
+</ul>
+<h2 id="installation-by-pip-and-excusing-black-on-a-terminal">Installation by pip and excusing Black on a terminal</h2>
+<ol>
+<li>
+<p><code>flake8</code>と<code>autopep8</code>がインストールされているか確認</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pip show flake8
+</span></span><span style="display:flex;"><span>Name: flake8
+</span></span><span style="display:flex;"><span>Version: 6.0.0
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>$ pip show autopep8 
+</span></span><span style="display:flex;"><span>Name: autopep8
+</span></span><span style="display:flex;"><span>Version: 1.6.0
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>のように出力されればインストール済み！</p>
+<p>エラーが出力された場合は次のコマンドでインストール</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pip install flake8
+</span></span><span style="display:flex;"><span>$ pip install autopep8
+</span></span></code></pre></div></li>
+<li>
+<p>次のコマンドで確認可能</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ autopep8 --in-place --aggressive --aggressive &lt;file name&gt;
+</span></span></code></pre></div></li>
+</ol>
+<p>詳しくは<a href="https://arakan-pgm-ai.hatenablog.com/entry/2018/11/12/090000">こちら</a>を参照</p>
+<p><strong>※VSCodeの拡張機能を使用する場合はpipでのインストールは不要！（VSCode側でインストールされるらしい）</strong></p>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://itc-engineering-blog.netlify.app/blogs/vscode-extensions-black-flake8">Pythonのコードフォーマッター(black)、リンター(flake8)をVSCode拡張機能で導入</a></li>
+<li><a href="https://zenn.dev/yamaden/articles/23d3805fc85d99">PythonのLinterとFormatter設定</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.flake8">Flake8 extension for Visual Studio Code</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          </section>        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard.min.js?1696408484" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1696408484" defer></script>
+    <script src="/js/featherlight.min.js?1696408484" defer></script>
+    <script src="/js/theme.js?1696408484" defer></script>
+  </body>
+</html>

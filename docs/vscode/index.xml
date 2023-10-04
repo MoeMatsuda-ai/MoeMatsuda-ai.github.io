@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VSCode on &#39;Moais blog</title>
+    <link>https://moematsuda-ai.github.io/vscode/index.html</link>
+    <description>Recent content in VSCode on &#39;Moais blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 04 Oct 2023 07:53:44 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installation for linter (Flake8) and Formatter (Black Formatter)</title>
+      <link>https://moematsuda-ai.github.io/vscode/linter_formatter/index.html</link>
+      <pubDate>Wed, 04 Oct 2023 07:53:44 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/vscode/linter_formatter/index.html</guid>
+      <description>Usage for Linter on the VSCode 拡張機能&amp;quot;Flake8&amp;quot;をインストール settings.jsonを開き，以下を追記 &amp;#34;flake8.args&amp;#34;: [ &amp;#34;--max-line-length=88&amp;#34;, &amp;#34;--ignore=E203,W503,W504&amp;#34; ] max-line-length：1文の文字数
+E203: :の前後にスペースがあるとエラー
+W503: 演算子の前に改行があるとエラー
+W504: 演算子の後に改行があるとエラー
+しかしながら、PEP 8（Python の公式スタイルガイド）は、過去のバージョンとの互換性の ために古い指針を維持していますが、実際には二項演算子の前での改行を推奨しています。
+これにはいくつかの理由がありますが、主に次のような利点が挙げられます。
+行の終わりに演算子があると、その演算子を見逃しやすくなる 一般的に、行の先頭に演算子があると、複数行にわたる式を読む際に整理されていると感じられる black はこの「新しい」スタイルを採用しています。したがって、black でフォーマットされた コードは、W503 に違反する可能性があります。
+black と flake8 を一緒に使用する場合、W503 の警告を無視するのが一般的です。
+【引用元】PythonのLinterとFormatter設定
+Usage for Formatter on the VSCode &amp;ldquo;Black Formatter&amp;quot;をインストール
+settingsを開き，Editor: Format On Saveにチェック
+「Blackフォーマッタ拡張機能がインストールされていますが，それを既定のフォーマッタとして使用しますか？」というメッセージが現れたら「はい」をクリック
+以下の文がsettings.jsonに追記されていることを確認
+&amp;#34;[python]&amp;#34;: { &amp;#34;editor.formatOnType&amp;#34;: true, &amp;#34;editor.defaultFormatter&amp;#34;: &amp;#34;ms-python.black-formatter&amp;#34; }, &amp;#34;editor.formatOnSave&amp;#34;: true, // &amp;#34;python.formatting.provider&amp;#34;: &amp;#34;none&amp;#34;, ※ただし最後の1文は今後非推奨になる予定らしいので削除（削除しても動作に問題はない！）
+Memo flake8とかをpipでインストールしてsettings.jsonでpython.linting.pylintEnabledとか を設定するという記事がいくつかあるが，2022年からこの方法は非推奨（今後廃止予定？）とな り，VSCodeの拡張機能で設定することが推奨されているらしい（Migration to Python Tools Extensions参照） Installation by pip and excusing Black on a terminal flake8とautopep8がインストールされているか確認</description>
+    </item>
+  </channel>
+</rss>

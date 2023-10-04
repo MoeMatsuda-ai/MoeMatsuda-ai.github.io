@@ -2,7 +2,7 @@
 tags = ["windows"]
 archetype = "chapter"
 title = "Windows settings"
-weight = 12
+weight = 15
 +++
 
 Windowsの設定についてのあれこれ
