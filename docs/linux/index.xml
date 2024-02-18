@@ -6,7 +6,14 @@
     <description>Recent content in Linux on &#39;Moais blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 18 Feb 2024 03:44:00 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Feb 2024 17:00:46 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remote Desktop</title>
+      <link>https://moematsuda-ai.github.io/linux/remote-desktop/index.html</link>
+      <pubDate>Sun, 18 Feb 2024 17:00:46 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/linux/remote-desktop/index.html</guid>
+      <description>WindowsからLinux (Ubuntu22.04) へのリモート接続の方法 サーバ側（Ubuntu）の設定 「設定」の「共有」を開く 「リモートデスクトップ」をクリック 「リモートデスクトップ」と「リモートコントロール」をONにする Ubuntu 20.04 LTSまではxrdpサーバをインストールする必要があったが，Ubuntu22.04 LTSからはすでにインストールされてるので不要になったみたい クライアント側（Windows）の設定 リモートデスクトップ接続を開く 「コンピュータ名」にIPアドレス，「ユーザー名」にアクセスするユーザー名を記入し，接続をクリック Problems xrdpがのactive化でwarningが出る $ sudo systemctl status xrdpと打つと，[WARNING] Cannot read private key file /etc/xrdp/key-pem: Permission deniedと表示される xrdpユーザをssl-certグループに追加 $ sudo gpasswd -a xrdp ssl-cert xrdpのリスタート $ sudo systemctl restart xrdp 画面が真っ暗のまま動かない デスクトップとリモートで同時ログインはできないみたい　→　デスクトップをログアウトすれば良い！ リモート接続を終了する場合はUbuntuでlog outすれば自動で接続が切れる Windowsからアクセスするとキーボードの種類によらずJIS配列になる xrdpの設定を変更 $ cd /etc/xrpd/ $ sudo mv km-00000411.ini ~/km-00000411.ini-org $ sudo cp km-00000409.ini km-00000411.ini $ sudo systemctl restart xrdp こちらを参照 参考 Ubuntu 22.</description>
+    </item>
     <item>
       <title>Launcher for Linux</title>
       <link>https://moematsuda-ai.github.io/linux/launcher/index.html</link>

@@ -1,4 +1,5 @@
 ---
+tags: ["linux"]
 title: "Launcher for Linux"
 date: 2024-02-18T03:44:00Z
 draft: false

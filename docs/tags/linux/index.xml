@@ -6,13 +6,30 @@
     <description>Recent content in linux on &#39;Moais blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 29 Apr 2023 06:12:44 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Feb 2024 17:00:46 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux</title>
       <link>https://moematsuda-ai.github.io/linux/index.html</link>
-      <pubDate>Sun, 18 Feb 2024 03:44:00 +0000</pubDate>
+      <pubDate>Sun, 18 Feb 2024 17:00:46 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/linux/index.html</guid>
       <description></description>
+    </item>
+    <item>
+      <title>Remote Desktop</title>
+      <link>https://moematsuda-ai.github.io/linux/remote-desktop/index.html</link>
+      <pubDate>Sun, 18 Feb 2024 17:00:46 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/linux/remote-desktop/index.html</guid>
+      <description>WindowsからLinux (Ubuntu22.04) へのリモート接続の方法 サーバ側（Ubuntu）の設定 「設定」の「共有」を開く 「リモートデスクトップ」をクリック 「リモートデスクトップ」と「リモートコントロール」をONにする Ubuntu 20.04 LTSまではxrdpサーバをインストールする必要があったが，Ubuntu22.04 LTSからはすでにインストールされてるので不要になったみたい クライアント側（Windows）の設定 リモートデスクトップ接続を開く 「コンピュータ名」にIPアドレス，「ユーザー名」にアクセスするユーザー名を記入し，接続をクリック Problems xrdpがのactive化でwarningが出る $ sudo systemctl status xrdpと打つと，[WARNING] Cannot read private key file /etc/xrdp/key-pem: Permission deniedと表示される xrdpユーザをssl-certグループに追加 $ sudo gpasswd -a xrdp ssl-cert xrdpのリスタート $ sudo systemctl restart xrdp 画面が真っ暗のまま動かない デスクトップとリモートで同時ログインはできないみたい　→　デスクトップをログアウトすれば良い！ リモート接続を終了する場合はUbuntuでlog outすれば自動で接続が切れる Windowsからアクセスするとキーボードの種類によらずJIS配列になる xrdpの設定を変更 $ cd /etc/xrpd/ $ sudo mv km-00000411.ini ~/km-00000411.ini-org $ sudo cp km-00000409.ini km-00000411.ini $ sudo systemctl restart xrdp こちらを参照 参考 Ubuntu 22.</description>
+    </item>
+    <item>
+      <title>Launcher for Linux</title>
+      <link>https://moematsuda-ai.github.io/linux/launcher/index.html</link>
+      <pubDate>Sun, 18 Feb 2024 03:44:00 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/linux/launcher/index.html</guid>
+      <description>1. Ulauncher Linux系のlauncherの一つ。 設定済みのキーボード・ショートカットとかtabキーとかが使用できるため，こちらをインストール。
+install こちらからUbuntu用のインストーラーをダウンロード 次のコマンドでインストール sudo apt install ./ulauncher_x.y.z_all.deb settings アプリを起動 歯車マークをクリックし，設定画面を開く HotkeyをAlt+Spaceに変更 Color Themeを変更 設定ファイルは~/.config/ulauncher/settings.jsonに存在 以下のExtensionsを追加 X11 Windows Swicher ($ ws ) Browser Bookmarks ($ bb) 2. Albert Linux系で使用されているluncherの一つ。 Linuxで設定しているキーボード・ショートカットが使用できなかったためアンインストール済み。
+install ホームページからインストール方法を確認できる。 今回はxUbuntuの22.04バージョンでインストール。
+echo &amp;#39;deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_22.04/ /&amp;#39; | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list curl -fsSL https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_manuelschneid3r.gpg &amp;gt; /dev/null sudo apt update sudo apt install albert uninstall sudo apt-get remove albert アンストールだけする場合はsudo apt-get remove albert albertのパッケージと他の依存パッケージをアンインストールする場合はsudo apt-get autoremove albert configファイルとalbertのデータファイルを削除したい場合はsudo apt-get purge albert </description>
     </item>
     <item>
       <title>Proxy settings  </title>

@@ -115,11 +115,11 @@ var relearn_search_index = [
     "uri": "/windows_settings/index.html"
   },
   {
-    "content": "1. Ulauncher Linux系のlauncherの一つ。 設定済みのキーボード・ショートカットとかtabキーとかが使用できるため，こちらをインストール。\ninstall こちらからUbuntu用のインストーラーをダウンロード 次のコマンドでインストール sudo apt install ./ulauncher_x.y.z_all.deb settings アプリを起動 歯車マークをクリックし，設定画面を開く HotkeyをAlt+Spaceに変更 Color Themeを変更 設定ファイルは~/.config/ulauncher/settings.jsonに存在 以下のExtensionsを追加 X11 Windows Swicher ($ ws ) Browser Bookmarks ($ bb) 2. Albert Linux系で使用されているluncherの一つ。 Linuxで設定しているキーボード・ショートカットが使用できなかったためアンインストール済み。\ninstall ホームページからインストール方法を確認できる。 今回はxUbuntuの22.04バージョンでインストール。\necho 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_22.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list curl -fsSL https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_manuelschneid3r.gpg \u003e /dev/null sudo apt update sudo apt install albert uninstall sudo apt-get remove albert アンストールだけする場合はsudo apt-get remove albert albertのパッケージと他の依存パッケージをアンインストールする場合はsudo apt-get autoremove albert configファイルとalbertのデータファイルを削除したい場合はsudo apt-get purge albert ",
+    "content": "",
     "description": "",
     "tags": null,
-    "title": "Launcher for Linux",
-    "uri": "/linux/launcher/index.html"
+    "title": "linux",
+    "uri": "/tags/linux/index.html"
   },
   {
     "content": " プログラミング言語やら何やらかんやらのメモ…\n",
@@ -127,6 +127,31 @@ var relearn_search_index = [
     "tags": null,
     "title": "Moai's blog",
     "uri": "/index.html"
+  },
+  {
+    "content": "WindowsからLinux (Ubuntu22.04) へのリモート接続の方法 サーバ側（Ubuntu）の設定 「設定」の「共有」を開く 「リモートデスクトップ」をクリック 「リモートデスクトップ」と「リモートコントロール」をONにする Ubuntu 20.04 LTSまではxrdpサーバをインストールする必要があったが，Ubuntu22.04 LTSからはすでにインストールされてるので不要になったみたい クライアント側（Windows）の設定 リモートデスクトップ接続を開く 「コンピュータ名」にIPアドレス，「ユーザー名」にアクセスするユーザー名を記入し，接続をクリック Problems xrdpがのactive化でwarningが出る $ sudo systemctl status xrdpと打つと，[WARNING] Cannot read private key file /etc/xrdp/key-pem: Permission deniedと表示される xrdpユーザをssl-certグループに追加 $ sudo gpasswd -a xrdp ssl-cert xrdpのリスタート $ sudo systemctl restart xrdp 画面が真っ暗のまま動かない デスクトップとリモートで同時ログインはできないみたい　→　デスクトップをログアウトすれば良い！ リモート接続を終了する場合はUbuntuでlog outすれば自動で接続が切れる Windowsからアクセスするとキーボードの種類によらずJIS配列になる xrdpの設定を変更 $ cd /etc/xrpd/ $ sudo mv km-00000411.ini ~/km-00000411.ini-org $ sudo cp km-00000409.ini km-00000411.ini $ sudo systemctl restart xrdp こちらを参照 参考 Ubuntu 22.04 LTSの新機能，リモートデスクトップのRDPサポートを使用する 【Ubuntu Tips】UbuntuにWindows10からリモートデスクトップで接続する方法 ~ xrdpパッケージ ~ Ubuntu 20.04 LTSをWindowsからリモート接続します（xrdpについて） ",
+    "description": "",
+    "tags": [
+      "linux"
+    ],
+    "title": "Remote Desktop",
+    "uri": "/linux/remote-desktop/index.html"
+  },
+  {
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "Tags",
+    "uri": "/tags/index.html"
+  },
+  {
+    "content": "1. Ulauncher Linux系のlauncherの一つ。 設定済みのキーボード・ショートカットとかtabキーとかが使用できるため，こちらをインストール。\ninstall こちらからUbuntu用のインストーラーをダウンロード 次のコマンドでインストール sudo apt install ./ulauncher_x.y.z_all.deb settings アプリを起動 歯車マークをクリックし，設定画面を開く HotkeyをAlt+Spaceに変更 Color Themeを変更 設定ファイルは~/.config/ulauncher/settings.jsonに存在 以下のExtensionsを追加 X11 Windows Swicher ($ ws ) Browser Bookmarks ($ bb) 2. Albert Linux系で使用されているluncherの一つ。 Linuxで設定しているキーボード・ショートカットが使用できなかったためアンインストール済み。\ninstall ホームページからインストール方法を確認できる。 今回はxUbuntuの22.04バージョンでインストール。\necho 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_22.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list curl -fsSL https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_manuelschneid3r.gpg \u003e /dev/null sudo apt update sudo apt install albert uninstall sudo apt-get remove albert アンストールだけする場合はsudo apt-get remove albert albertのパッケージと他の依存パッケージをアンインストールする場合はsudo apt-get autoremove albert configファイルとalbertのデータファイルを削除したい場合はsudo apt-get purge albert ",
+    "description": "",
+    "tags": [
+      "linux"
+    ],
+    "title": "Launcher for Linux",
+    "uri": "/linux/launcher/index.html"
   },
   {
     "content": "SSH settings on WSL 1. WindowsでOpenSSH serverのインストールと起動 設定を開く 「システム \u003e オプション機能 \u003e オプション機能を追加する \u003e 機能を表示」 の順番でクリック OpenSSHクライアントをインストール 「サービス」アプリを開く OpenSSH SSH Serverをダブルクリック メモ: [表示]タブの[詳細]で探すこと [全般]タブの[スタートアップの種類]ドロップダウンメニュー から[自動]を選択 この画面からサービスを開始する場合は[開始(S)]をクリック 2. OpenSSHの設定 パスワードでの認証設定 （デフォルトの設定では）パスワードでのssh接続はできないようになっている 公開鍵認証をOnにするにはC:\\ProgramData\\ssh\\sshd_configを開き，#PubleyAuthentication yesの行をアンコメント 管理者権限での編集は，エディタを管理者権限で実行し，ファイルを開けばOK！ ポート番号の設定 C:\\ProgramData\\ssh\\sshd_configでポート番号を指定 「コントロールパネル\u003eシステムとセキュリティ\u003eファイアウォールの状態の確認\u003e詳細設定\u003e受信規則]から指定したポートが解放されているかを確認可能 ipアドレスの確認 PowerShellで$ipconfigを実行 3. Linuxクライアントでの設定 参考 Windows用OpenSSHの概要 ",
@@ -177,13 +202,6 @@ var relearn_search_index = [
     "content": "",
     "description": "",
     "tags": null,
-    "title": "Tags",
-    "uri": "/tags/index.html"
-  },
-  {
-    "content": "",
-    "description": "",
-    "tags": null,
     "title": "proxy",
     "uri": "/tags/proxy/index.html"
   },
@@ -218,13 +236,6 @@ var relearn_search_index = [
     "tags": null,
     "title": "bash",
     "uri": "/tags/bash/index.html"
-  },
-  {
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "linux",
-    "uri": "/tags/linux/index.html"
   },
   {
     "content": "/etc/environment export no_proxy=localhost,127.0.0.1,localhost,*\u003cdomain\u003e export ftp_proxy=http://\u003cproxy server\u003e:\u003cport\u003e/ export http_proxy=http://\u003cproxy server\u003e:\u003cport\u003e/ export https_proxy=http://\u003cproxy server\u003e:\u003cport\u003e/ export all_proxy=socks://\u003cproxy server\u003e:\u003cport\u003e/ export FTP_PROXY=http://\u003cproxy server\u003e:\u003cport\u003e/ export HTTP_PROXY=http://\u003cproxy server\u003e:\u003cport\u003e/ export HTTPS_PROXY=http://\u003cproxy server\u003e:\u003cport\u003e/ export ALL_PROXY=socks://\u003cproxy server\u003e:\u003cport\u003e/ /etc/apt/apt.conf or /etc/apt/apt.conf.d/proxy.conf Acquire::http::Proxy \"http://proxy.cc.yamaguchi-u.ac.jp:8080/\"; ",

@@ -6,7 +6,14 @@
     <description>Recent content in Tags on &#39;Moais blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 29 Apr 2023 06:44:22 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Feb 2024 17:00:46 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>https://moematsuda-ai.github.io/tags/linux/index.html</link>
+      <pubDate>Sun, 18 Feb 2024 17:00:46 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/tags/linux/index.html</guid>
+      <description></description>
+    </item>
     <item>
       <title>numpy</title>
       <link>https://moematsuda-ai.github.io/tags/numpy/index.html</link>
@@ -47,13 +54,6 @@
       <link>https://moematsuda-ai.github.io/tags/bash/index.html</link>
       <pubDate>Sat, 29 Apr 2023 06:12:44 +0000</pubDate>
       <guid>https://moematsuda-ai.github.io/tags/bash/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>linux</title>
-      <link>https://moematsuda-ai.github.io/tags/linux/index.html</link>
-      <pubDate>Sat, 29 Apr 2023 06:12:44 +0000</pubDate>
-      <guid>https://moematsuda-ai.github.io/tags/linux/index.html</guid>
       <description></description>
     </item>
     <item>
