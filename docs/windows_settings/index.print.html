@@ -10,20 +10,20 @@
     <link href="https://moematsuda-ai.github.io/windows_settings/index.html" rel="canonical" type="text/html" title="Windows settings :: &#39;Moais blog">
     <link href="/windows_settings/index.xml" rel="alternate" type="application/rss+xml" title="Windows settings :: &#39;Moais blog"><link rel="icon" href="/images/favicon.png" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1696408484" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1696408484" rel="stylesheet"></noscript>
-    <link href="/css/featherlight.min.css?1696408484" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1696408484" rel="stylesheet"></noscript>
-    <link href="/css/auto-complete.css?1696408484" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1696408484" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1696408484" rel="stylesheet">
-    <link href="/css/nucleus.css?1696408484" rel="stylesheet">
-    <link href="/css/fonts.css?1696408484" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1696408484" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1696408484" rel="stylesheet">
-    <link href="/css/theme-relearn-dark.css?1696408484" rel="stylesheet" id="variant-style">
-    <link href="/css/ie.css?1696408484" rel="stylesheet">
-    <link href="/css/variant.css?1696408484" rel="stylesheet">
-    <link href="/css/print.css?1696408484" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1696408484" rel="stylesheet">
-    <script src="/js/url.js?1696408484"></script>
-    <script src="/js/variant.js?1696408484"></script>
+    <link href="/css/fontawesome-all.min.css?1708232072" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1708232072" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1708232072" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1708232072" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1708232072" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1708232072" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1708232072" rel="stylesheet">
+    <link href="/css/nucleus.css?1708232072" rel="stylesheet">
+    <link href="/css/fonts.css?1708232072" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1708232072" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1708232072" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1708232072" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1708232072" rel="stylesheet">
+    <link href="/css/variant.css?1708232072" rel="stylesheet">
+    <link href="/css/print.css?1708232072" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1708232072" rel="stylesheet">
+    <script src="/js/url.js?1708232072"></script>
+    <script src="/js/variant.js?1708232072"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -41,7 +41,7 @@
       var baseUriFull='https:\/\/moematsuda-ai.github.io/';
       window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
     </script>
-    <script src="/js/jquery.min.js?1696408484" defer></script>
+    <script src="/js/jquery.min.js?1708232072" defer></script>
   </head>
   <body class="mobile-support print" data-url="/windows_settings/index.html">
     <div id="body" class="default-animation">
@@ -79,6 +79,63 @@
 
           <section>
             <h1 class="a11y-only">Subsections of Windows settings</h1>
+          <article class="default">
+<h1 id="ssh_settings_wsl">Ssh_settings_wsl</h1>
+
+<h1 id="ssh-settings-on-wsl">SSH settings on WSL</h1>
+<h2 id="1-windowsでopenssh-serverのインストールと起動">1. WindowsでOpenSSH serverのインストールと起動</h2>
+<ol>
+<li>設定を開く</li>
+<li>「システム &gt; オプション機能 &gt; オプション機能を追加する &gt; 機能を表示」
+の順番でクリック</li>
+<li>OpenSSHクライアントをインストール</li>
+<li>「サービス」アプリを開く</li>
+<li>OpenSSH SSH Serverをダブルクリック
+<ul>
+<li>メモ: [表示]タブの[詳細]で探すこと</li>
+</ul>
+</li>
+<li>[全般]タブの[スタートアップの種類]ドロップダウンメニュー
+から[自動]を選択</li>
+<li>この画面からサービスを開始する場合は[開始(S)]をクリック</li>
+</ol>
+<h2 id="2-opensshの設定">2. OpenSSHの設定</h2>
+<ol>
+<li>パスワードでの認証設定
+<ol>
+<li>（デフォルトの設定では）パスワードでのssh接続はできないようになっている</li>
+<li>公開鍵認証をOnにするには<code>C:\ProgramData\ssh\sshd_config</code>を開き，<code>#PubleyAuthentication yes</code>の行をアンコメント
+<ul>
+<li>管理者権限での編集は，エディタを管理者権限で実行し，ファイルを開けばOK！</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>ポート番号の設定
+<ol>
+<li><code>C:\ProgramData\ssh\sshd_config</code>でポート番号を指定</li>
+<li>「コントロールパネル&gt;システムとセキュリティ&gt;ファイアウォールの状態の確認&gt;詳細設定&gt;受信規則]から指定したポートが解放されているかを確認可能</li>
+</ol>
+</li>
+<li>ipアドレスの確認
+<ul>
+<li>PowerShellで<code>$ipconfig</code>を実行</li>
+</ul>
+</li>
+</ol>
+<h2 id="3-linuxクライアントでの設定">3. Linuxクライアントでの設定</h2>
+<ol>
+<li></li>
+</ol>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/ja-jp/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui">Windows用OpenSSHの概要</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
           <article class="default">
 <h1 id="proxy-settings-on-wsl">Proxy settings on WSL</h1>
 
@@ -334,9 +391,9 @@ ftp_proxy = http://&lt;proxy&gt;:&lt;port&gt;
           </section>        </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1696408484" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1696408484" defer></script>
-    <script src="/js/featherlight.min.js?1696408484" defer></script>
-    <script src="/js/theme.js?1696408484" defer></script>
+    <script src="/js/clipboard.min.js?1708232072" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1708232072" defer></script>
+    <script src="/js/featherlight.min.js?1708232072" defer></script>
+    <script src="/js/theme.js?1708232072" defer></script>
   </body>
 </html>

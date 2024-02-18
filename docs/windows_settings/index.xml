@@ -6,7 +6,14 @@
     <description>Recent content in Windows settings on &#39;Moais blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 29 Apr 2023 06:30:35 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/windows_settings/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Dec 2023 05:17:22 +0000</lastBuildDate><atom:link href="https://moematsuda-ai.github.io/windows_settings/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ssh_settings_wsl</title>
+      <link>https://moematsuda-ai.github.io/windows_settings/ssh_settings_wsl/index.html</link>
+      <pubDate>Wed, 27 Dec 2023 05:17:22 +0000</pubDate>
+      <guid>https://moematsuda-ai.github.io/windows_settings/ssh_settings_wsl/index.html</guid>
+      <description>SSH settings on WSL 1. WindowsでOpenSSH serverのインストールと起動 設定を開く 「システム &amp;gt; オプション機能 &amp;gt; オプション機能を追加する &amp;gt; 機能を表示」 の順番でクリック OpenSSHクライアントをインストール 「サービス」アプリを開く OpenSSH SSH Serverをダブルクリック メモ: [表示]タブの[詳細]で探すこと [全般]タブの[スタートアップの種類]ドロップダウンメニュー から[自動]を選択 この画面からサービスを開始する場合は[開始(S)]をクリック 2. OpenSSHの設定 パスワードでの認証設定 （デフォルトの設定では）パスワードでのssh接続はできないようになっている 公開鍵認証をOnにするにはC:\ProgramData\ssh\sshd_configを開き，#PubleyAuthentication yesの行をアンコメント 管理者権限での編集は，エディタを管理者権限で実行し，ファイルを開けばOK！ ポート番号の設定 C:\ProgramData\ssh\sshd_configでポート番号を指定 「コントロールパネル&amp;gt;システムとセキュリティ&amp;gt;ファイアウォールの状態の確認&amp;gt;詳細設定&amp;gt;受信規則]から指定したポートが解放されているかを確認可能 ipアドレスの確認 PowerShellで$ipconfigを実行 3. Linuxクライアントでの設定 参考 Windows用OpenSSHの概要 </description>
+    </item>
     <item>
       <title>Proxy settings on WSL</title>
       <link>https://moematsuda-ai.github.io/windows_settings/proxy_settings_wsl/index.html</link>
