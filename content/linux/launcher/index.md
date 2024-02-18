@@ -3,18 +3,18 @@ title: "Launcher for Linux"
 date: 2024-02-18T03:44:00Z
 draft: false
 ---
-# 1. [Ulauncher](https://docs.ulauncher.io/en/stable/index.html)
+## 1. [Ulauncher](https://docs.ulauncher.io/en/stable/index.html)
 Linux系のlauncherの一つ。
 設定済みのキーボード・ショートカットとかtabキーとかが使用できるため，こちらをインストール。
 
-## install
+### install
 1. [こちら](https://ulauncher.io/#Download)からUbuntu用のインストーラーをダウンロード
 2. 次のコマンドでインストール
     ```bash
     sudo apt install ./ulauncher_x.y.z_all.deb
     ```
 
-## settings
+### settings
 1. アプリを起動
 2. 歯車マークをクリックし，設定画面を開く
 3. Hotkeyを`Alt+Space`に変更
@@ -24,11 +24,11 @@ Linux系のlauncherの一つ。
     - X11 Windows Swicher (`$ ws `)
     - Browser Bookmarks (`$ bb`)
 
-# 2. [Albert](https://albertlauncher.github.io/)
+## 2. [Albert](https://albertlauncher.github.io/)
 Linux系で使用されているluncherの一つ。
 Linuxで設定しているキーボード・ショートカットが使用できなかったためアンインストール済み。
 
-## install
+### install
 [ホームページ](https://software.opensuse.org/download.html?project=home:manuelschneid3r&package=albert)からインストール方法を確認できる。
 今回はxUbuntuの22.04バージョンでインストール。
 
@@ -39,7 +39,7 @@ sudo apt update
 sudo apt install albert
 ```
 
-## uninstall
+### uninstall
 ```bash
 sudo apt-get remove albert
 ```
