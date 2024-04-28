@@ -10,19 +10,19 @@
     <link href="/linux/proxy_settings/index.xml" rel="alternate" type="application/rss+xml" title="Proxy settings   :: &#39;Moais blog">
     <link href="/linux/proxy_settings/index.print.html" rel="alternate" type="text/html" title="Proxy settings   :: &#39;Moais blog"><link rel="icon" href="/images/favicon.png" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1708278015" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1708278015" rel="stylesheet"></noscript>
-    <link href="/css/featherlight.min.css?1708278015" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1708278015" rel="stylesheet"></noscript>
-    <link href="/css/auto-complete.css?1708278015" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1708278015" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1708278015" rel="stylesheet">
-    <link href="/css/nucleus.css?1708278015" rel="stylesheet">
-    <link href="/css/fonts.css?1708278015" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1708278015" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1708278015" rel="stylesheet">
-    <link href="/css/theme-relearn-dark.css?1708278015" rel="stylesheet" id="variant-style">
-    <link href="/css/ie.css?1708278015" rel="stylesheet">
-    <link href="/css/variant.css?1708278015" rel="stylesheet">
-    <link href="/css/print.css?1708278015" rel="stylesheet" media="print">
-    <script src="/js/url.js?1708278015"></script>
-    <script src="/js/variant.js?1708278015"></script>
+    <link href="/css/fontawesome-all.min.css?1714298825" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1714298825" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1714298825" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1714298825" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1714298825" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1714298825" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1714298825" rel="stylesheet">
+    <link href="/css/nucleus.css?1714298825" rel="stylesheet">
+    <link href="/css/fonts.css?1714298825" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1714298825" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1714298825" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1714298825" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1714298825" rel="stylesheet">
+    <link href="/css/variant.css?1714298825" rel="stylesheet">
+    <link href="/css/print.css?1714298825" rel="stylesheet" media="print">
+    <script src="/js/url.js?1714298825"></script>
+    <script src="/js/variant.js?1714298825"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -40,7 +40,7 @@
       var baseUriFull='https:\/\/moematsuda-ai.github.io/';
       window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
     </script>
-    <script src="/js/jquery.min.js?1708278015" defer></script>
+    <script src="/js/jquery.min.js?1714298825" defer></script>
   </head>
   <body class="mobile-support html" data-url="/linux/proxy_settings/index.html">
     <div id="body" class="default-animation">
@@ -74,10 +74,20 @@
             <div class="toc-wrapper" dir="ltr">
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#ubuntu-2204-lts">Ubuntu 22.04 LTS</a>
       <ul>
         <li><a href="#etcenvironment">/etc/environment</a></li>
-        <li><a href="#etcaptaptconf-or-etcaptaptconfdproxyconf">/etc/apt/apt.conf or /etc/apt/apt.conf.d/proxy.conf</a></li>
+        <li><a href="#apt">apt</a></li>
+        <li><a href="#discord">Discord</a></li>
+      </ul>
+    </li>
+    <li><a href="#windows-for-linux">Windows for Linux</a>
+      <ul>
+        <li><a href="#etcenvironment-1">/etc/environment</a></li>
+        <li><a href="#etcbashbashrc">/etc/bash.bashrc</a></li>
+        <li><a href="#etcaptaptconf">/etc/apt/apt.conf</a></li>
+        <li><a href="#etcwgetrc">/etc/wgetrc</a></li>
+        <li><a href="#anaconda3envsenv-name">anaconda3/envs/<!-- raw HTML omitted --></a></li>
       </ul>
     </li>
   </ul>
@@ -98,6 +108,7 @@
           <article class="default">
 <h1 id="proxy-settings">Proxy settings  </h1>
 
+<h2 id="ubuntu-2204-lts">Ubuntu 22.04 LTS</h2>
 <h3 id="etcenvironment">/etc/environment</h3>
 <pre tabindex="0"><code>export no_proxy=localhost,127.0.0.1,localhost,*&lt;domain&gt;
 export ftp_proxy=http://&lt;proxy server&gt;:&lt;port&gt;/
@@ -108,9 +119,38 @@ export FTP_PROXY=http://&lt;proxy server&gt;:&lt;port&gt;/
 export HTTP_PROXY=http://&lt;proxy server&gt;:&lt;port&gt;/
 export HTTPS_PROXY=http://&lt;proxy server&gt;:&lt;port&gt;/
 export ALL_PROXY=socks://&lt;proxy server&gt;:&lt;port&gt;/
-</code></pre><h3 id="etcaptaptconf-or-etcaptaptconfdproxyconf">/etc/apt/apt.conf or /etc/apt/apt.conf.d/proxy.conf</h3>
+</code></pre><h3 id="apt">apt</h3>
+<p><code>/etc/apt/apt.conf</code>に以下を追記</p>
 <pre tabindex="0"><code>Acquire::http::Proxy &#34;http://proxy.cc.yamaguchi-u.ac.jp:8080/&#34;;
-</code></pre>
+</code></pre><h3 id="discord">Discord</h3>
+<ol>
+<li><code>whereis discord</code>でパスを確認</li>
+<li>上記で確認したディレクトリ下にある<code>discord.desktop</code>の<code>Exec=/usr/share/discord/Discord</code>部分を以下のように書き換え
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Exec<span style="color:#f92672">=</span>env http_proxy<span style="color:#f92672">=</span>http://&lt;proxy-server&gt;:&lt;port&gt; https_proxy<span style="color:#f92672">=</span>http://&lt;proxy-server&gt;:&lt;port&gt; /usr/share/discord/Discord --proxy-server<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://&lt;proxy-server&gt;:&lt;port&gt;&#34;</span>
+</span></span></code></pre></div></li>
+<li>reboot</li>
+</ol>
+<h2 id="windows-for-linux">Windows for Linux</h2>
+<h3 id="etcenvironment-1">/etc/environment</h3>
+<pre tabindex="0"><code>http_proxy=http://&lt;proxy&gt;:&lt;port&gt;
+https_proxy=https://&lt;proxy&gt;:&lt;port&gt;
+</code></pre><h3 id="etcbashbashrc">/etc/bash.bashrc</h3>
+<pre tabindex="0"><code>export http_proxy=http://&lt;proxy&gt;:&lt;port&gt;
+export https_proxy=https://&lt;proxy&gt;:&lt;port&gt;
+</code></pre><h3 id="etcaptaptconf">/etc/apt/apt.conf</h3>
+<pre tabindex="0"><code>Acquire::http::Proxy &#34;http://&lt;proxy&gt;:&lt;port&gt;&#34;;
+Acquire::https::Proxy &#34;http://&lt;proxy&gt;:&lt;port&gt;&#34;;
+</code></pre><h3 id="etcwgetrc">/etc/wgetrc</h3>
+<pre tabindex="0"><code>http_proxy = http://&lt;proxy&gt;:&lt;port&gt;
+https_proxy = http://&lt;proxy&gt;:&lt;port&gt;
+ftp_proxy = http://&lt;proxy&gt;:&lt;port&gt;
+</code></pre><h3 id="anaconda3envsenv-name">anaconda3/envs/<!-- raw HTML omitted --></h3>
+<pre tabindex="0"><code>proxy_servers:
+    http: http://&lt;proxy server&gt;:&lt;port&gt;
+    https: https://&lt;proxy server&gt;:&lt;port&gt;
+</code></pre><p>次のコマンドで設定内容を確認</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ conda config --show
+</span></span></code></pre></div>
             <footer class="footline">
             </footer>
           </article>
@@ -236,12 +276,12 @@ Moai&#39;s blog
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/js/auto-complete.js?1708278015" defer></script>
-        <script src="/js/lunr.min.js?1708278015" defer></script>
-        <script src="/js/lunr.stemmer.support.min.js?1708278015" defer></script>
-        <script src="/js/lunr.multi.min.js?1708278015" defer></script>
-        <script src="/js/lunr.en.min.js?1708278015" defer></script>
-        <script src="/js/search.js?1708278015" defer></script>
+        <script src="/js/auto-complete.js?1714298825" defer></script>
+        <script src="/js/lunr.min.js?1714298825" defer></script>
+        <script src="/js/lunr.stemmer.support.min.js?1714298825" defer></script>
+        <script src="/js/lunr.multi.min.js?1714298825" defer></script>
+        <script src="/js/lunr.en.min.js?1714298825" defer></script>
+        <script src="/js/search.js?1714298825" defer></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -448,9 +488,9 @@ setting Keyboard<i class="fas fa-check read-icon"></i></a></li></ul></li>
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1708278015" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1708278015" defer></script>
-    <script src="/js/featherlight.min.js?1708278015" defer></script>
-    <script src="/js/theme.js?1708278015" defer></script>
+    <script src="/js/clipboard.min.js?1714298825" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1714298825" defer></script>
+    <script src="/js/featherlight.min.js?1714298825" defer></script>
+    <script src="/js/theme.js?1714298825" defer></script>
   </body>
 </html>
