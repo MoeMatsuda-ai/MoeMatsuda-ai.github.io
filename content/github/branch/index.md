@@ -122,6 +122,37 @@ $ git cat-file -p 0e9556
 <br><br>
 
 
+- ブランチのマージ：devブランチにmainブランチの内容をマージ（取り込む）
+     
+     **ただしマージしただけではリモートリポジトリに反映されないので、その後pushする必要あり**
+
+     ```bash
+     $ git checkout dev
+     $ git fetch
+     $ git merge origin/main
+     ```
+     - コンフリクトした場合に強制的にマージする際は、フェッチした後に`$ git reset --hard origin/main`
+
+- logの確認
+     ```bash
+     $ git log
+     ```
+     - option:
+          - --graph: グラフ形式で表示
+          - --decorate="short": ブランチ名の表示形式を変更 # select "short", "full", or "no"
+          - --date="relative": 日時表示 # select "relative", "local", "default", "iso", "rfc", "short", or "raw"
+
+- shtash: 変更内容を隠す
+     ```bash
+     $ git stash
+     $ git stash save "comment"    # コメント付きでstash
+     $ git stash list              # stashした内容の一覧を表示
+     $ git stash apply             # stashした内容を再度適用（stashした内容は保持）
+     $ git stash pop               # stashした内容を再度適用（stashした内容は削除）
+     $ git stash drop stash@{1}    # stashした内容を削除
+     $ git stash clear             # stashした内容を全て削除
+     ```
+
 
 
 ## 参考
