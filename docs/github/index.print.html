@@ -10,20 +10,20 @@
     <link href="https://moematsuda-ai.github.io/github/index.html" rel="canonical" type="text/html" title="Github :: &#39;Moais blog">
     <link href="/github/index.xml" rel="alternate" type="application/rss+xml" title="Github :: &#39;Moais blog"><link rel="icon" href="/images/favicon.png" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1715496567" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1715496567" rel="stylesheet"></noscript>
-    <link href="/css/featherlight.min.css?1715496567" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1715496567" rel="stylesheet"></noscript>
-    <link href="/css/auto-complete.css?1715496567" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1715496567" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1715496567" rel="stylesheet">
-    <link href="/css/nucleus.css?1715496567" rel="stylesheet">
-    <link href="/css/fonts.css?1715496567" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1715496567" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1715496567" rel="stylesheet">
-    <link href="/css/theme-relearn-dark.css?1715496567" rel="stylesheet" id="variant-style">
-    <link href="/css/ie.css?1715496567" rel="stylesheet">
-    <link href="/css/variant.css?1715496567" rel="stylesheet">
-    <link href="/css/print.css?1715496567" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1715496567" rel="stylesheet">
-    <script src="/js/url.js?1715496567"></script>
-    <script src="/js/variant.js?1715496567"></script>
+    <link href="/css/fontawesome-all.min.css?1716786878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1716786878" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1716786878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1716786878" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1716786878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1716786878" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1716786878" rel="stylesheet">
+    <link href="/css/nucleus.css?1716786878" rel="stylesheet">
+    <link href="/css/fonts.css?1716786878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1716786878" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1716786878" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1716786878" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1716786878" rel="stylesheet">
+    <link href="/css/variant.css?1716786878" rel="stylesheet">
+    <link href="/css/print.css?1716786878" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1716786878" rel="stylesheet">
+    <script src="/js/url.js?1716786878"></script>
+    <script src="/js/variant.js?1716786878"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -41,7 +41,7 @@
       var baseUriFull='https:\/\/moematsuda-ai.github.io/';
       window.variants && variants.init( [ 'relearn-dark', 'relearn-light', 'green', 'black', 'blue', 'learn' ] );
     </script>
-    <script src="/js/jquery.min.js?1715496567" defer></script>
+    <script src="/js/jquery.min.js?1716786878" defer></script>
   </head>
   <body class="mobile-support print" data-url="/github/index.html">
     <div id="body" class="default-animation">
@@ -510,6 +510,39 @@ $ git log
 </code></pre><p>で解決できる!
 <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 </li>
+<li>
+<p>ブランチのマージ：devブランチにmainブランチの内容をマージ（取り込む）</p>
+<p><strong>ただしマージしただけではリモートリポジトリに反映されないので、その後pushする必要あり</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git checkout dev
+</span></span><span style="display:flex;"><span>$ git fetch
+</span></span><span style="display:flex;"><span>$ git merge origin/main
+</span></span></code></pre></div><ul>
+<li>コンフリクトした場合に強制的にマージする際は、フェッチした後に<code>$ git reset --hard origin/main</code></li>
+</ul>
+</li>
+<li>
+<p>logの確認</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git log
+</span></span></code></pre></div><ul>
+<li>option:
+<ul>
+<li>&ndash;graph: グラフ形式で表示</li>
+<li>&ndash;decorate=&ldquo;short&rdquo;: ブランチ名の表示形式を変更 # select &ldquo;short&rdquo;, &ldquo;full&rdquo;, or &ldquo;no&rdquo;</li>
+<li>&ndash;date=&ldquo;relative&rdquo;: 日時表示 # select &ldquo;relative&rdquo;, &ldquo;local&rdquo;, &ldquo;default&rdquo;, &ldquo;iso&rdquo;, &ldquo;rfc&rdquo;, &ldquo;short&rdquo;, or &ldquo;raw&rdquo;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>shtash: 変更内容を隠す</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git stash
+</span></span><span style="display:flex;"><span>$ git stash save <span style="color:#e6db74">&#34;comment&#34;</span>    <span style="color:#75715e"># コメント付きでstash</span>
+</span></span><span style="display:flex;"><span>$ git stash list              <span style="color:#75715e"># stashした内容の一覧を表示</span>
+</span></span><span style="display:flex;"><span>$ git stash apply             <span style="color:#75715e"># stashした内容を再度適用（stashした内容は保持）</span>
+</span></span><span style="display:flex;"><span>$ git stash pop               <span style="color:#75715e"># stashした内容を再度適用（stashした内容は削除）</span>
+</span></span><span style="display:flex;"><span>$ git stash drop stash@<span style="color:#f92672">{</span>1<span style="color:#f92672">}</span>    <span style="color:#75715e"># stashした内容を削除</span>
+</span></span><span style="display:flex;"><span>$ git stash clear             <span style="color:#75715e"># stashした内容を全て削除</span>
+</span></span></code></pre></div></li>
 </ul>
 <h2 id="参考">参考</h2>
 <ul>
@@ -713,9 +746,9 @@ $git config --global core.editer vi   #コメント編集につかいたいエ�
           </section>        </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1715496567" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1715496567" defer></script>
-    <script src="/js/featherlight.min.js?1715496567" defer></script>
-    <script src="/js/theme.js?1715496567" defer></script>
+    <script src="/js/clipboard.min.js?1716786878" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1716786878" defer></script>
+    <script src="/js/featherlight.min.js?1716786878" defer></script>
+    <script src="/js/theme.js?1716786878" defer></script>
   </body>
 </html>
